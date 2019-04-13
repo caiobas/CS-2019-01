@@ -4,7 +4,7 @@ public class Propriedade3025 {
 	public static boolean Exercicio1(int numero) {
 		
 		int resultado, primDez, segDez;
-		//numero = Integer.parseInt(JOptionPane.showInputDialog("Digite o número entre 0 e 9999:"));
+		//numero = Integer.parseInt(JOptionPane.showInputDialog("Digite o nÃºmero entre 0 e 9999:"));
 		
  		if(numero >= 0 && numero <= 9999) {
  			primDez = numero / 100;
@@ -13,9 +13,13 @@ public class Propriedade3025 {
  			resultado = (primDez + segDez);
  			resultado = (int) Math.pow(resultado, 2);
  			
- 			if(resultado == numero) 
- 				return true;
- 			return false;
+ 			// if(resultado == numero) 
+ 			//	return true;
+ 			// return false;
+			
+			// Reescrita do trecho comentado acima
+			// Remova estes comentÃ¡rios
+			return resultado == numero;
  		}
  		return false;
 		
@@ -44,7 +48,7 @@ public class Propriedade3025 {
 	public static double Exercicio3(int dia, int mes, int ano) {
 		
 		if(dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano <= 1953) {
-			System.out.println("Escreva dados válidos.");
+			System.out.println("Escreva dados vÃ¡lidos.");
 			return -1;
 		}
 		
