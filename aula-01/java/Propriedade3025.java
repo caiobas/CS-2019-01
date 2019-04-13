@@ -27,6 +27,7 @@ public class Propriedade3025 {
 	
 	public static boolean Exercicio2(int numero) {
 		
+		// TODO efetuar a declaracao no bloco (mais proximo do uso e um  por vez)
 		int resultado, centena, dezena, dezenaAux, unidade;
 		
 		if(numero >= 100 && numero <= 999) {
