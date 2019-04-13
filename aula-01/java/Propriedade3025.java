@@ -58,6 +58,7 @@ public class Propriedade3025 {
 			ano = ano - 1;
 		}
 		
+		// TODO provavelmente um bug o uso de double pois toda a sentenca é int. 
 		double resultado;
 		resultado = dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400);
 		
