@@ -48,6 +48,7 @@ public class Propriedade3025 {
 	public static double Exercicio3(int dia, int mes, int ano) {
 		
 		if(dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano <= 1953) {
+			// TODO remover interação com o usuário (linha abaixo)
 			System.out.println("Escreva dados válidos.");
 			return -1;
 		}
