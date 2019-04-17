@@ -5,7 +5,6 @@ public class Propriedade3025 {
 	public static boolean Exercicio1(int numero) {
 		
 		int resultado, primDez, segDez;
-		//numero = Integer.parseInt(JOptionPane.showInputDialog("Digite o n�mero entre 0 e 9999:"));
 		
  		if(numero >= 0 && numero <= 9999) {
  			primDez = numero / 100;
@@ -18,7 +17,7 @@ public class Propriedade3025 {
  				return true;
  			return false;
  		}
- 		return false;
+ 		throw new IllegalArgumentException("Número fora da exigência:" + numero + " Esperado número entre 0 e 9999.");
 		
 	}
 	
@@ -38,15 +37,22 @@ public class Propriedade3025 {
 				return true;
 			return false;
 		}
-		return false;
+		throw new IllegalArgumentException("Número fora da exigência:" + numero + " Esperado número entre 100 e 999.");
 	
 	}
 	
 	public static double Exercicio3(int dia, int mes, int ano) {
 		
-		if(dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano <= 1953) {
-			System.out.println("Escreva dados v�lidos.");
-			return -1;
+		if(dia < 1 || dia > 31) {
+			throw new IllegalArgumentException("Dia fora da exigência:" + dia + " Esperado dia entre 1 e 31.");
+		}
+		
+		if(mes < 1 || mes > 12) {
+			throw new IllegalArgumentException("Mês fora da exigência:" + mes + " Esperado mês entre 1 e 12.");
+		}
+		
+		if(ano <= 1953) {
+			throw new IllegalArgumentException("Ano fora da exigência:" + ano + " Esperado ano maior ou igual a 1953.");
 		}
 		
 		if(mes == 1 && mes == 2) {
@@ -63,8 +69,11 @@ public class Propriedade3025 {
 	
 	public static int Exercicio4(int dividendo, int divisor) {
 		
-		if(dividendo < 0 || divisor <= 0) {
-			return -1;
+		if(dividendo < 0) {
+			throw new IllegalArgumentException("Dividendo fora da exigência:" + dividendo + " Esperado dividendo maior ou igual a 0.");
+		}
+		if(divisor <= 0) {
+			throw new IllegalArgumentException("Divisor fora da exigência:" + divisor + " Esperado divisor maior que 0.");
 		}
 		
 		int resto;
@@ -81,7 +90,7 @@ public class Propriedade3025 {
 	public static int Exercicio5(int numero) {
 		
 		if(numero < 1) {
-			return -1;
+			throw new IllegalArgumentException("Número fora da exigência:" + numero + " Esperado numero maior que 0.");
 		}
 		
 		int i = 2;
@@ -98,7 +107,7 @@ public class Propriedade3025 {
 	public static int Exercicio6(int numero) {
 		
 		if(numero < 1) {
-			return -1;
+			throw new IllegalArgumentException("Número fora da exigência:" + numero + " Esperado numero maior que 0.");
 		}
 		
 		int i = 2;
@@ -115,7 +124,7 @@ public class Propriedade3025 {
 	public static int Exercicio7(int a, int b) {
 		
 		if(a < 0 || b < 0) {
-			return -1;
+			throw new IllegalArgumentException("Número fora da exigência. Esperado numero maior ou igual a 0.");
 		}
 		
 		int totalParcelas;
@@ -146,7 +155,7 @@ public class Propriedade3025 {
 	public static int Exercicio8(int x, int y) {
 		
 		if(x < 0 || y < 0) {
-			return -1;
+			throw new IllegalArgumentException("Número fora da exigência. Esperado numero maior ou igual a 0.");
 		}
 		
 		int potencia;
@@ -166,7 +175,7 @@ public class Propriedade3025 {
 	public static double Exercicio9(int n) {
 		
 		if(n < 1) {
-			return -1;
+			throw new IllegalArgumentException("Número fora da exigência. Esperado numero maior ou igual a 1.");
 		}
 		
 		int i = 1;
@@ -187,7 +196,7 @@ public class Propriedade3025 {
 	public static double Exercicio10(int n, int k) {
 		
 		if(n < 1 || k < 2) {
-			return -1;
+			throw new IllegalArgumentException("Número fora da exigência. Esperado n maior ou igual a 1 e k maior ou igual a 2.");
 		}
 		
 		int i = 2;
@@ -208,7 +217,7 @@ public class Propriedade3025 {
 	public static double Exercicio11(int x, int y, int k) {
 		
 		if(x < 0 || y < x || k <= 0) {
-			return -1;
+			throw new IllegalArgumentException("Número fora da exigência. Esperado x maior ou igual a 0, y maior que x e k maior que 0.");
 		}
 		
 		double c = y;
@@ -229,7 +238,7 @@ public class Propriedade3025 {
 	public static boolean Exercicio12(int n) {
 		
 		if(n < 1) {
-			return false;
+			throw new IllegalArgumentException("Número fora da exigência. Esperado n maior ou igual a 1.");
 		}
 		
 		int i = 1;
@@ -246,7 +255,7 @@ public class Propriedade3025 {
 	public static double Exercicio13(int n, int i) {
 		
 		if(n < 1) {
-			return -1;
+			throw new IllegalArgumentException("Número fora da exigência. Esperado n maior que 0.");
 		}
 		
 		double r = 1;
@@ -262,7 +271,7 @@ public class Propriedade3025 {
 	public static boolean Exercicio14(int n) {
 		
 		if(n < 2) {
-			return false;
+			throw new IllegalArgumentException("Número fora da exigência. Esperado n maior que 1.");
 		}
 		
 		int i = 2;
@@ -280,7 +289,7 @@ public class Propriedade3025 {
 	public static boolean Exercicio15(int n) {
 		
 		if(n < 2) {
-			return false;
+			throw new IllegalArgumentException("Número fora da exigência. Esperado n que 1.");
 		}
 		
 		int a[] = new int[n+1];
@@ -309,9 +318,9 @@ public class Propriedade3025 {
 	}
 
 	public static int Exercicio16(int a, int b) {
-		
+		//Falta aqui pra frente.
 		if(a < b || b < 1) {
-			return -1;
+			throw new IllegalArgumentException("Número fora da exigência. Esperado numero maior ou igual a 0.");
 		}
 		int m;
 		
@@ -327,7 +336,7 @@ public class Propriedade3025 {
 	public static int Exercicio17(int a, int b) {
 		
 		if(a < b || b < 1) {
-			return -1;
+			throw new IllegalArgumentException("Número não está dentro da exigência pedida");
 		}
 		
 		while(a != b) {
@@ -343,7 +352,7 @@ public class Propriedade3025 {
 	public static double Exercicio18(double x, int g) {
 		
 		if(g < 1) {
-			return -1;
+			throw new IllegalArgumentException("Número não está dentro da exigência pedida");
 		}
 		
 		int a[] = new int[g+1];
@@ -367,7 +376,7 @@ public class Propriedade3025 {
 	public static int Exercicio19(int n) {
 		
 		if(n < 0) {
-			return -1;
+			throw new IllegalArgumentException("Número não está dentro da exigência pedida");
 		}
 		
 		if(n == 0 || n == 1) {
@@ -392,7 +401,7 @@ public class Propriedade3025 {
 		
 		for(int i = 0; i < 11; i++) {
 			if(d[i] < 0 || d[i] > 9) {
-				return false;
+				throw new IllegalArgumentException("Número não está dentro da exigência pedida");
 			}
 		}
 		
@@ -408,7 +417,7 @@ public class Propriedade3025 {
 		
 		for(int i = 1; i <= 11; i++) {
 			if(d[i] < 0 || d[i] > 9) {
-				return false;
+				throw new IllegalArgumentException("Número não está dentro da exigência pedida");
 			}
 		}
 		
@@ -429,8 +438,3 @@ public class Propriedade3025 {
 	}
 	
 }
-
-
-
-
-
