@@ -289,7 +289,7 @@ public class Propriedade3025 {
 	public static boolean Exercicio15(int n) {
 		
 		if(n < 2) {
-			throw new IllegalArgumentException("Número fora da exigência. Esperado n que 1.");
+			throw new IllegalArgumentException("Número fora da exigência. Esperado n maior que 1.");
 		}
 		
 		int a[] = new int[n+1];
@@ -318,9 +318,9 @@ public class Propriedade3025 {
 	}
 
 	public static int Exercicio16(int a, int b) {
-		//Falta aqui pra frente.
+		
 		if(a < b || b < 1) {
-			throw new IllegalArgumentException("Número fora da exigência. Esperado numero maior ou igual a 0.");
+			throw new IllegalArgumentException("Número fora da exigência. Esperado a maior ou igual a b e b maior que 0.");
 		}
 		int m;
 		
@@ -336,7 +336,7 @@ public class Propriedade3025 {
 	public static int Exercicio17(int a, int b) {
 		
 		if(a < b || b < 1) {
-			throw new IllegalArgumentException("Número não está dentro da exigência pedida");
+			throw new IllegalArgumentException("Número fora da exigência. Esperado a maior ou igual a b e b maior que 0.");
 		}
 		
 		while(a != b) {
@@ -352,7 +352,7 @@ public class Propriedade3025 {
 	public static double Exercicio18(double x, int g) {
 		
 		if(g < 1) {
-			throw new IllegalArgumentException("Número não está dentro da exigência pedida");
+			throw new IllegalArgumentException("Número fora da exigência. Esperado g maior ou igual a 1.");
 		}
 		
 		int a[] = new int[g+1];
@@ -376,7 +376,7 @@ public class Propriedade3025 {
 	public static int Exercicio19(int n) {
 		
 		if(n < 0) {
-			throw new IllegalArgumentException("Número não está dentro da exigência pedida");
+			throw new IllegalArgumentException("Número fora da exigência. Esperado n maior ou igual a 0.");
 		}
 		
 		if(n == 0 || n == 1) {
@@ -401,7 +401,7 @@ public class Propriedade3025 {
 		
 		for(int i = 0; i < 11; i++) {
 			if(d[i] < 0 || d[i] > 9) {
-				throw new IllegalArgumentException("Número não está dentro da exigência pedida");
+				throw new IllegalArgumentException("Números fora da exigência. Esperado um vetor e que comtem 0 a 9 em cada elemento.");
 			}
 		}
 		
@@ -417,7 +417,7 @@ public class Propriedade3025 {
 		
 		for(int i = 1; i <= 11; i++) {
 			if(d[i] < 0 || d[i] > 9) {
-				throw new IllegalArgumentException("Número não está dentro da exigência pedida");
+				throw new IllegalArgumentException("Números fora da exigência. Esperado um vetor e que comtem 0 a 9 em cada elemento.");
 			}
 		}
 		
