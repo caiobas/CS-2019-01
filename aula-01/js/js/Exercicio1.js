@@ -17,8 +17,10 @@ function Exercicio1(numero) {
         resultado = Math.pow(resultado, 2);
         resultado = Math.trunc(resultado);
 
-        if (resultado == numero)
+        if (resultado == numero) {
             return true;
+        }
+        
         return false;
     }
     return false;
