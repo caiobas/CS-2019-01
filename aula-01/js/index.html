@@ -92,9 +92,11 @@
     function Exercicio4(dividendo, divisor) {
 
         if (dividendo < 0 || divisor <= 0) {
+            // TODO o que este retorno -1 significa? Faz parte da especificação?
             return -1;
         }
 
+        // TODO Por que não unir esta linha com a próxima e usar "let" em vez de "var"?
         var resto;
 
         resto = dividendo;
@@ -268,6 +270,7 @@
             s = s + i;
         }
 
+        // TODO Parênteses desnecessários exigem esforço desnecessário de interpretação
         return (s == n);
     }
 
@@ -377,6 +380,7 @@
         var a = [g + 1];
 
         //Não compreendi a forma de leitura.
+        // TODO então não há como implementar. Pergunte ao responsável pelos requisitos!
 
         var p = a[g];
         var i = g - 1;
@@ -413,9 +417,12 @@
         return c;
     }
 
+    // TODO o vetor utilizado nao deveria ser fornecido via argumento?
     function Exercicio20() {
 
-        var d = new Array(0, 6, 3, 2, 3, 3, 6, 6, 9, 4, 0, 3);
+        // Prefiro versão mais simples, analise!
+        // var d = new Array(0, 6, 3, 2, 3, 3, 6, 6, 9, 4, 0, 3);
+        const d = [ 0, 6, 3, 2, 3, 3, 6, 6, 9, 4, 0, 3 ];
 
         for (var i = 0; i < 11; i++) {
             if (d[i] < 0 || d[i] > 9) {
