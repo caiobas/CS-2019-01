@@ -4,9 +4,8 @@ function Exercicio1(numero) {
     // Mais de uma declaracao por linha? Suspeito!!!!
     // let resultado, primDez, segDez, confere;
 
-    const confere = Math.trunc(numero);
-
-    if (confere != numero)
+    // Melhor forma
+    if (Math.trunc(numero) != numero)
         return false;
 
     if (numero >= 0 && numero <= 9999) {
