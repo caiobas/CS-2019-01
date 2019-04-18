@@ -29,31 +29,11 @@
 <div id="Exercicio20"></div>
 <div id="Exercicio21"></div>
 
+// TODO modularize o seu código (veja abaixo como pode ser feito)
+// Código da function Exercicio1 depositado no arquivo js/Exercicio1.js
+<script src="js/Exercicio1.js"></script>
+
 <script>
-
-    function Exercicio1(numero) {
-        var resultado, primDez, segDez, confere;
-
-        confere = Math.trunc(numero);
-
-        if (confere != numero)
-            return false;
-
-        if (numero >= 0 && numero <= 9999) {
-            primDez = numero / 100;
-            primDez = Math.trunc(primDez);
-            segDez = numero % 100;
-
-            resultado = (primDez + segDez);
-            resultado = Math.pow(resultado, 2);
-            resultado = Math.trunc(resultado);
-
-            if (resultado == numero)
-                return true;
-            return false;
-        }
-        return false;
-    }
 
     function Exercicio2(numero) {
         var resultado, centena, dezena, dezenaAux, unidade, confere;
