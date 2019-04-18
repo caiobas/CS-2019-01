@@ -16,8 +16,11 @@ function Exercicio1(numero) {
     const primDez = Math.trunc(numero / 100);
     const segDez = numero % 100;
 
+    // TODO nome enganoso, pois não guarda o resultado (da função)
     let resultado = primDez + segDez;
     resultado = Math.pow(resultado, 2);
+
+    // TODO suspeito que esta linha é desnecessária??!!!
     resultado = Math.trunc(resultado);
 
     return resultado == numero;
