@@ -424,7 +424,8 @@ public class Propriedade3025 {
     public static boolean Exercicio21(int d[]) {
 
         // TODO as mesmas atividades para o exercício anterior
-        
+
+        // Mesmo código anterior, ... Não é o caso de reutilizar?
         for (int i = 1; i <= 11; i++) {
             if (d[i] < 0 || d[i] > 9) {
                 throw new IllegalArgumentException("Número não está dentro da exigência pedida");
