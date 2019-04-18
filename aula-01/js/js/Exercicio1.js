@@ -9,15 +9,16 @@ function Exercicio1(numero) {
         return false;
     }
 
-    if (numero >= 0 && numero <= 9999) {
-        const primDez = Math.trunc(numero / 100);
-        const segDez = numero % 100;
-
-        let resultado = primDez + segDez;
-        resultado = Math.pow(resultado, 2);
-        resultado = Math.trunc(resultado);
-
-        return resultado == numero;
+    if (numero < 0 || numero > 9999) {
+        return false;
     }
-    return false;
+
+    const primDez = Math.trunc(numero / 100);
+    const segDez = numero % 100;
+
+    let resultado = primDez + segDez;
+    resultado = Math.pow(resultado, 2);
+    resultado = Math.trunc(resultado);
+
+    return resultado == numero;
 }
