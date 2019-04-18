@@ -13,9 +13,7 @@ public class Propriedade3025 {
  			resultado = (primDez + segDez);
  			resultado = (int) Math.pow(resultado, 2);
  			
- 			if(resultado == numero) 
- 				return true;
- 			return false;
+ 			return (resultado == numero);
  		}
  		throw new IllegalArgumentException("Número fora da exigência:" + numero + " Esperado número entre 0 e 9999.");
 		
@@ -33,9 +31,7 @@ public class Propriedade3025 {
 			
 			resultado = ((int) Math.pow(centena, 3)) + ((int) Math.pow(dezena, 3)) + ((int) Math.pow(unidade, 3));
 			
-			if(resultado == numero) 
-				return true;
-			return false;
+			return (resultado == numero);
 		}
 		throw new IllegalArgumentException("Número fora da exigência:" + numero + " Esperado número entre 100 e 999.");
 	
@@ -312,9 +308,7 @@ public class Propriedade3025 {
 			i = i + 1;
 		}
 
-		if(a[n] == 1)
-			return false;
-		return true;
+		return (a[n] == 1);
 	}
 
 	public static int Exercicio16(int a, int b) {
