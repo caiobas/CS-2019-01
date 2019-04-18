@@ -1,5 +1,7 @@
 function Exercicio1(numero) {
-    var resultado, primDez, segDez, confere;
+
+    // "let" é mais recomendado neste cenário
+    let resultado, primDez, segDez, confere;
 
     confere = Math.trunc(numero);
 
