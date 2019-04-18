@@ -1,11 +1,11 @@
-import java.util.Scanner;
-
 public class Propriedade3025 {
 
     public static boolean Exercicio1(int numero) {
 
         int resultado, primDez, segDez;
 
+        // TODO use o modelo empregado no Exercicio3 (que é muito mais simples)
+        // TODO vários comentários para JavaScript valem aqui
         if (numero >= 0 && numero <= 9999) {
             primDez = numero / 100;
             segDez = numero % 100;
@@ -76,6 +76,7 @@ public class Propriedade3025 {
             throw new IllegalArgumentException("Divisor fora da exigência:" + divisor + " Esperado divisor maior que 0.");
         }
 
+        // TODO unir próxima linha com a seguinte (mesma observação feita em js)
         int resto;
 
         resto = dividendo;
@@ -319,6 +320,7 @@ public class Propriedade3025 {
 
     public static int Exercicio16(int a, int b) {
         //Falta aqui pra frente.
+        // TODO comentário iniciado por TODO é a recomendação para dizer isso
         if (a < b || b < 1) {
             throw new IllegalArgumentException("Número fora da exigência. Esperado numero maior ou igual a 0.");
         }
@@ -356,8 +358,11 @@ public class Propriedade3025 {
         }
 
         int a[] = new int[g + 1];
+
+        // TODO remover entrada fornecida pelo usuário (não há interação)
         Scanner sc = new Scanner(System.in);
-		
+
+        // TODO você deve definitivamente remover comentários como abaixo.
 		/*for(int i=g; i >= 0; i--) {
 			a[g] = sc.nextInt();
 		}*/
@@ -399,6 +404,9 @@ public class Propriedade3025 {
 
     public static boolean Exercicio20(int d[]) {
 
+        // TODO verificar se null
+        // TODO verificar se possui exatamente 11 elementos
+
         for (int i = 0; i < 11; i++) {
             if (d[i] < 0 || d[i] > 9) {
                 throw new IllegalArgumentException("Número não está dentro da exigência pedida");
@@ -415,6 +423,8 @@ public class Propriedade3025 {
 
     public static boolean Exercicio21(int d[]) {
 
+        // TODO as mesmas atividades para o exercício anterior
+        
         for (int i = 1; i <= 11; i++) {
             if (d[i] < 0 || d[i] > 9) {
                 throw new IllegalArgumentException("Número não está dentro da exigência pedida");
@@ -436,5 +446,4 @@ public class Propriedade3025 {
 
         return ((j == d[10]) && (k == d[11]));
     }
-
 }
