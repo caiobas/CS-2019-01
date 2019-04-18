@@ -7,501 +7,499 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="Exercicio1"></div>
-    <div id="Exercicio2"></div>
-    <div id="Exercicio3"></div>
-    <div id="Exercicio4"></div>
-    <div id="Exercicio5"></div>
-    <div id="Exercicio6"></div>
-    <div id="Exercicio7"></div>
-    <div id="Exercicio8"></div>
-    <div id="Exercicio9"></div>
-    <div id="Exercicio10"></div>
-    <div id="Exercicio11"></div>
-    <div id="Exercicio12"></div>
-    <div id="Exercicio13"></div>
-    <div id="Exercicio14"></div>
-    <div id="Exercicio15"></div>
-    <div id="Exercicio16"></div>
-    <div id="Exercicio17"></div>
-    <div id="Exercicio18"></div>
-    <div id="Exercicio19"></div>
-    <div id="Exercicio20"></div>
-    <div id="Exercicio21"></div>
+<div id="Exercicio1"></div>
+<div id="Exercicio2"></div>
+<div id="Exercicio3"></div>
+<div id="Exercicio4"></div>
+<div id="Exercicio5"></div>
+<div id="Exercicio6"></div>
+<div id="Exercicio7"></div>
+<div id="Exercicio8"></div>
+<div id="Exercicio9"></div>
+<div id="Exercicio10"></div>
+<div id="Exercicio11"></div>
+<div id="Exercicio12"></div>
+<div id="Exercicio13"></div>
+<div id="Exercicio14"></div>
+<div id="Exercicio15"></div>
+<div id="Exercicio16"></div>
+<div id="Exercicio17"></div>
+<div id="Exercicio18"></div>
+<div id="Exercicio19"></div>
+<div id="Exercicio20"></div>
+<div id="Exercicio21"></div>
 
-    <script>
-        
-        function Exercicio1(numero) {
-            var resultado, primDez, segDez, confere;
-            
-            confere = Math.trunc(numero);
-            
-            if(confere != numero)
-                return false;
-            
-            if(numero >= 0 && numero <= 9999) {
- 			primDez = numero / 100;
+<script>
+
+    function Exercicio1(numero) {
+        var resultado, primDez, segDez, confere;
+
+        confere = Math.trunc(numero);
+
+        if (confere != numero)
+            return false;
+
+        if (numero >= 0 && numero <= 9999) {
+            primDez = numero / 100;
             primDez = Math.trunc(primDez);
- 			segDez = numero % 100;
- 			
- 			resultado = (primDez + segDez);
- 			resultado = Math.pow(resultado, 2);
- 			resultado = Math.trunc(resultado);
-                
- 			if(resultado == numero) 
- 				return true;
- 			return false;
-            }
-            return false;
-        }
-        
-        function Exercicio2(numero) {
-            var resultado, centena, dezena, dezenaAux, unidade, confere;
-            
-            confere = Math.trunc(numero);
-            
-            if(confere != numero)
-                return false;
-		
-            if(numero >= 100 && numero <= 999) {
-                centena = numero / 100;
-                centena = Math.trunc(centena);  
-                dezenaAux = numero % 100;
-                dezena = dezenaAux / 10;
-                dezena = Math.trunc(dezena);
-                unidade = numero % 10;
-			
-                resultado = (Math.pow(centena, 3)) + (Math.pow(dezena, 3)) + (Math.pow(unidade, 3));
-                resultado = Math.trunc(resultado);
-            
-                if(resultado == numero) 
-                    return true;
-                return false;
-            }
-            return false;
-        }
-        
-        function Exercicio3(dia, mes, ano) {
-            var confereDia, confereMes, confereAno
-            
-            confereDia = Math.trunc(dia);
-            confereMes = Math.trunc(mes);
-            confereAno = Math.trunc(ano);
-            
-            if(confereDia != dia || confereMes != mes || confereAno != ano)
-                return 'invalido';
-            
-            if(dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano <= 1953) {
-                return -1;
-		    }
-		
-		    if(mes == 1 && mes == 2) {
-                mes = mes + 12;
-                ano = ano - 1;
-            }
-		
-            var resultado;
-            resultado = dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400);
-            resultado = (resultado % 7);
+            segDez = numero % 100;
+
+            resultado = (primDez + segDez);
+            resultado = Math.pow(resultado, 2);
             resultado = Math.trunc(resultado);
-            
-            return resultado;
-	
+
+            if (resultado == numero)
+                return true;
+            return false;
         }
-        
-        function Exercicio4(dividendo, divisor) {
-		
-		if(dividendo < 0 || divisor <= 0) {
-			return -1;
-		}
-		
-		var resto;
-		
-		resto = dividendo;
-		
-		while(divisor <= resto) {
-			resto = resto - divisor;
-		}
-		
-		return resto;
-	}
-        
-        function Exercicio5(numero) {
-		
-		if(numero < 1) {
-			return -1;
-		}
-		
-		var i = 2;
-		var s = 1;
-		
-		while(i <= numero) {
-			s = s + i;
-			i = i + 1;
-		}
-		
-		return s;
-	}
-        
-        function Exercicio6(numero) {
-		
-		if(numero < 1) {
-			return -1;
-		}
-		
-		var i = 2;
-		var f = 1;
-		
-		while(i <= numero) {
-			f = f * i;
-			i = i + 1;
-		}
-		
-		return f;
-	}
-        
-        function Exercicio7(a, b) {
-		
-		if(a < 0 || b < 0) {
-			return -1;
-		}
-		
-		var totalParcelas;
-		var parcela;
-		
-		totalParcelas = a;
-		parcela = b;
-		
-		if(b < a) {
-			totalParcelas = b;
-			parcela = a;
-		}
-		
-		var i;
-		var s;
-		
-		i = 1;
-		s = 0;
-		
-		while(i <= totalParcelas) {
-			s = s + parcela;
-			i = i + 1;
-		}
-		
-		return s;
-	}
-        
-        function Exercicio8(x, y) {
-		
-		if(x < 0 || y < 0) {
-			return -1;
-		}
-		
-		var potencia;
-		var i;
-		
-		potencia = 1;
-		i = 1;
-		
-		while(i <= y) {
-			potencia = Exercicio7(potencia, x);
-			i = i + 1;
-		}
-		
-		return potencia;
-	}
-        
-        function Exercicio9(n) {
-		
-		if(n < 1) {
-			return -1;
-		}
-		
-		var i = 1;
-		var s = -1;
-		var d = -1;
-		var p = 0;
-		
-		while(i <= n) {
-			d = d + 2;
-			s = -1 * s;
-			p = p + ((4 * s) / d);
-			i = i + 1;
-		}
-		
-		return p;
-	}
-        
-        function Exercicio10(n, k) {
-		
-		if(n < 1 || k < 2) {
-			return -1;
-		}
-		
-		var i = 2;
-		var e = (i + n);
-		var numerador = n;
-		var denominador = 1;
-		
-		while(i <= k) {
-			numerador = (numerador * numerador);
-			denominador = (denominador * i);
-			e = e + (numerador / denominador);
-			i = i + 1;
-		}
-		
-		return e;
-	}
-        
-        function Exercicio11(x, y, k) {
-		
-		if(x < 0 || y < x || k <= 0) {
-			return -1;
-		}
-		
-		var c = y;
-		var a = x;
-		var i = 1;
-		var t;
-		
-		while(i <= k) {
-			t = c;
-			c = c + a;
-			a = t;
-			i = i + 1;
-		}
-		
-		return (c / a);
-	}
-        
-        function Exercicio12(n) {
-		
-		if(n < 1) {
-			return false;
-		}
-		
-		var i = 1;
-		var s = 1;
-		
-		while(s < n) {
-			i = i + 2;
-			s = s + i;
-		}
-		
-		return (s == n);
-	}
-        
-        function Exercicio13(n, i) {
-		
-		if(n < 1) {
-			return -1;
-		}
-		
-		var r = 1;
-		
-		while(0 <= i) {
-			r = (r + n/r) / 2;
-			i = i - 1;
-		}
-		
-		return r;
-	}
-        
-        function Exercicio14(n) {
-		
-		if(n < 2) {
-			return false;
-		}
-		
-		var i = 2;
-		
-		while(i < n) {
-			if((n % i) == 0) {
-				return false;
-			}
-			i = i + 1;
-		}
-		
-		return true;
-	}
-        
-        function Exercicio15(n) {
-		
-		if(n < 2) {
-			return false;
-		}
-		
-		var a = [];
-		
-		for(var i=1; i<n+1; i++) {
-			a[i] = 0;
-		}
-		
-		var i = 2;
-		var limite = Math.floor((Math.sqrt(n)));
-		
-		while(i <= limite) {
-			if(a[i] == 0) {
-				var multiplo = i + i;
-				while(multiplo <= n) {
-					a[multiplo] = 1;
-					multiplo = multiplo + i;
-				}
-			}
-			i = i + 1;
-		}
+        return false;
+    }
 
-		if(a[n] == 1)
-			return false;
-		return true;
-	}
-        
-        function Exercicio16(a, b) {
-		
-		if(a < b || b < 1) {
-			return -1;
-		}
-		var m;
-		
-		while(b != 0) {
-			m = a % b;
-			a = b;
-			b = m;
-		}
-		
-		return a;
-	}
-        
-        function Exercicio17(a, b) {
-		
-		if(a < b || b < 1) {
-			return -1;
-		}
-		
-		while(a != b) {
-			if(a > b) 
-				a = a - b;
-			else
-				b = b - a;
-		}
-		
-		return a;
-	}
-        
-        function Exercicio18(x, g) {
-		
-		if(g < 1) {
-			return -1;
-		}
-		
-		var a = [g+1];
-		
-		//Não compreendi a forma de leitura.
-		
-		var p = a[g];
-		var i = g-1;
-		
-		while(0 <= i) {
-			p = p * (x + a[i]);
-			i = i - 1;
-		}
-		
-		return p;
-	}
-        
-        function Exercicio19(n) {
-		
-		if(n < 0) {
-			return -1;
-		}
-		
-		if(n == 0 || n == 1) {
-			return n;
-		}
-		
-		var a = 0;
-		var c = 1;
-		var i = 2;
-		
-		while(i <= n) {
-			var t = c;
-			c = c + a;
-			a = t;
-			i = i + 1;
-		}
-		
-		return c;
-	}
-        
-        function Exercicio20() {
-		
-        var d = new Array(0, 6, 3, 2, 3, 3, 6, 6, 9, 4, 0, 3);
-            
-		for(var i = 0; i < 11; i++) {
-			if(d[i] < 0 || d[i] > 9) {
-				return false;
-			}
-		}
-		
-		var j = d[1] + 2*(d[2]) + 3*(d[3]) + 4*(d[4]) + 5*(d[5]) + 6*(d[6]) + 7*(d[7]) + 8*(d[8]) + 9*(d[9]);   
-		var k = d[2] + 2*(d[3]) + 3*(d[4]) + 4*(d[5]) + 5*(d[6]) + 6*(d[7]) + 7*(d[8]) + 8*(d[9]) + 9*(d[10]);
-		var dj = ((j %  11) % 10);
-		var dk = ((k %  11) % 10);
-		
-		return ((dj == d[10]) && (dk == d[11]));
-	   }
-        
-        function Exercicio21() {
-		
-        var d = new Array(0, 6, 3, 2, 3, 3, 6, 6, 9, 4, 0, 3);
-            
-		for(var i = 1; i <= 11; i++) {
-			if(d[i] < 0 || d[i] > 9) {
-				return false;
-			}
-		}
-		
-		var c = 8;
-		var p = d[9];
-		var s = d[9];
-		
-		while(1 <= c) {
-			p = p + d[c];
-			s = s + p;
-			c = c - 1;
-		}
-		
-		var j = ((s % 11) % 10);
-		var k = (((s - p + (9 * d[10])) % 11) % 10);
-		
-		return ((j == d[10]) && (k == d[11]));
-	}
+    function Exercicio2(numero) {
+        var resultado, centena, dezena, dezenaAux, unidade, confere;
 
-        window.onload = function() {
-            document.getElementById("Exercicio1").innerHTML = Exercicio1(3025);
-            document.getElementById("Exercicio2").innerHTML = Exercicio2(153);
-            document.getElementById("Exercicio3").innerHTML = Exercicio3(7, 4, 2019);
-            document.getElementById("Exercicio4").innerHTML = Exercicio4(3, 8);
-            document.getElementById("Exercicio5").innerHTML = Exercicio5(5);
-            document.getElementById("Exercicio6").innerHTML = Exercicio6(4);
-            document.getElementById("Exercicio7").innerHTML = Exercicio7(10, 8);
-            document.getElementById("Exercicio8").innerHTML = Exercicio8(2, 5);
-            document.getElementById("Exercicio9").innerHTML = Exercicio9(1000);
-            document.getElementById("Exercicio10").innerHTML = Exercicio10(1, 2);
-            document.getElementById("Exercicio11").innerHTML = Exercicio11(1, 2, 3);
-            document.getElementById("Exercicio12").innerHTML = Exercicio12(25);
-            document.getElementById("Exercicio13").innerHTML = Exercicio13(9, 10);
-            document.getElementById("Exercicio14").innerHTML = Exercicio14(7);
-            document.getElementById("Exercicio15").innerHTML = Exercicio15(20);
-            document.getElementById("Exercicio16").innerHTML = Exercicio16(16, 12);
-            document.getElementById("Exercicio17").innerHTML = Exercicio17(54, 27);
-            document.getElementById("Exercicio18").innerHTML = Exercicio18(2, 5);
-            document.getElementById("Exercicio19").innerHTML = Exercicio19(4);
-            document.getElementById("Exercicio20").innerHTML = Exercicio20();
-            document.getElementById("Exercicio21").innerHTML = Exercicio21();
-            
-            
-        };
-    </script>
+        confere = Math.trunc(numero);
+
+        if (confere != numero)
+            return false;
+
+        if (numero >= 100 && numero <= 999) {
+            centena = numero / 100;
+            centena = Math.trunc(centena);
+            dezenaAux = numero % 100;
+            dezena = dezenaAux / 10;
+            dezena = Math.trunc(dezena);
+            unidade = numero % 10;
+
+            resultado = (Math.pow(centena, 3)) + (Math.pow(dezena, 3)) + (Math.pow(unidade, 3));
+            resultado = Math.trunc(resultado);
+
+            if (resultado == numero)
+                return true;
+            return false;
+        }
+        return false;
+    }
+
+    function Exercicio3(dia, mes, ano) {
+        var confereDia, confereMes, confereAno
+
+        confereDia = Math.trunc(dia);
+        confereMes = Math.trunc(mes);
+        confereAno = Math.trunc(ano);
+
+        if (confereDia != dia || confereMes != mes || confereAno != ano)
+            return 'invalido';
+
+        if (dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano <= 1953) {
+            return -1;
+        }
+
+        if (mes == 1 && mes == 2) {
+            mes = mes + 12;
+            ano = ano - 1;
+        }
+
+        var resultado;
+        resultado = dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400);
+        resultado = (resultado % 7);
+        resultado = Math.trunc(resultado);
+
+        return resultado;
+
+    }
+
+    function Exercicio4(dividendo, divisor) {
+
+        if (dividendo < 0 || divisor <= 0) {
+            return -1;
+        }
+
+        var resto;
+
+        resto = dividendo;
+
+        while (divisor <= resto) {
+            resto = resto - divisor;
+        }
+
+        return resto;
+    }
+
+    function Exercicio5(numero) {
+
+        if (numero < 1) {
+            return -1;
+        }
+
+        var i = 2;
+        var s = 1;
+
+        while (i <= numero) {
+            s = s + i;
+            i = i + 1;
+        }
+
+        return s;
+    }
+
+    function Exercicio6(numero) {
+
+        if (numero < 1) {
+            return -1;
+        }
+
+        var i = 2;
+        var f = 1;
+
+        while (i <= numero) {
+            f = f * i;
+            i = i + 1;
+        }
+
+        return f;
+    }
+
+    function Exercicio7(a, b) {
+
+        if (a < 0 || b < 0) {
+            return -1;
+        }
+
+        var totalParcelas;
+        var parcela;
+
+        totalParcelas = a;
+        parcela = b;
+
+        if (b < a) {
+            totalParcelas = b;
+            parcela = a;
+        }
+
+        var i;
+        var s;
+
+        i = 1;
+        s = 0;
+
+        while (i <= totalParcelas) {
+            s = s + parcela;
+            i = i + 1;
+        }
+
+        return s;
+    }
+
+    function Exercicio8(x, y) {
+
+        if (x < 0 || y < 0) {
+            return -1;
+        }
+
+        var potencia;
+        var i;
+
+        potencia = 1;
+        i = 1;
+
+        while (i <= y) {
+            potencia = Exercicio7(potencia, x);
+            i = i + 1;
+        }
+
+        return potencia;
+    }
+
+    function Exercicio9(n) {
+
+        if (n < 1) {
+            return -1;
+        }
+
+        var i = 1;
+        var s = -1;
+        var d = -1;
+        var p = 0;
+
+        while (i <= n) {
+            d = d + 2;
+            s = -1 * s;
+            p = p + ((4 * s) / d);
+            i = i + 1;
+        }
+
+        return p;
+    }
+
+    function Exercicio10(n, k) {
+
+        if (n < 1 || k < 2) {
+            return -1;
+        }
+
+        var i = 2;
+        var e = (i + n);
+        var numerador = n;
+        var denominador = 1;
+
+        while (i <= k) {
+            numerador = (numerador * numerador);
+            denominador = (denominador * i);
+            e = e + (numerador / denominador);
+            i = i + 1;
+        }
+
+        return e;
+    }
+
+    function Exercicio11(x, y, k) {
+
+        if (x < 0 || y < x || k <= 0) {
+            return -1;
+        }
+
+        var c = y;
+        var a = x;
+        var i = 1;
+        var t;
+
+        while (i <= k) {
+            t = c;
+            c = c + a;
+            a = t;
+            i = i + 1;
+        }
+
+        return (c / a);
+    }
+
+    function Exercicio12(n) {
+
+        if (n < 1) {
+            return false;
+        }
+
+        var i = 1;
+        var s = 1;
+
+        while (s < n) {
+            i = i + 2;
+            s = s + i;
+        }
+
+        return (s == n);
+    }
+
+    function Exercicio13(n, i) {
+
+        if (n < 1) {
+            return -1;
+        }
+
+        var r = 1;
+
+        while (0 <= i) {
+            r = (r + n / r) / 2;
+            i = i - 1;
+        }
+
+        return r;
+    }
+
+    function Exercicio14(n) {
+
+        if (n < 2) {
+            return false;
+        }
+
+        var i = 2;
+
+        while (i < n) {
+            if ((n % i) == 0) {
+                return false;
+            }
+            i = i + 1;
+        }
+
+        return true;
+    }
+
+    function Exercicio15(n) {
+
+        if (n < 2) {
+            return false;
+        }
+
+        var a = [];
+
+        for (var i = 1; i < n + 1; i++) {
+            a[i] = 0;
+        }
+
+        var i = 2;
+        var limite = Math.floor((Math.sqrt(n)));
+
+        while (i <= limite) {
+            if (a[i] == 0) {
+                var multiplo = i + i;
+                while (multiplo <= n) {
+                    a[multiplo] = 1;
+                    multiplo = multiplo + i;
+                }
+            }
+            i = i + 1;
+        }
+
+        if (a[n] == 1)
+            return false;
+        return true;
+    }
+
+    function Exercicio16(a, b) {
+
+        if (a < b || b < 1) {
+            return -1;
+        }
+        var m;
+
+        while (b != 0) {
+            m = a % b;
+            a = b;
+            b = m;
+        }
+
+        return a;
+    }
+
+    function Exercicio17(a, b) {
+
+        if (a < b || b < 1) {
+            return -1;
+        }
+
+        while (a != b) {
+            if (a > b)
+                a = a - b;
+            else
+                b = b - a;
+        }
+
+        return a;
+    }
+
+    function Exercicio18(x, g) {
+
+        if (g < 1) {
+            return -1;
+        }
+
+        var a = [g + 1];
+
+        //Não compreendi a forma de leitura.
+
+        var p = a[g];
+        var i = g - 1;
+
+        while (0 <= i) {
+            p = p * (x + a[i]);
+            i = i - 1;
+        }
+
+        return p;
+    }
+
+    function Exercicio19(n) {
+
+        if (n < 0) {
+            return -1;
+        }
+
+        if (n == 0 || n == 1) {
+            return n;
+        }
+
+        var a = 0;
+        var c = 1;
+        var i = 2;
+
+        while (i <= n) {
+            var t = c;
+            c = c + a;
+            a = t;
+            i = i + 1;
+        }
+
+        return c;
+    }
+
+    function Exercicio20() {
+
+        var d = new Array(0, 6, 3, 2, 3, 3, 6, 6, 9, 4, 0, 3);
+
+        for (var i = 0; i < 11; i++) {
+            if (d[i] < 0 || d[i] > 9) {
+                return false;
+            }
+        }
+
+        var j = d[1] + 2 * (d[2]) + 3 * (d[3]) + 4 * (d[4]) + 5 * (d[5]) + 6 * (d[6]) + 7 * (d[7]) + 8 * (d[8]) + 9 * (d[9]);
+        var k = d[2] + 2 * (d[3]) + 3 * (d[4]) + 4 * (d[5]) + 5 * (d[6]) + 6 * (d[7]) + 7 * (d[8]) + 8 * (d[9]) + 9 * (d[10]);
+        var dj = ((j % 11) % 10);
+        var dk = ((k % 11) % 10);
+
+        return ((dj == d[10]) && (dk == d[11]));
+    }
+
+    function Exercicio21() {
+
+        var d = new Array(0, 6, 3, 2, 3, 3, 6, 6, 9, 4, 0, 3);
+
+        for (var i = 1; i <= 11; i++) {
+            if (d[i] < 0 || d[i] > 9) {
+                return false;
+            }
+        }
+
+        var c = 8;
+        var p = d[9];
+        var s = d[9];
+
+        while (1 <= c) {
+            p = p + d[c];
+            s = s + p;
+            c = c - 1;
+        }
+
+        var j = ((s % 11) % 10);
+        var k = (((s - p + (9 * d[10])) % 11) % 10);
+
+        return ((j == d[10]) && (k == d[11]));
+    }
+
+    window.onload = function () {
+        document.getElementById("Exercicio1").innerHTML = Exercicio1(3025);
+        document.getElementById("Exercicio2").innerHTML = Exercicio2(153);
+        document.getElementById("Exercicio3").innerHTML = Exercicio3(7, 4, 2019);
+        document.getElementById("Exercicio4").innerHTML = Exercicio4(3, 8);
+        document.getElementById("Exercicio5").innerHTML = Exercicio5(5);
+        document.getElementById("Exercicio6").innerHTML = Exercicio6(4);
+        document.getElementById("Exercicio7").innerHTML = Exercicio7(10, 8);
+        document.getElementById("Exercicio8").innerHTML = Exercicio8(2, 5);
+        document.getElementById("Exercicio9").innerHTML = Exercicio9(1000);
+        document.getElementById("Exercicio10").innerHTML = Exercicio10(1, 2);
+        document.getElementById("Exercicio11").innerHTML = Exercicio11(1, 2, 3);
+        document.getElementById("Exercicio12").innerHTML = Exercicio12(25);
+        document.getElementById("Exercicio13").innerHTML = Exercicio13(9, 10);
+        document.getElementById("Exercicio14").innerHTML = Exercicio14(7);
+        document.getElementById("Exercicio15").innerHTML = Exercicio15(20);
+        document.getElementById("Exercicio16").innerHTML = Exercicio16(16, 12);
+        document.getElementById("Exercicio17").innerHTML = Exercicio17(54, 27);
+        document.getElementById("Exercicio18").innerHTML = Exercicio18(2, 5);
+        document.getElementById("Exercicio19").innerHTML = Exercicio19(4);
+        document.getElementById("Exercicio20").innerHTML = Exercicio20();
+        document.getElementById("Exercicio21").innerHTML = Exercicio21();
+    };
+</script>
 </body>
 </html>
