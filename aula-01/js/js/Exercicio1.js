@@ -1,19 +1,20 @@
 function Exercicio1(numero) {
 
     // "let" é mais recomendado neste cenário
-    let resultado, primDez, segDez, confere;
+    // Mais de uma declaracao por linha? Suspeito!!!!
+    // let resultado, primDez, segDez, confere;
 
-    confere = Math.trunc(numero);
+    const confere = Math.trunc(numero);
 
     if (confere != numero)
         return false;
 
     if (numero >= 0 && numero <= 9999) {
-        primDez = numero / 100;
+        let primDez = numero / 100;
         primDez = Math.trunc(primDez);
-        segDez = numero % 100;
+        const segDez = numero % 100;
 
-        resultado = (primDez + segDez);
+        let resultado = (primDez + segDez);
         resultado = Math.pow(resultado, 2);
         resultado = Math.trunc(resultado);
 
