@@ -13,7 +13,7 @@ function Exercicio1(numero) {
         const primDez = Math.trunc(numero / 100);
         const segDez = numero % 100;
 
-        let resultado = (primDez + segDez);
+        let resultado = primDez + segDez;
         resultado = Math.pow(resultado, 2);
         resultado = Math.trunc(resultado);
 
