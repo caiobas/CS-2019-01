@@ -426,11 +426,7 @@ public class Propriedade3025 {
         // TODO as mesmas atividades para o exercício anterior
 
         // Mesmo código anterior, ... Não é o caso de reutilizar?
-        for (int i = 1; i <= 11; i++) {
-            if (d[i] < 0 || d[i] > 9) {
-                throw new IllegalArgumentException("Número não está dentro da exigência pedida");
-            }
-        }
+        geraExcecaoSeCpfInvalido(d);
 
         int c = 8;
         int p = d[9];
@@ -446,5 +442,21 @@ public class Propriedade3025 {
         int k = Math.floorMod(Math.floorMod((s - p + (9 * d[10])), 11), 10);
 
         return ((j == d[10]) && (k == d[11]));
+    }
+
+    private static void geraExcecaoSeCpfInvalido(int[] d) {
+        if (d == null) {
+            throw new IllegalArgumentException("argumento null");
+        }
+
+        if (d.length != 11) {
+            throw new IllegalArgumentException("CPF deve ter exatos 11 digitos");
+        }
+
+        for (int i = 1; i <= 11; i++) {
+            if (d[i] < 0 || d[i] > 9) {
+                throw new IllegalArgumentException("Número não está dentro da exigência pedida");
+            }
+        }
     }
 }
