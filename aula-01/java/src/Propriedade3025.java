@@ -299,10 +299,12 @@ public class Propriedade3025 {
 		}
 		
 		while(a != b) {
-			if(a > b) 
+			if(a > b) {
 				a = a - b;
-			else
+			}
+			else {
 				b = b - a;
+			}
 		}
 		
 		return a;
