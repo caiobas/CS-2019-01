@@ -22,9 +22,10 @@ public class Main {
 		System.out.println(Propriedade3025.Exercicio17(54, 27));
 		System.out.println(Propriedade3025.Exercicio18(2, 5));
 		System.out.println(Propriedade3025.Exercicio19(4));
-		int d[] = {0, 6, 3, 2, 3, 3, 6, 6, 9, 4, 0, 3};
+		int d[] = {6, 3, 2, 3, 3, 6, 6, 9, 4, 0, 3};
+		int d1[] = {7, 4, 8, 3, 3, 8, 4, 3, 8, 7, 0};
 		System.out.println(Propriedade3025.Exercicio20(d));
-		System.out.println(Propriedade3025.Exercicio21(d));
+		System.out.println(Propriedade3025.Exercicio21(d1));
 		
 	}
 

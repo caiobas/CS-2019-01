@@ -14,7 +14,6 @@ function Exercicio21(d) {
         }
     }
 
-    let c = 7;
     let p = d[8];
     let s = d[8];
 

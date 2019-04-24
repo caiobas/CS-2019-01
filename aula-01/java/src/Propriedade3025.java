@@ -362,36 +362,34 @@ public class Propriedade3025 {
 			}
 		}
 		
-		int j = d[1] + 2*(d[2]) + 3*(d[3]) + 4*(d[4]) + 5*(d[5]) + 6*(d[6]) + 7*(d[7]) + 8*(d[8]) + 9*(d[9]);   
-		int k = d[2] + 2*(d[3]) + 3*(d[4]) + 4*(d[5]) + 5*(d[6]) + 6*(d[7]) + 7*(d[8]) + 8*(d[9]) + 9*(d[10]);
+		int j = d[0] + 2*(d[1]) + 3*(d[2]) + 4*(d[3]) + 5*(d[4]) + 6*(d[5]) + 7*(d[6]) + 8*(d[7]) + 9*(d[8]);   
+		int k = d[1] + 2*(d[2]) + 3*(d[3]) + 4*(d[4]) + 5*(d[5]) + 6*(d[6]) + 7*(d[7]) + 8*(d[8]) + 9*(d[9]);
 		int dj = Math.floorMod(Math.floorMod(j,  11), 10);
 		int dk = Math.floorMod(Math.floorMod(k,  11), 10);
 		
-		return (dj == d[10]) && (dk == d[11]);
+		return (dj == d[9]) && (dk == d[10]);
 	}
 	
 	public static boolean Exercicio21(int d[]) {
 		
-		for(int i = 1; i <= 11; i++) {
+		for(int i = 0; i < 11; i++) {
 			if(d[i] < 0 || d[i] > 9) {
 				throw new IllegalArgumentException("Numeros fora da exigencia. Esperado um vetor e que comtem 0 a 9 em cada elemento.");
 			}
 		}
 		
-		int c = 8;
-		int p = d[9];
-		int s = d[9];
+		int p = d[8];
+		int s = d[8];
 		
-		while(1 <= c) {
+		for(int c = 7; 0 <= c; c--) {
 			p = p + d[c];
 			s = s + p;
-			c = c - 1;
 		}
 		
 		int j = Math.floorMod(Math.floorMod(s,  11), 10);
-		int k = Math.floorMod(Math.floorMod((s - p + (9 * d[10])),  11), 10);
+		int k = Math.floorMod(Math.floorMod((s - p + (9 * d[9])),  11), 10);
 		
-		return (j == d[10]) && (k == d[11]);
+		return (j == d[9]) && (k == d[10]);
 	}
 	
 }
