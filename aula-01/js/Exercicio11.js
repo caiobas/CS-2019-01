@@ -22,5 +22,5 @@ function Exercicio11(x, y, k) {
         a = t;
     }
 
-    return (c / a);
+    return c / a;
 }

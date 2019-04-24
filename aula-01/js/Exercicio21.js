@@ -24,8 +24,8 @@ function Exercicio21(d) {
         c = c - 1;
     }
 
-    const j = ((s % 11) % 10);
-    const k = (((s - p + (9 * d[10])) % 11) % 10);
+    const j = (s % 11) % 10;
+    const k = ((s - p + (9 * d[10])) % 11) % 10;
 
-    return ((j == d[10]) && (k == d[11]));
+    return (j == d[10]) && (k == d[11]);
 }

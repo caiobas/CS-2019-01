@@ -16,5 +16,5 @@ function Exercicio12(n) {
         s = s + i;
     }
 
-    return (s == n);
+    return s == n;
 }
