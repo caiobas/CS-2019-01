@@ -18,7 +18,7 @@ function Exercicio15(n) {
         a[i] = 0;
     }
 
-    const limite = Math.floor((Math.sqrt(n)));
+    const limite = Math.floor(Math.sqrt(n));
 
     for(let i = 2; i <= limite; i++){
         if(a[i] == 0) {

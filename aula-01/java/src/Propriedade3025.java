@@ -10,7 +10,7 @@ public class Propriedade3025 {
  			
  			int resultado = (int) Math.pow(primDez + segDez, 2);
  			
- 			return (resultado == numero);
+ 			return resultado == numero;
  		}
  		throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero entre 0 e 9999.");
 		
@@ -24,9 +24,9 @@ public class Propriedade3025 {
 			int dezena = dezenaAux / 10;
 			int unidade = numero % 10;
 			
-			int resultado = ((int) Math.pow(centena, 3)) + ((int) Math.pow(dezena, 3)) + ((int) Math.pow(unidade, 3));
+			int resultado = (int) Math.pow(centena, 3) + (int) Math.pow(dezena, 3) + (int) Math.pow(unidade, 3);
 			
-			return (resultado == numero);
+			return resultado == numero;
 		}
 		throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero entre 100 e 999.");
 	
@@ -53,7 +53,7 @@ public class Propriedade3025 {
 		
 		int resultado = dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400);
 		
-		return (resultado % 7);
+		return resultado % 7;
 	
 	}
 	
@@ -174,8 +174,8 @@ public class Propriedade3025 {
 		double denominador = 1;
 		
 		for(; i <= k; i++){
-			numerador = (numerador * numerador);
-			denominador = (denominador * i);
+			numerador = numerador * numerador;
+			denominador = denominador * i;
 			e = e + (numerador / denominador);
 		}
 		
@@ -198,7 +198,7 @@ public class Propriedade3025 {
 			a = t;
 		}
 		
-		return (c / a);
+		return c / a;
 	}
 	
 	public static boolean Exercicio12(int n) {
@@ -215,7 +215,7 @@ public class Propriedade3025 {
 			s = s + i;
 		}
 		
-		return (s == n);
+		return s == n;
 	}
 	
 	public static double Exercicio13(int n, int i) {
@@ -261,7 +261,7 @@ public class Propriedade3025 {
 			a[i] = 0;
 		}
 		
-		double limite = Math.floor((Math.sqrt(n)));
+		double limite = Math.floor(Math.sqrt(n));
 		
 		for(int i = 2; i <= limite; i ++){
 			if(a[i] == 0) {
@@ -273,7 +273,7 @@ public class Propriedade3025 {
 			}
 		}
 
-		return (a[n] == 1);
+		return a[n] == 1;
 	}
 
 	public static int Exercicio16(int a, int b) {
@@ -365,7 +365,7 @@ public class Propriedade3025 {
 		int dj = Math.floorMod(Math.floorMod(j,  11), 10);
 		int dk = Math.floorMod(Math.floorMod(k,  11), 10);
 		
-		return ((dj == d[10]) && (dk == d[11]));
+		return (dj == d[10]) && (dk == d[11]);
 	}
 	
 	public static boolean Exercicio21(int d[]) {
@@ -389,7 +389,7 @@ public class Propriedade3025 {
 		int j = Math.floorMod(Math.floorMod(s,  11), 10);
 		int k = Math.floorMod(Math.floorMod((s - p + (9 * d[10])),  11), 10);
 		
-		return ((j == d[10]) && (k == d[11]));
+		return (j == d[10]) && (k == d[11]);
 	}
 	
 }

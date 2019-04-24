@@ -18,8 +18,8 @@ function Exercicio10(n, k) {
     let denominador = 1;
 
     for(; i <= k; i++){
-        numerador = (numerador * numerador);
-        denominador = (denominador * i);
+        numerador = numerador * numerador;
+        denominador = denominador * i;
         e = e + (numerador / denominador);
     }
 
