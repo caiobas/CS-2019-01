@@ -4,55 +4,46 @@ public class Propriedade3025 {
 
 	public static boolean Exercicio1(int numero) {
 		
-		int resultado, primDez, segDez;
-		
  		if(numero >= 0 && numero <= 9999) {
- 			primDez = numero / 100;
- 			segDez = numero % 100;
+ 			int primDez = numero / 100;
+ 			int segDez = numero % 100;
  			
- 			resultado = (primDez + segDez);
- 			resultado = (int) Math.pow(resultado, 2);
+ 			int resultado = (int) Math.pow(primDez + segDez, 2);
  			
  			return (resultado == numero);
  		}
- 		throw new IllegalArgumentException("N�mero fora da exig�ncia:" + numero + " Esperado n�mero entre 0 e 9999.");
+ 		throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero entre 0 e 9999.");
 		
 	}
 	
 	public static boolean Exercicio2(int numero) {
 		
 		if(numero >= 100 && numero <= 999) {
-			int resultado;
-			int centena;
-			int dezena;
-			int dezenaAux;
-			int unidade;
-
-			centena = numero / 100;
-			dezenaAux = numero % 100;
-			dezena = dezenaAux / 10;
-			unidade = numero % 10;
+			int centena = numero / 100;
+			int dezenaAux = numero % 100;
+			int dezena = dezenaAux / 10;
+			int unidade = numero % 10;
 			
-			resultado = ((int) Math.pow(centena, 3)) + ((int) Math.pow(dezena, 3)) + ((int) Math.pow(unidade, 3));
+			int resultado = ((int) Math.pow(centena, 3)) + ((int) Math.pow(dezena, 3)) + ((int) Math.pow(unidade, 3));
 			
 			return (resultado == numero);
 		}
-		throw new IllegalArgumentException("N�mero fora da exig�ncia:" + numero + " Esperado n�mero entre 100 e 999.");
+		throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero entre 100 e 999.");
 	
 	}
 	
 	public static double Exercicio3(int dia, int mes, int ano) {
 		
 		if(dia < 1 || dia > 31) {
-			throw new IllegalArgumentException("Dia fora da exig�ncia:" + dia + " Esperado dia entre 1 e 31.");
+			throw new IllegalArgumentException("Dia fora da exigencia:" + dia + " Esperado dia entre 1 e 31.");
 		}
 		
 		if(mes < 1 || mes > 12) {
-			throw new IllegalArgumentException("M�s fora da exig�ncia:" + mes + " Esperado m�s entre 1 e 12.");
+			throw new IllegalArgumentException("Mes fora da exigencia:" + mes + " Esperado mes entre 1 e 12.");
 		}
 		
 		if(ano <= 1953) {
-			throw new IllegalArgumentException("Ano fora da exig�ncia:" + ano + " Esperado ano maior ou igual a 1953.");
+			throw new IllegalArgumentException("Ano fora da exigencia:" + ano + " Esperado ano maior ou igual a 1953.");
 		}
 		
 		if(mes == 1 && mes == 2) {
@@ -60,8 +51,7 @@ public class Propriedade3025 {
 			ano = ano - 1;
 		}
 		
-		int resultado;
-		resultado = dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400);
+		int resultado = dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400);
 		
 		return (resultado % 7);
 	
@@ -70,15 +60,13 @@ public class Propriedade3025 {
 	public static int Exercicio4(int dividendo, int divisor) {
 		
 		if(dividendo < 0) {
-			throw new IllegalArgumentException("Dividendo fora da exig�ncia:" + dividendo + " Esperado dividendo maior ou igual a 0.");
+			throw new IllegalArgumentException("Dividendo fora da exigencia:" + dividendo + " Esperado dividendo maior ou igual a 0.");
 		}
 		if(divisor <= 0) {
-			throw new IllegalArgumentException("Divisor fora da exig�ncia:" + divisor + " Esperado divisor maior que 0.");
+			throw new IllegalArgumentException("Divisor fora da exigencia:" + divisor + " Esperado divisor maior que 0.");
 		}
 		
-		int resto;
-		
-		resto = dividendo;
+		int resto = dividendo;
 		
 		while(divisor <= resto) {
 			resto = resto - divisor;
@@ -90,15 +78,13 @@ public class Propriedade3025 {
 	public static int Exercicio5(int numero) {
 		
 		if(numero < 1) {
-			throw new IllegalArgumentException("N�mero fora da exig�ncia:" + numero + " Esperado numero maior que 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero maior que 0.");
 		}
 		
-		int i = 2;
 		int s = 1;
 		
-		while(i <= numero) {
+		for(int i = 2; i <= numero; i++){
 			s = s + i;
-			i = i + 1;
 		}
 		
 		return s;
@@ -107,15 +93,13 @@ public class Propriedade3025 {
 	public static int Exercicio6(int numero) {
 		
 		if(numero < 1) {
-			throw new IllegalArgumentException("N�mero fora da exig�ncia:" + numero + " Esperado numero maior que 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero maior que 0.");
 		}
 		
-		int i = 2;
 		int f = 1;
 		
-		while(i <= numero) {
+		for(int i = 2; i <= numero; i++){
 			f = f * i;
-			i = i + 1;
 		}
 		
 		return f;
@@ -124,29 +108,21 @@ public class Propriedade3025 {
 	public static int Exercicio7(int a, int b) {
 		
 		if(a < 0 || b < 0) {
-			throw new IllegalArgumentException("N�mero fora da exig�ncia. Esperado numero maior ou igual a 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia. Esperado numero maior ou igual a 0.");
 		}
-		
-		int totalParcelas;
-		int parcela;
-		
-		totalParcelas = a;
-		parcela = b;
+
+		int totalParcelas = a;
+		int parcela = b;
 		
 		if(b < a) {
 			totalParcelas = b;
 			parcela = a;
 		}
 		
-		int i;
-		int s;
+		int s = 0;
 		
-		i = 1;
-		s = 0;
-		
-		while(i <= totalParcelas) {
+		for(int i = 1; i <= totalParcelas; i++){
 			s = s + parcela;
-			i = i + 1;
 		}
 		
 		return s;
@@ -155,18 +131,13 @@ public class Propriedade3025 {
 	public static int Exercicio8(int x, int y) {
 		
 		if(x < 0 || y < 0) {
-			throw new IllegalArgumentException("N�mero fora da exig�ncia. Esperado numero maior ou igual a 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia. Esperado numero maior ou igual a 0.");
 		}
 		
-		int potencia;
-		int i;
+		int potencia = 1;
 		
-		potencia = 1;
-		i = 1;
-		
-		while(i <= y) {
+		for(int i = 1; i <= y; i++){
 			potencia = Exercicio7(potencia, x);
-			i = i + 1;
 		}
 		
 		return potencia;
@@ -175,19 +146,17 @@ public class Propriedade3025 {
 	public static double Exercicio9(int n) {
 		
 		if(n < 1) {
-			throw new IllegalArgumentException("N�mero fora da exig�ncia. Esperado numero maior ou igual a 1.");
+			throw new IllegalArgumentException("Numero fora da exigencia. Esperado numero maior ou igual a 1.");
 		}
 		
-		int i = 1;
 		double s = -1;
 		double d = -1;
 		double p = 0;
 		
-		while(i <= n) {
+		for(int i = 1; i <= n; i++){
 			d = d + 2;
 			s = -1 * s;
 			p = p + ((4 * s) / d);
-			i = i + 1;
 		}
 		
 		return p;
@@ -196,7 +165,7 @@ public class Propriedade3025 {
 	public static double Exercicio10(int n, int k) {
 		
 		if(n < 1 || k < 2) {
-			throw new IllegalArgumentException("N�mero fora da exig�ncia. Esperado n maior ou igual a 1 e k maior ou igual a 2.");
+			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior ou igual a 1 e k maior ou igual a 2.");
 		}
 		
 		int i = 2;
@@ -204,11 +173,10 @@ public class Propriedade3025 {
 		double numerador = n;
 		double denominador = 1;
 		
-		while(i <= k) {
+		for(; i <= k; i++){
 			numerador = (numerador * numerador);
 			denominador = (denominador * i);
 			e = e + (numerador / denominador);
-			i = i + 1;
 		}
 		
 		return e;
@@ -217,19 +185,17 @@ public class Propriedade3025 {
 	public static double Exercicio11(int x, int y, int k) {
 		
 		if(x < 0 || y < x || k <= 0) {
-			throw new IllegalArgumentException("N�mero fora da exig�ncia. Esperado x maior ou igual a 0, y maior que x e k maior que 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia. Esperado x maior ou igual a 0, y maior que x e k maior que 0.");
 		}
 		
 		double c = y;
 		double a = x;
-		int i = 1;
-		double t;
+		double t; //Perguntar ao professor se é interessante criar o t dentro ou fora do for.
 		
-		while(i <= k) {
+		for(int i = 1; i <= k; i++){
 			t = c;
 			c = c + a;
 			a = t;
-			i = i + 1;
 		}
 		
 		return (c / a);
@@ -238,7 +204,7 @@ public class Propriedade3025 {
 	public static boolean Exercicio12(int n) {
 		
 		if(n < 1) {
-			throw new IllegalArgumentException("N�mero fora da exig�ncia. Esperado n maior ou igual a 1.");
+			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior ou igual a 1.");
 		}
 		
 		int i = 1;
@@ -255,7 +221,7 @@ public class Propriedade3025 {
 	public static double Exercicio13(int n, int i) {
 		
 		if(n < 1) {
-			throw new IllegalArgumentException("N�mero fora da exig�ncia. Esperado n maior que 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior que 0.");
 		}
 		
 		double r = 1;
@@ -271,16 +237,13 @@ public class Propriedade3025 {
 	public static boolean Exercicio14(int n) {
 		
 		if(n < 2) {
-			throw new IllegalArgumentException("N�mero fora da exig�ncia. Esperado n maior que 1.");
+			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior que 1.");
 		}
 		
-		int i = 2;
-		
-		while(i < n) {
+		for(int i = 2; i < n; i++){
 			if((n % i) == 0) {
 				return false;
 			}
-			i = i + 1;
 		}
 		
 		return true;
@@ -289,7 +252,7 @@ public class Propriedade3025 {
 	public static boolean Exercicio15(int n) {
 		
 		if(n < 2) {
-			throw new IllegalArgumentException("N�mero fora da exig�ncia. Esperado n maior que 1.");
+			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior que 1.");
 		}
 		
 		int a[] = new int[n+1];
@@ -298,10 +261,9 @@ public class Propriedade3025 {
 			a[i] = 0;
 		}
 		
-		int i = 2;
 		double limite = Math.floor((Math.sqrt(n)));
 		
-		while(i <= limite) {
+		for(int i = 2; i <= limite; i ++){
 			if(a[i] == 0) {
 				int multiplo = i + i;
 				while(multiplo <= n) {
@@ -309,7 +271,6 @@ public class Propriedade3025 {
 					multiplo = multiplo + i;
 				}
 			}
-			i = i + 1;
 		}
 
 		return (a[n] == 1);
@@ -318,9 +279,9 @@ public class Propriedade3025 {
 	public static int Exercicio16(int a, int b) {
 		
 		if(a < b || b < 1) {
-			throw new IllegalArgumentException("N�mero fora da exig�ncia. Esperado a maior ou igual a b e b maior que 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia. Esperado a maior ou igual a b e b maior que 0.");
 		}
-		int m;
+		int m; //Mesma duvida do Exercicio11
 		
 		while(b != 0) {
 			m = a % b;
@@ -334,7 +295,7 @@ public class Propriedade3025 {
 	public static int Exercicio17(int a, int b) {
 		
 		if(a < b || b < 1) {
-			throw new IllegalArgumentException("N�mero fora da exig�ncia. Esperado a maior ou igual a b e b maior que 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia. Esperado a maior ou igual a b e b maior que 0.");
 		}
 		
 		while(a != b) {
@@ -350,7 +311,7 @@ public class Propriedade3025 {
 	public static double Exercicio18(double x, int g) {
 		
 		if(g < 1) {
-			throw new IllegalArgumentException("N�mero fora da exig�ncia. Esperado g maior ou igual a 1.");
+			throw new IllegalArgumentException("Numero fora da exigencia. Esperado g maior ou igual a 1.");
 		}
 		
 		int a[] = new int[g+1];
@@ -361,20 +322,18 @@ public class Propriedade3025 {
 		}*/
 		
 		double p = a[g];
-		int i = g-1;
 		
-		while(0 <= i) {
+		for(int i = (g-1); 0 <= i; i--){
 			p = p * (x + a[i]);
-			i = i - 1;
 		}
-		
+
 		return p;
 	}
 
 	public static int Exercicio19(int n) {
 		
 		if(n < 0) {
-			throw new IllegalArgumentException("N�mero fora da exig�ncia. Esperado n maior ou igual a 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior ou igual a 0.");
 		}
 		
 		if(n == 0 || n == 1) {
@@ -383,13 +342,11 @@ public class Propriedade3025 {
 		
 		int a = 0;
 		int c = 1;
-		int i = 2;
 		
-		while(i <= n) {
-			int t = c;
+		for(int i = 2; i <= n; i++){
+			int t = c; //Mesma duvida referente ao Exercicio11 e 16
 			c = c + a;
 			a = t;
-			i = i + 1;
 		}
 		
 		return c;
@@ -399,7 +356,7 @@ public class Propriedade3025 {
 		
 		for(int i = 0; i < 11; i++) {
 			if(d[i] < 0 || d[i] > 9) {
-				throw new IllegalArgumentException("N�meros fora da exig�ncia. Esperado um vetor e que comtem 0 a 9 em cada elemento.");
+				throw new IllegalArgumentException("Numeros fora da exigencia. Esperado um vetor e que comtem 0 a 9 em cada elemento.");
 			}
 		}
 		
@@ -415,7 +372,7 @@ public class Propriedade3025 {
 		
 		for(int i = 1; i <= 11; i++) {
 			if(d[i] < 0 || d[i] > 9) {
-				throw new IllegalArgumentException("N�meros fora da exig�ncia. Esperado um vetor e que comtem 0 a 9 em cada elemento.");
+				throw new IllegalArgumentException("Numeros fora da exigencia. Esperado um vetor e que comtem 0 a 9 em cada elemento.");
 			}
 		}
 		
