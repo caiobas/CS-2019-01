@@ -8,15 +8,10 @@ function Exercicio8(x, y) {
         return RangeError("x e y devem ser maiores ou igual a 0");
     }
 
-    var potencia;
-    var i;
+    let potencia = 1;
 
-    potencia = 1;
-    i = 1;
-
-    while(i <= y) {
+    for(let i = 1; i <= y; i++){
         potencia = Exercicio7(potencia, x);
-        i = i + 1;
     }
 
     return potencia;

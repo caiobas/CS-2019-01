@@ -8,7 +8,7 @@ function Exercicio13(n, i) {
         return RangeError("n deve ser maior ou igual a 1.");
     }
 
-    var r = 1;
+    let r = 1;
 
     while(0 <= i) {
         r = (r + n/r) / 2;

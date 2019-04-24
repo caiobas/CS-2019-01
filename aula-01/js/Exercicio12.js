@@ -8,8 +8,8 @@ function Exercicio12(n) {
         return RangeError("n deve ser maior ou igual a 1.");
     }
 
-    var i = 1;
-    var s = 1;
+    let i = 1;
+    let s = 1;
 
     while(s < n) {
         i = i + 2;

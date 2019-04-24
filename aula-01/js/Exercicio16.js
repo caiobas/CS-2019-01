@@ -8,7 +8,7 @@ function Exercicio16(a, b) {
         return RangeError("a deve ser maior ou igual a b e b deve ser maior que 0.");
     }
 
-    var m;
+    let m; //Mesma duvida do Exercicio11
 
     while(b != 0) {
         m = a % b;

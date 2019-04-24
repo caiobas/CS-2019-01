@@ -8,12 +8,10 @@ function Exercicio6(numero) {
         return RangeError("Numero deve ser maior que 1.");
     }
 
-    var i = 2;
-    var f = 1;
+    let f = 1;
 
-    while(i <= numero) {
+    for(let i = 2; i <= numero; i++){
         f = f * i;
-        i = i + 1;
     }
 
     return f;

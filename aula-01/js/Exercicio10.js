@@ -8,16 +8,15 @@ function Exercicio10(n, k) {
         return RangeError("n deve ser maior ou igual a 1 e k maior ou igual a 2.");
     }
 
-    var i = 2;
-    var e = (i + n);
-    var numerador = n;
-    var denominador = 1;
+    let i = 2;
+    let e = (i + n);
+    let numerador = n;
+    let denominador = 1;
 
-    while(i <= k) {
+    for(; i <= k; i++){
         numerador = (numerador * numerador);
         denominador = (denominador * i);
         e = e + (numerador / denominador);
-        i = i + 1;
     }
 
     return e;

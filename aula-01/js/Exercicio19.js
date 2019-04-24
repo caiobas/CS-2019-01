@@ -12,15 +12,13 @@ function Exercicio19(n) {
         return n;
     }
 
-    var a = 0;
-    var c = 1;
-    var i = 2;
+    let a = 0;
+    let c = 1;
 
-    while(i <= n) {
-        var t = c;
+    for(let i = 2; i <= n; i++){
+        var t = c; //Mesma duvida referente ao Exercicio11 e 16
         c = c + a;
         a = t;
-        i = i + 1;
     }
 
     return c;

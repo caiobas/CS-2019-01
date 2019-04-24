@@ -8,15 +8,11 @@ function Exercicio1(numero) {
         return RangeError("Numero não está entre 0 e 9999.");
     }
     
-    var resultado;
-    var primDez;
-    var segDez;
-    
-    primDez = numero / 100;
+    let primDez = numero / 100;
     primDez = Math.trunc(primDez);
-    segDez = numero % 100;
+    const segDez = numero % 100;
      
-    resultado = (primDez + segDez);
+    let resultado = (primDez + segDez);
     resultado = Math.pow(resultado, 2);
     resultado = Math.trunc(resultado);
         

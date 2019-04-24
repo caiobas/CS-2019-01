@@ -8,9 +8,7 @@ function Exercicio4(dividendo, divisor) {
         return RangeError("Divisor deve ser maior que 0 e dividendo deve ser maior ou igual a 0.");
     }
 
-    var resto;
-
-    resto = dividendo;
+    let resto = dividendo;
 
     while(divisor <= resto) {
         resto = resto - divisor;

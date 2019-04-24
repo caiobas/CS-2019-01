@@ -12,12 +12,10 @@ function Exercicio18(x, g) {
 
     //Não compreendi a forma de leitura.
 
-    var p = a[g];
-    var i = g-1;
+    let p = a[g];
 
-    while(0 <= i) {
+    for(let i = (g-1); 0 <= i; i--){
         p = p * (x + a[i]);
-        i = i - 1;
     }
 
     return p;

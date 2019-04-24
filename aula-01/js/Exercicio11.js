@@ -8,16 +8,14 @@ function Exercicio11(x, y, k) {
         return RangeError("x deve ser maior ou igual a 0, y deve ser maior que x e k maior que 0.");
     }
 
-    var c = y;		
-    var a = x;
-    var i = 1;
-    var t;
+    let c = y;		
+    let a = x;
+    let t; //Perguntar ao professor se é interessante criar o t dentro ou fora do for.
 
-    while(i <= k) {
+    for(let i = 1; i <= k; i++){
         t = c;
         c = c + a;
         a = t;
-        i = i + 1;
     }
 
     return (c / a);

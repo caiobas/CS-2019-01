@@ -8,16 +8,14 @@ function Exercicio9(n) {
         return RangeError("Numero não é maior ou igual a 1.");
     }
 
-    var i = 1;
-    var s = -1;
-    var d = -1;
-    var p = 0;
+    let s = -1;
+    let d = -1;
+    let p = 0;
 
-    while(i <= n) {
+    for(let i = 1; i <= n; i++){
         d = d + 2;
         s = -1 * s;
         p = p + ((4 * s) / d);
-        i = i + 1;
     }
 
     return p;

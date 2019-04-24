@@ -7,21 +7,15 @@ function Exercicio2(numero) {
     if(numero < 100 || numero > 999) {
         return Error("Numero não está entre 100 e 999.");
     }
-    
-    var resultado;
-    var centena;
-    var dezena;
-    var dezenaAux;
-    var unidade;
 
-    centena = numero / 100;
+    let centena = numero / 100;
     centena = Math.trunc(centena);  
-    dezenaAux = numero % 100;
-    dezena = dezenaAux / 10;
+    const dezenaAux = numero % 100;
+    let dezena = dezenaAux / 10;
     dezena = Math.trunc(dezena);
-    unidade = numero % 10;
+    const unidade = numero % 10;
     
-    resultado = (Math.pow(centena, 3)) + (Math.pow(dezena, 3)) + (Math.pow(unidade, 3));
+    let resultado = (Math.pow(centena, 3)) + (Math.pow(dezena, 3)) + (Math.pow(unidade, 3));
     resultado = Math.trunc(resultado);
     
     return (resultado == numero);

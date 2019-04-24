@@ -8,26 +8,18 @@ function Exercicio7(a, b) {
         return RangeError("a e b devem ser maior ou igual a 0.");
     }
 
-    var totalParcelas;
-    var parcela;
-
-    totalParcelas = a;
-    parcela = b;
+    let totalParcelas = a;
+    let parcela = b;
 
     if(b < a) {
         totalParcelas = b;
         parcela = a;
     }
 
-    var i;
-    var s;
+    let s = 0;
 
-    i = 1;
-    s = 0;
-
-    while(i <= totalParcelas) {
+    for(let i = 1; i <= totalParcelas; i++){
         s = s + parcela;
-        i = i + 1;
     }
 
     return s;
