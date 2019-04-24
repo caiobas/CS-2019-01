@@ -3,18 +3,19 @@ function Exercicio1(numero) {
     if(typeof numero != 'number'){
         return TypeError("Este parâmetro não é um número.");
     }
+
+    if(Math.trunc(numero) != numero){
+        return TypeError("Este parâmetro não é um inteiro.");
+    }
     
     if(numero < 0 || numero > 9999) {
         return RangeError("Numero não está entre 0 e 9999.");
     }
     
-    let primDez = numero / 100;
-    primDez = Math.trunc(primDez);
+    const primDez = Math.trunc(numero / 100);
     const segDez = numero % 100;
      
-    let resultado = (primDez + segDez);
-    resultado = Math.pow(resultado, 2);
-    resultado = Math.trunc(resultado);
+    const resultado = Math.pow((primDez + segDez), 2);
         
     return (resultado == numero);
 }
