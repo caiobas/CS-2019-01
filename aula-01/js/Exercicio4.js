@@ -4,6 +4,10 @@ function Exercicio4(dividendo, divisor) {
         return TypeError("Um(ou mais) parâmetro(s) não é um número.");
     }
 
+    if(Math.trunc(dividendo) != dividendo || Math.trunc(divisor) != divisor){
+        return TypeError("Um(ou mais) parâmetro(s) não é um inteiro.");
+    }
+
     if(dividendo < 0 || divisor <= 0) {
         return RangeError("Divisor deve ser maior que 0 e dividendo deve ser maior ou igual a 0.");
     }

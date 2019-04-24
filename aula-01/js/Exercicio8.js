@@ -3,6 +3,10 @@ function Exercicio8(x, y) {
     if(typeof x != 'number' || typeof y != 'number'){
         return TypeError("Este parâmetro não é um número.");
     }
+
+    if(Math.trunc(x) != x || Math.trunc(y) != y){
+        return TypeError("Um(ou mais) parâmetro(s) não é um inteiro.");
+    }
     
     if(x < 0 || y < 0) {
         return RangeError("x e y devem ser maiores ou igual a 0");
