@@ -16,7 +16,6 @@ function Exercicio2(numero) {
     const dezenaAux = numero % 100;
     const dezena = Math.trunc(dezenaAux / 10);
     const unidade = numero % 10;
-
     const resultado = Math.pow(centena, 3) + Math.pow(dezena, 3) + Math.pow(unidade, 3);
     
     return resultado == numero;

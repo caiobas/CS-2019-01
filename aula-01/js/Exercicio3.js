@@ -18,8 +18,6 @@ function Exercicio3(dia, mes, ano) {
     }
 
     let resultado = dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400);
-    resultado = Math.trunc(resultado % 7);
 
-    return resultado;
-
+    return Math.trunc(resultado % 7);
 }

@@ -24,7 +24,6 @@ public class Propriedade3025 {
 		int dezenaAux = numero % 100;
 		int dezena = dezenaAux / 10;
 		int unidade = numero % 10;
-		
 		int resultado = (int) Math.pow(centena, 3) + (int) Math.pow(dezena, 3) + (int) Math.pow(unidade, 3);
 		
 		return resultado == numero;
@@ -254,7 +253,7 @@ public class Propriedade3025 {
 		
 		int a[] = new int[n+1];
 		
-		for(int i=1; i<n+1; i++) {
+		for(int i = 1; i < n+1; i++) {
 			a[i] = 0;
 		}
 		
@@ -382,6 +381,7 @@ public class Propriedade3025 {
 	}
 	
 	private static void geraExcecaoSeCpfInvalido(int[] d) {
+		
         if (d == null) {
             throw new IllegalArgumentException("Argumento null");
         }

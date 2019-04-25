@@ -14,7 +14,6 @@ function Exercicio1(numero) {
     
     const primDez = Math.trunc(numero / 100);
     const segDez = numero % 100;
-     
     const resultado = Math.pow(primDez + segDez, 2);
         
     return resultado == numero;
