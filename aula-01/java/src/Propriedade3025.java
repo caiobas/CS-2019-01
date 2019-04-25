@@ -353,15 +353,7 @@ public class Propriedade3025 {
 	
 	public static boolean Exercicio20(int d[]) {
 		
-		if(d == null || d.length != 11) {
-			throw new IllegalArgumentException("Numeros fora da exigencia. Esperado um vetor de 11 elementos que contem 0 a 9 em cada elemento.");
-		}
-		
-		for(int i = 0; i < 11; i++) {
-			if(d[i] < 0 || d[i] > 9) {
-				throw new IllegalArgumentException("Numeros fora da exigencia. Esperado um vetor de 11 elementos que contem 0 a 9 em cada elemento.");
-			}
-		}
+		geraExcecaoSeCpfInvalido(d);
 		
 		int j = d[0] + 2*(d[1]) + 3*(d[2]) + 4*(d[3]) + 5*(d[4]) + 6*(d[5]) + 7*(d[6]) + 8*(d[7]) + 9*(d[8]);   
 		int k = d[1] + 2*(d[2]) + 3*(d[3]) + 4*(d[4]) + 5*(d[5]) + 6*(d[6]) + 7*(d[7]) + 8*(d[8]) + 9*(d[9]);
@@ -373,15 +365,7 @@ public class Propriedade3025 {
 	
 	public static boolean Exercicio21(int d[]) {
 		
-		if(d == null || d.length != 11) {
-			throw new IllegalArgumentException("Numeros fora da exigencia. Esperado um vetor de 11 elementos que contem 0 a 9 em cada elemento.");
-		}
-		
-		for(int i = 0; i < 11; i++) {
-			if(d[i] < 0 || d[i] > 9) {
-				throw new IllegalArgumentException("Numeros fora da exigencia. Esperado um vetor de 11 elementos que contem 0 a 9 em cada elemento.");
-			}
-		}
+		geraExcecaoSeCpfInvalido(d);
 		
 		int p = d[8];
 		int s = d[8];
@@ -396,5 +380,21 @@ public class Propriedade3025 {
 		
 		return (j == d[9]) && (k == d[10]);
 	}
+	
+	private static void geraExcecaoSeCpfInvalido(int[] d) {
+        if (d == null) {
+            throw new IllegalArgumentException("Argumento null");
+        }
+
+         if (d.length != 11) {
+            throw new IllegalArgumentException("CPF deve ter exatos 11 digitos");
+        }
+
+         for (int i = 0; i < 11; i++) {
+            if (d[i] < 0 || d[i] > 9) {
+                throw new IllegalArgumentException("Número não está dentro da exigência pedida");
+            }
+        }
+    }
 	
 }
