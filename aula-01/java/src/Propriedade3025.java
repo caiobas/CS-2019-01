@@ -4,32 +4,30 @@ public class Propriedade3025 {
 
 	public static boolean Exercicio1(int numero) {
 		
- 		if(numero >= 0 && numero <= 9999) {
- 			int primDez = numero / 100;
- 			int segDez = numero % 100;
- 			
- 			int resultado = (int) Math.pow(primDez + segDez, 2);
- 			
- 			return resultado == numero;
+ 		if(numero < 0 || numero > 9999) {
+ 			throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero entre 0 e 9999.");
  		}
- 		throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero entre 0 e 9999.");
+ 			
+		int primDez = numero / 100;
+		int segDez = numero % 100;
+		int resultado = (int) Math.pow(primDez + segDez, 2);
 		
+		return resultado == numero;
 	}
 	
 	public static boolean Exercicio2(int numero) {
 		
-		if(numero >= 100 && numero <= 999) {
-			int centena = numero / 100;
-			int dezenaAux = numero % 100;
-			int dezena = dezenaAux / 10;
-			int unidade = numero % 10;
-			
-			int resultado = (int) Math.pow(centena, 3) + (int) Math.pow(dezena, 3) + (int) Math.pow(unidade, 3);
-			
-			return resultado == numero;
+		if(numero < 100 || numero > 999) {
+			throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero entre 100 e 999.");
 		}
-		throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero entre 100 e 999.");
-	
+		int centena = numero / 100;
+		int dezenaAux = numero % 100;
+		int dezena = dezenaAux / 10;
+		int unidade = numero % 10;
+		
+		int resultado = (int) Math.pow(centena, 3) + (int) Math.pow(dezena, 3) + (int) Math.pow(unidade, 3);
+		
+		return resultado == numero;
 	}
 	
 	public static double Exercicio3(int dia, int mes, int ano) {
@@ -54,7 +52,6 @@ public class Propriedade3025 {
 		int resultado = dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400);
 		
 		return resultado % 7;
-	
 	}
 	
 	public static int Exercicio4(int dividendo, int divisor) {
@@ -356,9 +353,13 @@ public class Propriedade3025 {
 	
 	public static boolean Exercicio20(int d[]) {
 		
+		if(d == null || d.length != 11) {
+			throw new IllegalArgumentException("Numeros fora da exigencia. Esperado um vetor de 11 elementos que contem 0 a 9 em cada elemento.");
+		}
+		
 		for(int i = 0; i < 11; i++) {
 			if(d[i] < 0 || d[i] > 9) {
-				throw new IllegalArgumentException("Numeros fora da exigencia. Esperado um vetor e que comtem 0 a 9 em cada elemento.");
+				throw new IllegalArgumentException("Numeros fora da exigencia. Esperado um vetor de 11 elementos que contem 0 a 9 em cada elemento.");
 			}
 		}
 		
@@ -372,9 +373,13 @@ public class Propriedade3025 {
 	
 	public static boolean Exercicio21(int d[]) {
 		
+		if(d == null || d.length != 11) {
+			throw new IllegalArgumentException("Numeros fora da exigencia. Esperado um vetor de 11 elementos que contem 0 a 9 em cada elemento.");
+		}
+		
 		for(int i = 0; i < 11; i++) {
 			if(d[i] < 0 || d[i] > 9) {
-				throw new IllegalArgumentException("Numeros fora da exigencia. Esperado um vetor e que comtem 0 a 9 em cada elemento.");
+				throw new IllegalArgumentException("Numeros fora da exigencia. Esperado um vetor de 11 elementos que contem 0 a 9 em cada elemento.");
 			}
 		}
 		

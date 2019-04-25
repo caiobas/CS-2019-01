@@ -24,6 +24,7 @@ public class Main {
 		System.out.println(Propriedade3025.Exercicio19(4));
 		int d[] = {6, 3, 2, 3, 3, 6, 6, 9, 4, 0, 3};
 		int d1[] = {7, 4, 8, 3, 3, 8, 4, 3, 8, 7, 0};
+		int d2[] = null;
 		System.out.println(Propriedade3025.Exercicio20(d));
 		System.out.println(Propriedade3025.Exercicio21(d1));
 		
