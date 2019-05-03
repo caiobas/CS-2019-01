@@ -1,3 +1,14 @@
+/**
+ * Função matemática para o cálculo de Fibonacci.
+ * 
+ * @param {number} n Número para cálculo de Fibonacci.
+ * 
+ * @returns {number} Retorna número de Fibonacci.
+ * 
+ * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
+ * @throws {RangeError} n deve ser maior ou igual a 0.
+ */
+
 function Exercicio19(n) {
             
     if(typeof n != 'number'){

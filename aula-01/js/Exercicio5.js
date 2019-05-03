@@ -1,3 +1,14 @@
+/**
+ * Função matemática que calcula a soma dos números naturais até o parâmetro.
+ * 
+ * @param {number} numero Número limite para a soma.
+ * 
+ * @returns {number} Retorna a soma dos números naturais até o parâmetro. 
+ * 
+ * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
+ * @throws {RangeError} Número deve ser maior que 1.
+ */
+
 function Exercicio5(numero) {
             
     if(typeof numero != 'number'){

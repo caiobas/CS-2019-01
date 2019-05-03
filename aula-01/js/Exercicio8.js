@@ -1,3 +1,15 @@
+/**
+ * Função matemática que calcula a potência usando somas.
+ * 
+ * @param {number} x Número natural a ser elevado.
+ * @param {number} y Potência do número.
+ * 
+ * @returns {number} Retorna o resultado da potência.
+ * 
+ * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
+ * @throws {RangeError} x e y devem ser maiores ou igual a 0.
+ */
+
 function Exercicio8(x, y) {
             
     if(typeof x != 'number' || typeof y != 'number'){

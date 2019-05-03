@@ -1,3 +1,13 @@
+/**
+ * Função matemática que verifica se o quadrado da soma dos 2 primeiros números com os 2 ultimos é o próprio número.
+ * 
+ * @param {number} numero Número a ser verificado.
+ * 
+ * @returns {boolean} Retorna booleano para verificação. 
+ * 
+ * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
+ * @throws {RangeError} Se o número não está entre 0 e 9999.
+ */
 function Exercicio1(numero) {
             
     if(typeof numero != 'number'){

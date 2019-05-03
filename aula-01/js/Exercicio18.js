@@ -1,3 +1,15 @@
+/**
+ * Função matemática com a regra de Horner para avaliação de polinômio.
+ * 
+ * @param {number} x Número para cálculo da regra de Horner.
+ * @param {number} g Número para cálculo da regra de Horner.
+ * 
+ * @returns {number} Retorna regra de Horner.
+ * 
+ * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
+ * @throws {RangeError} g deve ser maior ou igual a 1.
+ */
+
 function Exercicio18(x, g) {
             
     if(typeof x != 'number' || typeof g != 'number'){

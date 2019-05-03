@@ -1,3 +1,16 @@
+/**
+ * Função matemática que verifica o dia da semana de uma determinada data.
+ * 
+ * @param {number} dia Dia a ser verificado.
+ * @param {number} mes Mês a ser verificado.
+ * @param {number} ano Ano a ser verificado.
+ * 
+ * @returns {number} Retorna número entre 0 e 6, sendo 0 segunda-feria seguindo para 6 domingo. 
+ * 
+ * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
+ * @throws {RangeError} Se qualquer um dos argumentos não estiver dentro dos parâmetros de data.
+ */
+
 function Exercicio3(dia, mes, ano) {
             
     if(typeof dia != 'number' || typeof mes != 'number' || typeof ano != 'number'){
