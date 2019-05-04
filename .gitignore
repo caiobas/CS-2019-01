@@ -3,4 +3,4 @@ desktop.ini
 .classpath
 .project
 .settings/
-.class
+bin/
