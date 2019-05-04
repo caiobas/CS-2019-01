@@ -1,1 +1,6 @@
 node_modules/
+desktop.ini
+.classpath
+.project
+.settings/
+.class
