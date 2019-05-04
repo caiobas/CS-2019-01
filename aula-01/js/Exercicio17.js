@@ -1,6 +1,6 @@
 function Exercicio17(a, b) {
             
-    if(typeof a != 'number' || typeof b != 'number'){
+    if(typeof a != "number" || typeof b != "number"){
         return TypeError("Este parâmetro não é um número.");
     }
 

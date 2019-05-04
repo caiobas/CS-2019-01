@@ -10,7 +10,7 @@ function Exercicio21(d) {
 
     for(let i = 0; i < d.length; i++) {
         if(d[i] < 0 || d[i] > 9 || Math.trunc(d[i]) != d[i]) {
-            RangeError("Dados do vetor incorretos.")
+            RangeError("Dados do vetor incorretos.");
         }
     }
 

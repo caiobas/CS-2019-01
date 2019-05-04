@@ -1,6 +1,6 @@
 function Exercicio3(dia, mes, ano) {
             
-    if(typeof dia != 'number' || typeof mes != 'number' || typeof ano != 'number'){
+    if(typeof dia != "number" || typeof mes != "number" || typeof ano != "number"){
         return TypeError("Este parâmetro não é um número.");
     }
 

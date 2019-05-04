@@ -1,6 +1,6 @@
 function Exercicio4(dividendo, divisor) {
         
-    if(typeof dividendo != 'number' || typeof divisor != 'number'){
+    if(typeof dividendo != "number" || typeof divisor != "number"){
         return TypeError("Um(ou mais) parâmetro(s) não é um número.");
     }
 

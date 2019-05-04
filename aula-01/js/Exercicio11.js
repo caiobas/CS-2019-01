@@ -1,6 +1,6 @@
 function Exercicio11(x, y, k) {
             
-    if(typeof x != 'number' || typeof y != 'number' || typeof k != 'number'){
+    if(typeof x != "number" || typeof y != "number" || typeof k != "number"){
         return TypeError("Este parâmetro não é um número.");
     }
 

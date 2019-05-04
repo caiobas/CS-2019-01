@@ -1,6 +1,6 @@
 function Exercicio13(n, i) {
             
-    if(typeof n != 'number' || typeof i != 'number'){
+    if(typeof n != "number" || typeof i != "number"){
         return TypeError("Este parâmetro não é um número.");
     }
     
