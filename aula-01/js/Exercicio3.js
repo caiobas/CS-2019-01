@@ -1,15 +1,15 @@
 function Exercicio3(dia, mes, ano) {
             
     if(typeof dia != "number" || typeof mes != "number" || typeof ano != "number"){
-        return TypeError("Este parâmetro não é um número.");
+        throw new TypeError("Este parâmetro não é um número.");
     }
 
     if(Math.trunc(dia) != dia || Math.trunc(mes) != mes|| Math.trunc(ano) != ano){
-        return TypeError("Este número não corresponde a uma data.");
+        throw new TypeError("Este número não corresponde a uma data.");
     }
     
     if(dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano <= 1953) {
-        return RangeError("Data incorreta. Dia deveria estar entre 1 e 31, mês entre 1 e 12 e ano igual ou maior que 1954.");
+        throw new RangeError("Data incorreta. Dia deveria estar entre 1 e 31, mês entre 1 e 12 e ano igual ou maior que 1954.");
     }
 
     if(mes == 1 && mes == 2) {

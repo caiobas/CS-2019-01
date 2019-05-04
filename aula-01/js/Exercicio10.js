@@ -1,15 +1,15 @@
 function Exercicio10(n, k) {
             
     if(typeof n != "number" || typeof k != "number"){
-        return TypeError("Este parâmetro não é um número.");
+        throw new TypeError("Este parâmetro não é um número.");
     }
 
     if(Math.trunc(n) != n || Math.trunc(k) != k){
-        return TypeError("Um(ou mais) parâmetro(s) não é um inteiro.");
+        throw new TypeError("Um(ou mais) parâmetro(s) não é um inteiro.");
     }
     
     if(n < 1 || k < 2) {
-        return RangeError("n deve ser maior ou igual a 1 e k maior ou igual a 2.");
+        throw new RangeError("n deve ser maior ou igual a 1 e k maior ou igual a 2.");
     }
 
     let i = 2;

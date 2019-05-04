@@ -1,15 +1,15 @@
 function Exercicio2(numero) {
             
     if(typeof numero != "number"){
-        return TypeError("Este parâmetro não é um número.");
+        throw new TypeError("Este parâmetro não é um número.");
     }
 
     if(Math.trunc(numero) != numero){
-        return TypeError("Este parâmetro não é um inteiro.");
+        throw new TypeError("Este parâmetro não é um inteiro.");
     }
     
     if(numero < 100 || numero > 999) {
-        return Error("Numero não está entre 100 e 999.");
+        throw new Error("Numero não está entre 100 e 999.");
     }
 
     const centena = Math.trunc(numero / 100);  

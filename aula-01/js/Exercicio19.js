@@ -1,15 +1,15 @@
 function Exercicio19(n) {
             
     if(typeof n != "number"){
-        return TypeError("Este parâmetro não é um número.");
+        throw new TypeError("Este parâmetro não é um número.");
     }
 
     if(Math.trunc(n) != n){
-        return TypeError("Este parâmetro não é um inteiro.");
+        throw new TypeError("Este parâmetro não é um inteiro.");
     }
     
     if(n < 0) {
-        return RangeError("n deve ser maior ou igual a 0.");
+        throw new RangeError("n deve ser maior ou igual a 0.");
     }
 
     if(n == 0 || n == 1) {

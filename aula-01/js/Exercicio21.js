@@ -1,16 +1,16 @@
 function Exercicio21(d) {
             
     if(!d.isArray){
-        TypeError("Este parâmetro não é um vetor.");
+        throw new TypeError("Este parâmetro não é um vetor.");
     }
     
     if(d.length != 11) {
-        RangeError("Vetor de tamanho incorreto.");
+        throw new RangeError("Vetor de tamanho incorreto.");
     }
 
     for(let i = 0; i < d.length; i++) {
         if(d[i] < 0 || d[i] > 9 || Math.trunc(d[i]) != d[i]) {
-            RangeError("Dados do vetor incorretos.");
+            throw new RangeError("Dados do vetor incorretos.");
         }
     }
 

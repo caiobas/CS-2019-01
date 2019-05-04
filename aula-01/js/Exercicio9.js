@@ -1,11 +1,11 @@
 function Exercicio9(n) {
             
     if(typeof n != "number"){
-        return TypeError("Este parâmetro não é um número.");
+        throw new TypeError("Este parâmetro não é um número.");
     }
     
     if(n < 1) {
-        return RangeError("Numero não é maior ou igual a 1.");
+        throw new RangeError("Numero não é maior ou igual a 1.");
     }
 
     let s = -1;
