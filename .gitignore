@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-node_modules/
-desktop.ini
-||||||| merged common ancestors
-node_modules/
-=======
 node_modules/
 desktop.ini
 .classpath
 .project
 .settings/
 bin/
->>>>>>> refactoring/documentacao
