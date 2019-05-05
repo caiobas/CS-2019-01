@@ -1,3 +1,15 @@
+/**
+ * Função matemática que calcula maior divisor comum.
+ * 
+ * @param {number} a Número para cálculo do maior divisor comum.
+ * @param {number} b Número para cálculo do maior divisor comum.
+ * 
+ * @returns {number} Retorna maior divisor comum.
+ * 
+ * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
+ * @throws {RangeError} a deve ser maior ou igual a b e b deve ser maior que 0.
+ */
+
 function Exercicio17(a, b) {
             
     if(typeof a != "number" || typeof b != "number"){

@@ -1,3 +1,14 @@
+/**
+ * Função matemática que verifica se a soma do cubo dos digitos do número é o próprio número.
+ * 
+ * @param {number} numero Número a ser verificado.
+ * 
+ * @returns {boolean} Retorna booleano para verificação. 
+ * 
+ * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
+ * @throws {RangeError} Número não está entre 100 e 999.
+ */
+
 function Exercicio2(numero) {
             
     if(typeof numero != "number"){

@@ -1,3 +1,15 @@
+/**
+ * Função matemática que calcula a proximidade do logaritmo natural.
+ * 
+ * @param {number} n Numerador do logaritmo.
+ * @param {number} k Número utilizado para proximidade do logaritmo natural.
+ * 
+ * @returns {number} Retorna valor mais próximo do logaritmo natural.
+ * 
+ * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
+ * @throws {RangeError} n deve ser maior ou igual a 1 e k maior ou igual a 2.
+ */
+
 function Exercicio10(n, k) {
             
     if(typeof n != "number" || typeof k != "number"){

@@ -1,3 +1,14 @@
+/**
+ * Função matemática que confere se o número é quadrado perfeito.
+ * 
+ * @param {number} n Número para conferir se é quadrado perfeito.
+ * 
+ * @returns {boolean} Retorna booleano se é quadrado perfeito.
+ * 
+ * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
+ * @throws {RangeError} n deve ser maior ou igual a 1.
+ */
+
 function Exercicio12(n) {
             
     if(typeof n != "number"){

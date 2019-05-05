@@ -1,3 +1,15 @@
+/**
+ * Função matemática que calcula o valor mais próximo da raiz quadrada.
+ * 
+ * @param {number} n Número para calculo da raiz quadrada.
+ * @param {number} i Número para proximidade de raiz quadrada.
+ * 
+ * @returns {number} Retorna número mais próximo da raiz quadrada.
+ * 
+ * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
+ * @throws {RangeError} n deve ser maior ou igual a 1.
+ */
+
 function Exercicio13(n, i) {
             
     if(typeof n != "number" || typeof i != "number"){

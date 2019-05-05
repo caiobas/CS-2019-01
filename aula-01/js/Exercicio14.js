@@ -1,3 +1,14 @@
+/**
+ * Função matemática que confere se o número é primo.
+ * 
+ * @param {number} n Número para conferir se é número primo.
+ * 
+ * @returns {boolean} Retorna booleano se é número primo.
+ * 
+ * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
+ * @throws {RangeError} n deve ser maior ou igual a 1.
+ */
+
 function Exercicio14(n) {
             
     if(typeof n != "number"){

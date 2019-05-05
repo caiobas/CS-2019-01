@@ -1,3 +1,15 @@
+/**
+ * Função matemática que calcula o produto de inteiro usando somas.
+ * 
+ * @param {number} a Número usado para calcular produto.
+ * @param {number} b Número usado para calcular produto.
+ * 
+ * @returns {number} Retorna o produto dos números.
+ * 
+ * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
+ * @throws {RangeError} a e b devem ser maior ou igual a 0.
+ */
+
 function Exercicio7(a, b) {
             
     if(typeof a != "number" || typeof b != "number"){

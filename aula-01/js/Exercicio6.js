@@ -1,3 +1,14 @@
+/**
+ * Função matemática que calcula o fatorial de um número natural.
+ * 
+ * @param {number} numero Número limite para o fatorial.
+ * 
+ * @returns {number} Retorna o fatorial do parâmetro. 
+ * 
+ * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
+ * @throws {RangeError} Número deve ser maior que 1.
+ */
+
 function Exercicio6(numero) {
             
     if(typeof numero != "number"){

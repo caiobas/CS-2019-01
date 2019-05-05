@@ -1,3 +1,16 @@
+/**
+ * Função matemática que calcula a razão áurea.
+ * 
+ * @param {number} x Número para calcular razão áurea.
+ * @param {number} y Número para calcular razão áurea.
+ * @param {number} k Precisão da razão áurea.
+ * 
+ * @returns {number} Retorna valor da razão áurea.
+ * 
+ * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
+ * @throws {RangeError} x deve ser maior ou igual a 0, y deve ser maior que x e k maior que 0.
+ */
+
 function Exercicio11(x, y, k) {
             
     if(typeof x != "number" || typeof y != "number" || typeof k != "number"){
