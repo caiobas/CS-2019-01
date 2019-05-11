@@ -11,7 +11,7 @@
  * @throws {RangeError} x deve ser maior ou igual a 0, y deve ser maior que x e k maior que 0.
  */
 
-function Exercicio11(x, y, k) {
+function razaoAurea(x, y, k) {
             
     if(typeof x != "number" || typeof y != "number" || typeof k != "number"){
         throw new TypeError("Este parâmetro não é um número.");

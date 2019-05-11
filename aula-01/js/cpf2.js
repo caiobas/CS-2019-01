@@ -9,7 +9,7 @@
  * @throws {RangeError} Vetor de tamanho incorreto ou com dígitos incorretos.
  */
 
-function Exercicio21(d) {
+function cpf2(d) {
             
     if(!d.isArray){
         throw new TypeError("Este parâmetro não é um vetor.");

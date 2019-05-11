@@ -10,7 +10,7 @@
  * @throws {RangeError} Divisor deve ser maior que 0 e dividendo deve ser maior ou igual a 0.
  */
 
-function Exercicio4(dividendo, divisor) {
+function restoDivisao(dividendo, divisor) {
         
     if(typeof dividendo != "number" || typeof divisor != "number"){
         throw new TypeError("Um(ou mais) parâmetro(s) não é um número.");

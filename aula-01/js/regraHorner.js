@@ -10,7 +10,7 @@
  * @throws {RangeError} g deve ser maior ou igual a 1.
  */
 
-function Exercicio18(x, g) {
+function regraHorner(x, g) {
             
     if(typeof x != "number" || typeof g != "number"){
         throw new TypeError("Este parâmetro não é um número.");

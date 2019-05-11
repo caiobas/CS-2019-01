@@ -10,7 +10,7 @@
  * @throws {RangeError} n deve ser maior ou igual a 1.
  */
 
-function Exercicio13(n, i) {
+function raizQuadrada(n, i) {
             
     if(typeof n != "number" || typeof i != "number"){
         throw new TypeError("Este parâmetro não é um número.");

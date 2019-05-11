@@ -10,7 +10,7 @@
  * @throws {RangeError} a e b devem ser maior ou igual a 0.
  */
 
-function Exercicio7(a, b) {
+function produtoUsandoSomas(a, b) {
             
     if(typeof a != "number" || typeof b != "number"){
         throw new TypeError("Este(s) parâmetro(s) não é um número.");

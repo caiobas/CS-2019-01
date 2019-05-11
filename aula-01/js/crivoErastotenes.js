@@ -9,7 +9,7 @@
  * @throws {RangeError} n deve ser maior ou igual a 2.
  */
 
-function Exercicio15(n) {
+function crivoErastotenes(n) {
             
     if(typeof n != "number"){
         throw new TypeError("Este parâmetro não é um número.");

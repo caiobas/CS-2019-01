@@ -9,7 +9,7 @@
  * @throws {RangeError} n deve ser maior ou igual a 1.
  */
 
-function Exercicio14(n) {
+function numeroPrimo(n) {
             
     if(typeof n != "number"){
         throw new TypeError("Este parâmetro não é um número.");

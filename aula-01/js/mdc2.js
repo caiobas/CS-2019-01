@@ -10,7 +10,7 @@
  * @throws {RangeError} a deve ser maior ou igual a b e b deve ser maior que 0.
  */
 
-function Exercicio17(a, b) {
+function mdc2(a, b) {
             
     if(typeof a != "number" || typeof b != "number"){
         throw new TypeError("Este parâmetro não é um número.");

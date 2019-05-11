@@ -9,7 +9,7 @@
  * @throws {RangeError} Número não está entre 100 e 999.
  */
 
-function Exercicio2(numero) {
+function propriedade153(numero) {
             
     if(typeof numero != "number"){
         throw new TypeError("Este parâmetro não é um número.");

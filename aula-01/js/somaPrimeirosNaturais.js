@@ -9,7 +9,7 @@
  * @throws {RangeError} Número deve ser maior que 1.
  */
 
-function Exercicio5(numero) {
+function somaPrimeirosNaturais(numero) {
             
     if(typeof numero != "number"){
         throw new TypeError("Este parâmetro não é um número.");

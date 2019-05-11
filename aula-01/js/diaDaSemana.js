@@ -11,7 +11,7 @@
  * @throws {RangeError} Se qualquer um dos argumentos não estiver dentro dos parâmetros de data.
  */
 
-function Exercicio3(dia, mes, ano) {
+function diaDaSemana(dia, mes, ano) {
             
     if(typeof dia != "number" || typeof mes != "number" || typeof ano != "number"){
         throw new TypeError("Este parâmetro não é um número.");

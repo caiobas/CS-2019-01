@@ -10,7 +10,7 @@
  * @throws {RangeError} n deve ser maior ou igual a 1 e k maior ou igual a 2.
  */
 
-function Exercicio10(n, k) {
+function logaritmo(n, k) {
             
     if(typeof n != "number" || typeof k != "number"){
         throw new TypeError("Este parâmetro não é um número.");

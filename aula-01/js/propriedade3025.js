@@ -10,7 +10,7 @@ module.exports = Exercicio1;
  * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
  * @throws {RangeError} Se o número não está entre 0 e 9999.
  */
-function Exercicio1(numero) {
+function propriedade3025(numero) {
             
     if(typeof numero != "number"){
         throw new TypeError("Este parâmetro não é um número.");

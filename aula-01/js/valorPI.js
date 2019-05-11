@@ -9,7 +9,7 @@
  * @throws {RangeError} Numero não é maior ou igual a 1.
  */
 
-function Exercicio9(n) {
+function valorPI(n) {
             
     if(typeof n != "number"){
         throw new TypeError("Este parâmetro não é um número.");

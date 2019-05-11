@@ -10,7 +10,7 @@
  * @throws {RangeError} x e y devem ser maiores ou igual a 0.
  */
 
-function Exercicio8(x, y) {
+function potenciaUsandoSomas(x, y) {
             
     if(typeof x != "number" || typeof y != "number"){
         throw new TypeError("Este parâmetro não é um número.");

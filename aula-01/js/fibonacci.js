@@ -9,7 +9,7 @@
  * @throws {RangeError} n deve ser maior ou igual a 0.
  */
 
-function Exercicio19(n) {
+function fibonacci(n) {
             
     if(typeof n != "number"){
         throw new TypeError("Este parâmetro não é um número.");
