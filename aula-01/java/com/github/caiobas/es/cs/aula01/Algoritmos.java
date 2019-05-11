@@ -1,8 +1,8 @@
-import java.util.Scanner;
+package com/github/caiobas/es/cs/aula01;
 
-public class Propriedade3025 {
+public class Algoritmos {
 
-	public static boolean Exercicio1(int numero) {
+	public static boolean propriedade3025(int numero) {
 		
  		if(numero < 0 || numero > 9999) {
  			throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero entre 0 e 9999.");
@@ -15,7 +15,7 @@ public class Propriedade3025 {
 		return resultado == numero;
 	}
 	
-	public static boolean Exercicio2(int numero) {
+	public static boolean propriedade153(int numero) {
 		
 		if(numero < 100 || numero > 999) {
 			throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero entre 100 e 999.");
@@ -29,7 +29,7 @@ public class Propriedade3025 {
 		return resultado == numero;
 	}
 	
-	public static double Exercicio3(int dia, int mes, int ano) {
+	public static double diaDaSemana(int dia, int mes, int ano) {
 		
 		if(dia < 1 || dia > 31) {
 			throw new IllegalArgumentException("Dia fora da exigencia:" + dia + " Esperado dia entre 1 e 31.");
@@ -53,7 +53,7 @@ public class Propriedade3025 {
 		return resultado % 7;
 	}
 	
-	public static int Exercicio4(int dividendo, int divisor) {
+	public static int restoDivisao(int dividendo, int divisor) {
 		
 		if(dividendo < 0) {
 			throw new IllegalArgumentException("Dividendo fora da exigencia:" + dividendo + " Esperado dividendo maior ou igual a 0.");
@@ -71,7 +71,7 @@ public class Propriedade3025 {
 		return resto;
 	}
 	
-	public static int Exercicio5(int numero) {
+	public static int somaPrimeirosNaturais(int numero) {
 		
 		if(numero < 1) {
 			throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero maior que 0.");
@@ -86,7 +86,7 @@ public class Propriedade3025 {
 		return s;
 	}
 	
-	public static int Exercicio6(int numero) {
+	public static int fatorial(int numero) {
 		
 		if(numero < 1) {
 			throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero maior que 0.");
@@ -101,7 +101,7 @@ public class Propriedade3025 {
 		return f;
 	}
 	
-	public static int Exercicio7(int a, int b) {
+	public static int produtoUsandoSomas(int a, int b) {
 		
 		if(a < 0 || b < 0) {
 			throw new IllegalArgumentException("Numero fora da exigencia. Esperado numero maior ou igual a 0.");
@@ -124,7 +124,7 @@ public class Propriedade3025 {
 		return s;
 	}
 	
-	public static int Exercicio8(int x, int y) {
+	public static int potenciaUsandoSomas(int x, int y) {
 		
 		if(x < 0 || y < 0) {
 			throw new IllegalArgumentException("Numero fora da exigencia. Esperado numero maior ou igual a 0.");
@@ -139,7 +139,7 @@ public class Propriedade3025 {
 		return potencia;
 	}
 	
-	public static double Exercicio9(int n) {
+	public static double valorPI(int n) {
 		
 		if(n < 1) {
 			throw new IllegalArgumentException("Numero fora da exigencia. Esperado numero maior ou igual a 1.");
@@ -158,7 +158,7 @@ public class Propriedade3025 {
 		return p;
 	}
 	
-	public static double Exercicio10(int n, int k) {
+	public static double logaritmo(int n, int k) {
 		
 		if(n < 1 || k < 2) {
 			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior ou igual a 1 e k maior ou igual a 2.");
@@ -178,7 +178,7 @@ public class Propriedade3025 {
 		return e;
 	}
 	
-	public static double Exercicio11(int x, int y, int k) {
+	public static double razaoAurea(int x, int y, int k) {
 		
 		if(x < 0 || y < x || k <= 0) {
 			throw new IllegalArgumentException("Numero fora da exigencia. Esperado x maior ou igual a 0, y maior que x e k maior que 0.");
@@ -197,7 +197,7 @@ public class Propriedade3025 {
 		return c / a;
 	}
 	
-	public static boolean Exercicio12(int n) {
+	public static boolean quadradoPerfeito(int n) {
 		
 		if(n < 1) {
 			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior ou igual a 1.");
@@ -214,7 +214,7 @@ public class Propriedade3025 {
 		return s == n;
 	}
 	
-	public static double Exercicio13(int n, int i) {
+	public static double raizQuadrada(int n, int i) {
 		
 		if(n < 1) {
 			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior que 0.");
@@ -230,7 +230,7 @@ public class Propriedade3025 {
 		return r;
 	}
 	
-	public static boolean Exercicio14(int n) {
+	public static boolean numeroPrimo(int n) {
 		
 		if(n < 2) {
 			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior que 1.");
@@ -245,7 +245,7 @@ public class Propriedade3025 {
 		return true;
 	}
 	
-	public static boolean Exercicio15(int n) {
+	public static boolean crivoErastotenes(int n) {
 		
 		if(n < 2) {
 			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior que 1.");
@@ -272,7 +272,7 @@ public class Propriedade3025 {
 		return a[n] == 1;
 	}
 
-	public static int Exercicio16(int a, int b) {
+	public static int mdc1(int a, int b) {
 		
 		if(a < b || b < 1) {
 			throw new IllegalArgumentException("Numero fora da exigencia. Esperado a maior ou igual a b e b maior que 0.");
@@ -288,7 +288,7 @@ public class Propriedade3025 {
 		return a;
 	}
 
-	public static int Exercicio17(int a, int b) {
+	public static int mdc2(int a, int b) {
 		
 		if(a < b || b < 1) {
 			throw new IllegalArgumentException("Numero fora da exigencia. Esperado a maior ou igual a b e b maior que 0.");
@@ -306,7 +306,7 @@ public class Propriedade3025 {
 		return a;
 	}
 
-	public static double Exercicio18(double x, int g) {
+	public static double regraHorner(double x, int g) {
 		
 		if(g < 1) {
 			throw new IllegalArgumentException("Numero fora da exigencia. Esperado g maior ou igual a 1.");
@@ -328,7 +328,7 @@ public class Propriedade3025 {
 		return p;
 	}
 
-	public static int Exercicio19(int n) {
+	public static int fibonacci(int n) {
 		
 		if(n < 0) {
 			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior ou igual a 0.");
@@ -350,7 +350,7 @@ public class Propriedade3025 {
 		return c;
 	}
 	
-	public static boolean Exercicio20(int d[]) {
+	public static boolean cpf1(int d[]) {
 		
 		geraExcecaoSeCpfInvalido(d);
 		
@@ -362,7 +362,7 @@ public class Propriedade3025 {
 		return (dj == d[9]) && (dk == d[10]);
 	}
 	
-	public static boolean Exercicio21(int d[]) {
+	public static boolean cpf2(int d[]) {
 		
 		geraExcecaoSeCpfInvalido(d);
 		
@@ -392,7 +392,7 @@ public class Propriedade3025 {
 
          for (int i = 0; i < 11; i++) {
             if (d[i] < 0 || d[i] > 9) {
-                throw new IllegalArgumentException("Número não está dentro da exigência pedida");
+                throw new IllegalArgumentException("Nï¿½mero nï¿½o estï¿½ dentro da exigï¿½ncia pedida");
             }
         }
     }
