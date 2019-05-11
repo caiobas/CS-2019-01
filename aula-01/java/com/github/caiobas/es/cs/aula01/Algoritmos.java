@@ -64,7 +64,7 @@ public class Algoritmos {
 		
 		int resto = dividendo;
 		
-		while(divisor <= resto) {
+		while(resto >= divisor) {
 			resto = resto - divisor;
 		}
 		
@@ -222,7 +222,7 @@ public class Algoritmos {
 		
 		double r = 1;
 		
-		while(0 <= i) {
+		while(i >= 0) {
 			r = (r + n/r) / 2;
 			i = i - 1;
 		}
