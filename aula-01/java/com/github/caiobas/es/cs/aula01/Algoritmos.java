@@ -8,9 +8,9 @@ public class Algoritmos {
  			throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero entre 0 e 9999.");
  		}
  			
-		int primDez = numero / 100;
-		int segDez = numero % 100;
-		int resultado = (int) Math.pow(primDez + segDez, 2);
+		final int primDez = numero / 100;
+		final int segDez = numero % 100;
+		final int resultado = (int) Math.pow(primDez + segDez, 2);
 		
 		return resultado == numero;
 	}
@@ -20,11 +20,11 @@ public class Algoritmos {
 		if(numero < 100 || numero > 999) {
 			throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero entre 100 e 999.");
 		}
-		int centena = numero / 100;
-		int dezenaAux = numero % 100;
-		int dezena = dezenaAux / 10;
-		int unidade = numero % 10;
-		int resultado = (int) Math.pow(centena, 3) + (int) Math.pow(dezena, 3) + (int) Math.pow(unidade, 3);
+		final int centena = numero / 100;
+		final int dezenaAux = numero % 100;
+		final int dezena = dezenaAux / 10;
+		final int unidade = numero % 10;
+		final int resultado = (int) Math.pow(centena, 3) + (int) Math.pow(dezena, 3) + (int) Math.pow(unidade, 3);
 		
 		return resultado == numero;
 	}
@@ -48,7 +48,7 @@ public class Algoritmos {
 			ano = ano - 1;
 		}
 		
-		int resultado = dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400);
+		final int resultado = dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400);
 		
 		return resultado % 7;
 	}
@@ -186,10 +186,9 @@ public class Algoritmos {
 		
 		double c = y;
 		double a = x;
-		double t; //Perguntar ao professor se é interessante criar o t dentro ou fora do for.
 		
 		for(int i = 1; i <= k; i++){
-			t = c;
+			double t = c;
 			c = c + a;
 			a = t;
 		}
@@ -277,10 +276,9 @@ public class Algoritmos {
 		if(a < b || b < 1) {
 			throw new IllegalArgumentException("Numero fora da exigencia. Esperado a maior ou igual a b e b maior que 0.");
 		}
-		int m; //Mesma duvida do Exercicio11
 		
 		while(b != 0) {
-			m = a % b;
+			int m = a % b;
 			a = b;
 			b = m;
 		}
@@ -342,7 +340,7 @@ public class Algoritmos {
 		int c = 1;
 		
 		for(int i = 2; i <= n; i++){
-			int t = c; //Mesma duvida referente ao Exercicio11 e 16
+			int t = c;
 			c = c + a;
 			a = t;
 		}
@@ -354,10 +352,10 @@ public class Algoritmos {
 		
 		geraExcecaoSeCpfInvalido(d);
 		
-		int j = d[0] + 2*(d[1]) + 3*(d[2]) + 4*(d[3]) + 5*(d[4]) + 6*(d[5]) + 7*(d[6]) + 8*(d[7]) + 9*(d[8]);   
-		int k = d[1] + 2*(d[2]) + 3*(d[3]) + 4*(d[4]) + 5*(d[5]) + 6*(d[6]) + 7*(d[7]) + 8*(d[8]) + 9*(d[9]);
-		int dj = Math.floorMod(Math.floorMod(j,  11), 10);
-		int dk = Math.floorMod(Math.floorMod(k,  11), 10);
+		final int j = d[0] + 2*(d[1]) + 3*(d[2]) + 4*(d[3]) + 5*(d[4]) + 6*(d[5]) + 7*(d[6]) + 8*(d[7]) + 9*(d[8]);   
+		final int k = d[1] + 2*(d[2]) + 3*(d[3]) + 4*(d[4]) + 5*(d[5]) + 6*(d[6]) + 7*(d[7]) + 8*(d[8]) + 9*(d[9]);
+		final int dj = Math.floorMod(Math.floorMod(j,  11), 10);
+		final int dk = Math.floorMod(Math.floorMod(k,  11), 10);
 		
 		return (dj == d[9]) && (dk == d[10]);
 	}
@@ -374,8 +372,8 @@ public class Algoritmos {
 			s = s + p;
 		}
 		
-		int j = Math.floorMod(Math.floorMod(s,  11), 10);
-		int k = Math.floorMod(Math.floorMod((s - p + (9 * d[9])),  11), 10);
+		final int j = Math.floorMod(Math.floorMod(s,  11), 10);
+		final int k = Math.floorMod(Math.floorMod((s - p + (9 * d[9])),  11), 10);
 		
 		return (j == d[9]) && (k == d[10]);
 	}
