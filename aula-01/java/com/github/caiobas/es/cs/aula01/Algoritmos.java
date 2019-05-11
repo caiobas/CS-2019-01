@@ -14,7 +14,7 @@ public class Algoritmos {
 		
 		return resultado == numero;
 	}
-	
+
 	public static boolean propriedade153(int numero) {
 		
 		if(numero < 100 || numero > 999) {
@@ -28,7 +28,7 @@ public class Algoritmos {
 		
 		return resultado == numero;
 	}
-	
+
 	public static double diaDaSemana(int dia, int mes, int ano) {
 		
 		if(dia < 1 || dia > 31) {
@@ -52,7 +52,7 @@ public class Algoritmos {
 		
 		return resultado % 7;
 	}
-	
+
 	public static int restoDivisao(int dividendo, int divisor) {
 		
 		if(dividendo < 0) {
@@ -70,7 +70,7 @@ public class Algoritmos {
 		
 		return resto;
 	}
-	
+
 	public static int somaPrimeirosNaturais(int numero) {
 		
 		if(numero < 1) {
@@ -85,7 +85,7 @@ public class Algoritmos {
 		
 		return s;
 	}
-	
+
 	public static int fatorial(int numero) {
 		
 		if(numero < 1) {
@@ -100,7 +100,7 @@ public class Algoritmos {
 		
 		return f;
 	}
-	
+
 	public static int produtoUsandoSomas(int a, int b) {
 		
 		if(a < 0 || b < 0) {
@@ -123,7 +123,7 @@ public class Algoritmos {
 		
 		return s;
 	}
-	
+
 	public static int potenciaUsandoSomas(int x, int y) {
 		
 		if(x < 0 || y < 0) {
@@ -138,7 +138,7 @@ public class Algoritmos {
 		
 		return potencia;
 	}
-	
+
 	public static double valorPI(int n) {
 		
 		if(n < 1) {
@@ -157,7 +157,7 @@ public class Algoritmos {
 		
 		return p;
 	}
-	
+
 	public static double logaritmo(int n, int k) {
 		
 		if(n < 1 || k < 2) {
@@ -177,7 +177,7 @@ public class Algoritmos {
 		
 		return e;
 	}
-	
+
 	public static double razaoAurea(int x, int y, int k) {
 		
 		if(x < 0 || y < x || k <= 0) {
@@ -196,7 +196,7 @@ public class Algoritmos {
 		
 		return c / a;
 	}
-	
+
 	public static boolean quadradoPerfeito(int n) {
 		
 		if(n < 1) {
@@ -213,7 +213,7 @@ public class Algoritmos {
 		
 		return s == n;
 	}
-	
+
 	public static double raizQuadrada(int n, int i) {
 		
 		if(n < 1) {
@@ -229,7 +229,7 @@ public class Algoritmos {
 		
 		return r;
 	}
-	
+
 	public static boolean numeroPrimo(int n) {
 		
 		if(n < 2) {
@@ -244,7 +244,7 @@ public class Algoritmos {
 		
 		return true;
 	}
-	
+
 	public static boolean crivoErastotenes(int n) {
 		
 		if(n < 2) {
@@ -349,7 +349,7 @@ public class Algoritmos {
 		
 		return c;
 	}
-	
+
 	public static boolean cpf1(int d[]) {
 		
 		geraExcecaoSeCpfInvalido(d);
@@ -361,7 +361,7 @@ public class Algoritmos {
 		
 		return (dj == d[9]) && (dk == d[10]);
 	}
-	
+
 	public static boolean cpf2(int d[]) {
 		
 		geraExcecaoSeCpfInvalido(d);
@@ -379,7 +379,7 @@ public class Algoritmos {
 		
 		return (j == d[9]) && (k == d[10]);
 	}
-	
+
 	private static void geraExcecaoSeCpfInvalido(int[] d) {
 		
         if (d == null) {
@@ -396,5 +396,5 @@ public class Algoritmos {
             }
         }
     }
-	
+
 }
