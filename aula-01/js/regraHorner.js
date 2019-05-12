@@ -9,7 +9,7 @@
  * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
  * @throws {RangeError} g deve ser maior ou igual a 1.
  */
-function regraHorner(x, g) {
+function regraHorner(x, g, a) {
 
     if (typeof x != "number" || typeof g != "number") {
         throw new TypeError("Este parâmetro não é um número.");
@@ -18,10 +18,6 @@ function regraHorner(x, g) {
     if (g < 1) {
         throw new RangeError("g deve ser maior ou igual a 1.");
     }
-
-    var a = [g + 1];
-
-    //Não compreendi a forma de leitura.
 
     let p = a[g];
 
