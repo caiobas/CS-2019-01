@@ -326,23 +326,16 @@ public class Algoritmos {
 		return a;
 	}
 
-	public static double regraHorner(double x, int g) {
+	public static double regraHorner(double x, int g, int[] a) {
 		
 		if(g < 1) {
 			throw new IllegalArgumentException("Numero fora da exigencia. 
 												Esperado g maior ou igual a 1.");
 		}
 		
-		int a[] = new int[g+1];
-		Scanner sc = new Scanner(System.in);
-		
-		/*for(int i=g; i >= 0; i--) {
-			a[g] = sc.nextInt();
-		}*/
-		
 		double p = a[g];
 		
-		for(int i = (g-1); 0 <= i; i--){
+		for(int i = (g-1); i >= 0; i--){
 			p = p * (x + a[i]);
 		}
 
