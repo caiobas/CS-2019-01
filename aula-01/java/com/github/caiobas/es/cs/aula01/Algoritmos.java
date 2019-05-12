@@ -5,7 +5,8 @@ public class Algoritmos {
 	public static boolean propriedade3025(int numero) {
 		
  		if(numero < 0 || numero > 9999) {
- 			throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero entre 0 e 9999.");
+			 throw new IllegalArgumentException("Numero fora da exigencia:" 
+			 									+ numero + " Esperado numero entre 0 e 9999.");
  		}
  			
 		final int primDez = numero / 100;
@@ -18,13 +19,15 @@ public class Algoritmos {
 	public static boolean propriedade153(int numero) {
 		
 		if(numero < 100 || numero > 999) {
-			throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero entre 100 e 999.");
+			throw new IllegalArgumentException("Numero fora da exigencia:" 
+												+ numero + " Esperado numero entre 100 e 999.");
 		}
 		final int centena = numero / 100;
 		final int dezenaAux = numero % 100;
 		final int dezena = dezenaAux / 10;
 		final int unidade = numero % 10;
-		final int resultado = (int) Math.pow(centena, 3) + (int) Math.pow(dezena, 3) + (int) Math.pow(unidade, 3);
+		final int resultado = (int) Math.pow(centena, 3) 
+							+ (int) Math.pow(dezena, 3) + (int) Math.pow(unidade, 3);
 		
 		return resultado == numero;
 	}
@@ -32,15 +35,18 @@ public class Algoritmos {
 	public static double diaDaSemana(int dia, int mes, int ano) {
 		
 		if(dia < 1 || dia > 31) {
-			throw new IllegalArgumentException("Dia fora da exigencia:" + dia + " Esperado dia entre 1 e 31.");
+			throw new IllegalArgumentException("Dia fora da exigencia:" 
+												+ dia + " Esperado dia entre 1 e 31.");
 		}
 		
 		if(mes < 1 || mes > 12) {
-			throw new IllegalArgumentException("Mes fora da exigencia:" + mes + " Esperado mes entre 1 e 12.");
+			throw new IllegalArgumentException("Mes fora da exigencia:" 
+												+ mes + " Esperado mes entre 1 e 12.");
 		}
 		
 		if(ano <= 1953) {
-			throw new IllegalArgumentException("Ano fora da exigencia:" + ano + " Esperado ano maior ou igual a 1953.");
+			throw new IllegalArgumentException("Ano fora da exigencia:" 
+												+ ano + " Esperado ano maior ou igual a 1953.");
 		}
 		
 		if(mes == 1 && mes == 2) {
@@ -48,7 +54,8 @@ public class Algoritmos {
 			ano = ano - 1;
 		}
 		
-		final int resultado = dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400);
+		final int resultado = dia + (2 * mes) + (3 * (mes + 1) / 5) 
+							+ ano + (ano / 4) - (ano / 100) + (ano / 400);
 		
 		return resultado % 7;
 	}
@@ -56,10 +63,12 @@ public class Algoritmos {
 	public static int restoDivisao(int dividendo, int divisor) {
 		
 		if(dividendo < 0) {
-			throw new IllegalArgumentException("Dividendo fora da exigencia:" + dividendo + " Esperado dividendo maior ou igual a 0.");
+			throw new IllegalArgumentException("Dividendo fora da exigencia:" 
+												+ dividendo + " Esperado dividendo maior ou igual a 0.");
 		}
 		if(divisor <= 0) {
-			throw new IllegalArgumentException("Divisor fora da exigencia:" + divisor + " Esperado divisor maior que 0.");
+			throw new IllegalArgumentException("Divisor fora da exigencia:" 
+												+ divisor + " Esperado divisor maior que 0.");
 		}
 		
 		int resto = dividendo;
@@ -74,7 +83,8 @@ public class Algoritmos {
 	public static int somaPrimeirosNaturais(int numero) {
 		
 		if(numero < 1) {
-			throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero maior que 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia:" 
+												+ numero + " Esperado numero maior que 0.");
 		}
 		
 		int s = 1;
@@ -89,7 +99,8 @@ public class Algoritmos {
 	public static int fatorial(int numero) {
 		
 		if(numero < 1) {
-			throw new IllegalArgumentException("Numero fora da exigencia:" + numero + " Esperado numero maior que 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia:" 
+												+ numero + " Esperado numero maior que 0.");
 		}
 		
 		int f = 1;
@@ -104,7 +115,8 @@ public class Algoritmos {
 	public static int produtoUsandoSomas(int a, int b) {
 		
 		if(a < 0 || b < 0) {
-			throw new IllegalArgumentException("Numero fora da exigencia. Esperado numero maior ou igual a 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia. 
+												Esperado numero maior ou igual a 0.");
 		}
 
 		int totalParcelas = a;
@@ -127,7 +139,8 @@ public class Algoritmos {
 	public static int potenciaUsandoSomas(int x, int y) {
 		
 		if(x < 0 || y < 0) {
-			throw new IllegalArgumentException("Numero fora da exigencia. Esperado numero maior ou igual a 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia. 
+												Esperado numero maior ou igual a 0.");
 		}
 		
 		int potencia = 1;
@@ -142,7 +155,8 @@ public class Algoritmos {
 	public static double valorPI(int n) {
 		
 		if(n < 1) {
-			throw new IllegalArgumentException("Numero fora da exigencia. Esperado numero maior ou igual a 1.");
+			throw new IllegalArgumentException("Numero fora da exigencia. 
+												Esperado numero maior ou igual a 1.");
 		}
 		
 		double s = -1;
@@ -161,7 +175,8 @@ public class Algoritmos {
 	public static double logaritmo(int n, int k) {
 		
 		if(n < 1 || k < 2) {
-			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior ou igual a 1 e k maior ou igual a 2.");
+			throw new IllegalArgumentException("Numero fora da exigencia. 
+												Esperado n maior ou igual a 1 e k maior ou igual a 2.");
 		}
 		
 		int i = 2;
@@ -181,7 +196,8 @@ public class Algoritmos {
 	public static double razaoAurea(int x, int y, int k) {
 		
 		if(x < 0 || y < x || k <= 0) {
-			throw new IllegalArgumentException("Numero fora da exigencia. Esperado x maior ou igual a 0, y maior que x e k maior que 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia. 
+												Esperado x maior ou igual a 0, y maior que x e k maior que 0.");
 		}
 		
 		double c = y;
@@ -199,7 +215,8 @@ public class Algoritmos {
 	public static boolean quadradoPerfeito(int n) {
 		
 		if(n < 1) {
-			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior ou igual a 1.");
+			throw new IllegalArgumentException("Numero fora da exigencia. 
+												Esperado n maior ou igual a 1.");
 		}
 		
 		int i = 1;
@@ -216,7 +233,8 @@ public class Algoritmos {
 	public static double raizQuadrada(int n, int i) {
 		
 		if(n < 1) {
-			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior que 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia. 
+												Esperado n maior que 0.");
 		}
 		
 		double r = 1;
@@ -232,7 +250,8 @@ public class Algoritmos {
 	public static boolean numeroPrimo(int n) {
 		
 		if(n < 2) {
-			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior que 1.");
+			throw new IllegalArgumentException("Numero fora da exigencia. 
+												Esperado n maior que 1.");
 		}
 		
 		for(int i = 2; i < n; i++){
@@ -247,7 +266,8 @@ public class Algoritmos {
 	public static boolean crivoErastotenes(int n) {
 		
 		if(n < 2) {
-			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior que 1.");
+			throw new IllegalArgumentException("Numero fora da exigencia. 
+												Esperado n maior que 1.");
 		}
 		
 		int a[] = new int[n+1];
@@ -274,7 +294,8 @@ public class Algoritmos {
 	public static int mdc1(int a, int b) {
 		
 		if(a < b || b < 1) {
-			throw new IllegalArgumentException("Numero fora da exigencia. Esperado a maior ou igual a b e b maior que 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia. 
+												Esperado a maior ou igual a b e b maior que 0.");
 		}
 		
 		while(b != 0) {
@@ -289,7 +310,8 @@ public class Algoritmos {
 	public static int mdc2(int a, int b) {
 		
 		if(a < b || b < 1) {
-			throw new IllegalArgumentException("Numero fora da exigencia. Esperado a maior ou igual a b e b maior que 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia. 
+												Esperado a maior ou igual a b e b maior que 0.");
 		}
 		
 		while(a != b) {
@@ -307,7 +329,8 @@ public class Algoritmos {
 	public static double regraHorner(double x, int g) {
 		
 		if(g < 1) {
-			throw new IllegalArgumentException("Numero fora da exigencia. Esperado g maior ou igual a 1.");
+			throw new IllegalArgumentException("Numero fora da exigencia. 
+												Esperado g maior ou igual a 1.");
 		}
 		
 		int a[] = new int[g+1];
@@ -329,7 +352,8 @@ public class Algoritmos {
 	public static int fibonacci(int n) {
 		
 		if(n < 0) {
-			throw new IllegalArgumentException("Numero fora da exigencia. Esperado n maior ou igual a 0.");
+			throw new IllegalArgumentException("Numero fora da exigencia. 
+												Esperado n maior ou igual a 0.");
 		}
 		
 		if(n == 0 || n == 1) {
@@ -352,8 +376,10 @@ public class Algoritmos {
 		
 		geraExcecaoSeCpfInvalido(d);
 		
-		final int j = d[0] + 2*(d[1]) + 3*(d[2]) + 4*(d[3]) + 5*(d[4]) + 6*(d[5]) + 7*(d[6]) + 8*(d[7]) + 9*(d[8]);   
-		final int k = d[1] + 2*(d[2]) + 3*(d[3]) + 4*(d[4]) + 5*(d[5]) + 6*(d[6]) + 7*(d[7]) + 8*(d[8]) + 9*(d[9]);
+		final int j = d[0] + 2*(d[1]) + 3*(d[2]) + 4*(d[3]) + 5*(d[4]) 
+					+ 6*(d[5]) + 7*(d[6]) + 8*(d[7]) + 9*(d[8]);   
+		final int k = d[1] + 2*(d[2]) + 3*(d[3]) + 4*(d[4]) + 5*(d[5]) 
+					+ 6*(d[6]) + 7*(d[7]) + 8*(d[8]) + 9*(d[9]);
 		final int dj = Math.floorMod(Math.floorMod(j,  11), 10);
 		final int dk = Math.floorMod(Math.floorMod(k,  11), 10);
 		
@@ -390,7 +416,7 @@ public class Algoritmos {
 
          for (int i = 0; i < 11; i++) {
             if (d[i] < 0 || d[i] > 9) {
-                throw new IllegalArgumentException("N�mero n�o est� dentro da exig�ncia pedida");
+                throw new IllegalArgumentException("Numero nao esta dentro da exigencia pedida");
             }
         }
     }
