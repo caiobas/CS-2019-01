@@ -39,3 +39,5 @@ function produtoUsandoSomas(a, b) {
 
     return s;
 }
+
+module.exports = produtoUsandoSomas;

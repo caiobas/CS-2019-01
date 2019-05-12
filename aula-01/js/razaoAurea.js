@@ -36,3 +36,5 @@ function razaoAurea(x, y, k) {
 
     return c / a;
 }
+
+module.exports = razaoAurea;

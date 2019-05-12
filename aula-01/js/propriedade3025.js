@@ -1,5 +1,3 @@
-module.exports = Exercicio1;
-
 /**
  * Função matemática que verifica se o quadrado da soma dos 2 primeiros números com os 2 ultimos é o próprio número.
  * 
@@ -30,3 +28,5 @@ function propriedade3025(numero) {
 
     return resultado == numero;
 }
+
+module.exports = propriedade3025;

@@ -28,3 +28,5 @@ function raizQuadrada(n, i) {
 
     return r;
 }
+
+module.exports = raizQuadrada;

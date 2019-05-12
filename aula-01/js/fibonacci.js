@@ -37,3 +37,5 @@ function fibonacci(n) {
 
     return c;
 }
+
+module.exports = fibonacci;

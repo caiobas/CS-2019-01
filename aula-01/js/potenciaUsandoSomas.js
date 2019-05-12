@@ -31,3 +31,5 @@ function potenciaUsandoSomas(x, y) {
 
     return potencia;
 }
+
+module.exports = potenciaUsandoSomas;

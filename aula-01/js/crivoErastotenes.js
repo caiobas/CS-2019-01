@@ -42,3 +42,5 @@ function crivoErastotenes(n) {
 
     return a[n] == 1;
 }
+
+module.exports = crivoErastotenes;

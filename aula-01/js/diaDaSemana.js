@@ -33,3 +33,5 @@ function diaDaSemana(dia, mes, ano) {
 
     return Math.trunc(resultado % 7);
 }
+
+module.exports = diaDaSemana;

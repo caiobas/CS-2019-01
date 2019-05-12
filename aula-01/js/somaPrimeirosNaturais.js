@@ -30,3 +30,5 @@ function somaPrimeirosNaturais(numero) {
 
     return s;
 }
+
+module.exports = somaPrimeirosNaturais;

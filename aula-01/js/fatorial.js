@@ -30,3 +30,5 @@ function fatorial(numero) {
 
     return f;
 }
+
+module.exports = fatorial;

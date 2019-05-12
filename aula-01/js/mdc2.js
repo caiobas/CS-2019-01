@@ -34,3 +34,5 @@ function mdc2(a, b) {
 
     return a;
 }
+
+module.exports = mdc2;

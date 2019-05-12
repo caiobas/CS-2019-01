@@ -28,3 +28,5 @@ function quadradoPerfeito(n) {
 
     return s == n;
 }
+
+module.exports = quadradoPerfeito;

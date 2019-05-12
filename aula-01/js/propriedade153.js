@@ -30,3 +30,5 @@ function propriedade153(numero) {
 
     return resultado == numero;
 }
+
+module.exports = propriedade153;

@@ -36,3 +36,5 @@ function logaritmo(n, k) {
 
     return e;
 }
+
+module.exports = logaritmo;

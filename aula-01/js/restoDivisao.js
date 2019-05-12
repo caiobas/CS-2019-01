@@ -31,3 +31,5 @@ function restoDivisao(dividendo, divisor) {
 
     return resto;
 }
+
+module.exports = restoDivisao;

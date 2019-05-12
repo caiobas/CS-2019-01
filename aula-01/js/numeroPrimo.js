@@ -30,3 +30,5 @@ function numeroPrimo(n) {
 
     return true;
 }
+
+module.exports = numeroPrimo;

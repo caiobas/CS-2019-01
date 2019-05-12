@@ -31,3 +31,5 @@ function regraHorner(x, g) {
 
     return p;
 }
+
+module.exports = regraHorner;

@@ -30,3 +30,5 @@ function valorPI(n) {
 
     return p;
 }
+
+module.exports = valorPI;

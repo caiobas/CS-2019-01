@@ -47,3 +47,5 @@ function confereDadosVetor(d) {
         }
     }
 }
+
+module.exports = {cpf1, confereDadosVetor};
