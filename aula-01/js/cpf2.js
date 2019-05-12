@@ -5,8 +5,8 @@
  * 
  * @returns {boolean} Retorna booleano se é CPF.
  * 
- * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
- * @throws {RangeError} Vetor de tamanho incorreto ou com dígitos incorretos.
+ * @throws {TypeError} Se o parâmetro não for um vetor.
+ * @throws {RangeError} Se o vetor tiver tamanho incorreto.
  */
 function cpf2(d) {
 
@@ -18,11 +18,7 @@ function cpf2(d) {
         throw new RangeError("Vetor de tamanho incorreto.");
     }
 
-    for (let i = 0; i < d.length; i++) {
-        if (d[i] < 0 || d[i] > 9 || Math.trunc(d[i]) != d[i]) {
-            throw new RangeError("Dados do vetor incorretos.");
-        }
-    }
+    confereDadosVetor(d);
 
     let p = d[8];
     let s = d[8];
@@ -36,4 +32,24 @@ function cpf2(d) {
     const k = ((s - p + (9 * d[9])) % 11) % 10;
 
     return (j == d[9]) && (k == d[10]);
+}
+
+/**
+ * Função matemática para conferir dados do vetor de CPF.
+ * 
+ * @param {Array} d Array com digitos para conferir.
+ * 
+ * @throws {TypeError} Se qualquer um dos elementos do vetor não forem inteiro.
+ * @throws {RangeError} Se qualquer um dos elementos do vetor não possuir números entre 0 e 9.
+ */
+function confereDadosVetor(d) {
+
+    for (let i = 1; i < d.length; i++) {
+        if (Math.trunc(d[i]) != d[i]) {
+            throw new TypeError("Espera-se dados inteiros em cada elemento do vetor.");
+        }
+        if (d[i] < 0 || d[i] > 9) {
+            throw new RangeError("Espera-se dados de cada elemento do vetor entre 0 e 9.");
+        }
+    }
 }
