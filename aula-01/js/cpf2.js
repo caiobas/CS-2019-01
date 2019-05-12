@@ -8,19 +8,18 @@
  * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
  * @throws {RangeError} Vetor de tamanho incorreto ou com dígitos incorretos.
  */
-
 function cpf2(d) {
-            
-    if(!d.isArray){
+
+    if (!d.isArray) {
         throw new TypeError("Este parâmetro não é um vetor.");
     }
-    
-    if(d.length != 11) {
+
+    if (d.length != 11) {
         throw new RangeError("Vetor de tamanho incorreto.");
     }
 
-    for(let i = 0; i < d.length; i++) {
-        if(d[i] < 0 || d[i] > 9 || Math.trunc(d[i]) != d[i]) {
+    for (let i = 0; i < d.length; i++) {
+        if (d[i] < 0 || d[i] > 9 || Math.trunc(d[i]) != d[i]) {
             throw new RangeError("Dados do vetor incorretos.");
         }
     }
@@ -28,7 +27,7 @@ function cpf2(d) {
     let p = d[8];
     let s = d[8];
 
-    for(let c = 7; 0 <= c; c--){
+    for (let c = 7; 0 <= c; c--) {
         p = p + d[c];
         s = s + p;
     }
