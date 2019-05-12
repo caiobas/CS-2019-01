@@ -411,12 +411,14 @@ public class Algoritmos {
         }
 
          if (d.length != 11) {
-            throw new IllegalArgumentException("CPF deve ter exatos 11 digitos");
+			throw new IllegalArgumentException("CPF deve 
+												ter exatos 11 digitos");
         }
 
          for (int i = 0; i < 11; i++) {
             if (d[i] < 0 || d[i] > 9) {
-                throw new IllegalArgumentException("Numero nao esta dentro da exigencia pedida");
+				throw new IllegalArgumentException("Numero nao 
+													esta dentro da exigencia pedida");
             }
         }
     }
