@@ -54,4 +54,4 @@ function confereDadosVetor(d) {
     }
 }
 
-module.exports = {cpf2, confereDadosVetor};
+module.exports = {f1: cpf2, f2: confereDadosVetor};

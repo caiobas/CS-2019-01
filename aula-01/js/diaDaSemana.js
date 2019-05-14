@@ -83,4 +83,4 @@ function dataInvalida(dia, mes, ano) {
     return false;
 }
 
-module.exports = diaDaSemana;
+module.exports = {f1: diaDaSemana, f2: nomeDiaDaSemana, f3: dataInvalida};
