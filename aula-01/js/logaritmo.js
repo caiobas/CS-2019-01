@@ -38,3 +38,5 @@ function logaritmo(n, k) {
 }
 
 module.exports = logaritmo;
+
+console.log(logaritmo(2, 2))

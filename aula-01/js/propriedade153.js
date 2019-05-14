@@ -19,7 +19,7 @@ function propriedade153(numero) {
     }
 
     if (numero < 100 || numero > 999) {
-        throw new Error("Numero não está entre 100 e 999.");
+        throw new RangeError("Numero não está entre 100 e 999.");
     }
 
     const centena = Math.trunc(numero / 100);

@@ -10,7 +10,7 @@
  */
 function cpf2(d) {
 
-    if (!d.isArray) {
+    if (!Array.isArray(d)) {
         throw new TypeError("Este parâmetro não é um vetor.");
     }
 
@@ -44,7 +44,7 @@ function cpf2(d) {
  */
 function confereDadosVetor(d) {
 
-    for (let i = 1; i < d.length; i++) {
+    for (let i = 0; i < d.length; i++) {
         if (Math.trunc(d[i]) != d[i]) {
             throw new TypeError("Espera-se dados inteiros em cada elemento do vetor.");
         }

@@ -26,10 +26,12 @@ function potenciaUsandoSomas(x, y) {
     let potencia = 1;
 
     for (let i = 1; i <= y; i++) {
-        potencia = Exercicio7(potencia, x);
+        potencia = produtoUsandoSomas(potencia, x);
     }
 
     return potencia;
 }
 
 module.exports = potenciaUsandoSomas;
+
+console.log(potenciaUsandoSomas(2, 5));

@@ -27,9 +27,9 @@ function diaDaSemana(dia, mes, ano) {
         ano = ano - 1;
     }
 
-    let resultado = dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400);
+    let resultado = dia + (2 * mes) + Math.floor(3 * (mes + 1) / 5) + ano + Math.floor(ano / 4) - Math.floor(ano / 100) + Math.floor(ano / 400);
 
-    nomeDiaDaSemana(resultado % 7);
+    return nomeDiaDaSemana(Math.trunc(resultado % 7));
 }
 
 /**
@@ -77,7 +77,7 @@ function nomeDiaDaSemana(resultado) {
  */
 function dataInvalida(dia, mes, ano) {
 
-    if (dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano <= 1953) {
+    if (dia < 1 || dia > 31 || mes < 1 || mes > 12 || ano <= 1753) {
         return true;
     }
     return false;

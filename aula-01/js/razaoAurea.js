@@ -26,10 +26,9 @@ function razaoAurea(x, y, k) {
 
     let c = y;
     let a = x;
-    let t; //Perguntar ao professor se é interessante criar o t dentro ou fora do for.
 
     for (let i = 1; i <= k; i++) {
-        t = c;
+        let t = c;
         c = c + a;
         a = t;
     }
@@ -38,3 +37,5 @@ function razaoAurea(x, y, k) {
 }
 
 module.exports = razaoAurea;
+
+console.log(razaoAurea(1, 2, 1000))

@@ -14,6 +14,10 @@ function valorPI(n) {
         throw new TypeError("Este parâmetro não é um número.");
     }
 
+    if (Math.trunc(n) != n) {
+        throw new TypeError("Este parâmetro não é um inteiro.");
+    }
+
     if (n < 1) {
         throw new RangeError("Numero não é maior ou igual a 1.");
     }

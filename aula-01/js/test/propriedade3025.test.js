@@ -16,7 +16,6 @@ test("argumento nao numerico", () => {
   expect(() => { funcao("abcd"); }).toThrow();
 });
 
-
 test("valor negativo fora da faixa", () => {
   expect(() => { funcao(-1); }).toThrow(RangeError);
 });

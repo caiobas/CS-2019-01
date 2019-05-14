@@ -12,7 +12,11 @@
 function regraHorner(x, g, a) {
 
     if (typeof x != "number" || typeof g != "number") {
-        throw new TypeError("Este parâmetro não é um número.");
+        throw new TypeError("x ou y não e um numero.");
+    }
+
+    if(!Array.isArray(a)){
+        throw new TypeError("a nao e um vetor.");
     }
 
     if (g < 1) {
@@ -20,7 +24,7 @@ function regraHorner(x, g, a) {
     }
 
     let p = a[g];
-
+    console.log(a);
     for (let i = (g - 1); 0 <= i; i--) {
         p = p * (x + a[i]);
     }
