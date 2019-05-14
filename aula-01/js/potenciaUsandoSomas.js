@@ -1,3 +1,4 @@
+const funcao = require("./produtoUsandoSomas.js");
 /**
  * Função matemática que calcula a potência usando somas.
  * 
@@ -26,7 +27,7 @@ function potenciaUsandoSomas(x, y) {
     let potencia = 1;
 
     for (let i = 1; i <= y; i++) {
-        potencia = produtoUsandoSomas(potencia, x);
+        potencia = funcao(potencia, x);
     }
 
     return potencia;
