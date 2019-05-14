@@ -1,4 +1,4 @@
-const funcao = require("../Exercicio1.js");
+const funcao = require("../propriedade3025.js");
 
 test("3025 satisfaz (caso classico)", () => {
   expect(funcao(3025)).toBe(true);
