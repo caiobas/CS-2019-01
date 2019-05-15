@@ -1,4 +1,4 @@
-package com/github/caiobas/es/cs/aula01;
+package com.github.caiobas.es.cs.aula01.domain;
 
 public class Algoritmos {
 
@@ -57,33 +57,28 @@ public class Algoritmos {
 		final int resultado = dia + (2 * mes) + (3 * (mes + 1) / 5) 
 							+ ano + (ano / 4) - (ano / 100) + (ano / 400);
 		
-		nomeDiaDaSemana(resultado);
+		nomeDiaDaSemana(resultado % 7);
 	}
 
 	public static String nomeDiaDaSemana(int resultado){
-
+		
 		switch (resultado) {
 			case 0:
 				return "Segunda-feira";
-				break;
 			case 1:
 				return "Terca-feira";
-				break;
 			case 2:
 				return "Quarta-feira";
-				break;
 			case 3:
 				return "Quinta-feira";
-				break;
 			case 4:
 				return "Sexta-feira";
-				break;
 			case 5:
 				return "Sabado";
-				break;
 			case 6:
 				return "Domingo";
-				break;
+			default:
+				throw new IllegalArgumentException("Valor incorreto para analise de dia.");
 		}
 	}
 
@@ -173,7 +168,7 @@ public class Algoritmos {
 		int potencia = 1;
 		
 		for(int i = 1; i <= y; i++){
-			potencia = Exercicio7(potencia, x);
+			potencia = produtoUsandoSomas(potencia, x);
 		}
 		
 		return potencia;
