@@ -241,4 +241,19 @@ public class AlgoritmosTest {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(1, 2, 0));
     }
 
+    @Test
+	public void quadradoPerfeitoCasoClassico() {
+        assertEquals(true, Algoritmos.quadradoPerfeito(36));
+    }
+
+    @Test
+	public void quadradoPerfeitoErro() {
+        assertEquals(false, Algoritmos.quadradoPerfeito(30));
+    }
+
+    @Test
+    public void quadradoPerfeito1MenorQue1() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.quadradoPerfeito(0));
+    }
+
 }
