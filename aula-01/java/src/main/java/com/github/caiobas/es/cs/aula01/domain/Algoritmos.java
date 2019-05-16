@@ -8,8 +8,7 @@ public class Algoritmos {
      *
      * @param numero Número a ser verificado.
      * @return Retorna booleano para verificação.
-     * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro ou se o número não está entre 0 e 9999.
+     * @throws IllegalArgumentException Se o número não está entre 0 e 9999.
      */
 	public static boolean propriedade3025(int numero) {
 		
@@ -31,8 +30,7 @@ public class Algoritmos {
      *
      * @param numero Número a ser verificado.
      * @return Retorna booleano para verificação. 
-     * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro ou se o número não está entre 100 e 999.
+     * @throws IllegalArgumentException Se o número não está entre 100 e 999.
      */
 	public static boolean propriedade153(int numero) {
 		
@@ -59,8 +57,7 @@ public class Algoritmos {
      * @param ano Ano a ser verificado.
      * @return Retorna dia da semana. 
      * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro ou se qualquer um dos argumentos 
-	 * não estiver dentro dos parâmetros de data.
+	 * 									não estiver dentro dos parâmetros de data.
      */
 	public static String diaDaSemana(int dia, int mes, int ano) {
 		
@@ -94,10 +91,10 @@ public class Algoritmos {
      * Função que retorna o dia da semana 
 	 * baseado no resultado da função diaDaSemana.
      *
-     * @param resultado resultado utilizado para identificar dia da semana.
+     * @param resultado utilizado para identificar dia da semana.
      * @return Retorna dia da semana. 
      * @throws IllegalArgumentException Se o argumento 
-	 * conter valor incorreto para análise.
+	 * 									conter valor incorreto para análise.
      */
 	public static String nomeDiaDaSemana(int resultado){
 		
@@ -128,9 +125,8 @@ public class Algoritmos {
      * @param dividendo Dividendo a ser verificado.
      * @param divisor Divisor a ser verificado.
      * @return Retorna resto da divisão inteira. 
-     * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro ou se o divisor não for 
-	 * maior que 0 e dividendo não for maior ou igual a 0.
+     * @throws IllegalArgumentException Se o divisor não for 
+	 * 									maior que 0 e dividendo não for maior ou igual a 0.
      */
 	public static int restoDivisao(int dividendo, int divisor) {
 		
@@ -158,8 +154,7 @@ public class Algoritmos {
      *
      * @param numero Número limite para a soma.
      * @return Retorna a soma dos números naturais até o parâmetro. 
-     * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro ou se o número não for maior que 1.
+     * @throws IllegalArgumentException Se o número não for maior que 1.
      */
 	public static int somaPrimeirosNaturais(int numero) {
 		
@@ -182,9 +177,7 @@ public class Algoritmos {
      *
      * @param numero Número limite para o fatorial.
      * @return Retorna o fatorial do parâmetro. 
-     * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro ou 
-	 * se o número não for maior que 1.
+     * @throws IllegalArgumentException Se o número não for maior que 1.
      */
 	public static int fatorial(int numero) {
 		
@@ -208,9 +201,8 @@ public class Algoritmos {
      * @param a Número usado para calcular produto.
      * @param b Número usado para calcular produto.
      * @return Retorna o produto dos números.
-     * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro ou 
-	 * se a e b não forem maiores ou iguais a 0.
+     * @throws IllegalArgumentException Se a e b não 
+	 * 									forem maiores ou iguais a 0.
      */
 	public static int produtoUsandoSomas(int a, int b) {
 		
@@ -242,9 +234,8 @@ public class Algoritmos {
      * @param x Número natural a ser elevado.
      * @param y Potência do número.
      * @return Retorna o resultado da potência.
-     * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro ou 
-	 * se x e y não forem maiores ou igual a 0.
+     * @throws IllegalArgumentException Se x e y não 
+	 * 									forem maiores ou igual a 0.
      */
 	public static int potenciaUsandoSomas(int x, int y) {
 		
@@ -269,8 +260,8 @@ public class Algoritmos {
      * @param n Número utilizado para determinar 
 	 * maior proximidade do valor de PI.
      * @return Retorna valor aproximado de PI.
-     * @throws IllegalArgumentException Se qualquer um dos argumentos não 
-	 * for um número ou inteiro ou se o numero não for maior ou igual a 1.
+     * @throws IllegalArgumentException Se o numero não 
+	 * 									for maior ou igual a 1.
      */
 	public static double valorPI(int n) {
 		
@@ -298,9 +289,8 @@ public class Algoritmos {
      * @param n n Numerador do logaritmo.
      * @param k Número utilizado para proximidade do logaritmo natural.
      * @return Retorna valor mais próximo do logaritmo natural.
-     * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro ou se n não for maior ou 
-	 * igual a 1 ou k não for maior ou igual a 2.
+     * @throws IllegalArgumentException Se n não for maior ou 
+	 * 									igual a 1 ou k não for maior ou igual a 2.
      */
 	public static double logaritmo(int n, int k) {
 		
@@ -330,9 +320,8 @@ public class Algoritmos {
      * @param y Número para calcular razão áurea.
      * @param k Precisão da razão áurea.
      * @return Retorna valor da razão áurea.
-     * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro, se x não for maior ou igual a 0, 
-	 * se y não for maior que x ou se k não for maior que 0.
+     * @throws IllegalArgumentException Se x não for maior ou igual a 0, 
+	 * 									se y não for maior que x ou se k não for maior que 0.
      */
 	public static double razaoAurea(int x, int y, int k) {
 		
@@ -358,8 +347,7 @@ public class Algoritmos {
      *
      * @param n Número para conferir se é quadrado perfeito.
      * @return Retorna booleano se é quadrado perfeito.
-     * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro ou se n não for maior ou igual a 1.
+     * @throws IllegalArgumentException Se n não for maior ou igual a 1.
      */
 	public static boolean quadradoPerfeito(int n) {
 		
@@ -385,8 +373,7 @@ public class Algoritmos {
      * @param n Número para calculo da raiz quadrada.
      * @param i Número para proximidade de raiz quadrada.
      * @return Retorna número mais próximo da raiz quadrada.
-     * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro ou se n não for maior ou igual a 1.
+     * @throws IllegalArgumentException Se n não for maior ou igual a 1.
      */
 	public static double raizQuadrada(int n, int i) {
 		
@@ -410,8 +397,7 @@ public class Algoritmos {
      *
      * @param n Número para conferir se é número primo.
      * @return Retorna booleano se é número primo.
-     * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro ou se n não for maior ou igual a 1.
+     * @throws IllegalArgumentException Se n não for maior ou igual a 1.
      */
 	public static boolean numeroPrimo(int n) {
 		
@@ -434,8 +420,7 @@ public class Algoritmos {
      *
      * @param n Número para conferir se é número primo.
      * @return Retorna booleano se é número primo.
-     * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro ou se n não for maior ou igual a 2.
+     * @throws IllegalArgumentException Se n não for maior ou igual a 2.
      */
 	public static boolean crivoErastotenes(int n) {
 		
@@ -471,9 +456,8 @@ public class Algoritmos {
      * @param a Número para cálculo do maior divisor comum.
      * @param b Número para cálculo do maior divisor comum.
      * @return Retorna maior divisor comum.
-     * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro, se a 
-	 * não for maior ou igual a b ou se b não for maior que 0.
+     * @throws IllegalArgumentException Se a não for maior ou igual a b 
+	 * 									ou se b não for maior que 0.
      */
 	public static int mdc1(int a, int b) {
 		
@@ -497,9 +481,8 @@ public class Algoritmos {
      * @param a Número para cálculo do maior divisor comum.
      * @param b Número para cálculo do maior divisor comum.
      * @return Retorna maior divisor comum.
-     * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro, se a 
-	 * não for maior ou igual a b ou se b não for maior que 0.
+     * @throws IllegalArgumentException Se a não for maior ou igual a b 
+	 * 									ou se b não for maior que 0.
      */
 	public static int mdc2(int a, int b) {
 		
@@ -527,8 +510,7 @@ public class Algoritmos {
      * @param g Número para cálculo da regra de Horner.
      * @param a Vetor para cálculo da regra de Horner.
      * @return Retorna regra de Horner.
-     * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro ou se g não for maior ou igual a 1.
+     * @throws IllegalArgumentException Se g não for maior ou igual a 1.
      */
 	public static double regraHorner(double x, int g, int[] a) {
 		
@@ -551,8 +533,7 @@ public class Algoritmos {
      *
      * @param n Número para cálculo de Fibonacci.
      * @return Retorna número de Fibonacci.
-     * @throws IllegalArgumentException Se qualquer um dos argumentos 
-	 * não for um número ou inteiro ou se n não for maior ou igual a 0.
+     * @throws IllegalArgumentException Se n não for maior ou igual a 0.
      */
 	public static int fibonacci(int n) {
 		
@@ -625,8 +606,8 @@ public class Algoritmos {
      * Função matemática para conferir CPF.
      *
      * @param n d Array com digitos para conferir.
-     * @throws IllegalArgumentException Se o parâmetro não 
-	 * for um vetor ou se o vetor tiver tamanho incorreto.
+     * @throws IllegalArgumentException Se o parâmetro não for um vetor 
+	 * 									ou se o vetor tiver tamanho incorreto.
      */
 	private static void geraExcecaoSeCpfInvalido(int[] d) {
 		
