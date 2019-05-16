@@ -3,17 +3,13 @@ package com.github.caiobas.es.cs.aula01.domain;
 public class Algoritmos {
 	
 	/**
-     * Função matemática que verifica se o quadrado da soma dos 2 primeiros números com os 2 ultimos é o próprio número.
+     * Função matemática que verifica se o quadrado da soma 
+	 * dos 2 primeiros números com os 2 ultimos é o próprio número.
      *
-     * @param dia O dia da data. Valor entre 1 e 31, inclusive.
-     * @param mes O mês da data. Valor entre 1 e 12, inclusive.
-     * @param ano O ano da data. Valor maior que 1752.
-     * @return O dia da semana correspondente à data. O valor 0 para
-     * segunda-feira, 1 para terça-feira, 2 para quarta-feira e
-     * assim sucessivamente.
-     * @throws IllegalArgumentException Se o dia for inválido (menor que um
-     *                                  ou maior que 31), o mês for inválido (menor que 1 ou maior que 12)
-     *                                  ou o ano for menor que 1753.
+     * @param numero Número a ser verificado.
+     * @return Retorna booleano para verificação.
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro ou se o número não está entre 0 e 9999.
      */
 	public static boolean propriedade3025(int numero) {
 		
@@ -29,6 +25,15 @@ public class Algoritmos {
 		return resultado == numero;
 	}
 
+	/**
+     * Função matemática que verifica se a soma do 
+	 * cubo dos digitos do número é o próprio número.
+     *
+     * @param numero Número a ser verificado.
+     * @return Retorna booleano para verificação. 
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro ou se o número não está entre 100 e 999.
+     */
 	public static boolean propriedade153(int numero) {
 		
 		if(numero < 100 || numero > 999) {
@@ -45,6 +50,18 @@ public class Algoritmos {
 		return resultado == numero;
 	}
 
+	/**
+     * Função matemática que verifica o 
+	 * dia da semana de uma determinada data.
+     *
+     * @param dia Dia a ser verificado.
+     * @param mes Mês a ser verificado.
+     * @param ano Ano a ser verificado.
+     * @return Retorna dia da semana. 
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro ou se qualquer um dos argumentos 
+	 * não estiver dentro dos parâmetros de data.
+     */
 	public static String diaDaSemana(int dia, int mes, int ano) {
 		
 		if(dia < 1 || dia > 31) {
@@ -73,6 +90,15 @@ public class Algoritmos {
 		return nomeDiaDaSemana(resultado % 7);
 	}
 
+	/**
+     * Função que retorna o dia da semana 
+	 * baseado no resultado da função diaDaSemana.
+     *
+     * @param resultado resultado utilizado para identificar dia da semana.
+     * @return Retorna dia da semana. 
+     * @throws IllegalArgumentException Se o argumento 
+	 * conter valor incorreto para análise.
+     */
 	public static String nomeDiaDaSemana(int resultado){
 		
 		switch (resultado) {
@@ -91,10 +117,21 @@ public class Algoritmos {
 			case 6:
 				return "Domingo";
 			default:
-				throw new IllegalArgumentException("Valor incorreto para analise de dia.");
+				throw new IllegalArgumentException
+												("Valor incorreto para analise de dia.");
 		}
 	}
 
+	/**
+     * Função matemática que calcula resto de divisão inteira.
+     *
+     * @param dividendo Dividendo a ser verificado.
+     * @param divisor Divisor a ser verificado.
+     * @return Retorna resto da divisão inteira. 
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro ou se o divisor não for 
+	 * maior que 0 e dividendo não for maior ou igual a 0.
+     */
 	public static int restoDivisao(int dividendo, int divisor) {
 		
 		if(dividendo < 0) {
@@ -115,6 +152,15 @@ public class Algoritmos {
 		return resto;
 	}
 
+	/**
+     * Função matemática que calcula a 
+	 * soma dos números naturais até o parâmetro.
+     *
+     * @param numero Número limite para a soma.
+     * @return Retorna a soma dos números naturais até o parâmetro. 
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro ou se o número não for maior que 1.
+     */
 	public static int somaPrimeirosNaturais(int numero) {
 		
 		if(numero < 1) {
@@ -131,6 +177,15 @@ public class Algoritmos {
 		return s;
 	}
 
+	/**
+     * Função matemática que calcula o fatorial de um número natural.
+     *
+     * @param numero Número limite para o fatorial.
+     * @return Retorna o fatorial do parâmetro. 
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro ou 
+	 * se o número não for maior que 1.
+     */
 	public static int fatorial(int numero) {
 		
 		if(numero < 1) {
@@ -147,6 +202,16 @@ public class Algoritmos {
 		return f;
 	}
 
+	/**
+     * Função matemática que calcula o produto de inteiro usando somas.
+     *
+     * @param a Número usado para calcular produto.
+     * @param b Número usado para calcular produto.
+     * @return Retorna o produto dos números.
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro ou 
+	 * se a e b não forem maiores ou iguais a 0.
+     */
 	public static int produtoUsandoSomas(int a, int b) {
 		
 		if(a < 0 || b < 0) {
@@ -171,6 +236,16 @@ public class Algoritmos {
 		return s;
 	}
 
+	/**
+     * Função matemática que calcula a potência usando somas.
+     *
+     * @param x Número natural a ser elevado.
+     * @param y Potência do número.
+     * @return Retorna o resultado da potência.
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro ou 
+	 * se x e y não forem maiores ou igual a 0.
+     */
 	public static int potenciaUsandoSomas(int x, int y) {
 		
 		if(x < 0 || y < 0) {
@@ -187,6 +262,16 @@ public class Algoritmos {
 		return potencia;
 	}
 
+	/**
+     * Função matemática que calcula o valor com mais 
+	 * proximidade de PI de acordo com quanto maior for o parâmetro.
+     *
+     * @param n Número utilizado para determinar 
+	 * maior proximidade do valor de PI.
+     * @return Retorna valor aproximado de PI.
+     * @throws IllegalArgumentException Se qualquer um dos argumentos não 
+	 * for um número ou inteiro ou se o numero não for maior ou igual a 1.
+     */
 	public static double valorPI(int n) {
 		
 		if(n < 1) {
@@ -207,6 +292,16 @@ public class Algoritmos {
 		return p;
 	}
 
+	/**
+     * Função matemática que calcula a proximidade do logaritmo natural.
+     *
+     * @param n n Numerador do logaritmo.
+     * @param k Número utilizado para proximidade do logaritmo natural.
+     * @return Retorna valor mais próximo do logaritmo natural.
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro ou se n não for maior ou 
+	 * igual a 1 ou k não for maior ou igual a 2.
+     */
 	public static double logaritmo(int n, int k) {
 		
 		if(n < 1 || k < 2) {
@@ -228,6 +323,17 @@ public class Algoritmos {
 		return e;
 	}
 
+	/**
+     * Função matemática que calcula a razão áurea.
+     *
+     * @param x Número para calcular razão áurea.
+     * @param y Número para calcular razão áurea.
+     * @param k Precisão da razão áurea.
+     * @return Retorna valor da razão áurea.
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro, se x não for maior ou igual a 0, 
+	 * se y não for maior que x ou se k não for maior que 0.
+     */
 	public static double razaoAurea(int x, int y, int k) {
 		
 		if(x < 0 || y < x || k <= 0) {
@@ -247,6 +353,14 @@ public class Algoritmos {
 		return c / a;
 	}
 
+	/**
+     * Função matemática que confere se o número é quadrado perfeito.
+     *
+     * @param n Número para conferir se é quadrado perfeito.
+     * @return Retorna booleano se é quadrado perfeito.
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro ou se n não for maior ou igual a 1.
+     */
 	public static boolean quadradoPerfeito(int n) {
 		
 		if(n < 1) {
@@ -265,6 +379,15 @@ public class Algoritmos {
 		return s == n;
 	}
 
+	/**
+     * Função matemática que calcula o valor mais próximo da raiz quadrada.
+     *
+     * @param n Número para calculo da raiz quadrada.
+     * @param i Número para proximidade de raiz quadrada.
+     * @return Retorna número mais próximo da raiz quadrada.
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro ou se n não for maior ou igual a 1.
+     */
 	public static double raizQuadrada(int n, int i) {
 		
 		if(n < 1) {
@@ -282,6 +405,14 @@ public class Algoritmos {
 		return r;
 	}
 
+	/**
+     * Função matemática que confere se o número é primo.
+     *
+     * @param n Número para conferir se é número primo.
+     * @return Retorna booleano se é número primo.
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro ou se n não for maior ou igual a 1.
+     */
 	public static boolean numeroPrimo(int n) {
 		
 		if(n < 2) {
@@ -298,6 +429,14 @@ public class Algoritmos {
 		return true;
 	}
 
+	/**
+     * Função matemática que verifica se o número é primo.
+     *
+     * @param n Número para conferir se é número primo.
+     * @return Retorna booleano se é número primo.
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro ou se n não for maior ou igual a 2.
+     */
 	public static boolean crivoErastotenes(int n) {
 		
 		if(n < 2) {
@@ -326,6 +465,16 @@ public class Algoritmos {
 		return a[n] == 1;
 	}
 
+	/**
+     * Função matemática que calcula maior divisor comum.
+     *
+     * @param a Número para cálculo do maior divisor comum.
+     * @param b Número para cálculo do maior divisor comum.
+     * @return Retorna maior divisor comum.
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro, se a 
+	 * não for maior ou igual a b ou se b não for maior que 0.
+     */
 	public static int mdc1(int a, int b) {
 		
 		if(a < b || b < 1) {
@@ -342,6 +491,16 @@ public class Algoritmos {
 		return a;
 	}
 
+	/**
+     * Função matemática que calcula maior divisor comum.
+     *
+     * @param a Número para cálculo do maior divisor comum.
+     * @param b Número para cálculo do maior divisor comum.
+     * @return Retorna maior divisor comum.
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro, se a 
+	 * não for maior ou igual a b ou se b não for maior que 0.
+     */
 	public static int mdc2(int a, int b) {
 		
 		if(a < b || b < 1) {
@@ -361,6 +520,16 @@ public class Algoritmos {
 		return a;
 	}
 
+	/**
+     * Função matemática com a regra de Horner para avaliação de polinômio.
+     *
+     * @param x Número para cálculo da regra de Horner.
+     * @param g Número para cálculo da regra de Horner.
+     * @param a Vetor para cálculo da regra de Horner.
+     * @return Retorna regra de Horner.
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro ou se g não for maior ou igual a 1.
+     */
 	public static double regraHorner(double x, int g, int[] a) {
 		
 		if(g < 1) {
@@ -377,6 +546,14 @@ public class Algoritmos {
 		return p;
 	}
 
+	/**
+     * Função matemática para o cálculo de Fibonacci.
+     *
+     * @param n Número para cálculo de Fibonacci.
+     * @return Retorna número de Fibonacci.
+     * @throws IllegalArgumentException Se qualquer um dos argumentos 
+	 * não for um número ou inteiro ou se n não for maior ou igual a 0.
+     */
 	public static int fibonacci(int n) {
 		
 		if(n < 0) {
@@ -400,6 +577,12 @@ public class Algoritmos {
 		return c;
 	}
 
+	/**
+     * Função matemática para conferir CPF.
+     *
+     * @param d Array com digitos para conferir.
+     * @return Retorna booleano se é CPF.
+     */
 	public static boolean cpf1(int d[]) {
 		
 		geraExcecaoSeCpfInvalido(d);
@@ -414,6 +597,12 @@ public class Algoritmos {
 		return (dj == d[9]) && (dk == d[10]);
 	}
 
+	/**
+     * Função matemática para conferir CPF.
+     *
+     * @param d Array com digitos para conferir.
+     * @return Retorna booleano se é CPF.
+     */
 	public static boolean cpf2(int d[]) {
 		
 		geraExcecaoSeCpfInvalido(d);
@@ -432,6 +621,13 @@ public class Algoritmos {
 		return (j == d[9]) && (k == d[10]);
 	}
 
+	/**
+     * Função matemática para conferir CPF.
+     *
+     * @param n d Array com digitos para conferir.
+     * @throws IllegalArgumentException Se o parâmetro não 
+	 * for um vetor ou se o vetor tiver tamanho incorreto.
+     */
 	private static void geraExcecaoSeCpfInvalido(int[] d) {
 		
         if (d == null) {
