@@ -252,8 +252,18 @@ public class AlgoritmosTest {
     }
 
     @Test
-    public void quadradoPerfeito1MenorQue1() {
+    public void quadradoPerfeitonMenorQue1() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.quadradoPerfeito(0));
+    }
+
+    @Test
+	public void raizQuadradaCasoClassico() {
+        assertEquals(1.7320508075688772, Algoritmos.raizQuadrada(3, 200));
+    }
+
+    @Test
+    public void raizQuadradanMenorQue1() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.raizQuadrada(0, 5));
     }
 
 }
