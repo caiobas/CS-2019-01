@@ -3,6 +3,7 @@
  * 
  * @param {number} x Número para cálculo da regra de Horner.
  * @param {number} g Número para cálculo da regra de Horner.
+ * @param {number} a Vetor para cálculo da regra de Horner.
  * 
  * @returns {number} Retorna regra de Horner.
  * 

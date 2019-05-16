@@ -23,10 +23,8 @@ function mdc1(a, b) {
         throw new RangeError("a deve ser maior ou igual a b e b deve ser maior que 0.");
     }
 
-    let m; //Mesma duvida do Exercicio11
-
     while (b != 0) {
-        m = a % b;
+        let m = a % b;
         a = b;
         b = m;
     }

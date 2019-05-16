@@ -30,7 +30,7 @@ function fibonacci(n) {
     let c = 1;
 
     for (let i = 2; i <= n; i++) {
-        var t = c; //Mesma duvida referente ao Exercicio11 e 16
+        var t = c;
         c = c + a;
         a = t;
     }

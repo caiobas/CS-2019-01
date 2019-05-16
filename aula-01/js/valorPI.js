@@ -3,7 +3,7 @@
  * 
  * @param {number} n Número utilizado para determinar maior proximidade do valor de PI.
  * 
- * @returns {number} Retorna valor de PI.
+ * @returns {number} Retorna aproximado de PI.
  * 
  * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
  * @throws {RangeError} Numero não é maior ou igual a 1.
