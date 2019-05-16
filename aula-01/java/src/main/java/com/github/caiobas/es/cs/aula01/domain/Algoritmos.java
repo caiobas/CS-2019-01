@@ -74,7 +74,7 @@ public class Algoritmos {
 												+ mes + " Esperado mes entre 1 e 12.");
 		}
 		
-		if(ano <= 1953) {
+		if(ano <= 1753) {
 			throw new IllegalArgumentException("Ano fora da exigencia:" 
 												+ ano + " Esperado ano maior ou igual a 1953.");
 		}
