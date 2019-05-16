@@ -126,4 +126,19 @@ public class AlgoritmosTest {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.nomeDiaDaSemana(7));
     }
 
+    @Test
+	public void restoDivisaoCasoClassico() {
+        assertEquals(2, Algoritmos.restoDivisao(5, 3));
+    }
+
+    @Test
+    public void restoDivisaoDividendoMenorQue0() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.restoDivisao(-1, 5));
+    }
+
+    @Test
+    public void restoDivisaoDivisorMenorQue1() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.restoDivisao(1, 0));
+    }
+
 }
