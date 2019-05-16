@@ -151,4 +151,14 @@ public class AlgoritmosTest {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.somaPrimeirosNaturais(0));
     }
 
+    @Test
+	public void FatorialCasoClassico() {
+        assertEquals(120, Algoritmos.fatorial(5));
+    }
+
+    @Test
+    public void fatorialNumeroMenorQue1() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.fatorial(0));
+    }
+
 }
