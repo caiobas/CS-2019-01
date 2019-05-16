@@ -181,4 +181,19 @@ public class AlgoritmosTest {
         assertEquals(8, Algoritmos.produtoUsandoSomas(4, 2));
     }
 
+    @Test
+	public void potenciaCasoClassico() {
+        assertEquals(32, Algoritmos.potenciaUsandoSomas(2, 5));
+    }
+
+    @Test
+    public void potenciaxMenorQue0() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.potenciaUsandoSomas(1, -4));
+    }
+
+    @Test
+    public void potenciayMenorQue0() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.potenciaUsandoSomas(1, -4));
+    }
+
 }
