@@ -152,13 +152,33 @@ public class AlgoritmosTest {
     }
 
     @Test
-	public void FatorialCasoClassico() {
+	public void fatorialCasoClassico() {
         assertEquals(120, Algoritmos.fatorial(5));
     }
 
     @Test
     public void fatorialNumeroMenorQue1() {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.fatorial(0));
+    }
+
+    @Test
+	public void produtoCasoClassico() {
+        assertEquals(8, Algoritmos.produtoUsandoSomas(2, 4));
+    }
+
+    @Test
+    public void produtoaMenorQue0() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.produtoUsandoSomas(-1, 5));
+    }
+
+    @Test
+    public void produtobMenorQue0() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.produtoUsandoSomas(1, -4));
+    }
+
+    @Test
+	public void produtobMenorQuea() {
+        assertEquals(8, Algoritmos.produtoUsandoSomas(4, 2));
     }
 
 }
