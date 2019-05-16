@@ -94,7 +94,7 @@ public class Algoritmos {
      * Função que retorna o dia da semana 
 	 * baseado no resultado da função diaDaSemana.
      *
-     * @param dia resultado resultado utilizado para identificar dia da semana.
+     * @param resultado resultado utilizado para identificar dia da semana.
      * @return Retorna dia da semana. 
      * @throws IllegalArgumentException Se o argumento 
 	 * conter valor incorreto para análise.
@@ -156,7 +156,7 @@ public class Algoritmos {
      * Função matemática que calcula a 
 	 * soma dos números naturais até o parâmetro.
      *
-     * @param dividendo numero Número limite para a soma.
+     * @param numero Número limite para a soma.
      * @return Retorna a soma dos números naturais até o parâmetro. 
      * @throws IllegalArgumentException Se qualquer um dos argumentos 
 	 * não for um número ou inteiro ou se o número não for maior que 1.
@@ -580,7 +580,7 @@ public class Algoritmos {
 	/**
      * Função matemática para conferir CPF.
      *
-     * @param n d Array com digitos para conferir.
+     * @param d Array com digitos para conferir.
      * @return Retorna booleano se é CPF.
      */
 	public static boolean cpf1(int d[]) {
@@ -600,7 +600,7 @@ public class Algoritmos {
 	/**
      * Função matemática para conferir CPF.
      *
-     * @param n d Array com digitos para conferir.
+     * @param d Array com digitos para conferir.
      * @return Retorna booleano se é CPF.
      */
 	public static boolean cpf2(int d[]) {
