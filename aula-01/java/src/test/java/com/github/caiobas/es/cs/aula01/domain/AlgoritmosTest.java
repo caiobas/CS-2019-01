@@ -266,4 +266,19 @@ public class AlgoritmosTest {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.raizQuadrada(0, 5));
     }
 
+    @Test
+	public void numeroPrimoCasoClassico() {
+        assertEquals(true, Algoritmos.numeroPrimo(19));
+    }
+
+    @Test
+	public void numeroPrimoErro() {
+        assertEquals(false, Algoritmos.numeroPrimo(18));
+    }
+
+    @Test
+    public void numeroPrimonMenorQue2() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.numeroPrimo(1));
+    }
+
 }
