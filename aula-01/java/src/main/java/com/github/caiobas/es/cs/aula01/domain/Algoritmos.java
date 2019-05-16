@@ -79,7 +79,7 @@ public class Algoritmos {
 												+ ano + " Esperado ano maior ou igual a 1953.");
 		}
 		
-		if(mes == 1 && mes == 2) {
+		if(mes == 1 || mes == 2) {
 			mes = mes + 12;
 			ano = ano - 1;
 		}

@@ -77,6 +77,16 @@ public class AlgoritmosTest {
     }
 
     @Test
+	public void diaDaSemanaMes1() {
+        assertEquals("Terca-feira", Algoritmos.diaDaSemana(1, 1, 2019));
+    }
+
+    @Test
+	public void diaDaSemanaMes2() {
+        assertEquals("Sexta-feira", Algoritmos.diaDaSemana(1, 2, 2019));
+    }
+
+    @Test
 	public void nomeDiaDaSemana0() {
         assertEquals("Segunda-feira", Algoritmos.nomeDiaDaSemana(0));
     }
