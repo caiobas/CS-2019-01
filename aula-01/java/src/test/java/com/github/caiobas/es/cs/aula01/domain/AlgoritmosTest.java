@@ -196,4 +196,14 @@ public class AlgoritmosTest {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.potenciaUsandoSomas(1, -4));
     }
 
+    @Test
+	public void valorPICasoClassico() {
+        assertEquals(3.140592653839794, Algoritmos.valorPI(1000));
+    }
+
+    @Test
+    public void valorPIMenorQue1() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.valorPI(0));
+    }
+
 }
