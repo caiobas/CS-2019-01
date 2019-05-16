@@ -221,4 +221,24 @@ public class AlgoritmosTest {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.logaritmo(1, 1));
     }
 
+    @Test
+	public void razaoAureaCasoClassico() {
+        assertEquals(1.6180339887498947, Algoritmos.razaoAurea(1, 2, 1000));
+    }
+
+    @Test
+    public void razaoAureaxMenorQue0() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(-1, 2, 1000));
+    }
+
+    @Test
+    public void razaoAureayMenorQuex() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(2, 1, 1000));
+    }
+    
+    @Test
+    public void razaoAureakMenorQue1() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.razaoAurea(1, 2, 0));
+    }
+
 }
