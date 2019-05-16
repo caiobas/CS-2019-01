@@ -206,4 +206,19 @@ public class AlgoritmosTest {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.valorPI(0));
     }
 
+    @Test
+	public void logaritmoCasoClassico() {
+        assertEquals(6, Algoritmos.logaritmo(2, 2));
+    }
+
+    @Test
+    public void logaritmonMenorQue1() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.logaritmo(0, 5));
+    }
+
+    @Test
+    public void logaritmokMenorQue2() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.logaritmo(1, 1));
+    }
+
 }
