@@ -1,7 +1,20 @@
 package com.github.caiobas.es.cs.aula01.domain;
 
 public class Algoritmos {
-
+	
+	/**
+     * Função matemática que verifica se o quadrado da soma dos 2 primeiros números com os 2 ultimos é o próprio número.
+     *
+     * @param dia O dia da data. Valor entre 1 e 31, inclusive.
+     * @param mes O mês da data. Valor entre 1 e 12, inclusive.
+     * @param ano O ano da data. Valor maior que 1752.
+     * @return O dia da semana correspondente à data. O valor 0 para
+     * segunda-feira, 1 para terça-feira, 2 para quarta-feira e
+     * assim sucessivamente.
+     * @throws IllegalArgumentException Se o dia for inválido (menor que um
+     *                                  ou maior que 31), o mês for inválido (menor que 1 ou maior que 12)
+     *                                  ou o ano for menor que 1753.
+     */
 	public static boolean propriedade3025(int numero) {
 		
  		if(numero < 0 || numero > 9999) {
@@ -32,7 +45,7 @@ public class Algoritmos {
 		return resultado == numero;
 	}
 
-	public static void diaDaSemana(int dia, int mes, int ano) {
+	public static String diaDaSemana(int dia, int mes, int ano) {
 		
 		if(dia < 1 || dia > 31) {
 			throw new IllegalArgumentException("Dia fora da exigencia:" 
@@ -57,7 +70,7 @@ public class Algoritmos {
 		final int resultado = dia + (2 * mes) + (3 * (mes + 1) / 5) 
 							+ ano + (ano / 4) - (ano / 100) + (ano / 400);
 		
-		nomeDiaDaSemana(resultado % 7);
+		return nomeDiaDaSemana(resultado % 7);
 	}
 
 	public static String nomeDiaDaSemana(int resultado){

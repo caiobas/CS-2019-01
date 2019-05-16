@@ -5,6 +5,8 @@
  * @param {number} mes Mês a ser verificado.
  * @param {number} ano Ano a ser verificado.
  * 
+ * @returns {String} Retorna dia da semana. 
+ * 
  * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
  * @throws {RangeError} Se qualquer um dos argumentos não estiver dentro dos parâmetros de data.
  */
