@@ -141,4 +141,14 @@ public class AlgoritmosTest {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.restoDivisao(1, 0));
     }
 
+    @Test
+	public void somaCasoClassico() {
+        assertEquals(15, Algoritmos.somaPrimeirosNaturais(5));
+    }
+
+    @Test
+    public void somaNumeroMenorQue1() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.somaPrimeirosNaturais(0));
+    }
+
 }
