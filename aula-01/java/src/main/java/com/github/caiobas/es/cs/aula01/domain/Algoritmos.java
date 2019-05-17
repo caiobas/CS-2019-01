@@ -1,18 +1,25 @@
 package com.github.caiobas.es.cs.aula01.domain;
 
+/**
+* Implementação de código referente a
+* aula de Construção de Software.
+*/
 public class Algoritmos {
-	
+	protected Algoritmos() {
+
+	}
+
 	/**
-     * Função matemática que verifica se o quadrado da soma 
+     * Função matemática que verifica se o quadrado da soma
 	 * dos 2 primeiros números com os 2 ultimos é o próprio número.
      *
      * @param numero Número a ser verificado.
      * @return Retorna booleano para verificação.
      * @throws IllegalArgumentException Se o número não está entre 0 e 9999.
      */
-	public static boolean propriedade3025(int numero) {
-		
- 		if(numero < 0 || numero > 9999) {
+	public static boolean propriedade3025(final int numero) {
+
+ 		if (numero < 0 || numero > 9999) {
 			 throw new IllegalArgumentException("Numero fora da exigencia:" 
 			 									+ numero + " Esperado numero entre 0 e 9999.");
  		}
@@ -627,5 +634,4 @@ public class Algoritmos {
             }
         }
     }
-
 }
