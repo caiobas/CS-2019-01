@@ -358,4 +358,46 @@ public class AlgoritmosTest {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.fibonacci(-1));
     }
 
+    @Test
+	public void cpf1CasoClassico() {
+        int cpf[] = {7, 4, 8, 3, 3, 8, 4, 3, 8, 7, 0}; //cpf TRUE para teste
+        assertEquals(true, Algoritmos.cpf1(cpf));
+    }
+
+    @Test
+	public void cpf1Erro() {
+        int cpf[] = {6, 3, 2, 3, 3, 6, 6, 9, 4, 0, 3}; //cpf FALSE para teste
+        assertEquals(false, Algoritmos.cpf1(cpf));
+    }
+
+    @Test
+	public void cpf2CasoClassico() {
+        int cpf[] = {7, 4, 8, 3, 3, 8, 4, 3, 8, 7, 0}; //cpf TRUE para teste
+        assertEquals(true, Algoritmos.cpf2(cpf));
+    }
+
+    @Test
+	public void cpf2Erro() {
+        int cpf[] = {6, 3, 2, 3, 3, 6, 6, 9, 4, 0, 3}; //cpf FALSE para teste
+        assertEquals(false, Algoritmos.cpf2(cpf));
+    }
+
+    @Test
+	public void excecaoCpfVetorNull() {
+        int cpf[] = null;
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.geraExcecaoSeCpfInvalido(cpf));
+    }
+
+    @Test
+	public void excecaoCpfTamanhoIncorreto() {
+        int cpf[] = {1, 5, 4, 7, 3, 4, 1, 5, 7, 8, 7, 6}; //cpf de tamanho incorreto para teste
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.geraExcecaoSeCpfInvalido(cpf));
+    }
+
+    @Test
+	public void excecaoCpfDadosIncorretos() {
+        int cpf[] = {72, 4, 8, 3, 33, 8, 4, 63, 8, 7, 0};
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.geraExcecaoSeCpfInvalido(cpf));
+    }
+
 }

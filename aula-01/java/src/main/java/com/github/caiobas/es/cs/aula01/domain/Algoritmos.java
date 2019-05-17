@@ -628,7 +628,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException Se o parâmetro não 
 	 * for um vetor ou se o vetor tiver tamanho incorreto.
      */
-	private static void geraExcecaoSeCpfInvalido(int[] d) {
+	public static void geraExcecaoSeCpfInvalido(int[] d) {
 		
         if (d == null) {
             throw new IllegalArgumentException("Argumento null");
