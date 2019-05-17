@@ -529,7 +529,7 @@ public class Algoritmos {
 			auxiliarb = m;
 		}
 
-		return a;
+		return auxiliara;
 	}
 
 	/**
@@ -552,7 +552,7 @@ public class Algoritmos {
 
 		int auxiliara = a;
 		int auxiliarb = b;
-		while (auxiliara != b) {
+		while (auxiliara != auxiliarb) {
 			if (auxiliara > auxiliarb) {
 				auxiliara = auxiliara - auxiliarb;
 			} else {
@@ -560,7 +560,7 @@ public class Algoritmos {
 			}
 		}
 
-		return a;
+		return auxiliara;
 	}
 
 	/**
