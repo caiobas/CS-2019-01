@@ -326,4 +326,16 @@ public class AlgoritmosTest {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.mdc2(1, 0));
     }
 
+    @Test
+	public void regraHornerCasoClassico() {
+        int regraTeste[] = {0, 1, 2};
+        assertEquals(4, Algoritmos.regraHorner(1, 2, regraTeste));
+    }
+
+    @Test
+	public void regraHornergMenorQue1() {
+        int regraTeste[] = {0, 1, 2};
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.regraHorner(1, 0, regraTeste));
+    }
+
 }
