@@ -338,4 +338,24 @@ public class AlgoritmosTest {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.regraHorner(1, 0, regraTeste));
     }
 
+    @Test
+	public void fibonacciCasoClassico() {
+        assertEquals(8, Algoritmos.fibonacci(6));
+    }
+
+    @Test
+	public void fibonacciCaso0() {
+        assertEquals(0, Algoritmos.fibonacci(0));
+    }
+
+    @Test
+	public void fibonacciCaso1() {
+        assertEquals(1, Algoritmos.fibonacci(1));
+    }
+
+    @Test
+	public void fibonaccinMenorQue0() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.fibonacci(-1));
+    }
+
 }
