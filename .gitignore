@@ -5,3 +5,4 @@ desktop.ini
 .settings/
 bin/
 out/
+*/target/*
