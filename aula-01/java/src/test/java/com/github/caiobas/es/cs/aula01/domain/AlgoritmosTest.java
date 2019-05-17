@@ -311,4 +311,19 @@ public class AlgoritmosTest {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.mdc1(1, 0));
     }
 
+    @Test
+	public void mdc2CasoClassico() {
+        assertEquals(27, Algoritmos.mdc2(81, 54));
+    }
+
+    @Test
+    public void mdc2aMenorQueb() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.mdc2(4, 5));
+    }
+
+    @Test
+    public void mdc2bMenorQue1() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.mdc2(1, 0));
+    }
+
 }
