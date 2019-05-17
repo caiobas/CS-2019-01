@@ -71,12 +71,12 @@ public class Algoritmos {
 												+ mes + " Esperado mes entre 1 e 12.");
 		}
 		
-		if(ano <= 1953) {
+		if(ano <= 1753) {
 			throw new IllegalArgumentException("Ano fora da exigencia:" 
 												+ ano + " Esperado ano maior ou igual a 1953.");
 		}
 		
-		if(mes == 1 && mes == 2) {
+		if(mes == 1 || mes == 2) {
 			mes = mes + 12;
 			ano = ano - 1;
 		}
@@ -609,7 +609,7 @@ public class Algoritmos {
      * @throws IllegalArgumentException Se o parâmetro não for um vetor 
 	 * 									ou se o vetor tiver tamanho incorreto.
      */
-	private static void geraExcecaoSeCpfInvalido(int[] d) {
+	public static void geraExcecaoSeCpfInvalido(int[] d) {
 		
         if (d == null) {
             throw new IllegalArgumentException("Argumento null");
