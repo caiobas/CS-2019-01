@@ -281,4 +281,19 @@ public class AlgoritmosTest {
         assertThrows(IllegalArgumentException.class, () -> Algoritmos.numeroPrimo(1));
     }
 
+    @Test
+	public void crivoCasoClassico() {
+        assertEquals(false, Algoritmos.crivoErastotenes(19));
+    }
+
+    @Test
+	public void crivoErro() {
+        assertEquals(true, Algoritmos.crivoErastotenes(18));
+    }
+
+    @Test
+    public void crivonMenorQue2() {
+        assertThrows(IllegalArgumentException.class, () -> Algoritmos.crivoErastotenes(1));
+    }
+
 }
