@@ -4,12 +4,6 @@ package com.github.caiobas.es.cs.aula01.domain;
  * Implementação de código referente a aula de Construção de Software.
  */
 public class Algoritmos {
-	/**
-	 * Apenas para fim de cobertura.
-	 */
-	public Algoritmos() {
-
-	}
 
 	/**
 	 * Função matemática que verifica se o quadrado da soma dos 2 primeiros
