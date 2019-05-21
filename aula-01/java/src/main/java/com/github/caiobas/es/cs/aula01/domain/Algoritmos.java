@@ -7,7 +7,7 @@ public class Algoritmos {
 	/**
 	 * Apenas para fim de cobertura.
 	 */
-	protected Algoritmos() {
+	public Algoritmos() {
 
 	}
 
