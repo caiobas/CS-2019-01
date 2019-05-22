@@ -1,10 +1,6 @@
 package com.github.caiobas.es.cs.aula01.domain;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
@@ -422,9 +418,8 @@ public class AlgoritmosTest {
 
     @Test
 	public void excecaoCpfVetorNull() {
-        int cpf[] = null;
         assertThrows(IllegalArgumentException.class, 
-                                                    () -> Algoritmos.geraExcecaoSeCpfInvalido(cpf));
+                                                    () -> Algoritmos.geraExcecaoSeCpfInvalido(null));
     }
 
     @Test
