@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1558483492269" clover="3.2.0">
+  <project timestamp="1558483492269" name="All files">
+    <metrics statements="275" coveredstatements="275" conditionals="215" coveredconditionals="215" methods="24" coveredmethods="24" elements="514" coveredelements="514" complexity="0" loc="275" ncloc="275" packages="1" files="20" classes="20"/>
+    <file name="cpf1.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\cpf1.js">
+      <metrics statements="16" coveredstatements="16" conditionals="12" coveredconditionals="12" methods="2" coveredmethods="2"/>
+      <line num="13" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="17" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="21" count="2" type="stmt"/>
+      <line num="23" count="2" type="stmt"/>
+      <line num="24" count="2" type="stmt"/>
+      <line num="25" count="2" type="stmt"/>
+      <line num="26" count="2" type="stmt"/>
+      <line num="28" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="41" count="4" type="stmt"/>
+      <line num="42" count="26" type="cond" truecount="2" falsecount="0"/>
+      <line num="43" count="1" type="stmt"/>
+      <line num="45" count="25" type="cond" truecount="4" falsecount="0"/>
+      <line num="46" count="1" type="stmt"/>
+      <line num="51" count="2" type="stmt"/>
+    </file>
+    <file name="cpf2.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\cpf2.js">
+      <metrics statements="19" coveredstatements="19" conditionals="12" coveredconditionals="12" methods="2" coveredmethods="2"/>
+      <line num="13" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="17" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="21" count="4" type="stmt"/>
+      <line num="23" count="2" type="stmt"/>
+      <line num="24" count="2" type="stmt"/>
+      <line num="26" count="2" type="stmt"/>
+      <line num="27" count="16" type="stmt"/>
+      <line num="28" count="16" type="stmt"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="32" count="2" type="stmt"/>
+      <line num="34" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="47" count="4" type="stmt"/>
+      <line num="48" count="30" type="cond" truecount="2" falsecount="0"/>
+      <line num="49" count="1" type="stmt"/>
+      <line num="51" count="29" type="cond" truecount="4" falsecount="0"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="57" count="1" type="stmt"/>
+    </file>
+    <file name="diaDaSemana.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\diaDaSemana.js">
+      <metrics statements="23" coveredstatements="23" conditionals="30" coveredconditionals="30" methods="3" coveredmethods="3"/>
+      <line num="15" count="9" type="cond" truecount="5" falsecount="0"/>
+      <line num="16" count="3" type="stmt"/>
+      <line num="19" count="6" type="cond" truecount="5" falsecount="0"/>
+      <line num="20" count="3" type="stmt"/>
+      <line num="23" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="27" count="2" type="cond" truecount="4" falsecount="0"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="32" count="2" type="stmt"/>
+      <line num="34" count="2" type="stmt"/>
+      <line num="46" count="9" type="cond" truecount="7" falsecount="0"/>
+      <line num="48" count="1" type="stmt"/>
+      <line num="50" count="3" type="stmt"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="54" count="1" type="stmt"/>
+      <line num="56" count="1" type="stmt"/>
+      <line num="58" count="1" type="stmt"/>
+      <line num="60" count="1" type="stmt"/>
+      <line num="75" count="11" type="cond" truecount="7" falsecount="0"/>
+      <line num="76" count="6" type="stmt"/>
+      <line num="78" count="5" type="stmt"/>
+      <line num="81" count="3" type="stmt"/>
+    </file>
+    <file name="fatorial.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\fatorial.js">
+      <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <line num="13" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="17" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="21" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="25" count="2" type="stmt"/>
+      <line num="27" count="2" type="stmt"/>
+      <line num="28" count="7" type="stmt"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
+    </file>
+    <file name="fibonacci.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\fibonacci.js">
+      <metrics statements="16" coveredstatements="16" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+      <line num="13" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="17" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="21" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="25" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="26" count="2" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="33" count="5" type="stmt"/>
+      <line num="34" count="5" type="stmt"/>
+      <line num="35" count="5" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="41" count="1" type="stmt"/>
+    </file>
+    <file name="logaritmo.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\logaritmo.js">
+      <metrics statements="17" coveredstatements="17" conditionals="12" coveredconditionals="12" methods="1" coveredmethods="1"/>
+      <line num="14" count="7" type="cond" truecount="4" falsecount="0"/>
+      <line num="15" count="2" type="stmt"/>
+      <line num="18" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="22" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="23" count="2" type="stmt"/>
+      <line num="26" count="2" type="stmt"/>
+      <line num="27" count="2" type="stmt"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="29" count="2" type="stmt"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="32" count="2" type="stmt"/>
+      <line num="33" count="2" type="stmt"/>
+      <line num="34" count="2" type="stmt"/>
+      <line num="37" count="2" type="stmt"/>
+      <line num="40" count="1" type="stmt"/>
+      <line num="42" count="1" type="stmt"/>
+    </file>
+    <file name="mdc1.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\mdc1.js">
+      <metrics statements="12" coveredstatements="12" conditionals="12" coveredconditionals="12" methods="1" coveredmethods="1"/>
+      <line num="14" count="6" type="cond" truecount="4" falsecount="0"/>
+      <line num="15" count="2" type="stmt"/>
+      <line num="18" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="22" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="23" count="2" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="27" count="2" type="stmt"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="29" count="2" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="35" count="1" type="stmt"/>
+    </file>
+    <file name="mdc2.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\mdc2.js">
+      <metrics statements="12" coveredstatements="12" conditionals="14" coveredconditionals="14" methods="1" coveredmethods="1"/>
+      <line num="14" count="6" type="cond" truecount="4" falsecount="0"/>
+      <line num="15" count="2" type="stmt"/>
+      <line num="18" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="22" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="23" count="2" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="27" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="35" count="1" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+    </file>
+    <file name="numeroPrimo.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\numeroPrimo.js">
+      <metrics statements="11" coveredstatements="11" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <line num="13" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="17" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="21" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="25" count="2" type="stmt"/>
+      <line num="26" count="18" type="cond" truecount="2" falsecount="0"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
+    </file>
+    <file name="potenciaUsandoSomas.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\potenciaUsandoSomas.js">
+      <metrics statements="13" coveredstatements="13" conditionals="12" coveredconditionals="12" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="15" count="7" type="cond" truecount="4" falsecount="0"/>
+      <line num="16" count="2" type="stmt"/>
+      <line num="19" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="23" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="24" count="2" type="stmt"/>
+      <line num="27" count="2" type="stmt"/>
+      <line num="29" count="2" type="stmt"/>
+      <line num="30" count="10" type="stmt"/>
+      <line num="33" count="2" type="stmt"/>
+      <line num="36" count="1" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+    </file>
+    <file name="produtoUsandoSomas.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\produtoUsandoSomas.js">
+      <metrics statements="16" coveredstatements="16" conditionals="14" coveredconditionals="14" methods="1" coveredmethods="1"/>
+      <line num="14" count="16" type="cond" truecount="4" falsecount="0"/>
+      <line num="15" count="2" type="stmt"/>
+      <line num="18" count="14" type="cond" truecount="4" falsecount="0"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="22" count="13" type="cond" truecount="4" falsecount="0"/>
+      <line num="23" count="2" type="stmt"/>
+      <line num="26" count="11" type="stmt"/>
+      <line num="27" count="11" type="stmt"/>
+      <line num="29" count="11" type="cond" truecount="2" falsecount="0"/>
+      <line num="30" count="6" type="stmt"/>
+      <line num="31" count="6" type="stmt"/>
+      <line num="34" count="11" type="stmt"/>
+      <line num="36" count="11" type="stmt"/>
+      <line num="37" count="20" type="stmt"/>
+      <line num="40" count="11" type="stmt"/>
+      <line num="43" count="2" type="stmt"/>
+    </file>
+    <file name="propriedade153.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\propriedade153.js">
+      <metrics statements="13" coveredstatements="13" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <line num="13" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="17" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="21" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="22" count="2" type="stmt"/>
+      <line num="25" count="2" type="stmt"/>
+      <line num="26" count="2" type="stmt"/>
+      <line num="27" count="2" type="stmt"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="29" count="2" type="stmt"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
+    </file>
+    <file name="propriedade3025.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\propriedade3025.js">
+      <metrics statements="11" coveredstatements="11" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <line num="13" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="17" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="21" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="22" count="2" type="stmt"/>
+      <line num="25" count="2" type="stmt"/>
+      <line num="26" count="2" type="stmt"/>
+      <line num="27" count="2" type="stmt"/>
+      <line num="29" count="2" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+    </file>
+    <file name="quadradoPerfeito.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\quadradoPerfeito.js">
+      <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <line num="13" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="17" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="21" count="2" type="stmt"/>
+      <line num="22" count="2" type="stmt"/>
+      <line num="24" count="2" type="stmt"/>
+      <line num="25" count="10" type="stmt"/>
+      <line num="26" count="10" type="stmt"/>
+      <line num="29" count="2" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+    </file>
+    <file name="raizQuadrada.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\raizQuadrada.js">
+      <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <line num="14" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="15" count="2" type="stmt"/>
+      <line num="18" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="25" count="201" type="stmt"/>
+      <line num="26" count="201" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+    </file>
+    <file name="razaoAurea.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\razaoAurea.js">
+      <metrics statements="15" coveredstatements="15" conditionals="15" coveredconditionals="15" methods="1" coveredmethods="1"/>
+      <line num="15" count="8" type="cond" truecount="5" falsecount="0"/>
+      <line num="16" count="2" type="stmt"/>
+      <line num="19" count="6" type="cond" truecount="5" falsecount="0"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="23" count="5" type="cond" truecount="5" falsecount="0"/>
+      <line num="24" count="3" type="stmt"/>
+      <line num="27" count="2" type="stmt"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="30" count="2" type="stmt"/>
+      <line num="31" count="2000" type="stmt"/>
+      <line num="32" count="2000" type="stmt"/>
+      <line num="33" count="2000" type="stmt"/>
+      <line num="36" count="2" type="stmt"/>
+      <line num="39" count="1" type="stmt"/>
+      <line num="41" count="1" type="stmt"/>
+    </file>
+    <file name="regraHorner.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\regraHorner.js">
+      <metrics statements="12" coveredstatements="12" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <line num="15" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="16" count="2" type="stmt"/>
+      <line num="19" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="30" count="2" type="stmt"/>
+      <line num="33" count="1" type="stmt"/>
+      <line num="36" count="1" type="stmt"/>
+    </file>
+    <file name="restoDivisao.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\restoDivisao.js">
+      <metrics statements="11" coveredstatements="11" conditionals="12" coveredconditionals="12" methods="1" coveredmethods="1"/>
+      <line num="14" count="6" type="cond" truecount="4" falsecount="0"/>
+      <line num="15" count="2" type="stmt"/>
+      <line num="18" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="22" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="23" count="2" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="35" count="1" type="stmt"/>
+    </file>
+    <file name="somaPrimeirosNaturais.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\somaPrimeirosNaturais.js">
+      <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <line num="13" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="17" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="21" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="28" count="4" type="stmt"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
+    </file>
+    <file name="valorPI.js" path="C:\Users\caiob\OneDrive\ProgramasEclipse\cs-2019-01\aula-01\js\valorPI.js">
+      <metrics statements="15" coveredstatements="15" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <line num="13" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="17" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="21" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="30" count="1000" type="stmt"/>
+      <line num="31" count="1000" type="stmt"/>
+      <line num="32" count="1000" type="stmt"/>
+      <line num="35" count="1" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
