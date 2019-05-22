@@ -24,7 +24,7 @@ function diaDaSemana(dia, mes, ano) {
         throw new RangeError("Data incorreta. Dia deveria estar entre 1 e 31, mês entre 1 e 12 e ano igual ou maior que 1954.");
     }
 
-    if (mes == 1 && mes == 2) {
+    if (mes == 1 || mes == 2) {
         mes = mes + 12;
         ano = ano - 1;
     }
@@ -46,25 +46,18 @@ function nomeDiaDaSemana(resultado) {
     switch (resultado) {
         case 0:
             return "Segunda-feira"
-            break;
         case 1:
             return "Terca-feira"
-            break;
         case 2:
             return "Quarta-feira"
-            break;
         case 3:
             return "Quinta-feira"
-            break;
         case 4:
             return "Sexta-feira"
-            break;
         case 5:
             return "Sabado"
-            break;
         case 6:
             return "Domingo"
-            break;
     }
 }
 
