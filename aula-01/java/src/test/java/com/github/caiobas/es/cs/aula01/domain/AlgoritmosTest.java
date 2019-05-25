@@ -205,7 +205,7 @@ public class AlgoritmosTest {
     @Test
     public void potenciaxMenorQue0() {
         assertThrows(IllegalArgumentException.class, 
-                                                    () -> Algoritmos.potenciaUsandoSomas(1, -4));
+                                                    () -> Algoritmos.potenciaUsandoSomas(-1, 4));
     }
 
     @Test
@@ -399,8 +399,14 @@ public class AlgoritmosTest {
     }
 
     @Test
-	public void cpf1Erro() {
+	public void cpf1Erro1() {
         int cpf[] = {6, 3, 2, 3, 3, 6, 6, 9, 4, 0, 3}; //cpf FALSE para teste
+        assertEquals(false, Algoritmos.cpf1(cpf));
+    }
+    
+    @Test
+	public void cpf1Erro2() {
+        int cpf[] = {7, 4, 8, 3, 3, 8, 4, 3, 8, 8, 0}; //cpf FALSE para teste
         assertEquals(false, Algoritmos.cpf1(cpf));
     }
 
@@ -411,16 +417,21 @@ public class AlgoritmosTest {
     }
 
     @Test
-	public void cpf2Erro() {
+	public void cpf2Erro1() {
         int cpf[] = {6, 3, 2, 3, 3, 6, 6, 9, 4, 0, 3}; //cpf FALSE para teste
         assertEquals(false, Algoritmos.cpf2(cpf));
     }
 
     @Test
+	public void cpf2Erro2() {
+        int cpf[] = {7, 4, 8, 3, 3, 8, 4, 3, 8, 9, 1}; //cpf FALSE para teste
+        assertEquals(false, Algoritmos.cpf2(cpf));
+    }
+
+    @Test
 	public void excecaoCpfVetorNull() {
-        int cpf[] = null;
         assertThrows(IllegalArgumentException.class, 
-                                                    () -> Algoritmos.geraExcecaoSeCpfInvalido(cpf));
+                                                    () -> Algoritmos.geraExcecaoSeCpfInvalido(null));
     }
 
     @Test
@@ -431,8 +442,15 @@ public class AlgoritmosTest {
     }
 
     @Test
-	public void excecaoCpfDadosIncorretos() {
+	public void excecaoCpfDadosAcima9() {
         int cpf[] = {72, 4, 8, 3, 33, 8, 4, 63, 8, 7, 0};
+        assertThrows(IllegalArgumentException.class, 
+                                                    () -> Algoritmos.geraExcecaoSeCpfInvalido(cpf));
+    }
+    
+    @Test
+	public void excecaoCpfDadosAbaixo0() {
+        int cpf[] = {7, -4, 8, 3, 33, 8, 4, 63, 8, 7, 0};
         assertThrows(IllegalArgumentException.class, 
                                                     () -> Algoritmos.geraExcecaoSeCpfInvalido(cpf));
     }
