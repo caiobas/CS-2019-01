@@ -365,13 +365,15 @@ public class Algoritmos {
 	 * maior ou igual a 0, se posterior não for
 	 * maior que anterior ou se limite não for maior que 0.
 	 */
-	public static double razaoAurea(final int anterior, final int posterior, final int limite) {
+	public static double razaoAurea(final int anterior,
+	final int posterior, final int limite) {
 
 		if (anterior < 0 || posterior < anterior || limite <= 0) {
 			throw new IllegalArgumentException(
 					"Numero fora da exigencia."
-					+ " Esperado anterior maior ou igual a 0,"
-					+ " posterior maior que anterior e limite maior que 0.");
+					+ " Esperado anterior maior ou igual"
+					+ " a 0, posterior maior que anterior"
+					+ " e limite maior que 0.");
 		}
 
 		double auxiliarPosterior = posterior;
@@ -379,7 +381,8 @@ public class Algoritmos {
 
 		for (int contador = 1; contador <= limite; contador++) {
 			double troca = auxiliarPosterior;
-			auxiliarPosterior = auxiliarPosterior + auxiliarAnterior;
+			auxiliarPosterior = auxiliarPosterior
+					+ auxiliarAnterior;
 			auxiliarAnterior = troca;
 		}
 
@@ -391,7 +394,8 @@ public class Algoritmos {
 	 *
 	 * @param numero Número para conferir se é quadrado perfeito.
 	 * @return Retorna booleano se é quadrado perfeito.
-	 * @throws IllegalArgumentException Se numero não for maior ou igual a 1.
+	 * @throws IllegalArgumentException Se numero não
+	 * for maior ou igual a 1.
 	 */
 	public static boolean quadradoPerfeito(final int numero) {
 
@@ -418,9 +422,11 @@ public class Algoritmos {
 	 * @param numero Número para calculo da raiz quadrada.
 	 * @param precisao Número para proximidade de raiz quadrada.
 	 * @return Retorna número mais próximo da raiz quadrada.
-	 * @throws IllegalArgumentException Se numero não for maior ou igual a 1.
+	 * @throws IllegalArgumentException Se numero
+	 * não for maior ou igual a 1.
 	 */
-	public static double raizQuadrada(final int numero, final int precisao) {
+	public static double raizQuadrada(final int numero,
+	final int precisao) {
 
 		if (numero < 1) {
 			throw new IllegalArgumentException(
@@ -444,7 +450,8 @@ public class Algoritmos {
 	 *
 	 * @param numero Número para conferir se é número primo.
 	 * @return Retorna booleano se é número primo.
-	 * @throws IllegalArgumentException Se numero não for maior ou igual a 1.
+	 * @throws IllegalArgumentException Se numero
+	 * não for maior ou igual a 1.
 	 */
 	public static boolean numeroPrimo(final int numero) {
 
@@ -468,7 +475,8 @@ public class Algoritmos {
 	 *
 	 * @param numero Número para conferir se é número primo.
 	 * @return Retorna booleano se é número primo.
-	 * @throws IllegalArgumentException Se numero não for maior ou igual a 2.
+	 * @throws IllegalArgumentException Se numero
+	 * não for maior ou igual a 2.
 	 */
 	public static boolean crivoErastotenes(final int numero) {
 
@@ -514,7 +522,8 @@ public class Algoritmos {
 			throw new IllegalArgumentException(
 					"Numero fora da exigencia."
 					+ " Esperado numeroUm maior ou"
-					+ " igual a numeroDois e numeroDoisg maior que 0.");
+					+ " igual a numeroDois e"
+					+ " numeroDois maior que 0.");
 		}
 
 		int auxiliarNumeroUm = numeroUm;
@@ -542,7 +551,8 @@ public class Algoritmos {
 		if (numeroUm < numeroDois || numeroDois < 1) {
 			throw new IllegalArgumentException(
 					"Numero fora da exigencia."
-					+ " Esperado numeroUm maior ou igual a numeroDois"
+					+ " Esperado numeroUm maior"
+					+ " ou igual a numeroDois"
 					+ " e numeroDois maior que 0.");
 		}
 
@@ -550,9 +560,11 @@ public class Algoritmos {
 		int auxiliarNumeroDois = numeroDois;
 		while (auxiliarNumeroUm != auxiliarNumeroDois) {
 			if (auxiliarNumeroUm > auxiliarNumeroDois) {
-				auxiliarNumeroUm = auxiliarNumeroUm - auxiliarNumeroDois;
+				auxiliarNumeroUm = auxiliarNumeroUm
+						- auxiliarNumeroDois;
 			} else {
-				auxiliarNumeroDois = auxiliarNumeroDois - auxiliarNumeroUm;
+				auxiliarNumeroDois = auxiliarNumeroDois
+						- auxiliarNumeroUm;
 			}
 		}
 
@@ -589,7 +601,7 @@ public class Algoritmos {
 	/**
 	 * Função matemática para o cálculo de Fibonacci.
 	 *
-	 * @param n Número para cálculo de Fibonacci.
+	 * @param numero Número para cálculo de Fibonacci.
 	 * @return Retorna número de Fibonacci.
 	 * @throws IllegalArgumentException Se numero não
 	 * for maior ou igual a 0.
@@ -638,20 +650,31 @@ public class Algoritmos {
 		final int auxiliar10 = 10;
 		final int auxiliar11 = 11;
 
-		final int comparaUm = vetor[0] + 2 * (vetor[1]) + auxiliar3 * (vetor[2])
-		+ auxiliar4 * (vetor[auxiliar3]) + auxiliar5 * (vetor[auxiliar4])
-		+ auxiliar6 * (vetor[auxiliar5]) + auxiliar7 * (vetor[auxiliar6])
-		+ auxiliar8 * (vetor[auxiliar7]) + auxiliar9 * (vetor[auxiliar8]);
-		final int comparaDois = vetor[1] + 2 * (vetor[2]) + auxiliar3 * (vetor[auxiliar3])
-		+ auxiliar4 * (vetor[auxiliar4]) + auxiliar5 * (vetor[auxiliar5])
-		+ auxiliar6 * (vetor[auxiliar6]) + auxiliar7 * (vetor[auxiliar7])
-		+ auxiliar8 * (vetor[auxiliar8]) + auxiliar9 * (vetor[auxiliar9]);
+		final int comparaUm = vetor[0]
+		+ 2 * (vetor[1])
+		+ auxiliar3 * (vetor[2])
+		+ auxiliar4 * (vetor[auxiliar3])
+		+ auxiliar5 * (vetor[auxiliar4])
+		+ auxiliar6 * (vetor[auxiliar5])
+		+ auxiliar7 * (vetor[auxiliar6])
+		+ auxiliar8 * (vetor[auxiliar7])
+		+ auxiliar9 * (vetor[auxiliar8]);
+		final int comparaDois = vetor[1]
+		+ 2 * (vetor[2])
+		+ auxiliar3 * (vetor[auxiliar3])
+		+ auxiliar4 * (vetor[auxiliar4])
+		+ auxiliar5 * (vetor[auxiliar5])
+		+ auxiliar6 * (vetor[auxiliar6])
+		+ auxiliar7 * (vetor[auxiliar7])
+		+ auxiliar8 * (vetor[auxiliar8])
+		+ auxiliar9 * (vetor[auxiliar9]);
 		final int vetorComparaUm = Math.floorMod(
 			Math.floorMod(comparaUm, auxiliar11), auxiliar10);
 		final int vetorComparaDois = Math.floorMod(
 			Math.floorMod(comparaDois, auxiliar11), auxiliar10);
-		
-		return (vetorComparaUm == vetor[auxiliar9]) && (vetorComparaDois == vetor[auxiliar10]);
+
+		return (vetorComparaUm == vetor[auxiliar9])
+			&& (vetorComparaDois == vetor[auxiliar10]);
 	}
 
 	/**
@@ -679,12 +702,15 @@ public class Algoritmos {
 		}
 
 		final int comparaUm = Math.floorMod(
-			Math.floorMod(auxiliaValorDois, auxiliar11), auxiliar10);
+			Math.floorMod(auxiliaValorDois, auxiliar11),
+			 auxiliar10);
 		final int comparaDois = Math.floorMod(
-			Math.floorMod((auxiliaValorDois - auxiliaValorUm + (auxiliar9 * vetor[auxiliar9])),
-			 auxiliar11), auxiliar10);
+			Math.floorMod((auxiliaValorDois - auxiliaValorUm
+			+ (auxiliar9 * vetor[auxiliar9])), auxiliar11),
+			auxiliar10);
 
-		return (comparaUm == vetor[auxiliar9]) && (comparaDois == vetor[auxiliar10]);
+		return (comparaUm == vetor[auxiliar9])
+		&& (comparaDois == vetor[auxiliar10]);
 	}
 
 	/**
@@ -709,7 +735,8 @@ public class Algoritmos {
 		}
 
 		for (int contador = 0; contador < auxiliar11; contador++) {
-			if (vetor[contador] < 0 || vetor[contador] > auxiliar9) {
+			if (vetor[contador] < 0
+			|| vetor[contador] > auxiliar9) {
 				throw new IllegalArgumentException(
 					"Dados fora de exigencia pedida.");
 			}
