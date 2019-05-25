@@ -1,29 +1,29 @@
 /**
  * Função matemática que confere se o número é primo.
  * 
- * @param {number} n Número para conferir se é número primo.
+ * @param {number} numero Número para conferir se é número primo.
  * 
  * @returns {boolean} Retorna booleano se é número primo.
  * 
  * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
- * @throws {RangeError} n deve ser maior ou igual a 1.
+ * @throws {RangeError} numero deve ser maior ou igual a 1.
  */
-function numeroPrimo(n) {
+function numeroPrimo(numero) {
 
-    if (typeof n != "number") {
+    if (typeof numero != "number") {
         throw new TypeError("Este parâmetro não é um número.");
     }
 
-    if (Math.trunc(n) != n) {
+    if (Math.trunc(numero) != numero) {
         throw new TypeError("Este parâmetro não é um inteiro.");
     }
 
-    if (n < 2) {
-        throw new RangeError("n deve ser maior ou igual a 2.");
+    if (numero < 2) {
+        throw new RangeError("numero deve ser maior ou igual a 2.");
     }
 
-    for (let i = 2; i < n; i++) {
-        if ((n % i) == 0) {
+    for (let contador = 2; contador < numero; contador++) {
+        if ((numero % contador) == 0) {
             return false;
         }
     }

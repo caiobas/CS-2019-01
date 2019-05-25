@@ -1,46 +1,46 @@
 /**
  * Função matemática que verifica se o número é primo.
  * 
- * @param {number} n Número para conferir se é número primo.
+ * @param {number} numero Número para conferir se é número primo.
  * 
  * @returns {boolean} Retorna booleano se é número primo.
  * 
  * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
- * @throws {RangeError} n deve ser maior ou igual a 2.
+ * @throws {RangeError} numero deve ser maior ou igual a 2.
  */
-function crivoErastotenes(n) {
+function crivoErastotenes(numero) {
 
-    if (typeof n != "number") {
+    if (typeof numero != "number") {
         throw new TypeError("Este parâmetro não é um número.");
     }
 
-    if (Math.trunc(n) != n) {
+    if (Math.trunc(numero) != numero) {
         throw new TypeError("Este parâmetro não é um inteiro.");
     }
 
-    if (n < 2) {
-        throw new RangeError("n deve ser maior ou igual a 2.");
+    if (numero < 2) {
+        throw new RangeError("numero deve ser maior ou igual a 2.");
     }
 
-    let a = [];
+    let vetor = [];
 
-    for (let i = 1; i < (n + 1); i++) {
-        a[i] = 0;
+    for (let contador = 1; contador < (numero + 1); contador++) {
+        vetor[contador] = 0;
     }
 
-    const limite = Math.floor(Math.sqrt(n));
+    const limite = Math.floor(Math.sqrt(numero));
 
-    for (let i = 2; i <= limite; i++) {
-        if (a[i] == 0) {
-            let multiplo = i + i;
-            while (multiplo <= n) {
-                a[multiplo] = 1;
-                multiplo = multiplo + i;
+    for (let contador = 2; contador <= limite; contador++) {
+        if (vetor[contador] == 0) {
+            let multiplo = contador + contador;
+            while (multiplo <= numero) {
+                vetor[multiplo] = 1;
+                multiplo = multiplo + contador;
             }
         }
     }
 
-    return a[n] == 1;
+    return vetor[numero] == 1;
 }
 
 module.exports = crivoErastotenes;

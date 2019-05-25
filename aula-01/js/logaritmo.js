@@ -1,40 +1,40 @@
 /**
  * Função matemática que calcula a proximidade do logaritmo natural.
  * 
- * @param {number} n Numerador do logaritmo.
- * @param {number} k Número utilizado para proximidade do logaritmo natural.
+ * @param {number} log Numerador do logaritmo.
+ * @param {number} limite Número utilizado para proximidade do logaritmo natural.
  * 
  * @returns {number} Retorna valor mais próximo do logaritmo natural.
  * 
  * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
- * @throws {RangeError} n deve ser maior ou igual a 1 e k maior ou igual a 2.
+ * @throws {RangeError} log deve ser maior ou igual a 1 e limite maior ou igual a 2.
  */
-function logaritmo(n, k) {
+function logaritmo(log, limite) {
 
-    if (typeof n != "number" || typeof k != "number") {
+    if (typeof log != "number" || typeof limite != "number") {
         throw new TypeError("Este parâmetro não é um número.");
     }
 
-    if (Math.trunc(n) != n || Math.trunc(k) != k) {
+    if (Math.trunc(log) != log || Math.trunc(limite) != limite) {
         throw new TypeError("Um(ou mais) parâmetro(s) não é um inteiro.");
     }
 
-    if (n < 1 || k < 2) {
-        throw new RangeError("n deve ser maior ou igual a 1 e k maior ou igual a 2.");
+    if (log < 1 || limite < 2) {
+        throw new RangeError("log deve ser maior ou igual a 1 e limite maior ou igual a 2.");
     }
 
-    let i = 2;
-    let e = (i + n);
-    let numerador = n;
+    let contador = 2;
+    let euler = (contador + log);
+    let numerador = log;
     let denominador = 1;
 
-    for (; i <= k; i++) {
+    for (; contador <= limite; contador++) {
         numerador = numerador * numerador;
-        denominador = denominador * i;
-        e = e + (numerador / denominador);
+        denominador = denominador * contador;
+        euler = euler + (numerador / denominador);
     }
 
-    return e;
+    return euler;
 }
 
 module.exports = logaritmo;

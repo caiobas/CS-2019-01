@@ -24,8 +24,8 @@ function fatorial(numero) {
 
     let f = 1;
 
-    for (let i = 2; i <= numero; i++) {
-        f = f * i;
+    for (let contador = 2; contador <= numero; contador++) {
+        f = f * contador;
     }
 
     return f;

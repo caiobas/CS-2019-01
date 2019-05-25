@@ -1,41 +1,41 @@
 /**
  * Função matemática para o cálculo de Fibonacci.
  * 
- * @param {number} n Número para cálculo de Fibonacci.
+ * @param {number} numero Número para cálculo de Fibonacci.
  * 
  * @returns {number} Retorna número de Fibonacci.
  * 
  * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
- * @throws {RangeError} n deve ser maior ou igual a 0.
+ * @throws {RangeError} numero deve ser maior ou igual a 0.
  */
-function fibonacci(n) {
+function fibonacci(numero) {
 
-    if (typeof n != "number") {
+    if (typeof numero != "number") {
         throw new TypeError("Este parâmetro não é um número.");
     }
 
-    if (Math.trunc(n) != n) {
+    if (Math.trunc(numero) != numero) {
         throw new TypeError("Este parâmetro não é um inteiro.");
     }
 
-    if (n < 0) {
-        throw new RangeError("n deve ser maior ou igual a 0.");
+    if (numero < 0) {
+        throw new RangeError("numero deve ser maior ou igual a 0.");
     }
 
-    if (n == 0 || n == 1) {
-        return n;
+    if (numero == 0 || numero == 1) {
+        return numero;
     }
 
-    let a = 0;
-    let c = 1;
+    let auxiliar = 0;
+    let resultado = 1;
 
-    for (let i = 2; i <= n; i++) {
-        var t = c;
-        c = c + a;
-        a = t;
+    for (let contador = 2; contador <= numero; contador++) {
+        var troca = resultado;
+        resultado = resultado + auxiliar;
+        auxiliar = troca;
     }
 
-    return c;
+    return resultado;
 }
 
 module.exports = fibonacci;

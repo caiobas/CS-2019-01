@@ -1,36 +1,36 @@
 /**
  * Função matemática com a regra de Horner para avaliação de polinômio.
  * 
- * @param {number} x Número para cálculo da regra de Horner.
- * @param {number} g Número para cálculo da regra de Horner.
- * @param {number} a Vetor para cálculo da regra de Horner.
+ * @param {number} valor Número para cálculo da regra de Horner.
+ * @param {number} total Número para cálculo da regra de Horner.
+ * @param {number} vetor Vetor para cálculo da regra de Horner.
  * 
  * @returns {number} Retorna regra de Horner.
  * 
  * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
- * @throws {RangeError} g deve ser maior ou igual a 1.
+ * @throws {RangeError} total deve ser maior ou igual a 1.
  */
-function regraHorner(x, g, a) {
+function regraHorner(valor, total, vetor) {
 
-    if (typeof x != "number" || typeof g != "number") {
-        throw new TypeError("x ou y não e um numero.");
+    if (typeof valor != "number" || typeof total != "number") {
+        throw new TypeError("valor ou total não e um numero.");
     }
 
-    if(!Array.isArray(a)){
-        throw new TypeError("a nao e um vetor.");
+    if(!Array.isArray(vetor)){
+        throw new TypeError("vetor nao e um vetor.");
     }
 
-    if (g < 1) {
-        throw new RangeError("g deve ser maior ou igual a 1.");
+    if (total < 1) {
+        throw new RangeError("total deve ser maior ou igual a 1.");
     }
 
-    let p = a[g];
-    console.log(a);
-    for (let i = (g - 1); 0 <= i; i--) {
-        p = p * (x + a[i]);
+    let polinomio = vetor[total];
+
+    for (let contador = (total - 1); 0 <= contador; contador--) {
+        polinomio = polinomio * (valor + vetor[contador]);
     }
 
-    return p;
+    return polinomio;
 }
 
 module.exports = regraHorner;

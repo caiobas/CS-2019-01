@@ -195,13 +195,13 @@ public class Algoritmos {
 				+ " Esperado numero maior que 0.");
 		}
 
-		int s = 1;
+		int soma = 1;
 
-		for (int i = 2; i <= numero; i++) {
-			s = s + i;
+		for (int contador = 2; contador <= numero; contador++) {
+			soma = soma + contador;
 		}
 
-		return s;
+		return soma;
 	}
 
 	/**
@@ -219,61 +219,63 @@ public class Algoritmos {
 				+ " Esperado numero maior que 0.");
 		}
 
-		int f = 1;
+		int fatorial = 1;
 
-		for (int i = 2; i <= numero; i++) {
-			f = f * i;
+		for (int contador = 2; contador <= numero; contador++) {
+			fatorial = fatorial * contador;
 		}
 
-		return f;
+		return fatorial;
 	}
 
 	/**
 	 * Função matemática que calcula o produto de inteiro usando somas.
 	 *
-	 * @param a Número usado para calcular produto.
-	 * @param b Número usado para calcular produto.
+	 * @param multiplicador Número usado para calcular produto.
+	 * @param multiplicando Número usado para calcular produto.
 	 * @return Retorna o produto dos números.
-	 * @throws IllegalArgumentException Se a e bs
+	 * @throws IllegalArgumentException Se multiplicador e multiplicando
 	 * não forem maiores ou iguais a 0.
 	 */
-	public static int produtoUsandoSomas(final int a, final int b) {
+	public static int produtoUsandoSomas(final int multiplicador,
+	final int multiplicando) {
 
-		if (a < 0 || b < 0) {
+		if (multiplicador < 0 || multiplicando < 0) {
 			throw new IllegalArgumentException(
 				"Numero fora da exigencia. "
 				+ " Esperado numero maior ou igual a 0.");
 		}
 
-		int totalParcelas = a;
-		int parcela = b;
+		int totalParcelas = multiplicador;
+		int parcela = multiplicando;
 
-		if (b < a) {
-			totalParcelas = b;
-			parcela = a;
+		if (multiplicando < multiplicador) {
+			totalParcelas = multiplicando;
+			parcela = multiplicador;
 		}
 
-		int s = 0;
+		int produto = 0;
 
-		for (int i = 1; i <= totalParcelas; i++) {
-			s = s + parcela;
+		for (int contador = 1; contador <= totalParcelas; contador++) {
+			produto = produto + parcela;
 		}
 
-		return s;
+		return produto;
 	}
 
 	/**
 	 * Função matemática que calcula a potência usando somas.
 	 *
-	 * @param x Número natural a ser elevado.
-	 * @param y Potência do número.
+	 * @param base Número natural a ser elevado.
+	 * @param expoente Potência do número.
 	 * @return Retorna o resultado da potência.
-	 * @throws IllegalArgumentException Se x e y
+	 * @throws IllegalArgumentException Se base e expoente
 	 * não forem maiores ou igual a 0.
 	 */
-	public static int potenciaUsandoSomas(final int x, final int y) {
+	public static int potenciaUsandoSomas(final int base,
+	final int expoente) {
 
-		if (x < 0 || y < 0) {
+		if (base < 0 || expoente < 0) {
 			throw new IllegalArgumentException(
 				"Numero fora da exigencia."
 				+ " Esperado numero maior ou igual a 0.");
@@ -281,8 +283,8 @@ public class Algoritmos {
 
 		int potencia = 1;
 
-		for (int i = 1; i <= y; i++) {
-			potencia = produtoUsandoSomas(potencia, x);
+		for (int contador = 1; contador <= expoente; contador++) {
+			potencia = produtoUsandoSomas(potencia, base);
 		}
 
 		return potencia;
@@ -292,168 +294,168 @@ public class Algoritmos {
 	 * Função matemática que calcula o valor com mais proximidade
 	 * de PI de acordocom quanto maior for o parâmetro.
 	 *
-	 * @param n Número utilizado para determinar maior
+	 * @param precisao Número utilizado para determinar maior
 	 * proximidade do valor de PI.
 	 * @return Retorna valor aproximado de PI.
-	 * @throws IllegalArgumentException Se o numero
+	 * @throws IllegalArgumentException Se a precisao
 	 * não for maior ou igual a 1.
 	 */
-	public static double valorPI(final int n) {
+	public static double valorPI(final int precisao) {
 
-		if (n < 1) {
+		if (precisao < 1) {
 			throw new IllegalArgumentException(
 				"Numero fora da exigencia."
 			+ " Esperado numero maior ou igual a 1.");
 		}
 
-		double s = -1;
-		double d = -1;
-		double p = 0;
+		double sinal = -1;
+		double divisor = -1;
+		double piValor = 0;
 
-		for (int i = 1; i <= n; i++) {
+		for (int contador = 1; contador <= precisao; contador++) {
 			final int auxiliar = 4;
-			d = d + 2;
-			s = -1 * s;
-			p = p + ((auxiliar * s) / d);
+			divisor = divisor + 2;
+			sinal = -1 * sinal;
+			piValor = piValor + ((auxiliar * sinal) / divisor);
 		}
 
-		return p;
+		return piValor;
 	}
 
 	/**
 	 * Função matemática que calcula a proximidade do logaritmo natural.
 	 *
-	 * @param n n Numerador do logaritmo.
-	 * @param k Número utilizado para proximidade do logaritmo natural.
+	 * @param log n Numerador do logaritmo.
+	 * @param limite Número utilizado para proximidade do logaritmo natural.
 	 * @return Retorna valor mais próximo do logaritmo natural.
-	 * @throws IllegalArgumentException Se n não for
-	 * maior ou igual a 1 ou k não for maior ou igual a 2.
+	 * @throws IllegalArgumentException Se log não for
+	 * maior ou igual a 1 ou limite não for maior ou igual a 2.
 	 */
-	public static double logaritmo(final int n, final int k) {
+	public static double logaritmo(final int log, final int limite) {
 
-		if (n < 1 || k < 2) {
+		if (log < 1 || limite < 2) {
 			throw new IllegalArgumentException(
 					"Numero fora da exigencia."
-					+ " Esperado n maior ou igual a 1"
-					+ " e k maior ou igual a 2.");
+					+ " Esperado log maior ou igual a 1"
+					+ " e limite maior ou igual a 2.");
 		}
 
-		int i = 2;
-		double e = (i + n);
-		double numerador = n;
+		int contador = 2;
+		double euler = (contador + log);
+		double numerador = log;
 		double denominador = 1;
 
-		for (; i <= k; i++) {
+		for (; contador <= limite; contador++) {
 			numerador = numerador * numerador;
-			denominador = denominador * i;
-			e = e + (numerador / denominador);
+			denominador = denominador * contador;
+			euler = euler + (numerador / denominador);
 		}
 
-		return e;
+		return euler;
 	}
 
 	/**
 	 * Função matemática que calcula a razão áurea.
 	 *
-	 * @param x Número para calcular razão áurea.
-	 * @param y Número para calcular razão áurea.
-	 * @param k Precisão da razão áurea.
+	 * @param anterior Número para calcular razão áurea.
+	 * @param posterior Número para calcular razão áurea.
+	 * @param limite Precisão da razão áurea.
 	 * @return Retorna valor da razão áurea.
-	 * @throws IllegalArgumentException Se x não for
-	 * maior ou igual a 0, se y não for
-	 * maior que x ou se k não for maior que 0.
+	 * @throws IllegalArgumentException Se anterior não for
+	 * maior ou igual a 0, se posterior não for
+	 * maior que anterior ou se limite não for maior que 0.
 	 */
-	public static double razaoAurea(final int x, final int y, final int k) {
+	public static double razaoAurea(final int anterior, final int posterior, final int limite) {
 
-		if (x < 0 || y < x || k <= 0) {
+		if (anterior < 0 || posterior < anterior || limite <= 0) {
 			throw new IllegalArgumentException(
 					"Numero fora da exigencia."
-					+ " Esperado x maior ou igual a 0,"
-					+ " y maior que x e k maior que 0.");
+					+ " Esperado anterior maior ou igual a 0,"
+					+ " posterior maior que anterior e limite maior que 0.");
 		}
 
-		double c = y;
-		double a = x;
+		double auxiliarPosterior = posterior;
+		double auxiliarAnterior = anterior;
 
-		for (int i = 1; i <= k; i++) {
-			double t = c;
-			c = c + a;
-			a = t;
+		for (int contador = 1; contador <= limite; contador++) {
+			double troca = auxiliarPosterior;
+			auxiliarPosterior = auxiliarPosterior + auxiliarAnterior;
+			auxiliarAnterior = troca;
 		}
 
-		return c / a;
+		return auxiliarPosterior / auxiliarAnterior;
 	}
 
 	/**
 	 * Função matemática que confere se o número é quadrado perfeito.
 	 *
-	 * @param n Número para conferir se é quadrado perfeito.
+	 * @param numero Número para conferir se é quadrado perfeito.
 	 * @return Retorna booleano se é quadrado perfeito.
-	 * @throws IllegalArgumentException Se n não for maior ou igual a 1.
+	 * @throws IllegalArgumentException Se numero não for maior ou igual a 1.
 	 */
-	public static boolean quadradoPerfeito(final int n) {
+	public static boolean quadradoPerfeito(final int numero) {
 
-		if (n < 1) {
+		if (numero < 1) {
 			throw new IllegalArgumentException(
 				"Numero fora da exigencia."
-				+ " Esperado n maior ou igual a 1.");
+				+ " Esperado numero maior ou igual a 1.");
 		}
 
-		int i = 1;
-		int s = 1;
+		int incremental = 1;
+		int resultado = 1;
 
-		while (s < n) {
-			i = i + 2;
-			s = s + i;
+		while (resultado < numero) {
+			incremental = incremental + 2;
+			resultado = resultado + incremental;
 		}
 
-		return s == n;
+		return resultado == numero;
 	}
 
 	/**
 	 * Função matemática que calcula o valor mais próximo da raiz quadrada.
 	 *
-	 * @param n Número para calculo da raiz quadrada.
-	 * @param i Número para proximidade de raiz quadrada.
+	 * @param numero Número para calculo da raiz quadrada.
+	 * @param precisao Número para proximidade de raiz quadrada.
 	 * @return Retorna número mais próximo da raiz quadrada.
-	 * @throws IllegalArgumentException Se n não for maior ou igual a 1.
+	 * @throws IllegalArgumentException Se numero não for maior ou igual a 1.
 	 */
-	public static double raizQuadrada(final int n, final int i) {
+	public static double raizQuadrada(final int numero, final int precisao) {
 
-		if (n < 1) {
+		if (numero < 1) {
 			throw new IllegalArgumentException(
 				"Numero fora da exigencia."
-				+ " Esperado n maior que 0.");
+				+ " Esperado numero maior que 0.");
 		}
 
-		double r = 1;
+		double raiz = 1;
 
-		int auxiliari = i;
-		while (auxiliari >= 0) {
-			r = (r + n / r) / 2;
-			auxiliari = auxiliari - 1;
+		int auxiliarPrecisao = precisao;
+		while (auxiliarPrecisao >= 0) {
+			raiz = (raiz + numero / raiz) / 2;
+			auxiliarPrecisao = auxiliarPrecisao - 1;
 		}
 
-		return r;
+		return raiz;
 	}
 
 	/**
 	 * Função matemática que confere se o número é primo.
 	 *
-	 * @param n Número para conferir se é número primo.
+	 * @param numero Número para conferir se é número primo.
 	 * @return Retorna booleano se é número primo.
-	 * @throws IllegalArgumentException Se n não for maior ou igual a 1.
+	 * @throws IllegalArgumentException Se numero não for maior ou igual a 1.
 	 */
-	public static boolean numeroPrimo(final int n) {
+	public static boolean numeroPrimo(final int numero) {
 
-		if (n < 2) {
+		if (numero < 2) {
 			throw new IllegalArgumentException(
 				"Numero fora da exigencia."
-				+ " Esperado n maior que 1.");
+				+ " Esperado numero maior que 1.");
 		}
 
-		for (int i = 2; i < n; i++) {
-			if ((n % i) == 0) {
+		for (int contador = 2; contador < numero; contador++) {
+			if ((numero % contador) == 0) {
 				return false;
 			}
 		}
@@ -464,124 +466,124 @@ public class Algoritmos {
 	/**
 	 * Função matemática que verifica se o número é primo.
 	 *
-	 * @param n Número para conferir se é número primo.
+	 * @param numero Número para conferir se é número primo.
 	 * @return Retorna booleano se é número primo.
-	 * @throws IllegalArgumentException Se n não for maior ou igual a 2.
+	 * @throws IllegalArgumentException Se numero não for maior ou igual a 2.
 	 */
-	public static boolean crivoErastotenes(final int n) {
+	public static boolean crivoErastotenes(final int numero) {
 
-		if (n < 2) {
+		if (numero < 2) {
 			throw new IllegalArgumentException(
 				"Numero fora da exigencia."
-				+ " Esperado n maior que 1.");
+				+ " Esperado numero maior que 1.");
 		}
 
-		int[] a = new int[n + 1];
+		int[] vetor = new int[numero + 1];
 
-		for (int i = 1; i < n + 1; i++) {
-			a[i] = 0;
+		for (int contador = 1; contador < numero + 1; contador++) {
+			vetor[contador] = 0;
 		}
 
-		double limite = Math.floor(Math.sqrt(n));
+		double limite = Math.floor(Math.sqrt(numero));
 
-		for (int i = 2; i <= limite; i++) {
-			if (a[i] == 0) {
-				int multiplo = i + i;
-				while (multiplo <= n) {
-					a[multiplo] = 1;
-					multiplo = multiplo + i;
+		for (int contador = 2; contador <= limite; contador++) {
+			if (vetor[contador] == 0) {
+				int multiplo = contador + contador;
+				while (multiplo <= numero) {
+					vetor[multiplo] = 1;
+					multiplo = multiplo + contador;
 				}
 			}
 		}
 
-		return a[n] == 1;
+		return vetor[numero] == 1;
 	}
 
 	/**
 	 * Função matemática que calcula maior divisor comum.
 	 *
-	 * @param a Número para cálculo do maior divisor comum.
-	 * @param b Número para cálculo do maior divisor comum.
+	 * @param numeroUm Número para cálculo do maior divisor comum.
+	 * @param numeroDois Número para cálculo do maior divisor comum.
 	 * @return Retorna maior divisor comum.
-	 * @throws IllegalArgumentException Se a não for
-	 * maior ou igual a b ou se b não for maior que 0.
+	 * @throws IllegalArgumentException Se numeroUm não for
+	 * maior ou igual a numeroDois ou se numeroDois não for maior que 0.
 	 */
-	public static int mdc1(final int a, final int b) {
+	public static int mdc1(final int numeroUm, final int numeroDois) {
 
-		if (a < b || b < 1) {
+		if (numeroUm < numeroDois || numeroDois < 1) {
 			throw new IllegalArgumentException(
 					"Numero fora da exigencia."
-					+ " Esperado a maior ou"
-					+ " igual a b e b maior que 0.");
+					+ " Esperado numeroUm maior ou"
+					+ " igual a numeroDois e numeroDoisg maior que 0.");
 		}
 
-		int auxiliara = a;
-		int auxiliarb = b;
-		while (auxiliarb != 0) {
-			int m = auxiliara % auxiliarb;
-			auxiliara = auxiliarb;
-			auxiliarb = m;
+		int auxiliarNumeroUm = numeroUm;
+		int auxiliarNumeroDois = numeroDois;
+		while (auxiliarNumeroDois != 0) {
+			int troca = auxiliarNumeroUm % auxiliarNumeroDois;
+			auxiliarNumeroUm = auxiliarNumeroDois;
+			auxiliarNumeroDois = troca;
 		}
 
-		return auxiliara;
+		return auxiliarNumeroUm;
 	}
 
 	/**
 	 * Função matemática que calcula maior divisor comum.
 	 *
-	 * @param a Número para cálculo do maior divisor comum.
-	 * @param b Número para cálculo do maior divisor comum.
+	 * @param numeroUm Número para cálculo do maior divisor comum.
+	 * @param numeroDois Número para cálculo do maior divisor comum.
 	 * @return Retorna maior divisor comum.
-	 * @throws IllegalArgumentException Se a não for
-	 * maior ou igual a b ou se b não for maior que 0.
+	 * @throws IllegalArgumentException Se numeroUm não for
+	 * maior ou igual a numeroDois ou se numeroDois não for maior que 0.
 	 */
-	public static int mdc2(final int a, final int b) {
+	public static int mdc2(final int numeroUm, final int numeroDois) {
 
-		if (a < b || b < 1) {
+		if (numeroUm < numeroDois || numeroDois < 1) {
 			throw new IllegalArgumentException(
 					"Numero fora da exigencia."
-					+ " Esperado a maior ou igual a b"
-					+ " e b maior que 0.");
+					+ " Esperado numeroUm maior ou igual a numeroDois"
+					+ " e numeroDois maior que 0.");
 		}
 
-		int auxiliara = a;
-		int auxiliarb = b;
-		while (auxiliara != auxiliarb) {
-			if (auxiliara > auxiliarb) {
-				auxiliara = auxiliara - auxiliarb;
+		int auxiliarNumeroUm = numeroUm;
+		int auxiliarNumeroDois = numeroDois;
+		while (auxiliarNumeroUm != auxiliarNumeroDois) {
+			if (auxiliarNumeroUm > auxiliarNumeroDois) {
+				auxiliarNumeroUm = auxiliarNumeroUm - auxiliarNumeroDois;
 			} else {
-				auxiliarb = auxiliarb - auxiliara;
+				auxiliarNumeroDois = auxiliarNumeroDois - auxiliarNumeroUm;
 			}
 		}
 
-		return auxiliara;
+		return auxiliarNumeroUm;
 	}
 
 	/**
 	 * Função matemática com a regra de Horner para avaliação de polinômio.
 	 *
-	 * @param x Número para cálculo da regra de Horner.
-	 * @param g Número para cálculo da regra de Horner.
-	 * @param a Vetor para cálculo da regra de Horner.
+	 * @param valor Número para cálculo da regra de Horner.
+	 * @param total Número para cálculo da regra de Horner.
+	 * @param vetor Vetor para cálculo da regra de Horner.
 	 * @return Retorna regra de Horner.
-	 * @throws IllegalArgumentException Se g não for maior ou igual a 1.
+	 * @throws IllegalArgumentException Se total não for maior ou igual a 1.
 	 */
-	public static double regraHorner(final double x,
-	final int g, final int[] a) {
+	public static double regraHorner(final double valor,
+	final int total, final int[] vetor) {
 
-		if (g < 1) {
+		if (total < 1) {
 			throw new IllegalArgumentException(
 				"Numero fora da exigencia."
-				+ " Esperado g maior ou igual a 1.");
+				+ " Esperado total maior ou igual a 1.");
 		}
 
-		double p = a[g];
+		double polinomio = vetor[total];
 
-		for (int i = (g - 1); i >= 0; i--) {
-			p = p * (x + a[i]);
+		for (int contador = (total - 1); contador >= 0; contador--) {
+			polinomio = polinomio * (valor + vetor[contador]);
 		}
 
-		return p;
+		return polinomio;
 	}
 
 	/**
@@ -589,42 +591,42 @@ public class Algoritmos {
 	 *
 	 * @param n Número para cálculo de Fibonacci.
 	 * @return Retorna número de Fibonacci.
-	 * @throws IllegalArgumentException Se n não
+	 * @throws IllegalArgumentException Se numero não
 	 * for maior ou igual a 0.
 	 */
-	public static int fibonacci(final int n) {
+	public static int fibonacci(final int numero) {
 
-		if (n < 0) {
+		if (numero < 0) {
 			throw new IllegalArgumentException(
 				"Numero fora da exigencia."
-				+ " Esperado n maior ou igual a 0.");
+				+ " Esperado numero maior ou igual a 0.");
 		}
 
-		if (n == 0 || n == 1) {
-			return n;
+		if (numero == 0 || numero == 1) {
+			return numero;
 		}
 
-		int a = 0;
-		int c = 1;
+		int auxiliar = 0;
+		int resultado = 1;
 
-		for (int i = 2; i <= n; i++) {
-			int t = c;
-			c = c + a;
-			a = t;
+		for (int contador = 2; contador <= numero; contador++) {
+			int troca = resultado;
+			resultado = resultado + auxiliar;
+			auxiliar = troca;
 		}
 
-		return c;
+		return resultado;
 	}
 
 	/**
 	 * Função matemática para conferir CPF.
 	 *
-	 * @param d Array com digitos para conferir.
+	 * @param vetor Array com digitos para conferir.
 	 * @return Retorna booleano se é CPF.
 	 */
-	public static boolean cpf1(final int[] d) {
+	public static boolean cpf1(final int[] vetor) {
 
-		geraExcecaoSeCpfInvalido(d);
+		geraExcecaoSeCpfInvalido(vetor);
 
 		final int auxiliar3 = 3;
 		final int auxiliar4 = 4;
@@ -636,31 +638,31 @@ public class Algoritmos {
 		final int auxiliar10 = 10;
 		final int auxiliar11 = 11;
 
-		final int j = d[0] + 2 * (d[1]) + auxiliar3 * (d[2])
-		+ auxiliar4 * (d[auxiliar3]) + auxiliar5 * (d[auxiliar4])
-		+ auxiliar6 * (d[auxiliar5]) + auxiliar7 * (d[auxiliar6])
-		+ auxiliar8 * (d[auxiliar7]) + auxiliar9 * (d[auxiliar8]);
-		final int k = d[1] + 2 * (d[2]) + auxiliar3 * (d[auxiliar3])
-		+ auxiliar4 * (d[auxiliar4]) + auxiliar5 * (d[auxiliar5])
-		+ auxiliar6 * (d[auxiliar6]) + auxiliar7 * (d[auxiliar7])
-		+ auxiliar8 * (d[auxiliar8]) + auxiliar9 * (d[auxiliar9]);
-		final int dj = Math.floorMod(
-			Math.floorMod(j, auxiliar11), auxiliar10);
-		final int dk = Math.floorMod(
-			Math.floorMod(k, auxiliar11), auxiliar10);
+		final int comparaUm = vetor[0] + 2 * (vetor[1]) + auxiliar3 * (vetor[2])
+		+ auxiliar4 * (vetor[auxiliar3]) + auxiliar5 * (vetor[auxiliar4])
+		+ auxiliar6 * (vetor[auxiliar5]) + auxiliar7 * (vetor[auxiliar6])
+		+ auxiliar8 * (vetor[auxiliar7]) + auxiliar9 * (vetor[auxiliar8]);
+		final int comparaDois = vetor[1] + 2 * (vetor[2]) + auxiliar3 * (vetor[auxiliar3])
+		+ auxiliar4 * (vetor[auxiliar4]) + auxiliar5 * (vetor[auxiliar5])
+		+ auxiliar6 * (vetor[auxiliar6]) + auxiliar7 * (vetor[auxiliar7])
+		+ auxiliar8 * (vetor[auxiliar8]) + auxiliar9 * (vetor[auxiliar9]);
+		final int vetorComparaUm = Math.floorMod(
+			Math.floorMod(comparaUm, auxiliar11), auxiliar10);
+		final int vetorComparaDois = Math.floorMod(
+			Math.floorMod(comparaDois, auxiliar11), auxiliar10);
 		
-		return (dj == d[auxiliar9]) && (dk == d[auxiliar10]);
+		return (vetorComparaUm == vetor[auxiliar9]) && (vetorComparaDois == vetor[auxiliar10]);
 	}
 
 	/**
 	 * Função matemática para conferir CPF.
 	 *
-	 * @param d Array com digitos para conferir.
+	 * @param vetor Array com digitos para conferir.
 	 * @return Retorna booleano se é CPF.
 	 */
-	public static boolean cpf2(final int[] d) {
+	public static boolean cpf2(final int[] vetor) {
 
-		geraExcecaoSeCpfInvalido(d);
+		geraExcecaoSeCpfInvalido(vetor);
 
 		final int auxiliar7 = 7;
 		final int auxiliar8 = 8;
@@ -668,46 +670,46 @@ public class Algoritmos {
 		final int auxiliar10 = 10;
 		final int auxiliar11 = 11;
 
-		int p = d[auxiliar8];
-		int s = d[auxiliar8];
+		int auxiliaValorUm = vetor[auxiliar8];
+		int auxiliaValorDois = vetor[auxiliar8];
 
-		for (int c = auxiliar7; 0 <= c; c--) {
-			p = p + d[c];
-			s = s + p;
+		for (int contador = auxiliar7; 0 <= contador; contador--) {
+			auxiliaValorUm = auxiliaValorUm + vetor[contador];
+			auxiliaValorDois = auxiliaValorDois + auxiliaValorUm;
 		}
 
-		final int j = Math.floorMod(
-			Math.floorMod(s, auxiliar11), auxiliar10);
-		final int k = Math.floorMod(
-			Math.floorMod((s - p + (auxiliar9 * d[auxiliar9])),
+		final int comparaUm = Math.floorMod(
+			Math.floorMod(auxiliaValorDois, auxiliar11), auxiliar10);
+		final int comparaDois = Math.floorMod(
+			Math.floorMod((auxiliaValorDois - auxiliaValorUm + (auxiliar9 * vetor[auxiliar9])),
 			 auxiliar11), auxiliar10);
 
-		return (j == d[auxiliar9]) && (k == d[auxiliar10]);
+		return (comparaUm == vetor[auxiliar9]) && (comparaDois == vetor[auxiliar10]);
 	}
 
 	/**
 	 * Função matemática para conferir CPF.
 	 *
-	 * @param d Array com digitos para conferir.
+	 * @param vetor Array com digitos para conferir.
 	 * @throws IllegalArgumentException Se o parâmetro
 	 * não for um vetor ou se o vetor tiver tamanho incorreto.
 	 */
-	public static void geraExcecaoSeCpfInvalido(final int[] d) {
+	public static void geraExcecaoSeCpfInvalido(final int[] vetor) {
 
 		final int auxiliar9 = 9;
 		final int auxiliar11 = 11;
 
-		if (d == null) {
+		if (vetor == null) {
 			throw new IllegalArgumentException("Argumento null");
 		}
 
-		if (d.length != auxiliar11) {
+		if (vetor.length != auxiliar11) {
 			throw new IllegalArgumentException(
 				"CPF deve ter exatos 11 digitos");
 		}
 
-		for (int i = 0; i < auxiliar11; i++) {
-			if (d[i] < 0 || d[i] > auxiliar9) {
+		for (int contador = 0; contador < auxiliar11; contador++) {
+			if (vetor[contador] < 0 || vetor[contador] > auxiliar9) {
 				throw new IllegalArgumentException(
 					"Dados fora de exigencia pedida.");
 			}

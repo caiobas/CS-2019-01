@@ -1,32 +1,32 @@
 /**
  * Função matemática que confere se o número é quadrado perfeito.
  * 
- * @param {number} n Número para conferir se é quadrado perfeito.
+ * @param {number} numero Número para conferir se é quadrado perfeito.
  * 
  * @returns {boolean} Retorna booleano se é quadrado perfeito.
  * 
  * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
- * @throws {RangeError} n deve ser maior ou igual a 1.
+ * @throws {RangeError} numero deve ser maior ou igual a 1.
  */
-function quadradoPerfeito(n) {
+function quadradoPerfeito(numero) {
 
-    if (typeof n != "number") {
+    if (typeof numero != "number") {
         throw new TypeError("Este parâmetro não é um número.");
     }
 
-    if (n < 1) {
-        throw new RangeError("n deve ser maior ou igual a 1.");
+    if (numero < 1) {
+        throw new RangeError("numero deve ser maior ou igual a 1.");
     }
 
-    let i = 1;
-    let s = 1;
+    let incremental = 1;
+    let resultado = 1;
 
-    while (s < n) {
-        i = i + 2;
-        s = s + i;
+    while (resultado < numero) {
+        incremental = incremental + 2;
+        resultado = resultado + incremental;
     }
 
-    return s == n;
+    return resultado == numero;
 }
 
 module.exports = quadradoPerfeito;

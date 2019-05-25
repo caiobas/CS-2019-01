@@ -8,26 +8,26 @@ const funcao = require("./produtoUsandoSomas.js");
  * @returns {number} Retorna o resultado da potência.
  * 
  * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
- * @throws {RangeError} x e y devem ser maiores ou igual a 0.
+ * @throws {RangeError} base e expoente devem ser maiores ou igual a 0.
  */
-function potenciaUsandoSomas(x, y) {
+function potenciaUsandoSomas(base, expoente) {
 
-    if (typeof x != "number" || typeof y != "number") {
+    if (typeof base != "number" || typeof expoente != "number") {
         throw new TypeError("Este parâmetro não é um número.");
     }
 
-    if (Math.trunc(x) != x || Math.trunc(y) != y) {
+    if (Math.trunc(base) != base || Math.trunc(expoente) != expoente) {
         throw new TypeError("Um(ou mais) parâmetro(s) não é um inteiro.");
     }
 
-    if (x < 0 || y < 0) {
-        throw new RangeError("x e y devem ser maiores ou igual a 0");
+    if (base < 0 || expoente < 0) {
+        throw new RangeError("Base e expoente devem ser maiores ou igual a 0");
     }
 
     let potencia = 1;
 
-    for (let i = 1; i <= y; i++) {
-        potencia = funcao(potencia, x);
+    for (let contador = 1; contador <= expoente; contador++) {
+        potencia = funcao(potencia, base);
     }
 
     return potencia;

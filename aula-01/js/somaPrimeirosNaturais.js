@@ -22,13 +22,13 @@ function somaPrimeirosNaturais(numero) {
         throw new RangeError("Numero deve ser maior que 1.");
     }
 
-    let s = 1;
+    let soma = 1;
 
-    for (let i = 2; i <= numero; i++) {
-        s = s + i;
+    for (let contador = 2; contador <= numero; contador++) {
+        soma = soma + contador;
     }
 
-    return s;
+    return soma;
 }
 
 module.exports = somaPrimeirosNaturais;

@@ -1,39 +1,39 @@
 /**
  * Função matemática que calcula a razão áurea.
  * 
- * @param {number} x Número para calcular razão áurea.
- * @param {number} y Número para calcular razão áurea.
- * @param {number} k Precisão da razão áurea.
+ * @param {number} anterior Número para calcular razão áurea.
+ * @param {number} posterior Número para calcular razão áurea.
+ * @param {number} limite Precisão da razão áurea.
  * 
  * @returns {number} Retorna valor da razão áurea.
  * 
  * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
- * @throws {RangeError} x deve ser maior ou igual a 0, y deve ser maior que x e k maior que 0.
+ * @throws {RangeError} anterior deve ser maior ou igual a 0, posterior deve ser maior que anterior e limite maior que 0.
  */
-function razaoAurea(x, y, k) {
+function razaoAurea(anterior, posterior, limite) {
 
-    if (typeof x != "number" || typeof y != "number" || typeof k != "number") {
+    if (typeof anterior != "number" || typeof posterior != "number" || typeof limite != "number") {
         throw new TypeError("Este parâmetro não é um número.");
     }
 
-    if (Math.trunc(x) != x || Math.trunc(y) != y || Math.trunc(k) != k) {
+    if (Math.trunc(anterior) != anterior || Math.trunc(posterior) != posterior || Math.trunc(limite) != limite) {
         throw new TypeError("Um(ou mais) parâmetro(s) não é um inteiro.");
     }
 
-    if (x < 0 || y < x || k <= 0) {
-        throw new RangeError("x deve ser maior ou igual a 0, y deve ser maior que x e k maior que 0.");
+    if (anterior < 0 || posterior < anterior || limite <= 0) {
+        throw new RangeError("anterior deve ser maior ou igual a 0, posterior deve ser maior que anterior e limite maior que 0.");
     }
 
-    let c = y;
-    let a = x;
+    let auxiliarPosterior = posterior;
+    let auxiliarAnterior = anterior;
 
-    for (let i = 1; i <= k; i++) {
-        let t = c;
-        c = c + a;
-        a = t;
+    for (let contador = 1; contador <= limite; contador++) {
+        let troca = auxiliarPosterior;
+        auxiliarPosterior = auxiliarPosterior + auxiliarAnterior;
+        auxiliarAnterior = troca;
     }
 
-    return c / a;
+    return auxiliarPosterior / auxiliarAnterior;
 }
 
 module.exports = razaoAurea;

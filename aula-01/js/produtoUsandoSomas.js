@@ -7,37 +7,37 @@
  * @returns {number} Retorna o produto dos números.
  * 
  * @throws {TypeError} Se qualquer um dos argumentos não for um número ou inteiro.
- * @throws {RangeError} a e b devem ser maior ou igual a 0.
+ * @throws {RangeError} multiplicador e b devem ser maior ou igual a 0.
  */
-function produtoUsandoSomas(a, b) {
+function produtoUsandoSomas(multiplicador, multiplicando) {
 
-    if (typeof a != "number" || typeof b != "number") {
+    if (typeof multiplicador != "number" || typeof multiplicando != "number") {
         throw new TypeError("Este(s) parâmetro(s) não é um número.");
     }
 
-    if (Math.trunc(a) != a || Math.trunc(b) != b) {
+    if (Math.trunc(multiplicador) != multiplicador || Math.trunc(multiplicando) != multiplicando) {
         throw new TypeError("Um(ou mais) parâmetro(s) não é um inteiro.");
     }
 
-    if (a < 0 || b < 0) {
-        throw new RangeError("a e b devem ser maior ou igual a 0.");
+    if (multiplicador < 0 || multiplicando < 0) {
+        throw new RangeError("multiplicador e multiplicando devem ser maior ou igual a 0.");
     }
 
-    let totalParcelas = a;
-    let parcela = b;
+    let totalParcelas = multiplicador;
+    let parcela = multiplicando;
 
-    if (b < a) {
-        totalParcelas = b;
-        parcela = a;
+    if (multiplicando < multiplicador) {
+        totalParcelas = multiplicando;
+        parcela = multiplicador;
     }
 
-    let s = 0;
+    let produto = 0;
 
-    for (let i = 1; i <= totalParcelas; i++) {
-        s = s + parcela;
+    for (let contador = 1; contador <= totalParcelas; contador++) {
+        produto = produto + parcela;
     }
 
-    return s;
+    return produto;
 }
 
 module.exports = produtoUsandoSomas;
