@@ -648,7 +648,7 @@ public class Algoritmos {
 			Math.floorMod(j, auxiliar11), auxiliar10);
 		final int dk = Math.floorMod(
 			Math.floorMod(k, auxiliar11), auxiliar10);
-
+		
 		return (dj == d[auxiliar9]) && (dk == d[auxiliar10]);
 	}
 
