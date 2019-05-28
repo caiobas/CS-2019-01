@@ -455,9 +455,4 @@ public class AlgoritmosTest {
                                                     () -> Algoritmos.geraExcecaoSeCpfInvalido(cpf));
     }
 
-    @Test
-    public void coberturaCemPorCento() {
-        assertNotNull(new Algoritmos());
-    }
-
 }
