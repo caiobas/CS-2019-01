@@ -482,7 +482,7 @@ public final class Algoritmos {
 		}
 
 		for (int contador = 2; contador < numero; contador++) {
-			if (numero % contador) == 0) {
+			if ((numero % contador) == 0) {
 				return false;
 			}
 		}
