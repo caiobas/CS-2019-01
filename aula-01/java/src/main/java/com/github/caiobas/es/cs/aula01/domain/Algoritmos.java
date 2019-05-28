@@ -25,9 +25,10 @@ public class Algoritmos {
 				+ " Esperado numero entre 0 e 9999.");
 		}
 		final int auxiliar = 100;
-		final int primDez = numero / auxiliar;
-		final int segDez = numero % auxiliar;
-		final int resultado = (int) Math.pow(primDez + segDez, 2);
+		final int primeiraDezena = numero / auxiliar;
+		final int segundaDezena = numero % auxiliar;
+		final int resultado = (int) Math.pow(primeiraDezena
+								+ segundaDezena, 2);
 
 		return resultado == numero;
 	}
