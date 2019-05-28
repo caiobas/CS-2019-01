@@ -359,7 +359,7 @@ public final class Algoritmos {
 		}
 
 		int contador = 2;
-		double euler = (contador + log);
+		double euler = contador + log;
 		double numerador = log;
 		double denominador = 1;
 
@@ -398,7 +398,7 @@ public final class Algoritmos {
 		double auxiliarAnterior = anterior;
 
 		for (int contador = 1; contador <= limite; contador++) {
-			double troca = auxiliarPosterior;
+			final double troca = auxiliarPosterior;
 			auxiliarPosterior = auxiliarPosterior
 					+ auxiliarAnterior;
 			auxiliarAnterior = troca;
@@ -482,7 +482,7 @@ public final class Algoritmos {
 		}
 
 		for (int contador = 2; contador < numero; contador++) {
-			if ((numero % contador) == 0) {
+			if (numero % contador) == 0) {
 				return false;
 			}
 		}
@@ -513,7 +513,7 @@ public final class Algoritmos {
 			vetor[contador] = 0;
 		}
 
-		double limite = Math.floor(Math.sqrt(numero));
+		final double limite = Math.floor(Math.sqrt(numero));
 
 		for (int contador = 2; contador <= limite; contador++) {
 			if (vetor[contador] == 0) {
@@ -547,15 +547,15 @@ public final class Algoritmos {
 					+ " numeroDois maior que 0.");
 		}
 
-		int auxiliarNumeroUm = numeroUm;
-		int auxiliarNumeroDois = numeroDois;
-		while (auxiliarNumeroDois != 0) {
-			int troca = auxiliarNumeroUm % auxiliarNumeroDois;
-			auxiliarNumeroUm = auxiliarNumeroDois;
-			auxiliarNumeroDois = troca;
+		int auxiliarUm = numeroUm;
+		int auxiliarDois = numeroDois;
+		while (auxiliarDois != 0) {
+			final int troca = auxiliarUm % auxiliarDois;
+			auxiliarUm = auxiliarDois;
+			auxiliarDois = troca;
 		}
 
-		return auxiliarNumeroUm;
+		return auxiliarUm;
 	}
 
 	/**
@@ -577,19 +577,19 @@ public final class Algoritmos {
 					+ " e numeroDois maior que 0.");
 		}
 
-		int auxiliarNumeroUm = numeroUm;
-		int auxiliarNumeroDois = numeroDois;
-		while (auxiliarNumeroUm != auxiliarNumeroDois) {
-			if (auxiliarNumeroUm > auxiliarNumeroDois) {
-				auxiliarNumeroUm = auxiliarNumeroUm
-						- auxiliarNumeroDois;
+		int auxiliarUm = numeroUm;
+		int auxiliarDois = numeroDois;
+		while (auxiliarUm != auxiliarDois) {
+			if (auxiliarUm > auxiliarDois) {
+				auxiliarUm = auxiliarUm
+						- auxiliarDois;
 			} else {
-				auxiliarNumeroDois = auxiliarNumeroDois
-						- auxiliarNumeroUm;
+				auxiliarDois = auxiliarDois
+						- auxiliarUm;
 			}
 		}
 
-		return auxiliarNumeroUm;
+		return auxiliarUm;
 	}
 
 	/**
@@ -643,7 +643,7 @@ public final class Algoritmos {
 		int resultado = 1;
 
 		for (int contador = 2; contador <= numero; contador++) {
-			int troca = resultado;
+			final int troca = resultado;
 			resultado = resultado + auxiliar;
 			auxiliar = troca;
 		}
@@ -745,17 +745,18 @@ public final class Algoritmos {
 	 */
 	public static void geraExcecaoSeCpfInvalido(final int[] vetor) {
 
-		final int auxiliar9 = 9;
-		final int auxiliar11 = 11;
-
 		if (vetor == null) {
 			throw new IllegalArgumentException("Argumento null");
 		}
+
+		final int auxiliar11 = 11;
 
 		if (vetor.length != auxiliar11) {
 			throw new IllegalArgumentException(
 				"CPF deve ter exatos 11 digitos");
 		}
+
+		final int auxiliar9 = 9;
 
 		for (int contador = 0; contador < auxiliar11; contador++) {
 			if (vetor[contador] < 0
