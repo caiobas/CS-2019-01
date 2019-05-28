@@ -1,7 +1,10 @@
 package com.github.caiobas.es.cs.aula01.domain;
 
 /**
- * Implementação de código referente a aula de Construção de Software.
+ * Implementação de código referente a aula de Construção de Software,
+ * que possui várias funções matemáticas como logaritmo,
+ * fatorial, calculo de numero primo, entre outras, com o
+ * objetivo de aprender a codificar com boas práticas.
  */
 public class Algoritmos {
 
