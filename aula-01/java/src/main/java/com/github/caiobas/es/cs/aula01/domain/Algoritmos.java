@@ -6,32 +6,36 @@ package com.github.caiobas.es.cs.aula01.domain;
  * fatorial, calculo de numero primo, entre outras, com o
  * objetivo de aprender a codificar com boas práticas.
  */
-public class Algoritmos {
+public final class Algoritmos {
 
-	/**
-	 * Função matemática que verifica se o quadrado da soma dos 2 primeiros
-	 * números com os 2 ultimos é o próprio número.
-	 *
-	 * @param numero Número a ser verificado.
-	 * @return Retorna o valor {@code true} caso satisfaça a
-	 * propriedade 3025 e o valor {@code false} caso não a satisfaça.
-	 * @throws IllegalArgumentException Se o número não está entre 0 e 9999.
-	 */
+    private Algoritmos() {
+
+    }
+
+    /**
+     * Função matemática que verifica se o quadrado da soma dos 2 primeiros
+     * números com os 2 ultimos é o próprio número.
+     *
+     * @param numero Número a ser verificado.
+     * @return Retorna o valor {@code true} caso satisfaça a
+     * propriedade 3025 e o valor {@code false} caso não a satisfaça.
+     * @throws IllegalArgumentException Se o número não está entre 0 e 9999.
+     */
     public static boolean propriedade3025(final int numero) {
-		final int limiteMaximo = 9999;
-		if (numero < 0 || numero > limiteMaximo) {
-			throw new IllegalArgumentException(
-				"Numero fora da exigencia:" + numero
-				+ " Esperado numero entre 0 e 9999.");
-		}
-		final int auxiliar = 100;
-		final int primeiraDezena = numero / auxiliar;
-		final int segundaDezena = numero % auxiliar;
-		final int resultado = (int) Math.pow(primeiraDezena
-								+ segundaDezena, 2);
+        final int limiteMaximo = 9999;
+        if (numero < 0 || numero > limiteMaximo) {
+            throw new IllegalArgumentException(
+                "Numero fora da exigencia:" + numero
+                + " Esperado numero entre 0 e 9999.");
+        }
+        final int auxiliar = 100;
+        final int primeiraDezena = numero / auxiliar;
+        final int segundaDezena = numero % auxiliar;
+        final int resultado = (int) Math.pow(primeiraDezena
+                                + segundaDezena, 2);
 
-		return resultado == numero;
-	}
+        return resultado == numero;
+    }
 
 	/**
 	 * Função matemática que verifica se a soma do cubo
@@ -53,12 +57,14 @@ public class Algoritmos {
 		}
 		final int auxiliar1 = 100;
 		final int auxiliar2 = 10;
+		final int auxiliar3 = 3;
 		final int centena = numero / auxiliar1;
 		final int dezenaAux = numero % auxiliar1;
 		final int dezena = dezenaAux / auxiliar2;
 		final int unidade = numero % auxiliar2;
-		final int resultado = (int) Math.pow(centena, 3)
-		+ (int) Math.pow(dezena, 3) + (int) Math.pow(unidade, 3);
+		final int resultado = (int) Math.pow(centena, auxiliar3)
+		+ (int) Math.pow(dezena, auxiliar3)
+		+ (int) Math.pow(unidade, auxiliar3);
 
 		return resultado == numero;
 	}
@@ -107,9 +113,15 @@ public class Algoritmos {
 			anoAuxiliar = ano - anoMenos;
 		}
 
+		final int auxiliar3 = 3;
+		final int auxiliar4 = 4;
+		final int auxiliar5 = 5;
+		final int auxiliar100 = 100;
+		final int auxiliar400 = 400;
 		final int resultado = dia + (2 * mesAuxiliar)
-		+ (3 * (mesAuxiliar + 1) / 5) + anoAuxiliar + (anoAuxiliar / 4)
-		- (anoAuxiliar / 100) + (anoAuxiliar / 400);
+		+ (auxiliar3 * (mesAuxiliar + 1) / auxiliar5)
+		+ anoAuxiliar + (anoAuxiliar / auxiliar4)
+		- (anoAuxiliar / auxiliar100) + (anoAuxiliar / auxiliar400);
 
 		final int auxiliaResultado = 7;
 		return nomeDiaDaSemana(resultado % auxiliaResultado);
