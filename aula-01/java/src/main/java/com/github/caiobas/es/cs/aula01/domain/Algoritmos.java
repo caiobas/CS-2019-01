@@ -13,7 +13,8 @@ public class Algoritmos {
 	 * números com os 2 ultimos é o próprio número.
 	 *
 	 * @param numero Número a ser verificado.
-	 * @return Retorna booleano para verificação.
+	 * @return Retorna o valor {@code true} caso satisfaça a
+	 * propriedade 3025 e o valor {@code false} caso não a satisfaça.
 	 * @throws IllegalArgumentException Se o número não está entre 0 e 9999.
 	 */
     public static boolean propriedade3025(final int numero) {
@@ -36,7 +37,8 @@ public class Algoritmos {
 	 * dos digitos do número é o próprio número.
 	 *
 	 * @param numero Número a ser verificado.
-	 * @return Retorna booleano para verificação.
+	 * @return Retorna o valor {@code true} caso satisfaça a
+	 * propriedade 153 e o valor {@code false} caso não a satisfaça.
 	 * @throws IllegalArgumentException Se o número não
 	 * está entre 100 e 999.
 	 */
@@ -396,7 +398,8 @@ public class Algoritmos {
 	 * Função matemática que confere se o número é quadrado perfeito.
 	 *
 	 * @param numero Número para conferir se é quadrado perfeito.
-	 * @return Retorna booleano se é quadrado perfeito.
+	 * @return Retorna o valor {@code true} se for um quadrado
+	 * perfeito, e o valor {@code false} caso não seja.
 	 * @throws IllegalArgumentException Se numero não
 	 * for maior ou igual a 1.
 	 */
@@ -452,7 +455,8 @@ public class Algoritmos {
 	 * Função matemática que confere se o número é primo.
 	 *
 	 * @param numero Número para conferir se é número primo.
-	 * @return Retorna booleano se é número primo.
+	 * @return Retorna o valor {@code true} se for um número
+	 * primo e o valor {@code false} caso não seja.
 	 * @throws IllegalArgumentException Se numero
 	 * não for maior ou igual a 1.
 	 */
@@ -477,7 +481,8 @@ public class Algoritmos {
 	 * Função matemática que verifica se o número é primo.
 	 *
 	 * @param numero Número para conferir se é número primo.
-	 * @return Retorna booleano se é número primo.
+	 * @return Retorna o valor {@code true} se for um número
+	 * primo e o valor {@code false} caso não seja.
 	 * @throws IllegalArgumentException Se numero
 	 * não for maior ou igual a 2.
 	 */
@@ -637,7 +642,8 @@ public class Algoritmos {
 	 * Função matemática para conferir CPF.
 	 *
 	 * @param vetor Array com digitos para conferir.
-	 * @return Retorna booleano se é CPF.
+	 * @return Retorna o valor {@code true} se for um cpf válido
+	 * e o valor {@code false} caso não seja.
 	 */
 	public static boolean cpf1(final int[] vetor) {
 
@@ -684,7 +690,8 @@ public class Algoritmos {
 	 * Função matemática para conferir CPF.
 	 *
 	 * @param vetor Array com digitos para conferir.
-	 * @return Retorna booleano se é CPF.
+	 * @return Retorna o valor {@code true} se for um cpf válido
+	 * e o valor {@code false} caso não seja.
 	 */
 	public static boolean cpf2(final int[] vetor) {
 
