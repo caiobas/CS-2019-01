@@ -1,0 +1,11 @@
+/**
+ * 
+ * 
+ * 
+ */
+
+public final class MenorTemperatura {
+
+
+    
+}
