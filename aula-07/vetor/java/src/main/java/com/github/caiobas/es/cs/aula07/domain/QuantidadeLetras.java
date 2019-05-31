@@ -13,9 +13,10 @@ public final class QuantidadeLetras {
      * Classe com o objetivo de retornar a quantidade de cada
      * uma das letras presentes em uma sequência de caracteres.
      * 
-     * @param vetor Vetor que contém os inteiros.
+     * @param string String contendo caracteres.
      * 
-     * @return Retorna a soma dos números ímpares de um vetor.
+     * @return Retorna a quantidade de cada uma das
+     * letras presentes em uma string.
      */
     public static String obterQuantidadeLetras(final String string) {
         int[] letras = new int[26];
