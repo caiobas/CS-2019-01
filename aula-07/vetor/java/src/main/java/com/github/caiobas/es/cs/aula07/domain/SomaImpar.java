@@ -21,8 +21,8 @@ public final class SomaImpar {
         int somaImpares = 0;
 
         for(int contador = 0; contador < vetor.length; contador++){
-            if(vetor[contador] % 2 == 0){
-                somaImpares = somaImpares + contador;
+            if(vetor[contador] % 2 != 0){
+                somaImpares = somaImpares + vetor[contador];
             }
         }
 

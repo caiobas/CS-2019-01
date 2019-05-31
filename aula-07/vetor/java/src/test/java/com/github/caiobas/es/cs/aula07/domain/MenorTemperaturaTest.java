@@ -11,4 +11,5 @@ public class MenorTemperaturaTest {
         double[] vetor = {10, 9, 8, 7, 6, 5};
         assertEquals(5, MenorTemperatura.obterMenorTemperatura(vetor));
     }
+    
 }
