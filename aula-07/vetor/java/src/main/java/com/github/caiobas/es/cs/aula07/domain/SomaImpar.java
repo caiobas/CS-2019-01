@@ -1,8 +1,8 @@
 package com.github.caiobas.es.cs.aula07.domain;
 
 /**
- * Classe com o objetivo de encontrar a menor temperatura
- * em um vetor de valores recebido como argumento.
+ * Classe com o objetivo de retornar a soma de
+ * números ímpares contidos em um vetor de inteiros.
  */
 public final class SomaImpar {
 
@@ -10,12 +10,12 @@ public final class SomaImpar {
 
     }
     /**
-     * Função com o objetivo de encontrar a menor temperatura
-     * em um vetor de valores recebido como argumento.
+     * Classe com o objetivo de retornar a soma de
+     * números ímpares contidos em um vetor de inteiros.
      * 
-     * @param vetor Vetor que contém temperaturas.
+     * @param vetor Vetor que contém os inteiros.
      * 
-     * @return Retorna a menor temperatura de um vetor.
+     * @return Retorna a soma dos números ímpares de um vetor.
      */
     public static int obterSomaImpar(final int[] vetor) {
         int somaImpares = 0;
