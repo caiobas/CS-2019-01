@@ -8,7 +8,7 @@ public class QuantidadeLetrasTest{
 
     @Test
     public void quantidadeLetras() {
-        assertEquals("E = 2\nI = 1\nO = 1\nS = 3\nT = 2\n", QuantidadeLetras.obterQuantidadeLetras("teste isso"));
+        assertEquals("E = 2\nI = 1\nO = 1\nS = 3\nT = 2\n", QuantidadeLetras.obterQuantidadeLetras("TeSte iSso{["));
     }
-    
+
 }
