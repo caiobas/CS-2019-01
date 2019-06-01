@@ -3,8 +3,9 @@ package com.github.caiobas.es.cs.aula07.domain;
 import java.util.Arrays;
 
 /**
- * Classe com o objetivo de localizar a palavra mais frequente em uma sequência
- * de caracteres.
+ * Classe com o objetivo de etornar a quantidade de elementos
+ * do vetor recebido como primeiro argumento cujos valores são
+ * iguais ao valor do segundo argumento fornecido.
  */
 public final class ElementosIguais {
 
@@ -12,12 +13,14 @@ public final class ElementosIguais {
 
     }
     /**
-     * Classe com o objetivo de localizar a palavra
-     * mais frequente em uma sequência de caracteres.
+     * Classe com o objetivo de etornar a quantidade de elementos
+     * do vetor recebido como primeiro argumento cujos valores são
+     * iguais ao valor do segundo argumento fornecido.
      * 
-     * @param frase String contendo palavras.
+     * @param vetor1 Vetor contendo elementos para conferir valores.
+     * @param vetor2 Vetor contendo elementos para conferir valores.
      * 
-     * @return Retorna a palavra mais frequente em uma frase.
+     * @return Retorna a quantidade de elementos iguais entre os vetores.
      */
     public static int obterElementosIguais(final int[] vetor1, final int[] vetor2) {
         int[] vetor1Aux = vetor1;
@@ -41,7 +44,7 @@ public final class ElementosIguais {
                 }
             }
         }
-        
+
         return contadorFinal;
     }
 
