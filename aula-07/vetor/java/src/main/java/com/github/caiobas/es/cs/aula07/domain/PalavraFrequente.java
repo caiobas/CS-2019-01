@@ -1,9 +1,6 @@
 package com.github.caiobas.es.cs.aula07.domain;
 
-import java.util.Collections;
-import java.util.LinkedHashMap;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Classe com o objetivo de localizar a palavra mais frequente em uma sequência
@@ -17,9 +14,9 @@ public final class PalavraFrequente {
     /**
      * Classe com o objetivo de localizar a palavra
      * mais frequente em uma sequência de caracteres.
-     * 
+     *
      * @param frase String contendo palavras.
-     * 
+     *
      * @return Retorna a palavra mais frequente em uma frase.
      */
     public static String obterPalavraFrequente(final String frase) {
@@ -27,11 +24,10 @@ public final class PalavraFrequente {
 
         String[] palavras = frase.split(" ");
 
-        for(String palavra : palavras) {
-            if(frequencia.containsKey(palavra)){
+        for (String palavra : palavras) {
+            if (frequencia.containsKey(palavra)) {
                 frequencia.put(palavra, frequencia.get(palavra) + 1);
-            }
-            else{
+            } else {
                 frequencia.put(palavra, 1);
             }
         }
@@ -39,8 +35,8 @@ public final class PalavraFrequente {
         String palavra = "";
         int compara = 0;
 
-        for(String contador : frequencia.keySet()){
-            if(frequencia.get(contador) > compara) {
+        for (String contador : frequencia.keySet()) {
+            if (frequencia.get(contador) > compara) {
                 compara = frequencia.get(contador);
                 palavra = contador;
             }

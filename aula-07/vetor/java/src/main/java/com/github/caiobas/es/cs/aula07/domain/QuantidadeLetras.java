@@ -12,33 +12,37 @@ public final class QuantidadeLetras {
     /**
      * Classe com o objetivo de retornar a quantidade de cada
      * uma das letras presentes em uma sequência de caracteres.
-     * 
+     *
      * @param string String contendo caracteres.
-     * 
+     *
      * @return Retorna a quantidade de cada uma das
      * letras presentes em uma string.
      */
     public static String obterQuantidadeLetras(final String string) {
-        int[] letras = new int[26];
-        for(int contador = 0; contador < letras.length; contador++){
+        final int quantidadeLetras = 26;
+        int[] letras = new int[quantidadeLetras];
+        for (int contador = 0; contador < letras.length; contador++) {
             letras[contador] = 0;
         }
         char[] stringAuxiliar = string.toCharArray();
 
-        for(int contador = 0; contador < stringAuxiliar.length; contador++){
-            if(stringAuxiliar[contador] - 65 >= 0  && stringAuxiliar[contador] - 65 < 26){
-                letras[stringAuxiliar[contador] - 65]++;
-            }
-            else if(stringAuxiliar[contador] - 97 >= 0  && stringAuxiliar[contador] - 97 < 26){
-                letras[stringAuxiliar[contador] - 97]++;
+        final int letraMaiuscula = 65;
+        final int letraMinuscula = 97;
+        for (int contador = 0; contador < stringAuxiliar.length; contador++) {
+            if (stringAuxiliar[contador] - letraMaiuscula >= 0
+                    && stringAuxiliar[contador] - letraMaiuscula < quantidadeLetras) {
+                letras[stringAuxiliar[contador] - letraMaiuscula]++;
+            } else if (stringAuxiliar[contador] - letraMinuscula >= 0
+                    && stringAuxiliar[contador] - letraMinuscula < quantidadeLetras) {
+                letras[stringAuxiliar[contador] - letraMinuscula]++;
             }
         }
 
         String letrasFinal = "";
 
-        for(int contador = 0; contador < letras.length; contador++){
-            if(letras[contador] != 0){
-                char letra = (char) (contador + 65);
+        for (int contador = 0; contador < letras.length; contador++) {
+            if (letras[contador] != 0) {
+                char letra = (char) (contador + letraMaiuscula);
                 letrasFinal = letrasFinal + letra + "" +  " = " + letras[contador] + "\n";
             }
         }
