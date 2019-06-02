@@ -3,7 +3,7 @@ let vetor = [9, 8, 7, 6, 5, 4, 3, 2, 1]; // Vetor para caso classico.
 let vetor1 = [9, 8, 7, 6, "a", 4, 3, 2, 1]; // Vetor que possui caractere.
 let vetor2 = [9, 8, 7, 6, 5.5, 4, 3, 2, 1]; // Vetor que possui caractere.
 
-test("Menor numero = 1 (caso classico)", () => {
+test("Soma = 25 (caso classico)", () => {
     expect(funcao(vetor)).toBe(25);
   });
 
