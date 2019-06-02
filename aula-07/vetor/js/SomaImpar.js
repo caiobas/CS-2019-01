@@ -1,13 +1,14 @@
 /**
- * Função com o objetivo de encontrar a menor temperatura
- * em um vetor de valores recebido como argumento.
+ * Função com o objetivo de retornar a soma de
+ * números ímpares contidos em um vetor de inteiros.
  * 
- * @param {Array} vetor Vetor usado para análise de menor temperatura.
+ * @param {Array} vetor Vetor de inteiros usado para soma de números ímpares.
  * 
- * @returns {number} Retorna menor temperatura de um vetor.
+ * @returns {number} Retorna soma de números ímpares de um vetor.
  * 
  * @throws {TypeError} Se o parâmetro não for um vetor.
  * @throws {TypeError} Se o vetor não conter apenas números.
+ * @throws {TypeError} Se o vetor não conter números inteiros.
  */
 function somaImpar(vetor) {
 
