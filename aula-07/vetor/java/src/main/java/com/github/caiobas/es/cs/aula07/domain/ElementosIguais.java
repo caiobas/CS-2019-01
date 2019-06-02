@@ -3,7 +3,7 @@ package com.github.caiobas.es.cs.aula07.domain;
 import java.util.Arrays;
 
 /**
- * Classe com o objetivo de etornar a quantidade de elementos
+ * Classe com o objetivo de retornar a quantidade de elementos
  * do vetor recebido como primeiro argumento cujos valores são
  * iguais ao valor do segundo argumento fornecido.
  */
@@ -13,7 +13,7 @@ public final class ElementosIguais {
 
     }
     /**
-     * Classe com o objetivo de etornar a quantidade de elementos
+     * Classe com o objetivo de retornar a quantidade de elementos
      * do vetor recebido como primeiro argumento cujos valores são
      * iguais ao valor do segundo argumento fornecido.
      * 
