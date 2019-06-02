@@ -1,14 +1,16 @@
 /**
- * Função com o objetivo de retornar a soma de
- * números ímpares contidos em um vetor de inteiros.
+ * Função com o objetivo de retornar a quantidade de elementos
+ * do vetor recebido como primeiro argumento cujos valores são
+ * iguais ao valor do segundo argumento fornecido.
  * 
- * @param {Array} vetor Vetor de inteiros usado para soma de números ímpares.
+ * @param {Array} vetor1 Vetor de inteiros usado como referência para encontrar elementos iguais.
+ * @param {Array} vetor2 Vetor de inteiros usado como referência para encontrar elementos iguais.
  * 
- * @returns {number} Retorna soma de números ímpares de um vetor.
+ * @returns {number} Retorna número de elementos iguais.
  * 
- * @throws {TypeError} Se o parâmetro não for um vetor.
- * @throws {TypeError} Se o vetor não conter apenas números.
- * @throws {TypeError} Se o vetor não conter números inteiros.
+ * @throws {TypeError} Se algum parâmetro não for um vetor.
+ * @throws {TypeError} Se algum vetor não conter apenas números.
+ * @throws {TypeError} Se algum vetor não conter números inteiros.
  */
 function elementosIguais(vetor1, vetor2) {
 
