@@ -6,9 +6,9 @@ import java.util.Collections;
 import java.util.HashMap;
 
 /**
- * Classe com o objetivo de etornar a quantidade de elementos
- * do vetor recebido como primeiro argumento cujos valores são
- * iguais ao valor do segundo argumento fornecido.
+ * Classe com o objetivo de retornar o número com a
+ * maior quantidade de repetições de 1.000.000 de números
+ * sorteados aleatoriamente entre o intervalo de 0 a 1.000. 
  */
 public final class NumeroFrequente {
 
@@ -16,14 +16,17 @@ public final class NumeroFrequente {
 
     }
     /**
-     * Classe com o objetivo de etornar a quantidade de elementos
-     * do vetor recebido como primeiro argumento cujos valores são
-     * iguais ao valor do segundo argumento fornecido.
+     * Classe com o objetivo de gerar 1.000.000 de números
+     * no intervalo de 0 a 1.000 aleatoriamente.
      * 
-     * @param vetor1 Vetor contendo elementos para conferir valores.
-     * @param vetor2 Vetor contendo elementos para conferir valores.
+     * @param quantidade Quantidade de números gerados.
+     * @param intervalo Intervalo dos números gerados.
      * 
-     * @return Retorna a quantidade de elementos iguais entre os vetores.
+     * @return Retorna um ArrayList de inteiro com
+     * todos os números gerados aleatoriamente.
+     * 
+     * @throws IllegalArgumentException Se a quantidade não for 1.000.000.
+     * @throws IllegalArgumentException Se o intervalo não for 1.000.
      */
     public static ArrayList<Integer> numerosAleatorios(final int quantidade,final int intervalo){
         final int limiteQuantidade = 1000000;
@@ -32,7 +35,7 @@ public final class NumeroFrequente {
         }
         final int limiteIntervalo = 1000;
         if(intervalo != limiteIntervalo){
-            throw new IllegalArgumentException("Intervalo deve ser 1000.");
+            throw new IllegalArgumentException("Intervalo deve ser entre 0 e 1000.");
         }
 
         Random random = new Random();
@@ -48,6 +51,16 @@ public final class NumeroFrequente {
         return vetor;
     }
     
+    /**
+     * Classe com o objetivo analisar o ArrayList de
+     * números gerados aleatoriamente e retornar um
+     * ArrayList com o(s) número(s) mais frequentes.
+     * 
+     * @param vetor Vetor com números gerados aleatoriamente.
+     * 
+     * @return Retorna um ArrayList de inteiro com os
+     * números mais frequentes do ArrayList de aleatórios.
+     */
     public static ArrayList<Integer> obterNumeroFrequente(ArrayList<Integer> vetor) {
         HashMap<Integer, Integer> numeros = new HashMap<Integer, Integer>();
         
