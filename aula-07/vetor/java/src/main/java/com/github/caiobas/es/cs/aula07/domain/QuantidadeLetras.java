@@ -18,13 +18,13 @@ public final class QuantidadeLetras {
      * @return Retorna a quantidade de cada uma das
      * letras presentes em uma string.
      */
-    public static String obterQuantidadeLetras(final String string) {
+    public static StringBuilder obterQuantidadeLetras(final String string) {
         final int quantidadeLetras = 26;
         int[] letras = new int[quantidadeLetras];
         for (int contador = 0; contador < letras.length; contador++) {
             letras[contador] = 0;
         }
-        char[] stringAuxiliar = string.toCharArray();
+        final char[] stringAuxiliar = string.toCharArray();
 
         final int letraMaiuscula = 65;
         final int letraMinuscula = 97;
@@ -38,12 +38,12 @@ public final class QuantidadeLetras {
             }
         }
 
-        String letrasFinal = "";
+        final StringBuilder letrasFinal = new StringBuilder();
 
         for (int contador = 0; contador < letras.length; contador++) {
             if (letras[contador] != 0) {
-                char letra = (char) (contador + letraMaiuscula);
-                letrasFinal = letrasFinal + letra + "" +  " = " + letras[contador] + "\n";
+                final char letra = (char) (contador + letraMaiuscula);
+                letrasFinal.append(letra +  " = " + letras[contador] + "\n");
             }
         }
         return letrasFinal;

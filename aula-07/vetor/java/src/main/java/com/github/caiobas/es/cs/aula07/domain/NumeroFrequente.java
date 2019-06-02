@@ -29,7 +29,7 @@ public final class NumeroFrequente {
      * @throws IllegalArgumentException Se o intervalo não for 1.000.
      */
     public static ArrayList<Integer> numerosAleatorios(final int quantidade, final int intervalo) {
-        final int limiteQuantidade = 1000000;
+        final int limiteQuantidade = 1_000_000;
         if (quantidade != limiteQuantidade) {
             throw new IllegalArgumentException("Quantidade deve ser 1000000.");
         }
@@ -38,9 +38,9 @@ public final class NumeroFrequente {
             throw new IllegalArgumentException("Intervalo deve ser entre 0 e 1000.");
         }
 
-        Random random = new Random();
+        final Random random = new Random();
 
-        ArrayList<Integer> vetor = new ArrayList<Integer>();
+        final ArrayList<Integer> vetor = new ArrayList<Integer>();
 
         final int intervaloFinal = intervalo + 1;
 
@@ -62,9 +62,9 @@ public final class NumeroFrequente {
      * números mais frequentes do ArrayList de aleatórios.
      */
     public static ArrayList<Integer> obterNumeroFrequente(final ArrayList<Integer> vetor) {
-        HashMap<Integer, Integer> numeros = new HashMap<Integer, Integer>();
+        final HashMap<Integer, Integer> numeros = new HashMap<Integer, Integer>();
 
-        for (int inteiro : vetor) {
+        for (final int inteiro : vetor) {
             if (numeros.containsKey(inteiro)) {
                 numeros.put(inteiro, numeros.get(inteiro) + 1);
             } else {
@@ -73,14 +73,14 @@ public final class NumeroFrequente {
         }
 
         int compara = 0;
-        for (int inteiro : numeros.keySet()) {
+        for (final int inteiro : numeros.keySet()) {
             if (numeros.get(inteiro) > compara) {
                 compara = numeros.get(inteiro);
             }
         }
 
-        ArrayList<Integer> frequentes = new ArrayList<Integer>();
-        for (int inteiro : numeros.keySet()) {
+        final ArrayList<Integer> frequentes = new ArrayList<Integer>();
+        for (final int inteiro : numeros.keySet()) {
             if (numeros.get(inteiro) == compara) {
                 frequentes.add(inteiro);
             }

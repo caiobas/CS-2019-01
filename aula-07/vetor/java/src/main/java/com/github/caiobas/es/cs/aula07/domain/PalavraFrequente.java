@@ -20,11 +20,11 @@ public final class PalavraFrequente {
      * @return Retorna a palavra mais frequente em uma frase.
      */
     public static String obterPalavraFrequente(final String frase) {
-        HashMap<String, Integer> frequencia = new HashMap<String, Integer>();
+        final HashMap<String, Integer> frequencia = new HashMap<String, Integer>();
 
-        String[] palavras = frase.split(" ");
+        final String[] palavras = frase.split(" ");
 
-        for (String palavra : palavras) {
+        for (final String palavra : palavras) {
             if (frequencia.containsKey(palavra)) {
                 frequencia.put(palavra, frequencia.get(palavra) + 1);
             } else {
@@ -35,14 +35,13 @@ public final class PalavraFrequente {
         String palavra = "";
         int compara = 0;
 
-        for (String contador : frequencia.keySet()) {
+        for (final String contador : frequencia.keySet()) {
             if (frequencia.get(contador) > compara) {
                 compara = frequencia.get(contador);
                 palavra = contador;
             }
         }
 
-        System.out.println(palavra);
         return palavra;
     }
 

@@ -20,7 +20,7 @@ public final class MenorTemperatura {
      * @return Retorna a menor temperatura de um vetor.
      */
     public static double obterMenorTemperatura(final double[] vetor) {
-        double[] vetorAuxiliar = vetor;
+        final double[] vetorAuxiliar = vetor;
         Arrays.sort(vetorAuxiliar);
 
         return vetorAuxiliar[0];

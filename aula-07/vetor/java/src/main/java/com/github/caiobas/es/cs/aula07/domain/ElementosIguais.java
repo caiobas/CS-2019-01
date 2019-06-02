@@ -23,8 +23,8 @@ public final class ElementosIguais {
      * @return Retorna a quantidade de elementos iguais entre os vetores.
      */
     public static int obterElementosIguais(final int[] vetor1, final int[] vetor2) {
-        int[] vetor1Aux = vetor1;
-        int[] vetor2Aux = vetor2;
+        final int[] vetor1Aux = vetor1;
+        final int[] vetor2Aux = vetor2;
 
         Arrays.sort(vetor1Aux);
         Arrays.sort(vetor2Aux);
