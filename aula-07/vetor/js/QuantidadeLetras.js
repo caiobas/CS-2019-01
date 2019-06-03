@@ -1,16 +1,12 @@
 /**
- * Função com o objetivo de retornar a quantidade de elementos
- * do vetor recebido como primeiro argumento cujos valores são
- * iguais ao valor do segundo argumento fornecido.
+ * Função com o objetivo de retornar a quantidade de cada
+ * uma das letras presentes em uma sequência de caracteres.
  * 
- * @param {Array} vetor1 Vetor de inteiros usado como referência para encontrar elementos iguais.
- * @param {Array} vetor2 Vetor de inteiros usado como referência para encontrar elementos iguais.
+ * @param {String} string String contendo caracteres.
  * 
- * @returns {number} Retorna número de elementos iguais.
+ * @returns {String} Retorna a quantidade de cada uma das letras presentes em uma string.
  * 
- * @throws {TypeError} Se algum parâmetro não for um vetor.
- * @throws {TypeError} Se algum vetor não conter apenas números.
- * @throws {TypeError} Se algum vetor não conter números inteiros.
+ * @throws {TypeError} Se o parâmetro não for uma string.
  */
 function quantidadeLetras(string) {
 
