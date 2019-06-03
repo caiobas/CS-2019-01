@@ -6,10 +6,6 @@ import org.junit.jupiter.api.Test;
 
 public class QuantidadeLetrasTest{
 
-    public static void main(String[] args){
-        System.out.println(QuantidadeLetras.obterQuantidadeLetras("TeSte iSso{["));
-    }
-
     @Test
     public void quantidadeLetras() {
         
