@@ -1,10 +1,10 @@
 /**
- * Função com o objetivo de retornar a quantidade de cada
- * uma das letras presentes em uma sequência de caracteres.
+ * Função com o objetivo de localizar a palavra
+ * mais frequente em uma sequência de caracteres.
  * 
- * @param {String} string String contendo caracteres.
+ * @param {String} string String contendo palavras.
  * 
- * @returns {String} Retorna a quantidade de cada uma das letras presentes em uma string.
+ * @returns {String} Retorna a palavra mais frequente em uma frase.
  * 
  * @throws {TypeError} Se o parâmetro não for uma string.
  */
