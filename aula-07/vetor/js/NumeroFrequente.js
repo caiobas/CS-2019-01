@@ -9,7 +9,10 @@
  * @returns {Array} Retorna um Array de inteiros com o(s)
  * número(s) mais frequentes do Array de aleatórios.
  * 
- * @throws {TypeError} Se não for uma string.
+ * @throws {TypeError} Se quantidade não for um número.
+ * @throws {TypeError} Se intervalo não for um número.
+ * @throws {RangeError} Se quantidade não for 1.000.000.
+ * @throws {RangeError} Se intervalo não for 1.000.
  */
 function numeroFrequente(quantidade, intervalo) {
 
