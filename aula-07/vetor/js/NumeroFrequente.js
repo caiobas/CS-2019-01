@@ -1,21 +1,32 @@
 /**
- * Função com o objetivo de localizar a palavra
- * mais frequente em uma sequência de caracteres.
+ * Função com o objetivo de analisar um Array de
+ * 1.000.000 números no intervalo de 0 a 1.000 gerados
+ * aleatoriamente e retornar um Array com o(s) número(s) mais frequentes.
  * 
- * @param {String} string String contendo palavras.
+ * @param {number} quantidade Quantidade de números gerados.
+ * @param {number} intervalo Intervalo dos números gerados.
  * 
- * @returns {String} Retorna a palavra mais frequente em uma frase.
+ * @returns {Array} Retorna um Array de inteiros com o(s)
+ * número(s) mais frequentes do Array de aleatórios.
  * 
- * @throws {TypeError} Se o parâmetro não for uma string.
+ * @throws {TypeError} Se não for uma string.
  */
 function numeroFrequente(quantidade, intervalo) {
 
-    if(typeof quantidade != 'number' || quantidade != 1000000) {
-        throw new TypeError("Quantidade deve ser número com valor de 1.000.000.");
+    if(typeof quantidade != 'number') {
+        throw new TypeError("Quantidade deve ser número.");
     }
 
-    if(typeof intervalo != 'number' || intervalo != 1000) {
-        throw new TypeError("Intervalo deve ser número com valor de 1000.");
+    if(typeof intervalo != 'number') {
+        throw new TypeError("Intervalo deve ser número.");
+    }
+    
+    if(quantidade != 1000000) {
+        throw new RangeError("Quantidade deve ter valor de 1.000.000.");
+    }
+
+    if(intervalo != 1000) {
+        throw new RangeError("Intervalo deve ter valor de 1000.");
     }
 
     let vetor = new Array();
