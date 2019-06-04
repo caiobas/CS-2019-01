@@ -10,7 +10,7 @@
  */
 function palavraFrequente(string) {
 
-    if(typeof string != 'string') {
+    if(typeof string != "string") {
         throw new TypeError("Parâmetro deve ser string.");
     }
 

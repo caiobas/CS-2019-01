@@ -6,9 +6,9 @@ let vetor3 = [9, 8, 7, 6, 5.5, 4, 3, 2, 1]; // Vetor que possui caractere.
 
 test("Elementos iguais = 2 (caso classico)", () => {
     expect(funcao(vetor, vetor1)).toBe(2);
-  });
+});
 
-  test("Parametro nao e vetor", () => {
+test("Parametro nao e vetor", () => {
     expect(() => { funcao(35, vetor); }).toThrow(TypeError);
 });
 

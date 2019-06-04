@@ -4,9 +4,9 @@ let vetor1 = [9, 8, 7, 6, "a", 4, 3, 2, 1]; // Vetor que possui caractere.
 
 test("Menor numero = 1 (caso classico)", () => {
     expect(funcao(vetor)).toBe(1);
-  });
+});
 
-  test("Parametro nao e vetor", () => {
+test("Parametro nao e vetor", () => {
     expect(() => { funcao(35); }).toThrow(TypeError);
 });
 

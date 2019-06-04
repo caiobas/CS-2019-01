@@ -17,7 +17,7 @@ function somaImpar(vetor) {
     }
     let somaImpares = 0;
     for(let contador = 0; contador < vetor.length; contador++) {
-        if (typeof vetor[contador] != 'number'){
+        if (typeof vetor[contador] != "number"){
             throw new TypeError("O vetor deve conter apenas números.");
         } else if (Math.trunc(vetor[contador]) != vetor[contador]){
             throw new TypeError("Os números contidos no vetor devem ser inteiros.");

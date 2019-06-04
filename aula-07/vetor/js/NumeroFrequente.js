@@ -16,11 +16,11 @@
  */
 function numeroFrequente(quantidade, intervalo) {
 
-    if(typeof quantidade != 'number') {
+    if(typeof quantidade != "number") {
         throw new TypeError("Quantidade deve ser número.");
     }
 
-    if(typeof intervalo != 'number') {
+    if(typeof intervalo != "number") {
         throw new TypeError("Intervalo deve ser número.");
     }
     
@@ -71,5 +71,5 @@ function numeroFrequente(quantidade, intervalo) {
     console.log(frequentes);
     return frequentes;
 }
-console.log(numeroFrequente(1000000, 1000))
+
 module.exports = numeroFrequente;

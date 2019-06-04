@@ -19,7 +19,7 @@ function elementosIguais(vetor1, vetor2) {
     }
 
     for(let contador = 0; contador < vetor1.length; contador++) {
-        if (typeof vetor1[contador] != 'number'){
+        if (typeof vetor1[contador] != "number"){
             throw new TypeError("Os vetores devem conter apenas números.");
         } else if (Math.trunc(vetor1[contador]) != vetor1[contador]){
             throw new TypeError("Os números contidos nos vetores devem ser inteiros.");
@@ -27,7 +27,7 @@ function elementosIguais(vetor1, vetor2) {
     }
     
     for(let contador = 0; contador < vetor2.length; contador++) {
-        if (typeof vetor2[contador] != 'number'){
+        if (typeof vetor2[contador] != "number"){
             throw new TypeError("Os vetores devem conter apenas números.");
         } else if (Math.trunc(vetor2[contador]) != vetor2[contador]){
             throw new TypeError("Os números contidos nos vetores devem ser inteiros.");
