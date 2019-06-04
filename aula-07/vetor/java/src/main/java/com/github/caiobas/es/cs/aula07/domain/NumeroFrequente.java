@@ -52,14 +52,14 @@ public final class NumeroFrequente {
     }
 
     /**
-     * Classe com o objetivo analisar o ArrayList de
+     * Classe com o objetivo de analisar o ArrayList de
      * números gerados aleatoriamente e retornar um
      * ArrayList com o(s) número(s) mais frequentes.
      *
      * @param vetor Vetor com números gerados aleatoriamente.
      *
-     * @return Retorna um ArrayList de inteiro com os
-     * números mais frequentes do ArrayList de aleatórios.
+     * @return Retorna um ArrayList de inteiro com o(s)
+     * número(s) mais frequentes do ArrayList de aleatórios.
      */
     public static ArrayList<Integer> obterNumeroFrequente(final ArrayList<Integer> vetor) {
         final HashMap<Integer, Integer> numeros = new HashMap<Integer, Integer>();

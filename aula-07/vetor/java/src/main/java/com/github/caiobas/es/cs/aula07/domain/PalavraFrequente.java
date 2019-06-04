@@ -3,8 +3,8 @@ package com.github.caiobas.es.cs.aula07.domain;
 import java.util.HashMap;
 
 /**
- * Classe com o objetivo de localizar a palavra mais frequente em uma sequência
- * de caracteres.
+ * Classe com o objetivo de localizar a palavra
+ * mais frequente em uma sequência de caracteres.
  */
 public final class PalavraFrequente {
 
