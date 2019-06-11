@@ -1,8 +1,9 @@
 language: java
 
 script:
-  - cd aula-01/java && mvn clean
-cache:
+  - cd aula-01/java && mvn clean test checkstyle:check pmd:check spotbugs:check
+  - mvn verify -P cobertura
+  cache:
   directories:
   - "$HOME/.m2/repository"
   - "$HOME/.sonar/cache"
