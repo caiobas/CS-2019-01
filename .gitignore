@@ -7,5 +7,4 @@ bin/
 out/
 target/
 coverage/
-tools/
 .vscode/
