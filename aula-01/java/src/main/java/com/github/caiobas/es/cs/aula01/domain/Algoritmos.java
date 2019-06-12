@@ -25,8 +25,7 @@ public final class Algoritmos {
         final int limiteMaximo = 9999;
         if (numero < 0 || numero > limiteMaximo) {
             throw new IllegalArgumentException(
-                "Numero fora da exigencia:" + numero
-                + " Esperado numero entre 0 e 9999.");
+                "Esperado numero entre 0 e 9999.");
         }
         final int auxiliar = 100;
         final int primeiraDezena = numero / auxiliar;
@@ -52,8 +51,7 @@ public final class Algoritmos {
         final int limiteMaximo = 999;
         if (numero < limiteMinimo || numero > limiteMaximo) {
             throw new IllegalArgumentException(
-                    "Numero fora da exigencia:" + numero
-                    + " Esperado numero entre 100 e 999.");
+                    "Esperado numero entre 100 e 999.");
         }
         final int auxiliar1 = 100;
         final int auxiliar2 = 10;
@@ -86,22 +84,19 @@ public final class Algoritmos {
         final int diaMaximo = 31;
         if (dia < 1 || dia > diaMaximo) {
             throw new IllegalArgumentException(
-                "Dia fora da exigencia:" + dia
-                + " Esperado dia entre 1 e 31.");
+                "Esperado dia entre 1 e 31.");
         }
 
         final int mesMaximo = 12;
         if (mes < 1 || mes > mesMaximo) {
             throw new IllegalArgumentException(
-                "Mes fora da exigencia:" + mes
-                + " Esperado mes entre 1 e 12.");
+                "Esperado mes entre 1 e 12.");
         }
 
         final int anoMaximo = 1754;
         if (ano < anoMaximo) {
             throw new IllegalArgumentException(
-                "Ano fora da exigencia:" + ano
-                + " Esperado ano maior ou igual a 1953.");
+                "Esperado ano maior ou igual a 1953.");
         }
 
         int mesAuxiliar = mes;
@@ -148,7 +143,7 @@ public final class Algoritmos {
         case auxiliarSegunda:
             return "Segunda-feira";
         case auxiliarTerca:
-            return "Terca-feira";
+            return "Terca-feira".toS;
         case auxiliarQuarta:
             return "Quarta-feira";
         case auxiliarQuinta:
@@ -178,14 +173,11 @@ public final class Algoritmos {
 
         if (dividendo < 0) {
             throw new IllegalArgumentException(
-                    "Dividendo fora da exigencia:"
-                    + dividendo
-                    + " Não pode ser menor que 0.");
+                    "Divisor não pode ser menor que 0.");
         }
         if (divisor <= 0) {
             throw new IllegalArgumentException(
-                    "Divisor fora da exigencia:" + divisor
-                    + " Esperado divisor maior que 0.");
+                    "Divisor não pode ser maior que 0.");
         }
 
         int resto = dividendo;
@@ -206,11 +198,11 @@ public final class Algoritmos {
      * @throws IllegalArgumentException Se o número não for maior que 1.
      */
     public static int somaPrimeirosNaturais(final int numero) {
+        final int limiteMinimo = 1;
 
-        if (numero < 1) {
+        if (numero < limiteMinimo) {
             throw new IllegalArgumentException(
-                "Numero fora da exigencia:" + numero
-                + " Esperado numero maior que 0.");
+                "Esperado numero maior que 0.");
         }
 
         int soma = 1;
@@ -230,11 +222,11 @@ public final class Algoritmos {
      * @throws IllegalArgumentException Se o número não for maior que 1.
      */
     public static int fatorial(final int numero) {
+        final int limiteMinimo = 1;
 
-        if (numero < 1) {
+        if (numero < limiteMinimo) {
             throw new IllegalArgumentException(
-                "Numero fora da exigencia:" + numero
-                + " Esperado numero maior que 0.");
+                "Esperado numero maior que 0.");
         }
 
         int fatorial = 1;
@@ -260,8 +252,7 @@ public final class Algoritmos {
 
         if (multiplicador < 0 || multiplicando < 0) {
             throw new IllegalArgumentException(
-                "Numero fora da exigencia. "
-                + " Esperado numero maior ou igual a 0.");
+                "Esperado numero maior ou igual a 0.");
         }
 
         int totalParcelas = multiplicador;
@@ -295,8 +286,7 @@ public final class Algoritmos {
 
         if (base < 0 || expoente < 0) {
             throw new IllegalArgumentException(
-                "Numero fora da exigencia."
-                + " Esperado numero maior ou igual a 0.");
+                "Esperado numero maior ou igual a 0.");
         }
 
         int potencia = 1;
@@ -319,11 +309,11 @@ public final class Algoritmos {
      * não for maior ou igual a 1.
      */
     public static double valorPI(final int precisao) {
+        final int limiteMinimo = 1;
 
-        if (precisao < 1) {
+        if (precisao < limiteMinimo) {
             throw new IllegalArgumentException(
-            "Numero fora da exigencia."
-            + " Esperado numero maior ou igual a 1.");
+            "Esperado numero maior ou igual a 1.");
         }
 
         double sinal = -1;
@@ -353,8 +343,7 @@ public final class Algoritmos {
 
         if (log < 1 || limite < 2) {
             throw new IllegalArgumentException(
-                    "Numero fora da exigencia."
-                    + " Esperado log maior ou igual a 1"
+                    "Esperado log maior ou igual a 1"
                     + " e limite maior ou igual a 2.");
         }
 
@@ -388,8 +377,7 @@ public final class Algoritmos {
 
         if (anterior < 0 || posterior < anterior || limite <= 0) {
             throw new IllegalArgumentException(
-                    "Numero fora da exigencia."
-                    + " Esperado anterior maior ou igual"
+                    "Esperado anterior maior ou igual"
                     + " a 0, posterior maior que anterior"
                     + " e limite maior que 0.");
         }
@@ -417,11 +405,11 @@ public final class Algoritmos {
      * for maior ou igual a 1.
      */
     public static boolean quadradoPerfeito(final int numero) {
+        final int limiteMinimo = 1;
 
-        if (numero < 1) {
+        if (numero < limiteMinimo) {
             throw new IllegalArgumentException(
-                "Numero fora da exigencia."
-                + " Esperado numero maior ou igual a 1.");
+                "Esperado numero maior ou igual a 1.");
         }
 
         int incremental = 1;
@@ -446,11 +434,11 @@ public final class Algoritmos {
      */
     public static double raizQuadrada(final int numero,
     final int precisao) {
+        final int limiteMinimo = 1;
 
-        if (numero < 1) {
+        if (numero < limiteMinimo) {
             throw new IllegalArgumentException(
-                "Numero fora da exigencia."
-                + " Esperado numero maior que 0.");
+                "Esperado numero maior que 0.");
         }
 
         double raiz = 1;
@@ -474,15 +462,15 @@ public final class Algoritmos {
      * não for maior ou igual a 1.
      */
     public static boolean numeroPrimo(final int numero) {
+        final int limiteMinimo = 2;
 
-        if (numero < 2) {
+        if (numero < limiteMinimo) {
             throw new IllegalArgumentException(
-                "Numero fora da exigencia."
-                + " Esperado numero maior que 1.");
+                "Esperado numero maior que 1.");
         }
 
         for (int contador = 2; contador < numero; contador++) {
-            if ((numero % contador) == 0) {
+            if (numero % contador == 0) {
                 return false;
             }
         }
@@ -500,11 +488,11 @@ public final class Algoritmos {
      * não for maior ou igual a 2.
      */
     public static boolean crivoErastotenes(final int numero) {
+        final int limiteMinimo = 2;
 
-        if (numero < 2) {
+        if (numero < limiteMinimo) {
             throw new IllegalArgumentException(
-                "Numero fora da exigencia."
-                + " Esperado numero maior que 1.");
+                "Esperado numero maior que 1.");
         }
 
         int[] vetor = new int[numero + 1];
@@ -541,8 +529,7 @@ public final class Algoritmos {
 
         if (numeroUm < numeroDois || numeroDois < 1) {
             throw new IllegalArgumentException(
-                    "Numero fora da exigencia."
-                    + " Esperado numeroUm maior ou"
+                    "Esperado numeroUm maior ou"
                     + " igual a numeroDois e"
                     + " numeroDois maior que 0.");
         }
@@ -571,8 +558,7 @@ public final class Algoritmos {
 
         if (numeroUm < numeroDois || numeroDois < 1) {
             throw new IllegalArgumentException(
-                    "Numero fora da exigencia."
-                    + " Esperado numeroUm maior"
+                    "Esperado numeroUm maior"
                     + " ou igual a numeroDois"
                     + " e numeroDois maior que 0.");
         }
@@ -603,16 +589,16 @@ public final class Algoritmos {
      */
     public static double regraHorner(final double valor,
     final int total, final int[] vetor) {
+        final int limiteMinimo = 1;
 
-        if (total < 1) {
+        if (total < limiteMinimo) {
             throw new IllegalArgumentException(
-                "Numero fora da exigencia."
-                + " Esperado total maior ou igual a 1.");
+                "Esperado total maior ou igual a 1.");
         }
 
         double polinomio = vetor[total];
 
-        for (int contador = (total - 1); contador >= 0; contador--) {
+        for (int contador = total - 1; contador >= 0; contador--) {
             polinomio = polinomio * (valor + vetor[contador]);
         }
 
@@ -631,8 +617,7 @@ public final class Algoritmos {
 
         if (numero < 0) {
             throw new IllegalArgumentException(
-                "Numero fora da exigencia."
-                + " Esperado numero maior ou igual a 0.");
+                "Esperado numero maior ou igual a 0.");
         }
 
         if (numero == 0 || numero == 1) {
@@ -695,8 +680,8 @@ public final class Algoritmos {
         final int vetorComparaDois = Math.floorMod(
             Math.floorMod(comparaDois, auxiliar11), auxiliar10);
 
-        return (vetorComparaUm == vetor[auxiliar9])
-            && (vetorComparaDois == vetor[auxiliar10]);
+        return vetorComparaUm == vetor[auxiliar9]
+            && vetorComparaDois == vetor[auxiliar10];
     }
 
     /**
@@ -728,12 +713,12 @@ public final class Algoritmos {
             Math.floorMod(auxiliaValorDois, auxiliar11),
             auxiliar10);
         final int comparaDois = Math.floorMod(
-            Math.floorMod((auxiliaValorDois - auxiliaValorUm
-            + (auxiliar9 * vetor[auxiliar9])), auxiliar11),
+            Math.floorMod(auxiliaValorDois - auxiliaValorUm
+            + (auxiliar9 * vetor[auxiliar9]), auxiliar11),
             auxiliar10);
 
-        return (comparaUm == vetor[auxiliar9])
-        && (comparaDois == vetor[auxiliar10]);
+        return comparaUm == vetor[auxiliar9]
+        && comparaDois == vetor[auxiliar10];
     }
 
     /**
