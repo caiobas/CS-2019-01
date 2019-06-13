@@ -18,6 +18,7 @@ public final class SomaImpar {
      * @return Retorna a soma dos números ímpares de um vetor.
      */
     public static int obterSomaImpar(final int[] vetor) {
+        // FIXME verifique se não null, não vaziou ou faça a documentação correspondente.
         int somaImpares = 0;
 
         for (int contador = 0; contador < vetor.length; contador++) {
@@ -26,7 +27,10 @@ public final class SomaImpar {
             }
         }
 
-        return somaImpares;
+        // TODO é preciso verificar o código abaixo
+        return Arrays.stream(vetor).filter(v -> v % 2 != 0).sum();
+        
+        // return somaImpares;
     }
 
 }
