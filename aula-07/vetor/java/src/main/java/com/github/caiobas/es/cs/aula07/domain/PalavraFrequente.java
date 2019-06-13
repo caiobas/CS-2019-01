@@ -9,8 +9,8 @@ import java.util.HashMap;
 public final class PalavraFrequente {
 
     private PalavraFrequente() {
-
     }
+    
     /**
      * Classe com o objetivo de localizar a palavra
      * mais frequente em uma sequência de caracteres.
@@ -22,6 +22,7 @@ public final class PalavraFrequente {
     public static String obterPalavraFrequente(final String frase) {
         final HashMap<String, Integer> frequencia = new HashMap<String, Integer>();
 
+        // FIXME há várias falhas aqui, por exemplo com o uso de vírgula e outros. Melhor seria: "\\P{L}+" em vez de " "
         final String[] palavras = frase.split(" ");
 
         for (final String palavra : palavras) {
