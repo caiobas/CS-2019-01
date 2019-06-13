@@ -13,19 +13,22 @@ public final class ElementosIguais {
 
     }
     /**
-     * Classe com o objetivo de retornar a quantidade de elementos
-     * do vetor recebido como primeiro argumento cujos valores são
-     * iguais ao valor do segundo argumento fornecido.
+     * Retorna a quantidade de elementos do vetor que coincidem com
+     * o valor fornecido.
      *
      * @param vetor1 Vetor contendo elementos para conferir valores.
-     * @param vetor2 Vetor contendo elementos para conferir valores.
+     * @param vetor2 NAO E VETOR, MAS APENAS UM VALOR
      *
      * @return Retorna a quantidade de elementos iguais entre os vetores.
      */
+    // FIXME o segundo argumento é apenas um valor. 
     public static int obterElementosIguais(final int[] vetor1, final int[] vetor2) {
+        // FIXME se a intenção é clonar, o correto é vetor1.clone()
+        // As atribuições abaixo não fazem sentido, apenas criam referência adicional. 
         final int[] vetor1Aux = vetor1;
         final int[] vetor2Aux = vetor2;
 
+        // TODO alteram a ordem dos elementos fornecidos como argumento!
         Arrays.sort(vetor1Aux);
         Arrays.sort(vetor2Aux);
 
