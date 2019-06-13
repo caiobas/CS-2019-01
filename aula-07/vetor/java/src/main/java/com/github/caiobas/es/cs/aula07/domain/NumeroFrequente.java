@@ -6,8 +6,8 @@ import java.util.Collections;
 import java.util.HashMap;
 
 /**
- * Classe com o objetivo de retornar o número com a
- * maior quantidade de repetições de 1.000.000 de números
+ * Retornar o número com a
+ * maior quantidade de repetições dentre 1.000.000 de números
  * sorteados aleatoriamente entre o intervalo de 0 a 1.000.
  */
 public final class NumeroFrequente {
@@ -15,9 +15,15 @@ public final class NumeroFrequente {
     private NumeroFrequente() {
 
     }
+    
     /**
-     * Classe com o objetivo de gerar 1.000.000 de números
-     * no intervalo de 0 a 1.000 aleatoriamente.
+     * Sorteia 1.000.000 de números de 0 a 1.000 e identifica o 
+     * valor sorteado o maior número de vezes.
+     *
+     * TODO a estratégia abaixo não é mais interessante?
+     *<p>O presente método armazena apenas os números sorteados e
+     * mantém a quantidade correspondente em um dicionário (Map<Integer, Integer>). 
+     * </p>
      *
      * @param quantidade Quantidade de números gerados.
      * @param intervalo Intervalo dos números gerados.
@@ -52,6 +58,7 @@ public final class NumeroFrequente {
     }
 
     /**
+     * TODO Não é necessário dizer que é uma classe ou um método
      * Classe com o objetivo de analisar o ArrayList de
      * números gerados aleatoriamente e retornar um
      * ArrayList com o(s) número(s) mais frequentes.
@@ -78,6 +85,8 @@ public final class NumeroFrequente {
                 compara = numeros.get(inteiro);
             }
         }
+        // TODO veja uma alternativa para as 6 linhas acima
+        // numeros.values().stream().max(Comparator.comparing(Integer::valueOf)).get()
 
         final ArrayList<Integer> frequentes = new ArrayList<Integer>();
         for (final int inteiro : numeros.keySet()) {
