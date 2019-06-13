@@ -21,9 +21,15 @@ public final class QuantidadeLetras {
     public static StringBuilder obterQuantidadeLetras(final String string) {
         final int quantidadeLetras = 26;
         int[] letras = new int[quantidadeLetras];
+        
+        // FIXME não faz sentido em Java (for abaixo), exceto quando se deseja substituir valores, não é o caso. 
         for (int contador = 0; contador < letras.length; contador++) {
             letras[contador] = 0;
         }
+        
+        // TODO sugiro reescrever o código abaixo, restante do método
+        // TODO tive dificuldade para entender e não sei se faz sentido a dificuldade?!
+        // TODO Por que não usar Map<Character,Integer>? Basta você refletir e mudar, se considerar oportuno.
         final char[] stringAuxiliar = string.toCharArray();
 
         final int letraMaiuscula = 65;
