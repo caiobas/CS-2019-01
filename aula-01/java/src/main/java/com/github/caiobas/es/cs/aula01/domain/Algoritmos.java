@@ -75,33 +75,17 @@ public final class Algoritmos {
      * @param mes Mês a ser verificado.
      * @param ano Ano a ser verificado.
      * @return Retorna dia da semana.
-     * @throws IllegalArgumentException Se qualquer um dos
-     * argumentos não estiver dentro dos parâmetros de data.
      */
     public static String diaDaSemana(final int dia,
     final int mes, final int ano) {
 
-        final int diaMaximo = 31;
-        if (dia < 1 || dia > diaMaximo) {
-            throw new IllegalArgumentException(
-                "Esperado dia entre 1 e 31.");
-        }
-
-        final int mesMaximo = 12;
-        if (mes < 1 || mes > mesMaximo) {
-            throw new IllegalArgumentException(
-                "Esperado mes entre 1 e 12.");
-        }
-
-        final int anoMaximo = 1754;
-        if (ano < anoMaximo) {
-            throw new IllegalArgumentException(
-                "Esperado ano maior ou igual a 1953.");
-        }
+        geraExcecaoSeDataInvalida(dia, mes, ano);
 
         int mesAuxiliar = mes;
         int anoAuxiliar = ano;
-        if (mes == 1 || mes == 2) {
+        final int JANEIRO = 1;
+        final int FEVEREIRO = 2;
+        if (mes == JANEIRO || mes == FEVEREIRO) {
             final int mesMais = 12;
             final int anoMenos = 1;
             mesAuxiliar = mes + mesMais;
@@ -123,41 +107,93 @@ public final class Algoritmos {
     }
 
     /**
+     * Função que gera exceção se a data
+     * fornecida estiver invalida.
+     *
+     * @param dia Dia a ser verificado.
+     * @param mes Mês a ser verificado.
+     * @param ano Ano a ser verificado.
+     * @return Retorna dia da semana.
+     * @throws IllegalArgumentException Se qualquer um dos
+     * argumentos não estiver dentro dos parâmetros de data.
+     */
+    private static void geraExcecaoSeDataInvalida(final int dia,
+    final int mes, final int ano){
+        final int diaMaximo31 = 31;
+        if (dia < 1 || dia > diaMaximo31) {
+            throw new IllegalArgumentException(
+                "Esperado dia entre 1 e 31.");
+        }
+
+        final int diaMaximo29 = 29;
+        final int mes2 = 2;
+        if (dia > diaMaximo29 && mes == mes2) {
+            if(ano%4 == 0) {
+            throw new IllegalArgumentException(
+                "Esperado dia entre 1 e 29"
+                + " no mês de Fevereiro deste ano.");
+            }
+        }
+
+        final int diaMaximo28 = 28;
+        if (dia > diaMaximo28 && mes == mes2) {
+            if(ano%4 != 0) {
+            throw new IllegalArgumentException(
+                "Esperado dia entre 1 e 28"
+                + " no mês de Fevereiro deste ano.");
+            }
+        }
+
+        final int diaMaximo30 = 30;
+        final int mes4 = 4;
+        if (dia > diaMaximo30 && mes == mes4) {
+            throw new IllegalArgumentException(
+                "Dia errado no mês de Abril.");
+        }
+
+        final int mes6 = 6;
+        if (dia > diaMaximo30 && mes == mes6) {
+            throw new IllegalArgumentException(
+                "Dia errado no mês de Junho.");
+        }
+
+        final int mes9 = 9;
+        if (dia > diaMaximo30 && mes == mes9) {
+            throw new IllegalArgumentException(
+                "Dia errado no mês de Setembro.");
+        }
+
+        final int mes11 = 11;
+        if (dia > diaMaximo30 && mes == mes11) {
+            throw new IllegalArgumentException(
+                "Dia errado no mês de Novembro.");
+        }
+
+        final int mesMaximo = 12;
+        if (mes < 1 || mes > mesMaximo) {
+            throw new IllegalArgumentException(
+                "Esperado mes entre 1 e 12.");
+        }
+
+        final int anoMaximo = 1754;
+        if (ano < anoMaximo) {
+            throw new IllegalArgumentException(
+                "Esperado ano maior ou igual a 1953.");
+        }
+    }
+
+    /**
      * Função que retorna o dia da semana baseado no resultado da função
      * diaDaSemana.
      *
-     * @param resultado utilizado para identificar dia da semana.
+     * @param dia utilizado para identificar dia da semana.
      * @return Retorna dia da semana.
-     * @throws IllegalArgumentException Se o argumento conter
-     * valor incorreto para análise.
      */
-    public static String nomeDiaDaSemana(final int resultado) {
-        final int auxiliarSegunda = 0;
-        final int auxiliarTerca = 1;
-        final int auxiliarQuarta = 2;
-        final int auxiliarQuinta = 3;
-        final int auxiliarSexta = 4;
-        final int auxiliarSabado = 5;
-        final int auxiliarDomingo = 6;
-        switch (resultado) {
-        case auxiliarSegunda:
-            return "Segunda-feira";
-        case auxiliarTerca:
-            return "Terca-feira";
-        case auxiliarQuarta:
-            return "Quarta-feira";
-        case auxiliarQuinta:
-            return "Quinta-feira";
-        case auxiliarSexta:
-            return "Sexta-feira";
-        case auxiliarSabado:
-            return "Sabado";
-        case auxiliarDomingo:
-            return "Domingo";
-        default:
-            throw new IllegalArgumentException(
-                "Valor incorreto para analise de dia.");
-        }
+    public static String nomeDiaDaSemana(final int dia) {
+        final String[] nomeDoDiaDaSemana = {"Segunda-feira", "Terca-feira",
+        "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sabado",
+        "Domingo"};
+         return nomeDoDiaDaSemana[dia];
     }
 
     /**

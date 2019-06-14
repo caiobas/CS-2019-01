@@ -80,9 +80,61 @@ public class AlgoritmosTest {
     }
 
     @Test
-    public void diaDaSemanaDiaMenorQue1754() {
+    public void diaDaSemanaAnoMenorQue1754() {
         assertThrows(IllegalArgumentException.class, 
                                                     () -> Algoritmos.diaDaSemana(1, 1, 1753));
+    }
+    
+    @Test
+    public void diaDaSemanaDia30Mes2Ano2000() {
+        assertThrows(IllegalArgumentException.class, 
+                                                    () -> Algoritmos.diaDaSemana(30, 2, 2000));
+    }
+    
+    @Test
+    public void diaDaSemanaPraPassar1() {
+        assertThrows(IllegalArgumentException.class, 
+                                                    () -> Algoritmos.diaDaSemana(30, 2, 2019));
+    }
+    
+    @Test
+    public void diaDaSemanaPraPassar2() {
+        assertEquals("Sabado", Algoritmos.diaDaSemana(29, 2, 2020));
+    }
+    
+    @Test
+    public void diaDaSemanaPraPassar3() {
+        assertEquals("Terca-feira", Algoritmos.diaDaSemana(31, 12, 2019));
+    }
+    
+    @Test
+    public void diaDaSemanaDia29Mes2Ano1999() {
+        assertThrows(IllegalArgumentException.class, 
+                                                    () -> Algoritmos.diaDaSemana(29, 2, 1999));
+    }
+    
+    @Test
+    public void diaDaSemanaDia31Mes4() {
+        assertThrows(IllegalArgumentException.class, 
+                                                    () -> Algoritmos.diaDaSemana(31, 4, 2000));
+    }
+    
+    @Test
+    public void diaDaSemanaDia31Mes6() {
+        assertThrows(IllegalArgumentException.class, 
+                                                    () -> Algoritmos.diaDaSemana(31, 6, 2000));
+    }
+    
+    @Test
+    public void diaDaSemanaDia31Mes9() {
+        assertThrows(IllegalArgumentException.class, 
+                                                    () -> Algoritmos.diaDaSemana(31, 9, 2000));
+    }
+
+    @Test
+    public void diaDaSemanaDia31Mes11() {
+        assertThrows(IllegalArgumentException.class, 
+                                                    () -> Algoritmos.diaDaSemana(31, 11, 2000));
     }
 
     @Test
@@ -128,12 +180,6 @@ public class AlgoritmosTest {
     @Test
 	public void nomeDiaDaSemana6() {
         assertEquals("Domingo", Algoritmos.nomeDiaDaSemana(6));
-    }
-
-    @Test
-    public void nomeDiaDaSemanaErro() {
-        assertThrows(IllegalArgumentException.class, 
-                                                    () -> Algoritmos.nomeDiaDaSemana(7));
     }
 
     @Test
