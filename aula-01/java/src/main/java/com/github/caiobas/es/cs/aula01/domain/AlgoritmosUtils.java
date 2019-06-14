@@ -6,9 +6,9 @@ package com.github.caiobas.es.cs.aula01.domain;
  * fatorial, calculo de numero primo, entre outras, com o
  * objetivo de aprender a codificar com boas práticas.
  */
-public final class Algoritmos {
+public final class AlgoritmosUtils {
 
-    private Algoritmos() {
+    private AlgoritmosUtils() {
 
     }
 
@@ -83,9 +83,9 @@ public final class Algoritmos {
 
         int mesAuxiliar = mes;
         int anoAuxiliar = ano;
-        final int JANEIRO = 1;
-        final int FEVEREIRO = 2;
-        if (mes == JANEIRO || mes == FEVEREIRO) {
+        final int janeiro = 1;
+        final int fevereiro = 2;
+        if (mes == janeiro || mes == fevereiro) {
             final int mesMais = 12;
             final int anoMenos = 1;
             mesAuxiliar = mes + mesMais;
@@ -119,54 +119,15 @@ public final class Algoritmos {
      */
     private static void geraExcecaoSeDataInvalida(final int dia,
     final int mes, final int ano){
+
+        confereDiaMaximo30(dia, mes);
+        
+        confereDiaMaximoFevereiro(dia, mes, ano);
+        
         final int diaMaximo31 = 31;
         if (dia < 1 || dia > diaMaximo31) {
             throw new IllegalArgumentException(
                 "Esperado dia entre 1 e 31.");
-        }
-
-        final int diaMaximo29 = 29;
-        final int mes2 = 2;
-        if (dia > diaMaximo29 && mes == mes2) {
-            if(ano%4 == 0) {
-            throw new IllegalArgumentException(
-                "Esperado dia entre 1 e 29"
-                + " no mês de Fevereiro deste ano.");
-            }
-        }
-
-        final int diaMaximo28 = 28;
-        if (dia > diaMaximo28 && mes == mes2) {
-            if(ano%4 != 0) {
-            throw new IllegalArgumentException(
-                "Esperado dia entre 1 e 28"
-                + " no mês de Fevereiro deste ano.");
-            }
-        }
-
-        final int diaMaximo30 = 30;
-        final int mes4 = 4;
-        if (dia > diaMaximo30 && mes == mes4) {
-            throw new IllegalArgumentException(
-                "Dia errado no mês de Abril.");
-        }
-
-        final int mes6 = 6;
-        if (dia > diaMaximo30 && mes == mes6) {
-            throw new IllegalArgumentException(
-                "Dia errado no mês de Junho.");
-        }
-
-        final int mes9 = 9;
-        if (dia > diaMaximo30 && mes == mes9) {
-            throw new IllegalArgumentException(
-                "Dia errado no mês de Setembro.");
-        }
-
-        final int mes11 = 11;
-        if (dia > diaMaximo30 && mes == mes11) {
-            throw new IllegalArgumentException(
-                "Dia errado no mês de Novembro.");
         }
 
         final int mesMaximo = 12;
@@ -179,6 +140,38 @@ public final class Algoritmos {
         if (ano < anoMaximo) {
             throw new IllegalArgumentException(
                 "Esperado ano maior ou igual a 1953.");
+        }
+    }
+    
+    private static void confereDiaMaximo30(final int dia,
+    final int mes){
+        final int diaMaximo30 = 30;
+        final int abril = 4;
+        final int junho = 6;
+        final int setembro = 9;
+        final int novembro = 11;
+        if(mes == abril || mes == junho || mes == setembro
+        || mes == novembro && dia > diaMaximo30){
+            throw new IllegalArgumentException(
+                "Dia deve ser entre 1 e 30 neste mes.");
+        }
+    }
+    
+    private static void confereDiaMaximoFevereiro(final int dia,
+    final int mes, final int ano){
+        final int fevereiro = 2;
+        final int diaMaximo29 = 29;
+        if (dia > diaMaximo29 && mes == fevereiro && ano%4 == 0) {
+            throw new IllegalArgumentException(
+                "Esperado dia entre 1 e 29"
+                + " no mês de Fevereiro deste ano.");
+        }
+
+        final int diaMaximo28 = 28;
+        if (dia > diaMaximo28 && mes == fevereiro && ano%4 != 0) {
+            throw new IllegalArgumentException(
+                "Esperado dia entre 1 e 28"
+                + " no mês de Fevereiro deste ano.");
         }
     }
 
