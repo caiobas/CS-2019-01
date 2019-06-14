@@ -143,7 +143,7 @@ public final class Algoritmos {
         case auxiliarSegunda:
             return "Segunda-feira";
         case auxiliarTerca:
-            return "Terca-feira".toS;
+            return "Terca-feira";
         case auxiliarQuarta:
             return "Quarta-feira";
         case auxiliarQuinta:
