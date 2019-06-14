@@ -19,22 +19,22 @@ public class NumeroFrequenteTest{
         ArrayList<Integer> resultado = new ArrayList<Integer>();
         resultado.add(0);
         resultado.add(3);
-        assertEquals(resultado, NumeroFrequente.obterNumeroFrequente(test));
+        assertEquals(resultado, NumeroFrequenteUtils.obterNumeroFrequente(test));
     }
 
     @Test
     public void numerosAleatorios() {
-        assertNotNull(NumeroFrequente.numerosAleatorios(1000000, 1000));
+        assertNotNull(NumeroFrequenteUtils.numerosAleatorios(1000000, 1000));
     }
 
     @Test
     public void excecaoIntervaloAleatorios() {
-        assertThrows(IllegalArgumentException.class, () -> NumeroFrequente.numerosAleatorios(1000000, 25));
+        assertThrows(IllegalArgumentException.class, () -> NumeroFrequenteUtils.numerosAleatorios(1000000, 25));
     }
     
     @Test
     public void excecaoQuantidadeAleatorios() {
-        assertThrows(IllegalArgumentException.class, () -> NumeroFrequente.numerosAleatorios(320, 1000));
+        assertThrows(IllegalArgumentException.class, () -> NumeroFrequenteUtils.numerosAleatorios(320, 1000));
     }
 
 }

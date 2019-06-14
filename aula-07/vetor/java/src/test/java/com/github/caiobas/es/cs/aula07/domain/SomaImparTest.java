@@ -9,7 +9,7 @@ public class SomaImparTest {
     @Test
     public void somaImpar() {
         int[] vetor = {10, 9, 8, 7, 6, 5};
-        assertEquals(21, SomaImpar.obterSomaImpar(vetor));
+        assertEquals(21, SomaImparUtils.obterSomaImpar(vetor));
     }
     
 }

@@ -10,9 +10,9 @@ import java.util.HashMap;
  * maior quantidade de repetições de 1.000.000 de números
  * sorteados aleatoriamente entre o intervalo de 0 a 1.000.
  */
-public final class NumeroFrequente {
+public final class NumeroFrequenteUtils {
 
-    private NumeroFrequente() {
+    private NumeroFrequenteUtils() {
 
     }
     /**

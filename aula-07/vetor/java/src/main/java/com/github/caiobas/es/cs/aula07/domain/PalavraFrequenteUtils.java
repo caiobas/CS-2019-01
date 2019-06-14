@@ -6,9 +6,9 @@ import java.util.HashMap;
  * Classe com o objetivo de localizar a palavra
  * mais frequente em uma sequência de caracteres.
  */
-public final class PalavraFrequente {
+public final class PalavraFrequenteUtils {
 
-    private PalavraFrequente() {
+    private PalavraFrequenteUtils() {
 
     }
     /**

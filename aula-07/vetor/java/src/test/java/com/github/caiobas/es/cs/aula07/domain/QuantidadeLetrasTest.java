@@ -8,7 +8,7 @@ public class QuantidadeLetrasTest{
 
     @Test
     public void quantidadeLetras() {
-        assertNotNull(QuantidadeLetras.obterQuantidadeLetras("TeSte iSso{["));
+        assertNotNull(QuantidadeLetrasUtils.obterQuantidadeLetras("TeSte iSso{["));
     }
 
 }

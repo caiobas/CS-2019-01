@@ -7,9 +7,9 @@ import java.util.Arrays;
  * do vetor recebido como primeiro argumento cujos valores são
  * iguais ao valor do segundo argumento fornecido.
  */
-public final class ElementosIguais {
+public final class ElementosIguaisUtils {
 
-    private ElementosIguais() {
+    private ElementosIguaisUtils() {
 
     }
     /**

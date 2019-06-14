@@ -6,9 +6,9 @@ import java.util.Arrays;
  * Classe com o objetivo de encontrar a menor temperatura
  * em um vetor de valores recebido como argumento.
  */
-public final class MenorTemperatura {
+public final class MenorTemperaturaUtils {
 
-    private MenorTemperatura() {
+    private MenorTemperaturaUtils() {
 
     }
     /**

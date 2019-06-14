@@ -10,7 +10,7 @@ public class ElementosIguaisTest{
     public void elementosIguais() {
         int[] vetor1 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         int[] vetor2 = {0, 5, 5, 10};
-        assertEquals(2, ElementosIguais.obterElementosIguais(vetor1, vetor2));
+        assertEquals(2, ElementosIguaisUtils.obterElementosIguais(vetor1, vetor2));
     }
 
 }

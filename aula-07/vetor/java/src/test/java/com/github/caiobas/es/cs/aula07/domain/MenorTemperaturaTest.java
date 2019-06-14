@@ -9,7 +9,7 @@ public class MenorTemperaturaTest {
     @Test
     public void menorTemperatura() {
         double[] vetor = {10, 9, 8, 7, 6, 5};
-        assertEquals(5, MenorTemperatura.obterMenorTemperatura(vetor));
+        assertEquals(5, MenorTemperaturaUtils.obterMenorTemperatura(vetor));
     }
     
 }

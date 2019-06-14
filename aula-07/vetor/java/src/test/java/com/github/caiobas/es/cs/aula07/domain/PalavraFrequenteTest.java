@@ -8,7 +8,7 @@ public class PalavraFrequenteTest{
 
     @Test
     public void palavraFrequente() {
-        assertEquals("sua", PalavraFrequente.obterPalavraFrequente("teste sua teste sua sua isso isso meu meu sua"));
+        assertEquals("sua", PalavraFrequenteUtils.obterPalavraFrequente("teste sua teste sua sua isso isso meu meu sua"));
     }
 
 }

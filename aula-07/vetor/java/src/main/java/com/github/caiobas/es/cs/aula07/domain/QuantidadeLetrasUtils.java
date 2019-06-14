@@ -4,9 +4,9 @@ package com.github.caiobas.es.cs.aula07.domain;
  * Classe com o objetivo de retornar a quantidade de cada
  * uma das letras presentes em uma sequência de caracteres.
  */
-public final class QuantidadeLetras {
+public final class QuantidadeLetrasUtils {
 
-    private QuantidadeLetras() {
+    private QuantidadeLetrasUtils() {
 
     }
     /**

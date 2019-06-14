@@ -4,9 +4,9 @@ package com.github.caiobas.es.cs.aula07.domain;
  * Classe com o objetivo de retornar a soma de
  * números ímpares contidos em um vetor de inteiros.
  */
-public final class SomaImpar {
+public final class SomaImparUtils {
 
-    private SomaImpar() {
+    private SomaImparUtils() {
 
     }
     /**
