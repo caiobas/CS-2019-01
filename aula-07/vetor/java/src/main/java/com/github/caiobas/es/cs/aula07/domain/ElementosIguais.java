@@ -9,6 +9,9 @@ import java.util.Arrays;
  */
 public final class ElementosIguais {
 
+    /**
+     * Construtor privado da classe para evitar instanciação.
+     */
     private ElementosIguais() {
 
     }

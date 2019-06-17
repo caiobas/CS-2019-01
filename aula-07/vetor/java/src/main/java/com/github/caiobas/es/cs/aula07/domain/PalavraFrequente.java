@@ -8,6 +8,9 @@ import java.util.HashMap;
  */
 public final class PalavraFrequente {
 
+    /**
+     * Construtor privado da classe para evitar instanciação.
+     */
     private PalavraFrequente() {
 
     }

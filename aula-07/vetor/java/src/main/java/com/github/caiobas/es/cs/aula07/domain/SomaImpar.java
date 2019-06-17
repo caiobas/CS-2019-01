@@ -6,6 +6,9 @@ package com.github.caiobas.es.cs.aula07.domain;
  */
 public final class SomaImpar {
 
+    /**
+     * Construtor privado da classe para evitar instanciação.
+     */
     private SomaImpar() {
 
     }

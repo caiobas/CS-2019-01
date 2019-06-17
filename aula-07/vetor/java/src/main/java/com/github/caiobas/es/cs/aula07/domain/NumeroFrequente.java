@@ -12,6 +12,9 @@ import java.util.HashMap;
  */
 public final class NumeroFrequente {
 
+    /**
+     * Construtor privado da classe para evitar instanciação.
+     */
     private NumeroFrequente() {
 
     }
