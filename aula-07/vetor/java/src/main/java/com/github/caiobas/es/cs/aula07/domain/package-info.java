@@ -7,7 +7,7 @@
  * {@link com.github.caiobas.es.cs.aula07.domain.QuantidadeLetras}.
  * {@link com.github.caiobas.es.cs.aula07.domain.SomaImpar}.
  *
- * @see com.github.caiobas.es.cs.aula07.domain.Algoritmos
+ * @see com.github.caiobas.es.cs.aula07.domain.ElementosIguais
  * @see com.github.caiobas.es.cs.aula07.domain.MenorTemperatura
  * @see com.github.caiobas.es.cs.aula07.domain.NumeroFrequente
  * @see com.github.caiobas.es.cs.aula07.domain.PalavraFrequente
