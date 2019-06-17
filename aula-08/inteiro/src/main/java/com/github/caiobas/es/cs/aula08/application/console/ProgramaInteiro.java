@@ -1,4 +1,4 @@
-package main.java.com.github.caiobas.es.cs.aula08.application.console;
+package com.github.caiobas.es.cs.aula08.application.console;
 
 import java.io.IOException;
 import java.util.logging.Logger;

@@ -3,9 +3,13 @@ package com.github.caiobas.es.cs.aula08.domain;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 /**
- * Classe com a finalidade de receber um nome de arquivo
+ *
+ * Classe com a finalidade de receber um nome de
  * e posteriormente retornar os 4 primeiros bytes
  * (inteiro de 32 bits) em formato hexadecimal.
  */
@@ -48,7 +52,7 @@ public final class InteiroUtils {
                 "Dados insuficientes no arquivo.");
         }
 
-        final InputStream fis = File.newInputStream(Paths.het(arquivo));
+        final InputStream fis = Files.newInputStream(Paths.get(arquivo));
         final DataInputStream dis = new DataInputStream(fis);
 
         final int hexadecimal = dis.readInt();
