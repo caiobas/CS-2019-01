@@ -37,6 +37,6 @@ public final class ProgramaInteiro {
                 "Nenhum argumento foi fornecido.");
         }
 
-        log.fine(InteiroUtils.imprimeHexa(args[0]));
+        System.out.println(InteiroUtils.imprimeHexa(args[0]));
     }
 }

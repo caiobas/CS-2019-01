@@ -8,7 +8,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 /**
- *
  * Classe com a finalidade de receber um nome de
  * e posteriormente retornar os 4 primeiros bytes
  * (inteiro de 32 bits) em formato hexadecimal.
@@ -52,7 +51,7 @@ public final class InteiroUtils {
                 "Dados insuficientes no arquivo.");
         }
 
-        final InputStream fis = Files.newInputStream(Paths.get(arquivo));
+        final InputStream fis = Files.newInputStream(Paths.get(caminho));
         final DataInputStream dis = new DataInputStream(fis);
 
         final int hexadecimal = dis.readInt();
