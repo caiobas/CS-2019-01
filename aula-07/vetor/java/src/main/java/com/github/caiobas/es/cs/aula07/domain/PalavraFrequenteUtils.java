@@ -1,6 +1,8 @@
 package com.github.caiobas.es.cs.aula07.domain;
 
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Classe com o objetivo de localizar a palavra
@@ -35,10 +37,11 @@ public final class PalavraFrequenteUtils {
         String palavra = "";
         int compara = 0;
 
-        for (final String contador : frequencia.keySet()) {
-            if (frequencia.get(contador) > compara) {
-                compara = frequencia.get(contador);
-                palavra = contador;
+        Set<Map.Entry<String, Integer>> entries = frequencia.entrySet();
+        for (Map.Entry<String, Integer> entrada : entries) {
+            if (entrada.getValue() > compara) {
+                compara = entrada.getValue();
+                palavra = entrada.getKey();
             }
         }
 
