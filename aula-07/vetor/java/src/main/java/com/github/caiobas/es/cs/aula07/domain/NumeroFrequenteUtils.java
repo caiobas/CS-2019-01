@@ -1,9 +1,11 @@
 package com.github.caiobas.es.cs.aula07.domain;
 
 import java.util.Random;
+import java.util.Set;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Classe com o objetivo de retornar o número com a
@@ -73,16 +75,16 @@ public final class NumeroFrequenteUtils {
         }
 
         int compara = 0;
-        for (final int inteiro : numeros.keySet()) {
-            if (numeros.get(inteiro) > compara) {
-                compara = numeros.get(inteiro);
+        Set<Map.Entry<Integer, Integer>> entries = numeros.entrySet();
+        for (Map.Entry<Integer, Integer> entrada : entries) {
+            if (entrada.getValue() > compara) {
+                compara = entrada.getValue();
             }
         }
-
         final ArrayList<Integer> frequentes = new ArrayList<Integer>();
-        for (final int inteiro : numeros.keySet()) {
-            if (numeros.get(inteiro) == compara) {
-                frequentes.add(inteiro);
+        for (Map.Entry<Integer, Integer> entrada : entries) {
+            if (entrada.getValue() == compara) {
+                frequentes.add(entrada.getKey());
             }
         }
 
