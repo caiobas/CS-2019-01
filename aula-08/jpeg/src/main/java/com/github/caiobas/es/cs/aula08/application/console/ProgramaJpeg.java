@@ -13,7 +13,7 @@ public final class ProgramaJpeg {
     /**
      * Vai mandar a mensagem de retorno do programa.
      */
-    private static Logger log = Logger.getLogger(ProgramaInteiro.class.getName());
+    private static Logger log = Logger.getLogger(ProgramaJpeg.class.getName());
 
     /**
      * Construtor privado da classe para evitar instanciação.
@@ -31,7 +31,7 @@ public final class ProgramaJpeg {
      * @throws IOException Se houver problema ao ler o caminho do arquivo.
      */
     public static void main(final String[] args) throws IOException {
-        log.fine(ConfereArquivoUtils.arquivoJpeg(
+        System.out.println(ConfereArquivoUtils.arquivoJpeg(
             ConfereArquivoUtils.confereByte(args[0])));
     }
 }
