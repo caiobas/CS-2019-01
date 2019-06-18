@@ -8,6 +8,9 @@ package com.github.caiobas.es.cs.aula01.domain;
  */
 public final class AlgoritmosUtils {
 
+    /**
+     * Construtor privado da classe para evitar instanciação.
+     */
     private AlgoritmosUtils() {
 
     }
@@ -113,17 +116,17 @@ public final class AlgoritmosUtils {
      * @param dia Dia a ser verificado.
      * @param mes Mês a ser verificado.
      * @param ano Ano a ser verificado.
-     * @return Retorna dia da semana.
+     *
      * @throws IllegalArgumentException Se qualquer um dos
      * argumentos não estiver dentro dos parâmetros de data.
      */
     private static void geraExcecaoSeDataInvalida(final int dia,
-    final int mes, final int ano){
+    final int mes, final int ano) {
 
         confereDiaMaximo30(dia, mes);
-        
+
         confereDiaMaximoFevereiro(dia, mes, ano);
-        
+
         final int diaMaximo31 = 31;
         if (dia < 1 || dia > diaMaximo31) {
             throw new IllegalArgumentException(
@@ -142,33 +145,53 @@ public final class AlgoritmosUtils {
                 "Esperado ano maior ou igual a 1953.");
         }
     }
-    
+
+    /**
+     * Método que confere os meses que terminam no dia 30.
+     *
+     * @param dia Contém o dia a ser analisado.
+     * @param mes Contém o mês a ser analisado.
+     *
+     * @throws IllegalArgumentException Se o dia não estiver
+     * entre 1 e 30 no mês analisado.
+     */
     private static void confereDiaMaximo30(final int dia,
-    final int mes){
+    final int mes) {
         final int diaMaximo30 = 30;
         final int abril = 4;
         final int junho = 6;
         final int setembro = 9;
         final int novembro = 11;
-        if(mes == abril || mes == junho || mes == setembro
-        || mes == novembro && dia > diaMaximo30){
+        if (mes == abril || mes == junho || mes == setembro
+        || mes == novembro && dia > diaMaximo30) {
             throw new IllegalArgumentException(
                 "Dia deve ser entre 1 e 30 neste mes.");
         }
     }
-    
+
+    /**
+     * Método que confere os meses que terminam no dia 30.
+     *
+     * @param dia Contém o dia a ser analisado.
+     * @param mes Contém o mês a ser analisado.
+     * @param ano Contém o ano a ser analisado.
+     *
+     * @throws IllegalArgumentException Se o dia  em fevereiro não estiver
+     * entre 1 e 29 em ano bissesto, e entre 1 e 28 em ano não bissesto.
+     */
     private static void confereDiaMaximoFevereiro(final int dia,
-    final int mes, final int ano){
+    final int mes, final int ano) {
         final int fevereiro = 2;
         final int diaMaximo29 = 29;
-        if (dia > diaMaximo29 && mes == fevereiro && ano%4 == 0) {
+        final int confereBissesto = 4;
+        if (dia > diaMaximo29 && mes == fevereiro && ano % confereBissesto == 0) {
             throw new IllegalArgumentException(
                 "Esperado dia entre 1 e 29"
                 + " no mês de Fevereiro deste ano.");
         }
 
         final int diaMaximo28 = 28;
-        if (dia > diaMaximo28 && mes == fevereiro && ano%4 != 0) {
+        if (dia > diaMaximo28 && mes == fevereiro && ano % confereBissesto != 0) {
             throw new IllegalArgumentException(
                 "Esperado dia entre 1 e 28"
                 + " no mês de Fevereiro deste ano.");
