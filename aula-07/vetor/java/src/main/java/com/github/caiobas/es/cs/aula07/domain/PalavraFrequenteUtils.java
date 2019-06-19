@@ -22,7 +22,7 @@ public final class PalavraFrequenteUtils {
     public static String obterPalavraFrequente(final String frase) {
         final HashMap<String, Integer> frequencia = new HashMap<String, Integer>();
 
-        final String[] palavras = frase.split(" ");
+        final String[] palavras = frase.split("\\P{L}+");
 
         for (final String palavra : palavras) {
             if (frequencia.containsKey(palavra)) {

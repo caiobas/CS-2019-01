@@ -1,5 +1,9 @@
 package com.github.caiobas.es.cs.aula07.domain;
 
+import java.util.HashMap;
+import java.util.Set;
+import java.util.Map;
+
 /**
  * Retorna a quantidade de cada uma das letras
  * presentes em uma sequência de caracteres.
@@ -19,33 +23,33 @@ public final class QuantidadeLetrasUtils {
      * letras presentes em uma string.
      */
     public static StringBuilder obterQuantidadeLetras(final String string) {
-        final int quantidadeLetras = 26;
-        int[] letras = new int[quantidadeLetras];
-        for (int contador = 0; contador < letras.length; contador++) {
-            letras[contador] = 0;
-        }
         final char[] stringAuxiliar = string.toCharArray();
 
-        final int letraMaiuscula = 65;
-        final int letraMinuscula = 97;
-        for (int contador = 0; contador < stringAuxiliar.length; contador++) {
-            if (stringAuxiliar[contador] - letraMaiuscula >= 0
-                    && stringAuxiliar[contador] - letraMaiuscula < quantidadeLetras) {
-                letras[stringAuxiliar[contador] - letraMaiuscula]++;
-            } else if (stringAuxiliar[contador] - letraMinuscula >= 0
-                    && stringAuxiliar[contador] - letraMinuscula < quantidadeLetras) {
-                letras[stringAuxiliar[contador] - letraMinuscula]++;
+        final HashMap<Character, Integer> letras = new HashMap<Character, Integer>();
+
+        final int maiusculaInicio = 65;
+        final int maiusculaFim = 90;
+        final int minusculaInicio = 97;
+        final int minusculaFim = 122;
+        
+        for (final char character : stringAuxiliar) {
+            if (character > maiusculaInicio && character < maiusculaFim
+            || character > minusculaInicio && character < minusculaFim) {
+                if (letras.containsKey(character)) {
+                    letras.put(character, letras.get(character) + 1);
+                } else {
+                    letras.put(character, 1);
+                }
             }
         }
 
         final StringBuilder letrasFinal = new StringBuilder();
 
-        for (int contador = 0; contador < letras.length; contador++) {
-            if (letras[contador] != 0) {
-                final char letra = (char) (contador + letraMaiuscula);
-                letrasFinal.append(letra +  " = " + letras[contador] + "\n");
-            }
+        Set<Map.Entry<Character, Integer>> entries = letras.entrySet();
+        for (Map.Entry<Character, Integer> entrada : entries) {
+            letrasFinal.append(entrada.getKey() +  " = " + entrada.getValue() + "\n");
         }
+
         return letrasFinal;
     }
 
