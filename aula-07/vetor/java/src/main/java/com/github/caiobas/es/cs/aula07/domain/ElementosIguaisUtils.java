@@ -31,7 +31,7 @@ public final class ElementosIguaisUtils {
         for (int contador = 0; contador < vetor1.length; contador++) {
             if (vetor1Aux[contador] == valor) {
                 contadorFinal++;
-            } 
+            }
         }
 
         return contadorFinal;
