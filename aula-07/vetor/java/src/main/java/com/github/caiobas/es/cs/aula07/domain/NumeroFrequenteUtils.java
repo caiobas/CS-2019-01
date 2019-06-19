@@ -4,13 +4,13 @@ import java.util.Random;
 import java.util.Set;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Classe com o objetivo de retornar o número com a
- * maior quantidade de repetições de 1.000.000 de números
- * sorteados aleatoriamente entre o intervalo de 0 a 1.000.
+ * Retornar o número com a maior quantidade de repetições dentre 1.000.000
+ * de números sorteados aleatoriamente entre o intervalo de 0 a 1.000.
  */
 public final class NumeroFrequenteUtils {
 
@@ -18,8 +18,8 @@ public final class NumeroFrequenteUtils {
 
     }
     /**
-     * Classe com o objetivo de gerar 1.000.000 de números
-     * no intervalo de 0 a 1.000 aleatoriamente.
+     * O presente método armazena apenas os números sorteados e mantém a
+     * quantidade correspondente em um dicionário (Map<Integer, Integer>).
      *
      * @param quantidade Quantidade de números gerados.
      * @param intervalo Intervalo dos números gerados.
@@ -54,7 +54,7 @@ public final class NumeroFrequenteUtils {
     }
 
     /**
-     * Classe com o objetivo de analisar o ArrayList de
+     * Possui objetivo de analisar o ArrayList de
      * números gerados aleatoriamente e retornar um
      * ArrayList com o(s) número(s) mais frequentes.
      *
@@ -74,13 +74,9 @@ public final class NumeroFrequenteUtils {
             }
         }
 
-        int compara = 0;
+        int compara = numeros.values().stream().max(Comparator.comparing(Integer::valueOf)).get();
+
         Set<Map.Entry<Integer, Integer>> entries = numeros.entrySet();
-        for (Map.Entry<Integer, Integer> entrada : entries) {
-            if (entrada.getValue() > compara) {
-                compara = entrada.getValue();
-            }
-        }
         final ArrayList<Integer> frequentes = new ArrayList<Integer>();
         for (Map.Entry<Integer, Integer> entrada : entries) {
             if (entrada.getValue() == compara) {
