@@ -35,8 +35,8 @@ public final class PalavraFrequenteUtils {
         String palavra = "";
         int compara = 0;
 
-        Set<Map.Entry<String, Integer>> entries = frequencia.entrySet();
-        for (Map.Entry<String, Integer> entrada : entries) {
+        final Set<Map.Entry<String, Integer>> entries = frequencia.entrySet();
+        for (final Map.Entry<String, Integer> entrada : entries) {
             if (entrada.getValue() > compara) {
                 compara = entrada.getValue();
                 palavra = entrada.getKey();

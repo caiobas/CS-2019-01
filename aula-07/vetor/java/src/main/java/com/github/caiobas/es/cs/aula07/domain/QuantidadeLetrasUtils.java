@@ -31,7 +31,7 @@ public final class QuantidadeLetrasUtils {
         final int maiusculaFim = 90;
         final int minusculaInicio = 97;
         final int minusculaFim = 122;
-        
+
         for (final char character : stringAuxiliar) {
             if (character > maiusculaInicio && character < maiusculaFim
             || character > minusculaInicio && character < minusculaFim) {
@@ -45,8 +45,8 @@ public final class QuantidadeLetrasUtils {
 
         final StringBuilder letrasFinal = new StringBuilder();
 
-        Set<Map.Entry<Character, Integer>> entries = letras.entrySet();
-        for (Map.Entry<Character, Integer> entrada : entries) {
+        final Set<Map.Entry<Character, Integer>> entries = letras.entrySet();
+        for (final Map.Entry<Character, Integer> entrada : entries) {
             letrasFinal.append(entrada.getKey() +  " = " + entrada.getValue() + "\n");
         }
 

@@ -74,11 +74,11 @@ public final class NumeroFrequenteUtils {
             }
         }
 
-        int compara = numeros.values().stream().max(Comparator.comparing(Integer::valueOf)).get();
+        final int compara = numeros.values().stream().max(Comparator.comparing(Integer::valueOf)).get();
 
-        Set<Map.Entry<Integer, Integer>> entries = numeros.entrySet();
+        final Set<Map.Entry<Integer, Integer>> entries = numeros.entrySet();
         final ArrayList<Integer> frequentes = new ArrayList<Integer>();
-        for (Map.Entry<Integer, Integer> entrada : entries) {
+        for (final Map.Entry<Integer, Integer> entrada : entries) {
             if (entrada.getValue() == compara) {
                 frequentes.add(entrada.getKey());
             }
