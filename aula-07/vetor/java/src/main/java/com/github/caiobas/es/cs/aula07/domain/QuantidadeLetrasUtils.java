@@ -1,8 +1,8 @@
 package com.github.caiobas.es.cs.aula07.domain;
 
 /**
- * Classe com o objetivo de retornar a quantidade de cada
- * uma das letras presentes em uma sequência de caracteres.
+ * Retorna a quantidade de cada uma das letras
+ * presentes em uma sequência de caracteres.
  */
 public final class QuantidadeLetrasUtils {
 
@@ -10,8 +10,8 @@ public final class QuantidadeLetrasUtils {
 
     }
     /**
-     * Classe com o objetivo de retornar a quantidade de cada
-     * uma das letras presentes em uma sequência de caracteres.
+     * Retorna a quantidade de cada uma das letras
+     * presentes em uma sequência de caracteres.
      *
      * @param string String contendo caracteres.
      *

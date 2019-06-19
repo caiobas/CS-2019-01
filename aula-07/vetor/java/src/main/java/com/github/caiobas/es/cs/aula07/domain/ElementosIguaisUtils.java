@@ -13,9 +13,9 @@ public final class ElementosIguaisUtils {
 
     }
     /**
-     * Classe com o objetivo de retornar a quantidade de elementos
-     * do vetor recebido como primeiro argumento cujos valores são
-     * iguais ao valor do segundo argumento fornecido.
+     * Retornar a quantidade de elementos do vetor recebido
+     * como primeiro argumento cujos valores são iguais ao
+     * valor do segundo argumento fornecido.
      *
      * @param vetor1 Vetor contendo elementos para conferir valores.
      * @param valor Valor usado para conferir valores.

@@ -3,8 +3,8 @@ package com.github.caiobas.es.cs.aula07.domain;
 import java.util.Arrays;
 
 /**
- * Classe com o objetivo de encontrar a menor temperatura
- * em um vetor de valores recebido como argumento.
+ * Encontra a menor temperatura em um
+ * vetor de valores recebido como argumento.
  */
 public final class MenorTemperaturaUtils {
 
@@ -12,8 +12,8 @@ public final class MenorTemperaturaUtils {
 
     }
     /**
-     * Função com o objetivo de encontrar a menor temperatura
-     * em um vetor de valores recebido como argumento.
+     * Encontra a menor temperatura em um
+     * vetor de valores recebido como argumento.
      *
      * @param vetor Vetor que contém temperaturas.
      *

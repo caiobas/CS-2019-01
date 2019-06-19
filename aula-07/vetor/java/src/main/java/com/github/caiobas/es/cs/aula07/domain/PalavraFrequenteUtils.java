@@ -5,8 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Classe com o objetivo de localizar a palavra
- * mais frequente em uma sequência de caracteres.
+ * Localiza a palavra mais frequente em uma sequência de caracteres.
  */
 public final class PalavraFrequenteUtils {
 
@@ -14,8 +13,7 @@ public final class PalavraFrequenteUtils {
 
     }
     /**
-     * Classe com o objetivo de localizar a palavra
-     * mais frequente em uma sequência de caracteres.
+     * Localiza a palavra mais frequente em uma sequência de caracteres.
      *
      * @param frase String contendo palavras.
      *

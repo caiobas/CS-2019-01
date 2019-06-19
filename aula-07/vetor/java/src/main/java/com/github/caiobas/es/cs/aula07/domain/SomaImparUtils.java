@@ -1,8 +1,8 @@
 package com.github.caiobas.es.cs.aula07.domain;
 
 /**
- * Classe com o objetivo de retornar a soma de
- * números ímpares contidos em um vetor de inteiros.
+ * Retorna a soma de números ímpares
+ * contidos em um vetor de inteiros.
  */
 public final class SomaImparUtils {
 
@@ -10,8 +10,8 @@ public final class SomaImparUtils {
 
     }
     /**
-     * Classe com o objetivo de retornar a soma de
-     * números ímpares contidos em um vetor de inteiros.
+     * Retornar a soma de números ímpares
+     * contidos em um vetor de inteiros.
      *
      * @param vetor Vetor que contém os inteiros.
      *
