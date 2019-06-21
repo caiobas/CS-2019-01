@@ -538,7 +538,7 @@
                         <configuration>
                             <targetClasses>
                                 <param>
-                                    com.github.caiobas.es.cs.aula08.domain.*
+                                    com.github.caiobas.es.cs.aula08.*
                                 </param>
                             </targetClasses>
                             <targetTests>
