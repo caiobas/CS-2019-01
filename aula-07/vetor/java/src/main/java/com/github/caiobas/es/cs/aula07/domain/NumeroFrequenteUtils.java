@@ -14,7 +14,10 @@ import java.util.Map;
  */
 public final class NumeroFrequenteUtils {
 
-    private NumeroFrequenteUtils() {
+    /**
+     * Construtor privado da classe para evitar instanciação.
+     */
+    private NumeroFrequente() {
 
     }
     /**

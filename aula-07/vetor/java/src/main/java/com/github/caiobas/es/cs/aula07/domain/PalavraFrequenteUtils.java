@@ -9,7 +9,10 @@ import java.util.Set;
  */
 public final class PalavraFrequenteUtils {
 
-    private PalavraFrequenteUtils() {
+    /**
+     * Construtor privado da classe para evitar instanciação.
+     */
+    private PalavraFrequente() {
 
     }
     /**
