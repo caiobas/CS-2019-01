@@ -67,15 +67,15 @@ public final class ConfereArquivoUtils {
 
         final InputStream fis = Files.newInputStream(Paths.get(caminho));
         final DataInputStream dis = new DataInputStream(fis);
-        final InputStreamReader isr = new InputStreamReader(fis, "UTF-8");
-        final BufferedReader br = new BufferedReader(isr);
 
-        boolean jpeg = false;
         final int valor = dis.readInt();
 
-        if (valor == PRIMEIROBYTE) {
-            jpeg = true;
+        if (valor != PRIMEIROBYTE) {
+            return false;
         }
+
+        final InputStreamReader isr = new InputStreamReader(fis, "UTF-8");
+        final BufferedReader br = new BufferedReader(isr);
 
         int lerByte;
         int byteFinal = 0;
@@ -87,8 +87,9 @@ public final class ConfereArquivoUtils {
             lerByte = fis.read(dado);
         }
 
-        if (dado[byteFinal] == ULTIMOBYTE && !jpeg) {
-            jpeg = false;
+        boolean jpeg = false;
+        if (dado[byteFinal] == ULTIMOBYTE) {
+            jpeg = true;
         }
         br.close();
         dis.close();
