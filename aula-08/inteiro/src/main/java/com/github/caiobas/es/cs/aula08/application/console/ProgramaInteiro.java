@@ -26,7 +26,7 @@ public final class ProgramaInteiro {
      * @throws IllegalArgumentException Se não for passado nenhum parâmetro.
      */
     public static void main(final String[] args) throws IOException {
-        System.console().writer().println(InteiroUtils.imprimeHexa(args[0]));
-        //System.out.println(InteiroUtils.imprimeHexa(args[0]));
+        //System.console().writer().println(InteiroUtils.imprimeHexa(args[0]));
+        System.out.println(InteiroUtils.imprimeHexa(args[0]));
     }
 }
