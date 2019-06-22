@@ -5,7 +5,7 @@ script:
   - cd ../..
   - cd aula-07/vetor/java && mvn clean test verify -P cobertura && mvn checkstyle:check spotbugs:check
   - cd ../../..
-  - cd aula-08/inteiro && mvn clean test verify -P cobertura && mvn checkstyle:check spotbugs:check pmd:check
+  - cd aula-08/inteiro && mvn clean test verify -P cobertura && mvn checkstyle:check spotbugs:check
 cache:
   directories:
   - "$HOME/.m2/repository"
