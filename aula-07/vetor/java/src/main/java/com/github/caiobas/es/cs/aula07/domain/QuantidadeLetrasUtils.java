@@ -10,6 +10,9 @@ import java.util.Map;
  */
 public final class QuantidadeLetrasUtils {
 
+    /**
+     * Construtor privado da classe para evitar instanciação.
+     */
     private QuantidadeLetrasUtils() {
 
     }

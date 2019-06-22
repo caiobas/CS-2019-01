@@ -8,6 +8,9 @@ import java.util.Arrays;
  */
 public final class MenorTemperaturaUtils {
 
+    /**
+     * Construtor privado da classe para evitar instanciação.
+     */
     private MenorTemperaturaUtils() {
 
     }

@@ -12,7 +12,7 @@ public final class PalavraFrequenteUtils {
     /**
      * Construtor privado da classe para evitar instanciação.
      */
-    private PalavraFrequente() {
+    private PalavraFrequenteUtils() {
 
     }
     /**

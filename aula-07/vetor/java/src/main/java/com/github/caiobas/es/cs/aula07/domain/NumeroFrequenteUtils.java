@@ -17,7 +17,7 @@ public final class NumeroFrequenteUtils {
     /**
      * Construtor privado da classe para evitar instanciação.
      */
-    private NumeroFrequente() {
+    private NumeroFrequenteUtils() {
 
     }
     /**
