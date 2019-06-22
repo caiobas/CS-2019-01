@@ -71,6 +71,7 @@ public final class ConfereArquivoUtils {
         final int valor = dis.readInt();
 
         if (valor != PRIMEIROBYTE) {
+            dis.close();
             return false;
         }
 
