@@ -8,8 +8,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 /**
- * Classe com a finalidade de receber um nome de
- * e posteriormente retornar os 4 primeiros bytes
+ * Tem finalidade de receber um nome e
+ * posteriormente retornar os 4 primeiros bytes
  * (inteiro de 32 bits) em formato hexadecimal.
  */
 public final class InteiroUtils {

@@ -6,6 +6,13 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+/**
+ * Tem a finalidade de receber um caminho de arquivo e uma palavra chave,
+ * esta palavra chave serve como parâmetro para procurar dentro do arquivo.
+ * Caso encontre, manda a quantidade encontrada e as linhas e
+ * colunas(caso haja mais de uma, apenas a primeira ocorrência) de sua
+ * ocorrência. Caso não encontre, apenas retorna que não encontrou nenhuma.
+ */
 public final class EncontreUtils {
 
     /**
@@ -15,8 +22,20 @@ public final class EncontreUtils {
 
     }
 
-    public static String Ocorrencias(final String caminho,
-    final String palavraChave) throws IOException{
+    /**
+     * Recebe o caminho de um arquivo e uma
+     * palavra chave para contar quantas ocorrências
+     * dessa palavra chave contém no arquivo.
+     *
+     * @param caminho Caminho de um arquivo a ser analisado.
+     * @param palavraChave Palavra chave a ser analisada no arquivo.
+     *
+     * @return Retorna uma string com a quantidade de ocorrências.
+     *
+     * @throws IOException Se houver problema ao ler o caminho do arquivo.
+     */
+    public static String ocorrencias(final String caminho,
+    final String palavraChave) throws IOException {
         final File arquivo = new File(caminho);
 
         if (!arquivo.exists()) {
@@ -51,7 +70,20 @@ public final class EncontreUtils {
         return String.format("Encontradas: %d.", ocorrencias);
     }
 
-    public static String LinhasEColunas(final String caminho,
+    /**
+     * Recebe o caminho de um arquivo e uma palavra chave para armazenar
+     * as linhas e colunas(da primeira ocorrência na linha em questão)
+     * das ocorrências da palavra chave no arquivo em questão.
+     *
+     * @param caminho Caminho de um arquivo a ser analisado.
+     * @param palavraChave Palavra chave a ser analisada no arquivo.
+     *
+     * @return Retorna uma string contendo as linhas e colunas
+     * das ocorrências da palavra chave no arquivo em questão.
+     *
+     * @throws IOException Se houver problema ao ler o caminho do arquivo.
+     */
+    public static String linhasEColunas(final String caminho,
     final String palavraChave) throws IOException {
         final File arquivo = new File(caminho);
 
@@ -88,12 +120,25 @@ public final class EncontreUtils {
         return formato.toString();
     }
 
+    /**
+     * Recebe o caminho de um arquivo e uma palavra chave para
+     * construir uma string com a quantidade e locais das
+     * ocorrências da palavra chave no arquivo em questão.
+     *
+     * @param caminho Caminho de um arquivo a ser analisado.
+     * @param palavraChave Palavra chave a ser analisada no arquivo.
+     *
+     * @return Retorna uma string contendo a quantidade e locais
+     * das ocorrências da palavra chave no arquivo em questão.
+     *
+     * @throws IOException Se houver problema ao ler o caminho do arquivo.
+     */
     public static String retornaResultado(final String caminho,
     final String palavraChave) throws IOException {
 
         final StringBuilder resultado = new StringBuilder();
-        resultado.append(Ocorrencias(caminho, palavraChave)).
-        append(LinhasEColunas(caminho, palavraChave));
+        resultado.append(ocorrencias(caminho, palavraChave)).
+        append(linhasEColunas(caminho, palavraChave));
 
         return resultado.toString();
     }

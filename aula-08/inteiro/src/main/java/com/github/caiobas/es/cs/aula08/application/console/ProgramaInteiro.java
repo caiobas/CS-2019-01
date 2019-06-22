@@ -5,7 +5,7 @@ import java.io.IOException;
 import com.github.caiobas.es.cs.aula08.domain.InteiroUtils;
 
 /**
- * Classe criada para a execução da classe InteiroUtils.
+ * Criada para a execução da classe InteiroUtils.
  */
 public final class ProgramaInteiro {
 

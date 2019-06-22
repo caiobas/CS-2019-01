@@ -10,7 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 /**
- * Classe com a função de receber um arquivo e
+ * Tem a função de receber um arquivo e
  * conferir se o mesmo é um arquivo do tipo jpeg.
  */
 public final class ConfereArquivoUtils {

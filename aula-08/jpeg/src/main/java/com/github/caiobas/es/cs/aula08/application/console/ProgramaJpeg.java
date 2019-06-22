@@ -5,7 +5,7 @@ import java.io.IOException;
 import com.github.caiobas.es.cs.aula08.domain.ConfereArquivoUtils;
 
 /**
- * Classe criada para a execução da classe ConfereArquivoUtils.
+ * Tem finalidade da execução da classe ConfereArquivoUtils.
  */
 public final class ProgramaJpeg {
 
