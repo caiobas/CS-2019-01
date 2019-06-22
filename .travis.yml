@@ -1,12 +1,11 @@
 language: java
 
 script:
-  - cd aula-01/java && mvn clean test verify -P cobertura && mvn checkstyle:check spotbugs:check
-  - cd ../..
-  - cd aula-07/vetor/java && mvn clean test verify -P cobertura && mvn checkstyle:check spotbugs:check
-  - cd ../../..
-  - cd aula-08/inteiro && mvn clean test verify -P cobertura && mvn checkstyle:check spotbugs:check
+  - cd aula-01/java && mvn clean test verify -P cobertura && mvn checkstyle:check spotbugs:check 
+  - cd ../../aula-07/vetor/java && mvn clean test verify -P cobertura && mvn checkstyle:check spotbugs:check
+  - cd ../../../aula-08/inteiro && mvn clean test verify -P cobertura && mvn checkstyle:check spotbugs:check
   - cd ../jpeg && mvn clean test verify -P cobertura && mvn checkstyle:check spotbugs:check
+  - cd ../encontre && mvn clean test verify -P cobertura && mvn checkstyle:check spotbugs:check
 cache:
   directories:
   - "$HOME/.m2/repository"
