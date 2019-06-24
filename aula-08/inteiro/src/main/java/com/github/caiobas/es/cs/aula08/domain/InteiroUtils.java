@@ -40,6 +40,7 @@ public final class InteiroUtils {
 
         final File arquivo = new File(caminho);
 
+        // TODO verificação simplificada aqui. Arquivo pode não possuir permissão de leitura, por exemplo.
         if (!arquivo.exists()) {
             throw new IllegalArgumentException(
                 "O arquivo não existe.");
