@@ -22,6 +22,11 @@ public final class InteiroUtils {
     }
 
     /**
+     * TODO não é preciso dizer que é um método
+     * TODO não há exibição, de fato, não mostra, mas retorna.
+     * Versão possivelmente melhor: 
+     * Retorna os quatro primeiros bytes em hexadecimal do arquivo fornecido.
+     *
      * Método que recebe um nome de arquivo e
      * mostra os 4 primeiros bytes do mesmo.
      *
@@ -30,6 +35,9 @@ public final class InteiroUtils {
      *
      * @return Retorna os 4 primeiros bytes
      * do arquivo passado como parâmetro.
+     *
+     * TODO um método que retorna os quatro primeiros bytes em hexa não deveria retornar IOException
+     * TODO Por que não encapsular todas as exceções em IllegalArgumentException??
      *
      * @throws IOException Se houver problema ao ler o caminho do arquivo.
      * @throws IllegalArgumentException Se o arquivo não existir
