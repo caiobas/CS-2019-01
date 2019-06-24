@@ -54,6 +54,8 @@ public final class InteiroUtils {
         final InputStream fis = Files.newInputStream(Paths.get(caminho));
         final DataInputStream dis = new DataInputStream(fis);
 
+        // TODO Muita dependência de conhecimento aqui: (a) um int é 4 bytes; 
+        // (b) a ordem dos bytes de um int, em Java é b1 b2 b3 b4 (poderia ser outra). 
         final int hexadecimal = dis.readInt();
 
         fis.close();
