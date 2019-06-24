@@ -51,6 +51,7 @@ public final class InteiroUtils {
                 "Dados insuficientes no arquivo.");
         }
 
+        // FIXME o melhor é try-with-resources
         final InputStream fis = Files.newInputStream(Paths.get(caminho));
         final DataInputStream dis = new DataInputStream(fis);
 
