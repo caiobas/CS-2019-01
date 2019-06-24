@@ -14,4 +14,4 @@
  * @see com.github.caiobas.es.cs.aula07.domain.QuantidadeLetras
  * @see com.github.caiobas.es.cs.aula07.domain.SomaImpar
  */
-package com.github.caiobas.es.cs.aula07.domain;
+package com.github.caiobas.es.cs.aula10.application.console;
