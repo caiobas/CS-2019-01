@@ -200,7 +200,7 @@ public final class AlgoritmosUtils {
 
     /**
      * Função que retorna o dia da semana baseado no resultado da função
-     * diaDaSemana.
+     * {@link #diaDaSemana(final int dia, final int mes, final int ano)}.
      *
      * @param dia utilizado para identificar dia da semana.
      * @return Retorna dia da semana.
