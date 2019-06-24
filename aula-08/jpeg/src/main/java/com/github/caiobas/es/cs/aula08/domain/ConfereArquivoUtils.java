@@ -17,6 +17,7 @@ public final class ConfereArquivoUtils {
 
     /**
      * Primeiro byte de arquivo jpeg.
+     * FIXME PRIMEIROBYTE sugere um único byte, aqui temos 4 bytes!!??
      */
     private static final int PRIMEIROBYTE = 0xffd8ffe0;
 
@@ -68,6 +69,10 @@ public final class ConfereArquivoUtils {
         final InputStream fis = Files.newInputStream(Paths.get(caminho));
         final DataInputStream dis = new DataInputStream(fis);
 
+        // TODO observe que não é feita a leitura de um byte, mas de 4 bytes.
+        // Para ler um único byte use readUnsignedByte() (precisa de verificação)
+        // Observe que não deve ser readByte() (minha dúvida no momento)
+        // CONTUDO, não é readInt?!!!!
         final int valor = dis.readInt();
 
         if (valor != PRIMEIROBYTE) {
@@ -75,6 +80,7 @@ public final class ConfereArquivoUtils {
             return false;
         }
 
+        // FIXME Qual a finalidade??!!!!
         final InputStreamReader isr = new InputStreamReader(fis, "UTF-8");
         final BufferedReader br = new BufferedReader(isr);
 
@@ -82,6 +88,7 @@ public final class ConfereArquivoUtils {
         int byteFinal = 0;
         final byte[] dado = new byte[LINHA];
 
+        // FIXME por que ler tudo, se você pode usar dis.skip(TAMANHO DO ARQUIVO - 2 bytes)???
         lerByte = fis.read(dado);
         while (lerByte != -1) {
             byteFinal = lerByte - 1;
