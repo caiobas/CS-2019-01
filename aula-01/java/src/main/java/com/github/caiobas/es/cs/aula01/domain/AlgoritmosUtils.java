@@ -200,7 +200,8 @@ public final class AlgoritmosUtils {
 
     /**
      * Função que retorna o dia da semana baseado no resultado da função
-     * diaDaSemana.
+     * {@link #diaDaSemana(int, int, int)}.
+     * @see #diaDaSemana(int, int, int)
      *
      * @param dia utilizado para identificar dia da semana.
      * @return Retorna dia da semana.
@@ -352,7 +353,7 @@ public final class AlgoritmosUtils {
 
     /**
      * Função matemática que calcula o valor com mais proximidade
-     * de PI de acordocom quanto maior for o parâmetro.
+     * de PI de acordo com quanto maior for o parâmetro.
      *
      * @param precisao Número utilizado para determinar maior
      * proximidade do valor de PI.
