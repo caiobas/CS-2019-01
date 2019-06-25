@@ -22,8 +22,7 @@ public final class InteiroUtils {
     }
 
     /**
-     * Método que recebe um nome de arquivo e
-     * mostra os 4 primeiros bytes do mesmo.
+     * Retorna os quatro primeiros bytes em hexadecimal do arquivo fornecido.
      *
      * @param caminho Caminho do arquivo que deve ser
      * analisado para se obter os 4 primeiros bytes.
