@@ -60,6 +60,11 @@ public final class ConfereArquivoUtils {
                 "O arquivo não existe.");
         }
 
+        if (!arquivo.canRead()) {
+            throw new IllegalArgumentException(
+                "O arquivo não pode ser lido.");
+        }
+
         if (arquivo.length() == 0) {
             throw new IllegalArgumentException(
                 "Dados insuficientes no arquivo.");

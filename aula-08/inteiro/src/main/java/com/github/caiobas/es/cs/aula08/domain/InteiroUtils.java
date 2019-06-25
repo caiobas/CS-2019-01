@@ -45,6 +45,11 @@ public final class InteiroUtils {
                 "O arquivo não existe.");
         }
 
+        if (!arquivo.canRead()) {
+            throw new IllegalArgumentException(
+                "O arquivo não pode ser lido.");
+        }
+
         final int bytesMinimo = 4;
         if (arquivo.length() < bytesMinimo) {
             throw new IllegalArgumentException(

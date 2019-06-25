@@ -23,15 +23,16 @@ public class InteiroTest {
     } 
 
     @Test
+    public void arquivoErro() {
+        assertThrows(IllegalArgumentException.class,() -> InteiroUtils.imprimeHexa(getFilename("vazio.txt")));
+        //assertThrows(IllegalArgumentException.class,() -> InteiroUtils.imprimeHexa(getFilename("naoPodeLer.txt")));
+        assertThrows(IllegalArgumentException.class,() -> InteiroUtils.imprimeHexa("a.txt"));
+    }
+    
+    @Test
     public void testMain() throws IOException {
         String[] args = {getFilename("74657374.txt")};
         ProgramaInteiro.main(args);
-    }
-
-    @Test
-    public void arquivoErro() {
-        assertThrows(IllegalArgumentException.class,() -> InteiroUtils.imprimeHexa(getFilename("vazio.txt")));
-        assertThrows(IllegalArgumentException.class,() -> InteiroUtils.imprimeHexa("a.txt"));
     }
     
 }
