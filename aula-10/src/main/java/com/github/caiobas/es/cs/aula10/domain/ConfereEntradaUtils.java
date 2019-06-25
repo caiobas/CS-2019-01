@@ -154,7 +154,7 @@ public final class ConfereEntradaUtils {
     }
 
     /**
-     * Executa todos os métodos anteriores com finalidade de conferir todos
+     * Executa todos os métodos desta classe com finalidade de conferir todos
      * os argumentos passados como parâmetro para obter dia da semana da
      * data desejada em relação ao dia da semana da data referência.
      *

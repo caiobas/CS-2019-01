@@ -22,7 +22,7 @@ public final class NumeroFrequenteUtils {
     }
     /**
      * O presente método armazena apenas os números sorteados e mantém a
-     * quantidade correspondente em um dicionário (Map<Integer, Integer>).
+     * quantidade correspondente em um dicionário (Map&lt;Integer, Integer&gt;).
      *
      * @param quantidade Quantidade de números gerados.
      * @param intervalo Intervalo dos números gerados.

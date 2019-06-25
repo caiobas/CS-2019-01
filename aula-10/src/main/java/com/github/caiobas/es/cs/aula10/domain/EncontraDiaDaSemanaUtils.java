@@ -387,7 +387,7 @@ public final class EncontraDiaDaSemanaUtils {
     }
 
     /**
-     * Executa todos os métodos anteriores com finalidade
+     * Executa todos os métodos desta classe com finalidade
      * de se obter o dia da semana da data desejada.
      *
      * @param args Argumentos contendo todas as informações necessárias
