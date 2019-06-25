@@ -18,17 +18,22 @@ public final class ConfereArquivoUtils {
     /**
      * Primeiro byte de arquivo jpeg.
      */
-    private static final int PRIMEIROBYTE = 0xffd8ffe0;
+    private static final int PRIMEIROBYTE = 0xff;
+    
+    /**
+     * Segundo byte de arquivo jpeg.
+     */
+    private static final int SEGUNDOBYTE = 0xd8;
 
     /**
-     * Ultimo byte de arquivo jpeg.
+     * Penúltimo byte de arquivo jpeg.
      */
-    private static final int ULTIMOBYTE = 0xffffffd9;
-
+    private static final int PENULTIMOBYTE = 0xff;
+    
     /**
-     * Tamanho de vetor que armazena as linhas de um arquivo.
+     * Último byte de arquivo jpeg.
      */
-    private static final int LINHA = 1024;
+    private static final int ULTIMOBYTE = 0xd9;
 
     /**
      * Construtor privado da classe para evitar instanciação.
@@ -73,31 +78,22 @@ public final class ConfereArquivoUtils {
         final InputStream fis = Files.newInputStream(Paths.get(caminho));
         final DataInputStream dis = new DataInputStream(fis);
 
-        final int valor = dis.readInt();
+        final int valor1 = dis.readUnsignedByte();
+        final int valor2 = dis.readUnsignedByte();
 
-        if (valor != PRIMEIROBYTE) {
+        if (valor1 != PRIMEIROBYTE && valor2 != SEGUNDOBYTE) {
             dis.close();
             return false;
         }
 
-        final InputStreamReader isr = new InputStreamReader(fis, "UTF-8");
-        final BufferedReader br = new BufferedReader(isr);
-
-        int lerByte;
-        int byteFinal = 0;
-        final byte[] dado = new byte[LINHA];
-
-        lerByte = fis.read(dado);
-        while (lerByte != -1) {
-            byteFinal = lerByte - 1;
-            lerByte = fis.read(dado);
-        }
+        dis.skip(arquivo.length() - 4);
+        final int valor3 = dis.readUnsignedByte();
+        final int valor4 = dis.readUnsignedByte();
 
         boolean jpeg = false;
-        if (dado[byteFinal] == ULTIMOBYTE) {
+        if (valor3 == PENULTIMOBYTE && valor4 == ULTIMOBYTE) {
             jpeg = true;
         }
-        br.close();
         dis.close();
 
         return jpeg;
