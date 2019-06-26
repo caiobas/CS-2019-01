@@ -82,9 +82,9 @@ public class JpegTest {
         Path dir = Files.createTempDirectory("testDir");
         Path path = dir.resolve("naoPodeLer.txt");
         Path teste = Files.createFile(path, fileAttributes);
-        /*PosixFileAttributes attr = Files.readAttributes(path, PosixFileAttributes.class);
+        PosixFileAttributes attr = Files.readAttributes(path, PosixFileAttributes.class);
         attr.permissions().clear();
-        Files.setPosixFilePermissions(path, permissions);*/
+        Files.setPosixFilePermissions(path, permissions);
 
         //String fileName = parentDir + "testPermission_" + System.currentTimeMillis();
         //createFileWithPermission(fileName);
