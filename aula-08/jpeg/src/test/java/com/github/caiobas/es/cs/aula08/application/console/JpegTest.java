@@ -77,19 +77,19 @@ public class JpegTest {
 
     @Test
     public void teste() throws IOException {
-        /*Set<PosixFilePermission> permissions = PosixFilePermissions.fromString("rw-r--r--");
+        Set<PosixFilePermission> permissions = PosixFilePermissions.fromString("rw-r--r--");
         FileAttribute<Set<PosixFilePermission>> fileAttributes = PosixFilePermissions.asFileAttribute(permissions);
         Path dir = Files.createTempDirectory("testDir");
         Path path = dir.resolve("naoPodeLer.txt");
         Path teste = Files.createFile(path, fileAttributes);
-        PosixFileAttributes attr = Files.readAttributes(path, PosixFileAttributes.class);
+        /*PosixFileAttributes attr = Files.readAttributes(path, PosixFileAttributes.class);
         attr.permissions().clear();
         Files.setPosixFilePermissions(path, permissions);*/
 
         String fileName = parentDir + "testPermission_" + System.currentTimeMillis();
         createFileWithPermission(fileName);
 
-        assertThrows(IllegalArgumentException.class,() -> ConfereArquivoUtils.confereByte(fileName));
+        assertThrows(IllegalArgumentException.class,() -> ConfereArquivoUtils.confereByte(teste.toString()));
     }
 
     @Test 

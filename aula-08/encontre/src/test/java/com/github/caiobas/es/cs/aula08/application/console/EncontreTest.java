@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.attribute.FileAttribute;
 import java.nio.file.attribute.PosixFilePermission;
 import java.nio.file.attribute.PosixFilePermissions;
@@ -84,19 +85,19 @@ public class EncontreTest {
 
     @Test
     public void teste() throws IOException {
-        /*Set<PosixFilePermission> permissions = PosixFilePermissions.fromString("rw-r--r--");
+        Set<PosixFilePermission> permissions = PosixFilePermissions.fromString("rw-r--r--");
         FileAttribute<Set<PosixFilePermission>> fileAttributes = PosixFilePermissions.asFileAttribute(permissions);
         Path dir = Files.createTempDirectory("testDir");
         Path path = dir.resolve("naoPodeLer.txt");
         Path teste = Files.createFile(path, fileAttributes);
-        PosixFileAttributes attr = Files.readAttributes(path, PosixFileAttributes.class);
+        /*PosixFileAttributes attr = Files.readAttributes(path, PosixFileAttributes.class);
         attr.permissions().clear();
         Files.setPosixFilePermissions(path, permissions);*/
 
         String fileName = parentDir + "testPermission_" + System.currentTimeMillis();
         createFileWithPermission(fileName);
 
-        assertThrows(IllegalArgumentException.class,() -> EncontreUtils.retornaResultado(fileName, "nada"));
+        assertThrows(IllegalArgumentException.class,() -> EncontreUtils.retornaResultado(teste.toString(), "nada"));
     }
 
     @Test 
