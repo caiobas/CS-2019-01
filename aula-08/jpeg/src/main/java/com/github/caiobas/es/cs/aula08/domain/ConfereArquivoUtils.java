@@ -17,7 +17,7 @@ public final class ConfereArquivoUtils {
      * Primeiro byte de arquivo jpeg.
      */
     private static final int PRIMEIROBYTE = 0xff;
-    
+
     /**
      * Segundo byte de arquivo jpeg.
      */
@@ -27,7 +27,7 @@ public final class ConfereArquivoUtils {
      * Penúltimo byte de arquivo jpeg.
      */
     private static final int PENULTIMOBYTE = 0xff;
-    
+
     /**
      * Último byte de arquivo jpeg.
      */
@@ -85,7 +85,8 @@ public final class ConfereArquivoUtils {
             return false;
         }
 
-        dis.skip(arquivo.length() - 4);
+        final int getPenultimoByte = 4;
+        dis.skip(arquivo.length() - getPenultimoByte);
         final int valor3 = dis.readUnsignedByte();
         final int valor4 = dis.readUnsignedByte();
 
