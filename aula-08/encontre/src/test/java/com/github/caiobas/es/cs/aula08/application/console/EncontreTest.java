@@ -73,7 +73,7 @@ public class EncontreTest {
         attr.permissions().clear();
         Files.setPosixFilePermissions(path, permissions);*/
 
-        String fileName = parentDir + "naoPodeLer.txt";
+        String fileName = parentDir + "testPermission_" + System.currentTimeMillis();
         FileAttribute<Set<PosixFilePermission>> attr =  PosixFilePermissions.asFileAttribute(defaultPosixPermissions);
         File file = new File(fileName);
         Files.createFile(file.toPath(), attr);
