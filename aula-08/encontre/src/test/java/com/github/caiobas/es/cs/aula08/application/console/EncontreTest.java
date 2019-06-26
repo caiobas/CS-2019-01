@@ -94,8 +94,8 @@ public class EncontreTest {
         attr.permissions().clear();
         Files.setPosixFilePermissions(path, permissions);*/
 
-        String fileName = parentDir + "testPermission_" + System.currentTimeMillis();
-        createFileWithPermission(fileName);
+        //String fileName = parentDir + "testPermission_" + System.currentTimeMillis();
+        //createFileWithPermission(fileName);
 
         assertThrows(IllegalArgumentException.class,() -> EncontreUtils.retornaResultado(teste.toString(), "nada"));
     }
