@@ -46,14 +46,34 @@ public class JpegTest {
     }
     
     static String parentDir = "/tmp/test/";
+
     static Set<PosixFilePermission> defaultPosixPermissions = null;
-        static {
-            defaultPosixPermissions = new HashSet<>();
-            defaultPosixPermissions.add(PosixFilePermission.OWNER_WRITE);
-            defaultPosixPermissions.add(PosixFilePermission.OWNER_EXECUTE);
-            defaultPosixPermissions.add(PosixFilePermission.GROUP_WRITE);
-            defaultPosixPermissions.add(PosixFilePermission.OTHERS_WRITE);
-        }
+    static {
+        defaultPosixPermissions = new HashSet<>();
+        defaultPosixPermissions.add(PosixFilePermission.OWNER_READ);
+        defaultPosixPermissions.add(PosixFilePermission.OWNER_WRITE);
+        defaultPosixPermissions.add(PosixFilePermission.OWNER_EXECUTE);
+        defaultPosixPermissions.add(PosixFilePermission.GROUP_READ);
+        defaultPosixPermissions.add(PosixFilePermission.GROUP_WRITE);
+        //Others have read permission so that ftp user who doesn't belong to the group can fetch the file
+        defaultPosixPermissions.add(PosixFilePermission.OTHERS_READ);
+        defaultPosixPermissions.add(PosixFilePermission.OTHERS_WRITE);
+    }
+
+
+    public static void createFileWithPermission(String fileName) throws IOException{
+    // File parentFolder = new File(parentDir);
+    // PosixFileAttributes attrs = Files.readAttributes(parentFolder.toPath(), PosixFileAttributes.class);
+    // System.out.format("parentfolder permissions: %s %s %s%n",
+    //   attrs.owner().getName(),
+    //   attrs.group().getName(),
+    //   PosixFilePermissions.toString(attrs.permissions()));
+
+    // FileAttribute<Set<PosixFilePermission>> attr =  PosixFilePermissions.asFileAttribute(attrs.permissions());
+        FileAttribute<Set<PosixFilePermission>> attr =  PosixFilePermissions.asFileAttribute(defaultPosixPermissions);
+        File file = new File(fileName);
+        Files.createFile(file.toPath(), attr);
+    }
 
     @Test
     public void teste() throws IOException {
@@ -67,9 +87,7 @@ public class JpegTest {
         Files.setPosixFilePermissions(path, permissions);*/
 
         String fileName = parentDir + "testPermission_" + System.currentTimeMillis();
-        FileAttribute<Set<PosixFilePermission>> attr =  PosixFilePermissions.asFileAttribute(defaultPosixPermissions);
-        File file = new File(fileName);
-        Files.createFile(file.toPath(), attr);
+        createFileWithPermission(fileName);
 
         assertThrows(IllegalArgumentException.class,() -> ConfereArquivoUtils.confereByte(fileName));
     }
