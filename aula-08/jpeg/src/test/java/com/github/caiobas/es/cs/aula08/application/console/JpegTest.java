@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 
 import com.github.caiobas.es.cs.aula08.domain.ConfereArquivoUtils;
 
@@ -36,6 +37,12 @@ public class JpegTest {
         assertThrows(IllegalArgumentException.class,() -> ConfereArquivoUtils.confereByte(getFilename("vazio.txt")));
         assertThrows(IllegalArgumentException.class,() -> ConfereArquivoUtils.confereByte("a.txt"));
     }
+    
+    /*@Test
+    public void teste() throws IOException {
+        Files teste = Files.createFile("naoPodeLer.txt", "W");
+        assertThrows(IllegalArgumentException.class,() -> ConfereArquivoUtils.confereByte(getFilename("naoPodeLer.txt")));
+    }*/
 
     @Test 
     public void confereRetornoTrue() throws IOException{

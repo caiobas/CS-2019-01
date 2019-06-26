@@ -35,6 +35,7 @@ public final class ConfereArquivoUtils {
      */
     private static final int ULTIMOBYTE = 0xd9;
 
+
     /**
      * Construtor privado da classe para evitar instanciação.
      */
