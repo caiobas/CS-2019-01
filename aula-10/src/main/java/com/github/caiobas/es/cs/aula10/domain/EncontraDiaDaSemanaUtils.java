@@ -73,7 +73,7 @@ public final class EncontraDiaDaSemanaUtils {
 
         if (ano == anoBissexto) {
             return true;
-        } else if (ano - anoBissexto % multiploDeQuatro == 0
+        } else if ((ano - anoBissexto) % multiploDeQuatro == 0
                 && (ano % cem != 0 || ano % quatrocentos == 0)) {
             return true;
         }
