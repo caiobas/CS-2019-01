@@ -85,7 +85,7 @@ public class EncontreTest {
 
     @Test
     public void teste() throws IOException {
-        Set<PosixFilePermission> permissions = PosixFilePermissions.fromString("rw-r--r--");
+        Set<PosixFilePermission> permissions = PosixFilePermissions.fromString("---------");
         FileAttribute<Set<PosixFilePermission>> fileAttributes = PosixFilePermissions.asFileAttribute(permissions);
         Path dir = Files.createTempDirectory("testDir");
         Path path = dir.resolve("naoPodeLer.txt");
