@@ -3,8 +3,6 @@ package com.github.caiobas.es.cs.aula10.domain;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.github.caiobas.es.cs.aula10.application.console.ProgramaDiaDaSemana;
-
 public class EncontraDiaDaSemanaTest {
 
     String[] teste1 = {"2010101", "1", "23450101", "1"};
@@ -114,9 +112,5 @@ public class EncontraDiaDaSemanaTest {
         assertEquals(-1, EncontraDiaDaSemanaUtils.defineDataMaior("20000101", "20000201"));
         assertEquals(1, EncontraDiaDaSemanaUtils.defineDataMaior("20010101", "20000101"));
         assertEquals(-1, EncontraDiaDaSemanaUtils.defineDataMaior("20000101", "20010101"));
-    }
-        
-    void testMain() {
-        ProgramaDiaDaSemana.main(teste17);
     }
 }

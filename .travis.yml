@@ -6,6 +6,7 @@ script:
   - cd ../../../aula-08/inteiro && mvn clean test verify -P cobertura && mvn checkstyle:check spotbugs:check
   - cd ../jpeg && mvn clean test verify -P cobertura && mvn checkstyle:check spotbugs:check
   - cd ../encontre && mvn clean test verify -P cobertura && mvn checkstyle:check spotbugs:check
+  - cd ../../aula-10 && mvn clean test verify -P cobertura && mvn checkstyle:check spotbugs:check
 cache:
   directories:
   - "$HOME/.m2/repository"
