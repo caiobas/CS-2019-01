@@ -25,13 +25,6 @@ public final class ProgramaDiaDaSemana {
      *             para se obter dia da semana da data desejada.
      */
     public static void main(final String[] args) {
-
-        /*String[] executa = new String[4];
-        executa[0] = "20000130";
-        executa[1] = "2000";
-        executa[2] = "20000130";
-        executa[3] = "3";*/
-
         System.exit(EncontraDiaDaSemanaUtils.executaEncontraDia(args));
     }
 }

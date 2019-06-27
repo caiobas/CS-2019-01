@@ -3,7 +3,7 @@ package com.github.caiobas.es.cs.aula10.domain;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.ginsberg.junit.exit.ExpectSystemExitWithStatus;
+import com.ginsberg.junit.exit.ExpectSystemExit;
 import com.github.caiobas.es.cs.aula10.application.console.ProgramaDiaDaSemana;
 
 public class EncontraDiaDaSemanaTest {
@@ -118,7 +118,7 @@ public class EncontraDiaDaSemanaTest {
     }
 
     @Test
-    @ExpectSystemExitWithStatus(5)
+    @ExpectSystemExit
     public void testMain() {
         ProgramaDiaDaSemana.main(teste17);
     }
