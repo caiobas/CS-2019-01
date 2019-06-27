@@ -2,7 +2,6 @@ package com.github.caiobas.es.cs.aula08.domain;
 
 import java.io.DataInputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
