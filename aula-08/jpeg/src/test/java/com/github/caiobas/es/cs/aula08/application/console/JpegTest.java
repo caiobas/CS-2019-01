@@ -45,7 +45,7 @@ public class JpegTest {
         assertThrows(IllegalArgumentException.class,() -> ConfereArquivoUtils.confereByte("a.txt"));
     }
     
-    static String parentDir = "/tmp/test/";
+    /*static String parentDir = "/tmp/test/";
 
     static Set<PosixFilePermission> defaultPosixPermissions = null;
     static {
@@ -73,7 +73,7 @@ public class JpegTest {
         FileAttribute<Set<PosixFilePermission>> attr =  PosixFilePermissions.asFileAttribute(defaultPosixPermissions);
         File file = new File(fileName);
         Files.createFile(file.toPath(), attr);
-    }
+    }*/
 
     @Test
     public void teste() throws IOException {
