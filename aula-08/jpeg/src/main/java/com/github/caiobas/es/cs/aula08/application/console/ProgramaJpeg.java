@@ -25,7 +25,7 @@ public final class ProgramaJpeg {
      * @throws IOException Se houver problema ao ler o caminho do arquivo.
      */
     public static void main(final String[] args) throws IOException {
-        System.console().writer().println(ConfereArquivoUtils.arquivoJpeg(
+        System.out.println(ConfereArquivoUtils.arquivoJpeg(
             ConfereArquivoUtils.confereByte(args[0])));
     }
 }

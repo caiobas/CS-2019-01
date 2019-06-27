@@ -25,6 +25,6 @@ public final class ProgramaEncontre {
      * @throws IOException Se houver problema ao ler o caminho do arquivo.
      */
     public static void main(final String[] args) throws IOException {
-        System.console().writer().println(EncontreUtils.retornaResultado(args[0], args[1]));
+        System.out.println(EncontreUtils.retornaResultado(args[0], args[1]));
     }
 }
