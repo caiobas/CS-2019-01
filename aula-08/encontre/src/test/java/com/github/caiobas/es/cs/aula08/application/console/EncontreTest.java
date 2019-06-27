@@ -98,7 +98,7 @@ public class EncontreTest {
         //String fileName = parentDir + "testPermission_" + System.currentTimeMillis();
         //createFileWithPermission(fileName);
 
-        assertThrows(IllegalArgumentException.class,() -> EncontreUtils.retornaResultado(teste.toString(), "nada"));
+        assertThrows(IllegalArgumentException.class,() -> EncontreUtils.retornaResultado(teste.toString(), "teste"));
     }
 
     @Test 
