@@ -43,6 +43,11 @@ public final class EncontreUtils {
                 "O arquivo não existe.");
         }
 
+        if (!arquivo.canRead()) {
+            throw new IllegalArgumentException(
+                "O arquivo não pode ser lido.");
+        }
+
         if (arquivo.length() == 0) {
             throw new IllegalArgumentException(
                 "Dados insuficientes no arquivo.");
@@ -90,11 +95,6 @@ public final class EncontreUtils {
         if (!arquivo.exists()) {
             throw new IllegalArgumentException(
                 "O arquivo não existe.");
-        }
-
-        if (!arquivo.canRead()) {
-            throw new IllegalArgumentException(
-                "O arquivo não pode ser lido.");
         }
 
         if (arquivo.length() == 0) {
