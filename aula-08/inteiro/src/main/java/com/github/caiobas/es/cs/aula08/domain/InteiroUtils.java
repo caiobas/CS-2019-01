@@ -58,10 +58,11 @@ public final class InteiroUtils {
 
                 final int[] valor = {dis.readByte(), dis.readByte(), dis.readByte(), dis.readByte()};
                 final StringBuilder hexadecimal = new StringBuilder();
+                final int tres = 3;
                 hexadecimal.append(Integer.toHexString(valor[0]));
                 hexadecimal.append(Integer.toHexString(valor[1]));
                 hexadecimal.append(Integer.toHexString(valor[2]));
-                hexadecimal.append(Integer.toHexString(valor[3]));
+                hexadecimal.append(Integer.toHexString(valor[tres]));
 
             return hexadecimal.toString();
         } catch (IOException io) {
