@@ -46,7 +46,7 @@ public final class ConfereEntradaUtils {
         //return (args.length != QTD_ARGUMENTOS) ? -1 : 1;
         if (args.length != QTD_ARGUMENTOS) {
             return -1;
-        } 
+        }
         return 1;
     }
 
