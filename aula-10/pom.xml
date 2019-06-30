@@ -800,7 +800,7 @@
                                     <excludes>
                                         <exclude>
                                             **/Programa*.*
-                                        <exclude>
+                                        </exclude>
                                     </excludes>
                                     <rules>
                                         <rule implementation="org.jacoco.maven.RuleConfiguration">
