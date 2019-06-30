@@ -797,6 +797,11 @@
                                     <goal>check</goal>
                                 </goals>
                                 <configuration>
+                                    <excludes>
+                                        <exclude>
+                                            **/Programa*.*
+                                        <exclude>
+                                    </excludes>
                                     <rules>
                                         <rule implementation="org.jacoco.maven.RuleConfiguration">
                                             <element>BUNDLE</element>
@@ -804,7 +809,7 @@
                                                 <limit implementation="org.jacoco.report.check.Limit">
                                                     <counter>LINE</counter>
                                                     <value>COVEREDRATIO</value>
-                                                    <minimum>0.99</minimum>
+                                                    <minimum>1</minimum>
                                                 </limit>
                                             </limits>
                                         </rule>
